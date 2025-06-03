@@ -1,0 +1,13 @@
+## Interface: 110105
+## Title: Renown Reward Tracker
+## Notes: Easily track which renown rewards are available per character and account-wide
+## Author: pranavius
+## Version: 0.0.1
+## X-Flavor: retail
+## X-License: GNU General Public License
+
+embeds.xml
+
+Constants.lua
+Utils.lua
+RRT.lua
