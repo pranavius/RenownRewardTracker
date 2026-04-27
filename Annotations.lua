@@ -1,0 +1,9 @@
+---@class RenownRewardTracker
+---@field WINDOW_MIN_HEIGHT number
+---@field WINDOW_MIN_WIDTH number
+---@field WINDOW_MAX_HEIGHT number
+---@field WINDOW_MAX_WIDTH number
+---@field SupportedExpansions table<number, string>
+---@field SelectedExpansion number
+---@field debug boolean
+---@field DebugPrint fun(...: string|number|boolean)

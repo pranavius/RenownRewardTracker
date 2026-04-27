@@ -1,3 +1,16 @@
 {
-    "Lua.workspace.ignoreDir": ["Libs/*"]
+    "diagnostics": {
+        "disabled": ["assign-type-mismatch"]
+    },
+    "type": {
+        "weakUnionCheck": true
+    },
+    "workspace": {
+        "ignoreDir": [
+            ".release",
+            ".vscode",
+            "Libs",
+            "Localization"
+        ]
+    }
 }

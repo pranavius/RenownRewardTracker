@@ -1,52 +1,54 @@
-local name, AddOn = ...
-print("name:", name)
----@class RenownRewardTracker: AceAddon, AceEvent-3.0
-AddOn = LibStub("AceAddon-3.0"):GetAddon(name)
+---@class RenownRewardTracker
+local AddOn = select(2, ...)
 
 local DebugPrint = AddOn.DebugPrint
 
-local sOptions = {
-    type ="group",
-    handler = AddOn,
-    args = {
-        debug = {
-            type = "execute",
-            name = "debug",
-            desc = "Toggle debug mode",
-            func = function()
-                AddOn.debug = not AddOn.debug
-                local color = AddOn.debug and UNCOMMON_GREEN_COLOR or ERROR_COLOR
-                print(WrapTextInColorCode("RRT:", HEIRLOOM_BLUE_COLOR:GenerateHexColor()), "Debug mode "..WrapTextInColorCode(AddOn.debug and "enabled" or "disabled", color:GenerateHexColor()))
-                end
-        }
-    }
-}
+local EventFrame = CreateFrame("Frame")
 
-local sCmds = { "renownrewardtracker", "rrt" }
+EventFrame:HookScript("OnEvent", function(self, event, ...)
+    if event == "ADDON_LOADED" then
+        if ... == "RenownRewardTracker" then
+            AddOn:Initialize()
+            self:UnregisterEvent("ADDON_LOADED")
+        end
+    else
+        DebugPrint(event)
+    end
+end)
 
-function AddOn:OnInitialize()
-    local config = LibStub("AceConfig-3.0")
-    config:RegisterOptionsTable(name, sOptions, sCmds)
+EventFrame:RegisterEvent("ADDON_LOADED")
 
+RRT_DB = RRT_DB or {}
+
+function AddOn:Initialize()
     self:CreateRRTFrame()
 
-    self:RegisterEvent("PLAYER_ENTERING_WORLD", "DummyEventCallback")
-    self:RegisterEvent("ZONE_CHANGED", "DummyEventCallback")
-    self:RegisterEvent("QUEST_ACCEPTED", "DummyEventCallback")
-    self:RegisterEvent("QUEST_COMPLETE", "DummyEventCallback")
-    self:RegisterEvent("MAJOR_FACTION_RENOWN_LEVEL_CHANGED", "DummyEventCallback")
-    self:RegisterEvent("COVENANT_SANCTUM_RENOWN_LEVEL_CHANGED", "DummyEventCallback")
+    EventFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
+    EventFrame:RegisterEvent("ZONE_CHANGED")
+    EventFrame:RegisterEvent("QUEST_ACCEPTED")
+    EventFrame:RegisterEvent("QUEST_COMPLETE")
+    EventFrame:RegisterEvent("MAJOR_FACTION_RENOWN_LEVEL_CHANGED")
+    EventFrame:RegisterEvent("COVENANT_SANCTUM_RENOWN_LEVEL_CHANGED")
     DebugPrint("Initialized")
 end
 
-function AddOn:DummyEventCallback(event)
-    DebugPrint(event)
+SLASH_RRT1 = "/renownrewardtracker"
+SLASH_RRT2 = "/rrt"
+SlashCmdList["RRT"] = function(msg)
+    if msg:lower() == "debug" then
+        AddOn.debug = not AddOn.debug
+        local color = AddOn.debug and UNCOMMON_GREEN_COLOR or ERROR_COLOR
+        print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode("RRT:"), "Debug mode " .. color:WrapTextInColorCode(AddOn.debug and "enabled" or "disabled"))
+    else
+        print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode("RRT:"), "Usage:")
+        print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("/rrt debug"), "Toggle debug mode")
+    end
 end
 
 function AddOn:CreateRRTFrame()
     local frame = CreateFrame("Frame", "RenownRewardTracker", UIParent)
-    frame:SetPoint("TOPLEFT", UIParent, "TOPLEFT", 50, -50)
-    frame:SetSize(self.WINDOW_MAX_WIDTH / 2, self.WINDOW_MAX_HEIGHT / 2)
+    frame:SetPoint("TOP", UIParent, "TOP", 0, -50)
+    frame:SetSize(self.WINDOW_MIN_WIDTH, self.WINDOW_MIN_HEIGHT)
     frame:EnableMouse(true)
     frame:SetMovable(true)
     frame:SetResizable(true)
@@ -54,21 +56,16 @@ function AddOn:CreateRRTFrame()
 
     -- Allow resizing the frame (hold Shift to move instead)
     frame:RegisterForDrag("LeftButton")
-    frame:SetScript("OnDragStart", function(self)
-        if IsShiftKeyDown() then
-            self:StartMoving()
-        else
-            self:StartSizing()
-        end
-    end)
-    frame:SetScript("OnDragStop", function(self)
-        self:StopMovingOrSizing()
-    end)
+    frame:HookScript("OnDragStart", function(f) f:StartMoving() end)
+    frame:HookScript("OnDragStop", function(f) f:StopMovingOrSizing() end)
 
     -- Add Blizzard's resize handle in the bottom-right corner
     frame.ResizeHandle = CreateFrame("Button", nil, frame, "PanelResizeButtonTemplate")
     frame.ResizeHandle:SetPoint("BOTTOMRIGHT", 0, 0)
     frame.ResizeHandle:Init(frame, self.WINDOW_MIN_WIDTH, self.WINDOW_MIN_HEIGHT, self.WINDOW_MAX_WIDTH, self.WINDOW_MAX_HEIGHT, 0)
+    frame.ResizeHandle:RegisterForDrag()
+    frame.ResizeHandle:HookScript("OnDragStart", function() frame:StartSizing() end)
+    frame.ResizeHandle:HookScript("OnDragStop", function() frame:StopMovingOrSizing() end)
 
     frame.Background = frame:CreateTexture("RRTBackground", "BACKGROUND")
     frame.Background:SetAllPoints(frame)
@@ -88,7 +85,7 @@ end
 function AddOn:CreateRRTInset()
     if not self.Frame then return end
 
-    self.Frame.ScrollFrameInset = CreateFrame("Frame", "RRTScrollFrameInset", self.Frame, "UIPanelScrollFrameTemplate")
+    self.Frame.ScrollFrameInset = CreateFrame("ScrollFrame", "RRTScrollFrameInset", self.Frame, "UIPanelScrollFrameTemplate")
     self.Frame.ScrollFrameInset:SetPoint("TOPLEFT", self.Frame, "TOPLEFT", 5, (self.Frame.Title:GetHeight() * -1) - 10)
     self.Frame.ScrollFrameInset:SetPoint("BOTTOMRIGHT", self.Frame, "BOTTOMRIGHT", -250, 5)
 end
@@ -96,25 +93,49 @@ end
 function AddOn:CreateRRTSidebar()
     if not self.Frame or not self.Frame.ScrollFrameInset then return end
 
-    self.Frame.Sidebar = CreateFrame("Frame", "RRTSidebar", self.Frame, "InsetFrameTemplate")
+    self.Frame.Sidebar = CreateFrame("Frame", "RRTSidebar", self.Frame)
     self.Frame.Sidebar:SetPoint("TOPLEFT", self.Frame.ScrollFrameInset.ScrollBar, "TOPRIGHT", 5, 0)
     self.Frame.Sidebar:SetPoint("BOTTOMLEFT", self.Frame.ScrollFrameInset.ScrollBar, "BOTTOMRIGHT", 5, 0)
     self.Frame.Sidebar:SetWidth(200)
-    
-    self:PopulateSidebar()
+
+    self:CreateExpansionDropdown()
 end
 
 function AddOn:PopulateSidebar()
     if not self.Frame or not self.Frame.Sidebar then return end
 
     local buttonCount = 0
-    for xpac in pairs(AddOn.Renowns) do
-        local xpacButton = CreateFrame("Button", "Expansion"..xpac, self.Frame.Sidebar, "OptionsListButtonTemplate")
-        xpacButton:SetPoint("TOPLEFT", self.Frame.Sidebar, "TOPLEFT", 10, (buttonCount == 0 and -5 or buttonCount * -20))
-        xpacButton:SetPoint("TOPRIGHT", self.Frame.Sidebar, "TOPRIGHT", -10, (buttonCount == 0 and -5 or buttonCount * -20))
-        xpacButton:SetText(xpac)
-        -- xpacButton:SetHighlightTexture("interface/buttons/ui-panel-button-highlight", "ADD")
-        xpacButton:SetScript("OnClick", function() DebugPrint(xpac) end)
-
+    for id, name in pairs(AddOn.SupportedExpansions) do
+        local xpacButton = CreateFrame("Button", "RRTExpansion"..id, self.Frame.Sidebar, "OptionsListButtonTemplate")
+        xpacButton:SetPoint("TOPLEFT", self.Frame.Sidebar, "TOPLEFT", 10, -5 +(buttonCount == 0 and 0 or buttonCount * -20))
+        xpacButton:SetPoint("TOPRIGHT", self.Frame.Sidebar, "TOPRIGHT", -10, -5 + (buttonCount == 0 and 0 or buttonCount * -20))
+        xpacButton:SetText(name)
+        xpacButton:HookScript("OnClick", function() DebugPrint(name) end)
+        buttonCount = buttonCount + 1
     end
+end
+
+function AddOn:CreateExpansionDropdown()
+    if not self.Frame or not self.Frame.Sidebar then return end
+
+    local dropdown = CreateFrame("DropdownButton", "RRTExpansionDropdown", self.Frame.Sidebar, "WowStyle1DropdownTemplate")
+    dropdown:SetPoint("TOPLEFT", self.Frame.Sidebar, "TOPLEFT", 10, -5)
+    dropdown:SetPoint("TOPRIGHT", self.Frame.Sidebar, "TOPRIGHT", -10, -5)
+
+    dropdown:SetupMenu(function(_, rootDescription)
+        rootDescription:CreateTitle("Expansion")
+        for expansionID, expansionName in pairs(AddOn.SupportedExpansions) do
+            rootDescription:CreateRadio(
+                expansionName,
+                function() return AddOn.SelectedExpansion == expansionID end,
+                function()
+                    AddOn.SelectedExpansion = expansionID
+                    DebugPrint("Selected:", expansionName)
+                end,
+                expansionID
+            )
+        end
+    end)
+
+    self.Frame.ExpansionDropdown = dropdown
 end
