@@ -7,6 +7,12 @@
 ## X-Flavor: retail
 ## X-License: GNU General Public License
 
+embeds.xml
+
 Config.lua
+Frames\RRTMainMixin.lua
+Frames\RRTMain.xml
+Frames\RRTScrollBoxMixin.lua
+Frames\RRTScrollBox.xml
 Utils.lua
 RRT.lua

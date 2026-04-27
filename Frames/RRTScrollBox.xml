@@ -1,0 +1,16 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Blizzard_SharedXML/UI.xsd">
+    <Frame name="RRTScrollBox" parent="RenownRewardTracker" parentKey="ScrollBox" mixin="RRTScrollBoxMixin" inherits="WowScrollBoxList">
+        <Anchors>
+            <Anchor point="TOPLEFT" relativeKey="$parent.Title" relativePoint="BOTTOMLEFT" y="-10"/>
+            <Anchor point="BOTTOMRIGHT" x="-210" y="10"/>
+        </Anchors>
+    </Frame>
+
+    <EventFrame name="RRTScrollBar" parent="RenownRewardTracker" parentKey="ScrollBar" inherits="MinimalScrollBar">
+        <Anchors>
+            <Anchor point="TOPLEFT" relativeKey="$parent.ScrollBox" relativePoint="TOPRIGHT" x="15"/>
+            <Anchor point="BOTTOMLEFT" relativeKey="$parent.ScrollBox" relativePoint="BOTTOMRIGHT" x="15"/>
+        </Anchors>
+    </EventFrame>
+</Ui>
