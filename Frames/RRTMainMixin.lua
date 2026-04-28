@@ -1,13 +1,14 @@
----@type string, RenownRewardTracker
-local addonName, AddOn = ...
+---@class RenownRewardTracker
+local AddOn = ...
 
+---@class RRTMainMixin
 RRTMainMixin = {}
 
 function RRTMainMixin:OnLoad()
     self.ResizeHandle:Init(self, RRT_WINDOW_MIN_WIDTH, RRT_WINDOW_MIN_HEIGHT, RRT_WINDOW_MAX_WIDTH, RRT_WINDOW_MAX_HEIGHT, 0)
     self.ResizeHandle:HookScript("OnDragStart", function() self:StartSizing() end)
     self.ResizeHandle:HookScript("OnDragStop", function() self:StopMovingOrSizing() end)
-    self.Title:SetText(addonName)
+    self.Title:SetText("Renown Reward Tracker")
 
     local function isSelectedExpansion(id)
         return id == AddOn.SelectedExpansion

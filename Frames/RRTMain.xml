@@ -12,7 +12,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
         <Layers>
             <Layer level="BACKGROUND">
                 <Texture parentKey="Bg" setAllPoints="true">
-                    <Color r="0" g="0" b="0" a="0.8"/>
+                    <Color color="BLACK_FONT_COLOR" a="0.8"/>
                 </Texture>
             </Layer>
             <Layer level="OVERLAY">
@@ -32,9 +32,10 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
             </Button>
             <DropdownButton parentKey="ExpansionDropdown" inherits="WowStyle1DropdownTemplate">
                 <Anchors>
-                    <Anchor point="TOPLEFT" relativeKey="$parent.Title" relativePoint="BOTTOMRIGHT" x="-150" y="-10" />
+                    <Anchor point="TOPLEFT" relativeKey="$parent.Title" relativePoint="BOTTOMRIGHT" x="-160" y="-10" />
                     <Anchor point="TOPRIGHT" relativeKey="$parent.Title" relativePoint="BOTTOMRIGHT" y="10"/>
                 </Anchors>
+                <!-- TODO: Look into overwriting the default background texture to align better with the modern look -->
             </DropdownButton>
         </Frames>
         <Scripts>

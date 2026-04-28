@@ -1,0 +1,51 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Blizzard_SharedXML/UI.xsd">
+    <Frame name="RRTListItemTemplate" virtual="true" mixin="RRTListItemMixin">
+        <Size y="25"/>
+        <KeyValues>
+            <KeyValue key="isFactionName" value="false"/>
+            <KeyValue key="factionID" value="-1"/>
+        </KeyValues>
+        <Layers>
+            <Layer level="BACKGROUND">
+                <Texture parentKey="Bg" hidden="true" setAllPoints="true">
+                    <Color color="WHITE_FONT_COLOR" a="0.1"/>
+                </Texture>
+                <Texture parentKey="FactionBg" hidden="true" setAllPoints="true">
+                    <Color color="DARKYELLOW_FONT_COLOR"/>
+                </Texture>
+            </Layer>
+        </Layers>
+        <Frames>
+            <Frame parentKey="IconDescContainer" inherits="RRTIconDescContainerTemplate">
+                <Size x="200"/>
+                <Anchors>
+                    <Anchor point="TOPLEFT"/>
+                    <Anchor point="BOTTOMLEFT"/>
+                </Anchors>
+            </Frame>
+        </Frames>
+    </Frame>
+
+    <Frame name="RRTIconDescContainerTemplate" virtual="true" mixin="RRTIconDescContainerMixin">
+        <Layers>
+            <Layer level="OVERLAY">
+                <Texture parentKey="Icon" file="Interface/Icons/inv_misc_questionmark">
+                    <Size x="25"/>
+                    <Anchors>
+                        <Anchor point="TOPLEFT"/>
+                        <Anchor point="BOTTOMLEFT"/>
+                    </Anchors>
+                </Texture>
+                <FontString parentKey="Desc" inherits="GameFontHighlightSmall" text="TestStringTheLongestTestStringYouEverDidSee" justifyH="LEFT">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativeKey="$parent.Icon" relativePoint="TOPRIGHT" x="5"/>
+                        <Anchor point="BOTTOMLEFT" relativeKey="$parent.Icon" relativePoint="BOTTOMRIGHT" x="5"/>
+                        <Anchor point="TOPRIGHT"/>
+                        <Anchor point="BOTTOMRIGHT"/>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+    </Frame>
+</Ui>

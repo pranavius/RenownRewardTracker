@@ -10,6 +10,8 @@
 embeds.xml
 
 Config.lua
+Templates\RRTListItemMixins.lua
+Templates\RRTListItemTemplates.xml
 Frames\RRTMainMixin.lua
 Frames\RRTMain.xml
 Frames\RRTScrollBoxMixin.lua

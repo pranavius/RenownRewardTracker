@@ -28,6 +28,11 @@ function AddOn:Initialize()
     EventFrame:RegisterEvent("MAJOR_FACTION_RENOWN_LEVEL_CHANGED")
     EventFrame:RegisterEvent("COVENANT_SANCTUM_RENOWN_LEVEL_CHANGED")
     DebugPrint("Initialized")
+
+    RRTScrollBox:InitializeScrollView()
+    local dataToShow = {"test", "test2", "test3"}
+    self.DataProvider = CreateDataProvider(dataToShow)
+    self.ScrollView:SetDataProvider(self.DataProvider)
 end
 
 SLASH_RRT1 = "/renownrewardtracker"
