@@ -88,3 +88,42 @@ AddOn.MidnightData = {
 -- C_TradeSkillUI.GetRecipeInfo(recipeSpellID)
 -- GetProfessions()
 -- GetProfessionInfo(index)
+
+function AddOn:CreateMidnightCache()
+    self.MidnightCache = {}
+    local itemRewards = {}
+    for _, reward in ipairs(self.MidnightData) do
+        if reward.type ~= "Mount" and reward.type ~= "Quest" and reward.type ~= "Decor" then
+            tinsert(itemRewards, reward)
+        end
+    end
+    local toLoad = #itemRewards
+
+    for _, item in ipairs(itemRewards) do
+        Item:CreateFromItemID(item.id):ContinueOnItemLoad(function()
+            toLoad = toLoad - 1
+            self.MidnightCache[item.id] = {
+                itemName = C_Item.GetItemNameByID(item.id) or "",
+                iconID = C_Item.GetItemIconByID(item.id) or 134400,
+                factionID = item.factionID,
+                level = item.level,
+            }
+
+            if toLoad == 0 then self.DebugPrint("Midnight item data loaded") end
+        end)
+    end
+end
+
+---Placeholder
+---@param frame Frame
+---@param reward RenownRewardData
+function AddOn.MidnightDataProviderInit(frame, reward)
+    if not frame or not reward then return end
+
+    print("Reward ID:", reward.id)
+    DevTools_Dump(AddOn.MidnightCache[reward.id])
+
+    frame.factionID = reward.factionID
+    frame.IconDescContainer.Icon:SetTexture(AddOn.MidnightCache[reward.id].iconID or 134400)
+    frame.IconDescContainer.Desc:SetText(AddOn.MidnightCache[reward.id].itemName or reward.type)
+end

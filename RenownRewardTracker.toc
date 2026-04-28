@@ -10,11 +10,12 @@
 embeds.xml
 
 Config.lua
+Utils.lua
+Data\Midnight.lua
 Templates\RRTListItemMixins.lua
 Templates\RRTListItemTemplates.xml
 Frames\RRTMainMixin.lua
 Frames\RRTMain.xml
 Frames\RRTScrollBoxMixin.lua
 Frames\RRTScrollBox.xml
-Utils.lua
 RRT.lua

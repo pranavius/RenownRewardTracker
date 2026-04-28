@@ -8,13 +8,12 @@ function RRTScrollBoxMixin:InitializeScrollView()
     AddOn.ScrollBar = RRTScrollBar
 
     if AddOn.ScrollBox and AddOn.ScrollBar then
-        print("Create data provider and scroll view")
         AddOn.DataProvider = CreateDataProvider()
         AddOn.ScrollView = CreateScrollBoxListLinearView()
 
         ScrollUtil.InitScrollBoxListWithScrollBar(AddOn.ScrollBox, AddOn.ScrollBar, AddOn.ScrollView)
         AddOn.ScrollView:SetElementFactory(function(factory, elementData)
-            factory("RRTListItemTemplate", AddOn.DataProvider)
+            factory("RRTListItemTemplate", AddOn.MidnightDataProviderInit)
         end)
         AddOn.ScrollView:SetElementExtent(AddOn.ScrollView:GetTemplateExtent("RRTListItemTemplate"))
 

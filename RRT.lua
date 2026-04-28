@@ -28,10 +28,10 @@ function AddOn:Initialize()
     EventFrame:RegisterEvent("MAJOR_FACTION_RENOWN_LEVEL_CHANGED")
     EventFrame:RegisterEvent("COVENANT_SANCTUM_RENOWN_LEVEL_CHANGED")
     DebugPrint("Initialized")
+    self:CreateMidnightCache()
 
     RRTScrollBox:InitializeScrollView()
-    local dataToShow = {"test", "test2", "test3"}
-    self.DataProvider = CreateDataProvider(dataToShow)
+    self.DataProvider = CreateDataProvider(AddOn.MidnightData)
     self.ScrollView:SetDataProvider(self.DataProvider)
 end
 
@@ -44,6 +44,6 @@ SlashCmdList["RRT"] = function(msg)
         print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode("RRT:"), "Debug mode " .. color:WrapTextInColorCode(AddOn.debug and "enabled" or "disabled"))
     else
         print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode("RenownRewardTracker"), "Usage:")
-        print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("/rrt debug"), "Toggle debug mode")
+        print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("    /rrt debug:"), "Toggle debug mode")
     end
 end
