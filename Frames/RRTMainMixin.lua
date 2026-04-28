@@ -1,5 +1,5 @@
 ---@class RenownRewardTracker
-local AddOn = ...
+local AddOn = select(2, ...)
 
 ---@class RRTMainMixin
 RRTMainMixin = {}
