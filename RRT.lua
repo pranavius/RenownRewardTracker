@@ -52,8 +52,13 @@ end
 function AddOn:UpdateListContents()
     ---@type RewardData[]
     local listContents = {}
+    local seenFactions = {}
     for _, reward in ipairs(self.MidnightData) do
         if self.ShouldRewardBeListed(reward) then
+            if not seenFactions[reward.factionID] then
+                seenFactions[reward.factionID] = true
+                tinsert(listContents, { id = 0, factionID = reward.factionID, type = "Other" })
+            end
             tinsert(listContents, reward)
         end
     end
@@ -62,14 +67,17 @@ function AddOn:UpdateListContents()
     self.ScrollView:SetDataProvider(self.DataProvider)
 end
 
----comment
+---Determine if a reward should appear for the current character
 ---@param reward RewardData
----@return boolean
+---@return boolean `true` if reward should be shown, `false` otherwise
 function AddOn.ShouldRewardBeListed(reward)
-    if reward.type == "Quest" then return C_QuestLog.IsQuestFlaggedCompleted(reward.id) end
+    if reward.requiredCharacterLevel then return UnitLevel("player") >= reward.requiredCharacterLevel end
 
     local currentRenownLevel = C_MajorFactions.GetCurrentRenownLevel(reward.factionID)
-    if currentRenownLevel < reward.level then return false end
+    if currentRenownLevel < reward.renownLevel then return false end
+
+    if reward.type == "Quest" then return not C_QuestLog.IsQuestFlaggedCompleted(reward.id) end
+    
     if reward.skillLineID then
         local midnightProfInfo = C_TradeSkillUI.GetProfessionInfoBySkillLineID(reward.skillLineID)
         -- Max Skill Level 0 indicates that the profession is not learned

@@ -12,8 +12,17 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                     <Color color="WHITE_FONT_COLOR" a="0.1"/>
                 </Texture>
                 <Texture parentKey="FactionBg" hidden="true" setAllPoints="true">
-                    <Color color="DARKYELLOW_FONT_COLOR"/>
+                    <Color color="BLACK_FONT_COLOR"/>
                 </Texture>
+            </Layer>
+            <Layer level="OVERLAY">
+                <FontString parentKey="RewardType" inherits="GameFontHighlightSmall" justifyH="LEFT">
+                    <Size x="100"/>
+                    <Anchors>
+                        <Anchor point="TOPLEFT" x="205"/>
+                        <Anchor point="BOTTOMLEFT" x="205"/>
+                    </Anchors>
+                </FontString>
             </Layer>
         </Layers>
         <Frames>
@@ -37,7 +46,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                         <Anchor point="BOTTOMLEFT"/>
                     </Anchors>
                 </Texture>
-                <FontString parentKey="Desc" inherits="GameFontHighlightSmall" text="TestStringTheLongestTestStringYouEverDidSee" justifyH="LEFT">
+                <FontString parentKey="Desc" inherits="GameFontHighlightSmall" justifyH="LEFT">
                     <Anchors>
                         <Anchor point="TOPLEFT" relativeKey="$parent.Icon" relativePoint="TOPRIGHT" x="5"/>
                         <Anchor point="BOTTOMLEFT" relativeKey="$parent.Icon" relativePoint="BOTTOMRIGHT" x="5"/>

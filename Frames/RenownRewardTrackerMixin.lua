@@ -9,6 +9,9 @@ function RenownRewardTrackerMixin:OnLoad()
     self.ResizeHandle:Init(self, AddOn.windowMinWidth, AddOn.windowMinHeight, AddOn.windowMaxWidth, AddOn.windowMaxHeight, 0)
     self.ResizeHandle:HookScript("OnDragStart", function() self:StartSizing() end)
     self.ResizeHandle:HookScript("OnDragStop", function() self:StopMovingOrSizing() end)
+    self.CloseButton:SetNormalAtlas("common-icon-redx")
+    self.CloseButton:SetHighlightAtlas("common-icon-redx")
+    self.CloseButton:SetPushedAtlas("common-icon-redx")
     self.Title:SetText("Renown Reward Tracker")
 
     local function isSelectedExpansion(id) return id == AddOn.selectedExpansion end

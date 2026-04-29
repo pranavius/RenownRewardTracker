@@ -16,6 +16,13 @@ AddOn.SupportedExpansions = {
     [LE_EXPANSION_SHADOWLANDS] = "Shadowlands"
 }
 
+AddOn.FactionIconAtlasMap = {
+    [2710] = "majorfactions_icons_light512",
+    [2696] = "majorfactions_icons_origin512",
+    [2704] = "majorfactions_icons_root512",
+    [2699] = "majorfactions_icons_sky512",
+    [2792] = "majorfactions_icons_ritualsites512",
+}
 
 ---@enum Profession
 AddOn.Professions = {

@@ -8,6 +8,7 @@
 ---@field initialized boolean
 ---@field debug boolean `true` when debugging mode is enabled, `false` otherwise
 ---@field SupportedExpansions table<number, string> Table of expansions the AddOn provides renown tracking info for. Keys of the table are expansion IDs with values being expansion name
+---@field FactionIconAtlasMap table<number, string>
 
 ---@class PanelResizeButton: Button
 ---@field Init fun(self: PanelResizeButton, target: Frame, minWidth: number, minHeight: number, maxWidth: number, maxHeight: number, rotationDegrees: number)
@@ -20,6 +21,7 @@
 ---@field Title FontString
 ---@field ResizeHandle PanelResizeButton
 ---@field ExpansionDropdown ExpansionDropdownButton
+---@field CloseButton Button
 RenownRewardTracker = {}
 
 ---@class ListItemIconDescContainer: Frame
@@ -27,11 +29,12 @@ RenownRewardTracker = {}
 ---@field Desc FontString
 
 ---@class ListItem: Frame
----@field isFactionName boolean?
+---@field isFactionName? boolean
 ---@field factionID number
 ---@field Bg Texture
 ---@field FactionBg Texture
 ---@field IconDescContainer ListItemIconDescContainer
+---@field RewardType FontString
 
 ---@class RewardCost
 ---@field id number
@@ -39,13 +42,14 @@ RenownRewardTracker = {}
 
 ---@class RewardData
 ---@field id number
----@field spellID number?
+---@field spellID? number
 ---@field factionID number
----@field level number
----@field type "Recipe"|"Profession"|"Mount"|"Cosmetic"|"Toy"|"Pet"|"Quest"|"Decor"|"Gear"
+---@field renownLevel number
+---@field requiredCharacterLevel? number
+---@field type "Recipe"|"Profession"|"Mount"|"Cosmetic"|"Toy"|"Pet"|"Quest"|"Decor"|"Gear"|"Other"
 ---@field currency? RewardCost[]
----@field skillLineID number?
----@field isProfessionKnowledge boolean?
+---@field skillLineID? number
+---@field isProfessionKnowledge? boolean
 
 ----- Undefined globals (VS Code extension) -----
 
