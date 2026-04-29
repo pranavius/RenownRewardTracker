@@ -1,21 +1,18 @@
 ---@class RenownRewardTracker
 local AddOn = select(2, ...)
 
----@class RRTMainMixin
-RRTMainMixin = {}
+---@class MainWindow
+RenownRewardTrackerMixin = {}
 
-function RRTMainMixin:OnLoad()
-    self.ResizeHandle:Init(self, RRT_WINDOW_MIN_WIDTH, RRT_WINDOW_MIN_HEIGHT, RRT_WINDOW_MAX_WIDTH, RRT_WINDOW_MAX_HEIGHT, 0)
+function RenownRewardTrackerMixin:OnLoad()
+    tinsert(UISpecialFrames, self:GetName())
+    self.ResizeHandle:Init(self, AddOn.windowMinWidth, AddOn.windowMinHeight, AddOn.windowMaxWidth, AddOn.windowMaxHeight, 0)
     self.ResizeHandle:HookScript("OnDragStart", function() self:StartSizing() end)
     self.ResizeHandle:HookScript("OnDragStop", function() self:StopMovingOrSizing() end)
     self.Title:SetText("Renown Reward Tracker")
 
-    local function isSelectedExpansion(id)
-        return id == AddOn.SelectedExpansion
-    end
-    local function setSelectedExpansion(id)
-        AddOn.SelectedExpansion = id
-    end
+    local function isSelectedExpansion(id) return id == AddOn.selectedExpansion end
+    local function setSelectedExpansion(id) AddOn.selectedExpansion = id end
 
     self.ExpansionDropdown:SetupMenu(function(_, rootDescription)
         rootDescription:CreateTitle("Expansion")
@@ -25,10 +22,14 @@ function RRTMainMixin:OnLoad()
     end)
 end
 
-function RRTMainMixin:OnDragStart()
+function RenownRewardTrackerMixin:OnShow()
+    if AddOn.initialized then AddOn:UpdateListContents() end
+end
+
+function RenownRewardTrackerMixin:OnDragStart()
     self:StartMoving()
 end
 
-function RRTMainMixin:OnDragStop()
+function RenownRewardTrackerMixin:OnDragStop()
     self:StopMovingOrSizing()
 end

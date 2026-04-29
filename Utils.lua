@@ -1,4 +1,4 @@
----@type RenownRewardTracker
+---@class RenownRewardTracker
 local AddOn = select(2, ...)
 
 AddOn.debug = false
@@ -7,7 +7,7 @@ AddOn.debug = false
 ---@param ... string|number|boolean
 ---@see print
 function AddOn.DebugPrint(...)
-    -- if AddOn.debug then
+    if AddOn.debug then
 		print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode("[RRT Debug]"), ...)
-	-- end
+	end
 end

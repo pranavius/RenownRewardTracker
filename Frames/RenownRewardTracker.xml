@@ -1,6 +1,6 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
 https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Blizzard_SharedXML/UI.xsd">
-    <Frame name="RenownRewardTracker" parent="UIParent" mixin="RRTMainMixin" enableMouse="true" movable="true" resizable="true" registerForDrag="LeftButton" frameStrata="HIGH">
+    <Frame name="RenownRewardTracker" parent="UIParent" mixin="RenownRewardTrackerMixin" enableMouse="true" movable="true" resizable="true" registerForDrag="LeftButton" frameStrata="HIGH">
         <Size x="700" y="400"/>
         <ResizeBounds>
             <minResize x="700" y="400"/>
@@ -25,6 +25,9 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
             </Layer>
         </Layers>
         <Frames>
+            <Button parentKey="CloseButton" inherits="UIPanelCloseButtonDefaultAnchors">
+                <Size x="20" y="20"/>
+            </Button>
             <Button parentKey="ResizeHandle" inherits="PanelResizeButtonTemplate" registerForDrag="LeftButton">
                 <Anchors>
                     <Anchor point="BOTTOMRIGHT"/>
@@ -40,6 +43,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
         </Frames>
         <Scripts>
             <OnLoad method="OnLoad"/>
+            <OnShow method="OnShow"/>
             <OnDragStart method="OnDragStart"/>
             <OnDragStop method="OnDragStop"/>
         </Scripts>
