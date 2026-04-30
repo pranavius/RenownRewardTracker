@@ -3,7 +3,7 @@ local AddOn = select(2, ...)
 
 ---@type RewardData[]
 AddOn.MidnightData = {
-    ----- Silvermoon Court -----
+    --#region Silvermoon Court
     {
         id = 265658, -- Silvermoon Court Cloak
         factionID = 2710,
@@ -78,8 +78,8 @@ AddOn.MidnightData = {
         renownLevel = 5,
         type = "Recipe",
         currency = {
-            { id = AddOn.Currencies.ArtisanMoxie.Inscription, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Inscription, amount = 150 },
         },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_MIDNIGHT]
     },
@@ -90,8 +90,8 @@ AddOn.MidnightData = {
         renownLevel = 5,
         type = "Recipe",
         currency = {
-            { id = AddOn.Currencies.ArtisanMoxie.Jewelcrafting, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Jewelcrafting, amount = 150 },
         },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_MIDNIGHT]
     },
@@ -102,8 +102,8 @@ AddOn.MidnightData = {
         renownLevel = 5,
         type = "Recipe",
         currency = {
-            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
         },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT]
     },
@@ -114,8 +114,8 @@ AddOn.MidnightData = {
         renownLevel = 5,
         type = "Recipe",
         currency = {
-            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
         },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT]
     },
@@ -126,8 +126,8 @@ AddOn.MidnightData = {
         renownLevel = 5,
         type = "Recipe",
         currency = {
-            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
         },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT]
     },
@@ -156,8 +156,8 @@ AddOn.MidnightData = {
         renownLevel = 5,
         type = "Recipe",
         currency = {
-            { id = AddOn.Currencies.ArtisanMoxie.Leatherworking, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Leatherworking, amount = 150 },
         },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_MIDNIGHT]
     },
@@ -168,8 +168,8 @@ AddOn.MidnightData = {
         renownLevel = 5,
         type = "Recipe",
         currency = {
-            { id = AddOn.Currencies.ArtisanMoxie.Tailoring, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Tailoring, amount = 150 },
         },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_MIDNIGHT]
     },
@@ -180,8 +180,8 @@ AddOn.MidnightData = {
         renownLevel = 6,
         type = "Profession",
         currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750 },
             { id = AddOn.Currencies.ArtisanMoxie.Tailoring, amount = 75 },
-            { id = AddOn.Currencies.VoidlightMarl, amount = 750 }
         },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_MIDNIGHT],
     },
@@ -192,8 +192,8 @@ AddOn.MidnightData = {
         renownLevel = 6,
         type = "Profession",
         currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750 },
             { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 75 },
-            { id = AddOn.Currencies.VoidlightMarl, amount = 750 }
         },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT],
     },
@@ -204,8 +204,8 @@ AddOn.MidnightData = {
         renownLevel = 6,
         type = "Profession",
         currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750 },
             { id = AddOn.Currencies.ArtisanMoxie.Jewelcrafting, amount = 75 },
-            { id = AddOn.Currencies.VoidlightMarl, amount = 750 }
         },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_MIDNIGHT],
     },
@@ -306,12 +306,100 @@ AddOn.MidnightData = {
         type = "Quest",
     },
     {
+        id = 259240, -- Sin'dorei Wine
+        factionID = 2710,
+        renownLevel = 13,
+        type = "Toy",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 4000 } },
+    },
+    {
+        id = 259082, -- Ensemble: Haven Dignitary Trappings
+        spellID = 1264423,
+        factionID = 2710,
+        renownLevel = 14,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 5000 } },
+    },
+    {
+        id = 245985, -- Floating Azure Lantern
+        factionID = 2710,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } }
+    },
+    {
+        id = 264264, -- Gilded Vigil Post
+        factionID = 2710,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } }
+    },
+    {
+        id = 257421, -- Bejewleed Silvermoon Chandelier
+        factionID = 2710,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 500 } }
+    },
+    {
+        id = 264265, -- Sanctified Flame Lantern
+        factionID = 2710,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } }
+    },
+    {
+        id = 265659, -- Silvermoon Court Epaulets
+        factionID = 2710,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 257154, -- Crimson Silvermoon Hawkstrider
+        spellID = -1,
+        factionID = 2710,
+        renownLevel = 17,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 6000 } },
+    },
+    {
+        id = 249559, -- Reverent Sin'dorei Statue
+        factionID = 2710,
+        renownLevel = 18,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 500 } }
+    },
+    {
+        id = 345941, -- Silvermoon Sanctum Focus
+        factionID = 2710,
+        renownLevel = 18,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 500 } }
+    },
+    {
         id = 93548, -- Quest: A Trove of Voidlight Marl
         factionID = 2710,
         renownLevel = 18,
         type = "Quest",
     },
-    ----- Amani Tribe -----
+    {
+        id = 257142, -- Fiery Dragonhawk
+        spellID = -1,
+        factionID = 2710,
+        renownLevel = 19,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 8000 } },
+    },
+    {
+        id = 259091, -- Ensemble: Haven Socialite's Attire
+        factionID = 2710,
+        renownLevel = 20,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 5000 } },
+    },
+    --#endregion
+    --#region Amani Tribe
     {
         id = 250799, -- Loa-Blessed Cloak
         factionID = 2696,
@@ -354,8 +442,8 @@ AddOn.MidnightData = {
         renownLevel = 5,
         type = "Recipe",
         currency = {
-            { id = AddOn.Currencies.ArtisanMoxie.Inscription, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Inscription, amount = 150 },
         },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_MIDNIGHT],
     },
@@ -366,8 +454,8 @@ AddOn.MidnightData = {
         renownLevel = 5,
         type = "Recipe",
         currency = {
-            { id = AddOn.Currencies.ArtisanMoxie.Alchemy, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Alchemy, amount = 150 },
         },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_MIDNIGHT],
     },
@@ -378,8 +466,8 @@ AddOn.MidnightData = {
         renownLevel = 5,
         type = "Recipe",
         currency = {
-            { id = AddOn.Currencies.ArtisanMoxie.Leatherworking, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Leatherworking, amount = 150 },
         },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_MIDNIGHT],
     },
@@ -402,8 +490,8 @@ AddOn.MidnightData = {
         renownLevel = 5,
         type = "Recipe",
         currency = {
-            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
         },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT],
     },
@@ -426,10 +514,46 @@ AddOn.MidnightData = {
         renownLevel = 5,
         type = "Recipe",
         currency = {
-            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
         },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 250924, -- Whisper of the Loa: Mining
+        spellID = 1251674,
+        factionID = 2696,
+        renownLevel = 6,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750 },
+            { id = AddOn.Currencies.ArtisanMoxie.Mining, amount = 75 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Mining][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 250923, -- Whisper of the Loa: Skinning
+        spellID = 1251673,
+        factionID = 2696,
+        renownLevel = 6,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750 },
+            { id = AddOn.Currencies.ArtisanMoxie.Skinning, amount = 75 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Skinning][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 250922, -- Whisper of the Loa: Leatherworking
+        spellID = 1251672,
+        factionID = 2696,
+        renownLevel = 6,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750 },
+            { id = AddOn.Currencies.ArtisanMoxie.Leatherworking, amount = 75 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_MIDNIGHT],
     },
     {
         id = 92386, -- Quest: A Handful of Voidlight Marl
@@ -438,10 +562,74 @@ AddOn.MidnightData = {
         type = "Quest",
     },
     {
+        id = 264350, -- Carved Idol of Akil'zon, Loa of Victory
+        factionID = 2696,
+        renownLevel = 7,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } }
+    },
+    {
+        id = 256933, -- Carved Idol of Jan'alai, Loa of Fire
+        factionID = 2696,
+        renownLevel = 7,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } }
+    },
+    {
+        id = 256927, -- Carved Idol of Nalorakk, Loa of War
+        factionID = 2696,
+        renownLevel = 7,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } }
+    },
+    {
+        id = 258290, -- Carved Idol of Halazzi, Loa of the Hunt
+        factionID = 2696,
+        renownLevel = 7,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } }
+    },
+    {
+        id = 93931, -- Quest: An Abundance of Wealth
+        factionID = 2696,
+        renownLevel = 9,
+        requiredCharacterLevel = 90, -- Also requires Abundance unlocked (TODO: Figure out a way to check for this)
+        type = "Quest",
+    },
+    {
+        id = 250800, -- Loa-Blessed Tabard
+        factionID = 2696,
+        renownLevel = 10,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
         id = 94813, -- Quest: Fine Fashion Funding
         factionID = 2696,
         renownLevel = 10,
         type = "Quest",
+    },
+    {
+        id = 258549, -- Burning Amani Pinecone
+        factionID = 2696,
+        renownLevel = 11,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } }
+    },
+    {
+        id = 264333, -- Amani Incense Burner
+        factionID = 2696,
+        renownLevel = 11,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150 } }
+    },
+    {
+        id = 250863, -- Naloki
+        spellID = -1,
+        factionID = 2696,
+        renownLevel = 12,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 2500 } },
     },
     {
         id = 92387, -- Quest: A Cluster of Voidlight Marl
@@ -450,11 +638,98 @@ AddOn.MidnightData = {
         type = "Quest",
     },
     {
+        id = 250974, -- Akil'zon's Updraft
+        factionID = 2696,
+        renownLevel = 13,
+        type = "Toy",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 4000 } },
+    },
+    {
+        id = 256934, -- Boiling Amani Cauldron
+        factionID = 2696,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } }
+    },
+    {
+        id = 256926, -- Empty Amani Cauldron
+        factionID = 2696,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } }
+    },
+    {
+        id = 256924, -- Hash'ey Heartbroth Cauldron
+        factionID = 2696,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } }
+    },
+    {
+        id = 250801, -- Loa-Blessed Shoulderguards
+        factionID = 2696,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 257219, -- Amani Blessed Bear
+        spellID = -1,
+        factionID = 2696,
+        renownLevel = 17,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 6000 } },
+    },
+    {
+        id = 260516, -- Visage of Jan'alai, Loa of Fire
+        factionID = 2696,
+        renownLevel = 18,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 500 } }
+    },
+    {
+        id = 260515, -- Visage of Halazzi, Loa of the Hunt
+        factionID = 2696,
+        renownLevel = 18,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 500 } }
+    },
+    {
+        id = 260514, -- Visage of Nalorakk, Loa of War
+        factionID = 2696,
+        renownLevel = 18,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 500 } }
+    },
+    {
+        id = 260202, -- Visage of Akil'zon, Loa of Victory
+        factionID = 2696,
+        renownLevel = 18,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 500 } }
+    },
+    {
         id = 92388, -- Quest: A Trove of Voidlight Marl
         factionID = 2696,
         renownLevel = 18,
         type = "Quest",
     },
+    {
+        id = 250889, -- Amani Windcaller
+        spellID = -1,
+        factionID = 2696,
+        renownLevel = 19,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 8000 } },
+    },
+    {
+        id = 250855, -- Crown of the Loa-Speaker
+        factionID = 2696,
+        renownLevel = 20,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 5000 } },
+    },
+    --#endregion
 }
 
 -- Relevant API functions:

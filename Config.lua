@@ -144,11 +144,14 @@ AddOn.Currencies = {
     VoidlightMarl = 3316,
     ArtisanMoxie = {
         Alchemy = 3256,
-        Inscription = 3261,
+        Blacksmithing = 665,
         Enchanting = 3528,
-        Leatherworking = 3263,
-        Tailoring = 3266,
+        Engineering = 0,
+        Inscription = 3261,
         Jewelcrafting = 3262,
-        Blacksmithing = 665
+        Leatherworking = 3263,
+        Mining = 3264,
+        Skinning = 3265,
+        Tailoring = 3266,
     }
 }
