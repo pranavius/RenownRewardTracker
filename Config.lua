@@ -9,6 +9,20 @@ AddOn.selectedExpansion = LE_EXPANSION_MIDNIGHT
 AddOn.iconFallbackTextureID = 134400
 AddOn.initialized = false
 
+AddOn.DatabaseDefaults = {
+    toggles = {
+        mount = true,
+        recipe = true,
+        profession = true,
+        cosmetic = true,
+        toy = true,
+        pet = true,
+        quest = true,
+        decor = true,
+        gear = true,
+    }
+}
+
 AddOn.SupportedExpansions = {
     [LE_EXPANSION_MIDNIGHT] = "Midnight",
     [LE_EXPANSION_WAR_WITHIN] = "The War Within",

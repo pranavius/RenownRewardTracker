@@ -4,6 +4,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
         <Size x="100" y="20"/>
         <KeyValues>
             <KeyValue key="label" value="" type="string"/>
+            <KeyValue key="toggleName" value="" type="string"/>
         </KeyValues>
         <Layers>
             <Layer level="OVERLAY">
@@ -16,7 +17,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
             </Layer>
         </Layers>
         <Frames>
-            <Button name="$parentFilterToggleButton" parentKey="Toggle" inherits="UIMenuButtonStretchTemplate">
+            <Button name="$parentFilterToggleButton" parentKey="Toggle" inherits="InsecureActionButtonTemplate">
                 <Size x="20" y="20"/>
                 <Anchors>
                     <Anchor point="LEFT"/>

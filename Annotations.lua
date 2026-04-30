@@ -42,6 +42,7 @@ RenownRewardTracker = {}
 ---@field hiddenAtlas string
 ---@field hiddenAtlasPressed string
 ---@field label string
+---@field toggleName string
 ---@field Toggle Button
 ---@field Desc FontString
 
@@ -58,7 +59,6 @@ RenownRewardTracker = {}
 ---@field type "Recipe"|"Profession"|"Mount"|"Cosmetic"|"Toy"|"Pet"|"Quest"|"Decor"|"Gear"|"Other"
 ---@field currency? RewardCost[]
 ---@field skillLineID? number
----@field isProfessionKnowledge? boolean
 
 ----- Undefined globals (VS Code extension) -----
 

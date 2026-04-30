@@ -54,12 +54,21 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                     </Layer>
                 </Layers>
                 <Frames>
-                    <Frame parentKey="ToggleAll" inherits="RRTFilterTemplate">
+                    <!-- <Frame parentKey="ToggleAll" inherits="RRTFilterTemplate">
                         <KeyValues>
                             <KeyValue key="label" value="Toggle All" type="string"/>
                         </KeyValues>
                         <Anchors>
                             <Anchor point="TOPLEFT" relativeKey="$parent.FiltersContainer" relativePoint="TOPLEFT" x="5" y="-10"/>
+                        </Anchors>
+                    </Frame> -->
+                    <Frame parentKey="ToggleDecor" inherits="RRTFilterTemplate">
+                        <KeyValues>
+                            <KeyValue key="label" value="Decor" />
+                            <KeyValue key="toggleName" value="decor" />
+                        </KeyValues>
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeKey="$parent.FilterContainers" relativePoint="TOPLEFT" x="5" y="-10"/>
                         </Anchors>
                     </Frame>
                 </Frames>

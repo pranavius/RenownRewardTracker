@@ -4,6 +4,7 @@
 ## Author: @project-author@
 ## Version: @project-version@
 ## SavedVariables: RRT_DB
+## LoadSavedVariablesFirst: 1
 ## X-Flavor: retail
 ## X-License: GNU General Public License
 

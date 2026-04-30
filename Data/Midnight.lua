@@ -184,7 +184,6 @@ AddOn.MidnightData = {
             { id = AddOn.Currencies.VoidlightMarl, amount = 750 }
         },
         skillLineID = AddOn.ExpacSkillLines[AddOn.Professions.Tailoring][LE_EXPANSION_MIDNIGHT],
-        isProfessionKnowledge = true
     },
     {
         id = 257600, -- Skill Issue: Enchanting
@@ -197,7 +196,6 @@ AddOn.MidnightData = {
             { id = AddOn.Currencies.VoidlightMarl, amount = 750 }
         },
         skillLineID = AddOn.ExpacSkillLines[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT],
-        isProfessionKnowledge = true
     },
     {
         id = 257599, -- Skill Issue: Jewelcrafting
@@ -210,7 +208,6 @@ AddOn.MidnightData = {
             { id = AddOn.Currencies.VoidlightMarl, amount = 750 }
         },
         skillLineID = AddOn.ExpacSkillLines[AddOn.Professions.Jewelcrafting][LE_EXPANSION_MIDNIGHT],
-        isProfessionKnowledge = true
     },
     {
         id = 93200, -- Quest: A Handful of Voidlight Marl

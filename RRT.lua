@@ -19,7 +19,7 @@ end)
 
 EventFrame:RegisterEvent("ADDON_LOADED")
 
-RRT_DB = RRT_DB or {}
+RRT_DB = RRT_DB or AddOn.DatabaseDefaults
 
 function AddOn:Initialize()
     self:CreateMidnightCache()
