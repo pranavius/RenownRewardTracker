@@ -86,13 +86,7 @@ function AddOn.ShouldRewardBeListed(reward)
 
     if reward.type == "Quest" then return not C_QuestLog.IsQuestFlaggedCompleted(reward.id) end
     
-    if reward.skillLineID then
-        local midnightProfInfo = C_TradeSkillUI.GetProfessionInfoBySkillLineID(reward.skillLineID)
-        -- Max Skill Level 0 indicates that the profession is not learned
-        if midnightProfInfo.maxSkillLevel == 0 then
-            return false
-        end
-    end
+    if reward.profSpellID then return C_SpellBook.IsSpellKnown(reward.profSpellID) end
 
     return true
 end

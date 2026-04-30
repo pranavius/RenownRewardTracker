@@ -89,9 +89,9 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                             <Anchor point="TOPLEFT" relativeTo="$parentToggleQuests" relativePoint="BOTTOMLEFT" y="-5"/>
                         </Anchors>
                     </Frame>
-                    <Frame name="$parentToggleProfKnowledge" parentKey="ToggleProfKnowledge" inherits="RRTFilterTemplate">
+                    <Frame name="$parentToggleProfession" parentKey="ToggleProfession" inherits="RRTFilterTemplate">
                         <KeyValues>
-                            <KeyValue key="label" value="Prof. Knowledge" />
+                            <KeyValue key="label" value="Profession" />
                             <KeyValue key="toggleName" value="profession" />
                         </KeyValues>
                         <Anchors>
@@ -104,7 +104,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                             <KeyValue key="toggleName" value="mount" />
                         </KeyValues>
                         <Anchors>
-                            <Anchor point="TOPLEFT" relativeTo="$parentToggleProfKnowledge" relativePoint="BOTTOMLEFT" y="-5"/>
+                            <Anchor point="TOPLEFT" relativeTo="$parentToggleProfession" relativePoint="BOTTOMLEFT" y="-5"/>
                         </Anchors>
                     </Frame>
                     <Frame name="$parentToggleToys" parentKey="ToggleToys" inherits="RRTFilterTemplate">

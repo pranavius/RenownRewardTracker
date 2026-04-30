@@ -23,6 +23,13 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                         <Anchor point="BOTTOMLEFT" x="205"/>
                     </Anchors>
                 </FontString>
+                <FontString parentKey="CurrencyDisplay" inherits="GameFontHighlightSmall" justifyH="LEFT">
+                    <Size x="200"/>
+                    <Anchors>
+                        <Anchor point="TOPLEFT" x="305"/>
+                        <Anchor point="BOTTOMLEFT" x="305"/>
+                    </Anchors>
+                </FontString>
             </Layer>
         </Layers>
         <Frames>

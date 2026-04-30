@@ -34,6 +34,7 @@
 ---@field FactionBg Texture
 ---@field IconDescContainer ListItemIconDescContainer
 ---@field RewardType FontString
+---@field CurrencyDisplay FontString
 
 ---@class ListFilter: Frame
 ---@field visibleAtlas string
@@ -57,7 +58,7 @@
 ---@field requiredCharacterLevel? number
 ---@field type "Recipe"|"Profession"|"Mount"|"Cosmetic"|"Toy"|"Pet"|"Quest"|"Decor"|"Gear"|"Other"
 ---@field currency? RewardCost[]
----@field skillLineID? number
+---@field profSpellID? number
 
 ----- Undefined globals (VS Code extension) -----
 

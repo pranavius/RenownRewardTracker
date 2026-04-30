@@ -81,7 +81,7 @@ AddOn.MidnightData = {
             { id = AddOn.Currencies.ArtisanMoxie.Inscription, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
         },
-        skillLineID = AddOn.ExpacSkillLines[AddOn.Professions.Inscription][LE_EXPANSION_MIDNIGHT]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_MIDNIGHT]
     },
     {
         id = 259363, -- Design: Bejeweled Sin'dorei Lyre
@@ -93,7 +93,7 @@ AddOn.MidnightData = {
             { id = AddOn.Currencies.ArtisanMoxie.Jewelcrafting, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
         },
-        skillLineID = AddOn.ExpacSkillLines[AddOn.Professions.Jewelcrafting][LE_EXPANSION_MIDNIGHT]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_MIDNIGHT]
     },
     {
         id = 256760, -- Formula: Enchant Ring - Silvermoon's Tenacity
@@ -105,7 +105,7 @@ AddOn.MidnightData = {
             { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
         },
-        skillLineID = AddOn.ExpacSkillLines[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT]
     },
     {
         id = 259374, -- Formula: Spellbound Tome of Thalassian Magics
@@ -117,7 +117,7 @@ AddOn.MidnightData = {
             { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
         },
-        skillLineID = AddOn.ExpacSkillLines[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT]
     },
     {
         id = 268042, -- Formula: Endless Codex of Blooming Light
@@ -129,7 +129,7 @@ AddOn.MidnightData = {
             { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
         },
-        skillLineID = AddOn.ExpacSkillLines[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT]
     },
     {
         id = 265528, -- Plans: Gilded Silvermoon Anvil
@@ -138,7 +138,7 @@ AddOn.MidnightData = {
         renownLevel = 5,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.ArtisanMoxie.Blacksmithing, amount = 150 } },
-        skillLineID = AddOn.ExpacSkillLines[AddOn.Professions.Blacksmithing][LE_EXPANSION_MIDNIGHT]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_MIDNIGHT]
     },
     {
         id = 265532, -- Plans: Gilded Silvermoon Hanger
@@ -147,7 +147,7 @@ AddOn.MidnightData = {
         renownLevel = 5,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.ArtisanMoxie.Blacksmithing, amount = 150 } },
-        skillLineID = AddOn.ExpacSkillLines[AddOn.Professions.Blacksmithing][LE_EXPANSION_MIDNIGHT]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_MIDNIGHT]
     },
     {
         id = 256636, -- Pattern: Row Walker's Deflectors
@@ -159,7 +159,7 @@ AddOn.MidnightData = {
             { id = AddOn.Currencies.ArtisanMoxie.Leatherworking, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
         },
-        skillLineID = AddOn.ExpacSkillLines[AddOn.Professions.Leatherworking][LE_EXPANSION_MIDNIGHT]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_MIDNIGHT]
     },
     {
         id = 258124, -- Pattern: Arcanoweave Spellthread
@@ -171,7 +171,7 @@ AddOn.MidnightData = {
             { id = AddOn.Currencies.ArtisanMoxie.Tailoring, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
         },
-        skillLineID = AddOn.ExpacSkillLines[AddOn.Professions.Tailoring][LE_EXPANSION_MIDNIGHT]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_MIDNIGHT]
     },
     {
         id = 257601, -- Skill Issue: Tailoring
@@ -183,7 +183,7 @@ AddOn.MidnightData = {
             { id = AddOn.Currencies.ArtisanMoxie.Tailoring, amount = 75 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 750 }
         },
-        skillLineID = AddOn.ExpacSkillLines[AddOn.Professions.Tailoring][LE_EXPANSION_MIDNIGHT],
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_MIDNIGHT],
     },
     {
         id = 257600, -- Skill Issue: Enchanting
@@ -195,7 +195,7 @@ AddOn.MidnightData = {
             { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 75 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 750 }
         },
-        skillLineID = AddOn.ExpacSkillLines[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT],
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT],
     },
     {
         id = 257599, -- Skill Issue: Jewelcrafting
@@ -207,7 +207,7 @@ AddOn.MidnightData = {
             { id = AddOn.Currencies.ArtisanMoxie.Jewelcrafting, amount = 75 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 750 }
         },
-        skillLineID = AddOn.ExpacSkillLines[AddOn.Professions.Jewelcrafting][LE_EXPANSION_MIDNIGHT],
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_MIDNIGHT],
     },
     {
         id = 93200, -- Quest: A Handful of Voidlight Marl
@@ -313,6 +313,13 @@ AddOn.MidnightData = {
     },
     ----- Amani Tribe -----
     {
+        id = 250799, -- Loa-Blessed Cloak
+        factionID = 2696,
+        renownLevel = 2,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
         id = 267642, -- Worn Amani Heartstring Pendant
         factionID = 2696,
         renownLevel = 2,
@@ -325,6 +332,104 @@ AddOn.MidnightData = {
         renownLevel = 2,
         type = "Gear",
         currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 25 } }
+    },
+    {
+        id = 263318, -- Simple Amani Basket
+        factionID = 2696,
+        renownLevel = 3,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150 } }
+    },
+    {
+        id = 263320, -- Rope-Bound Amani Basket
+        factionID = 2696,
+        renownLevel = 3,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150 } }
+    },
+    {
+        id = 251629, -- Technique: Contract: The Amani Tribe
+        spellID = 1230052,
+        factionID = 2696,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.ArtisanMoxie.Inscription, amount = 150 },
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 258305, -- Recipe: Amani Extract
+        spellID = -1,
+        factionID = 2696,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.ArtisanMoxie.Alchemy, amount = 150 },
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 256647, -- Pattern: Forest Hunter's Armor Kit
+        spellID = -1,
+        factionID = 2696,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.ArtisanMoxie.Leatherworking, amount = 150 },
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 256717, -- Design: Loa Worshipper's Band
+        spellID = -1,
+        factionID = 2696,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.ArtisanMoxie.Jewelcrafting, amount = 150 },
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 256741, -- Formula: Enchant Weapon - Strength of Halazzi
+        spellID = -1,
+        factionID = 2696,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 256744, -- Formula: Enchant Tool - Amani Perception
+        spellID = -1,
+        factionID = 2696,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 268043, -- Formula: Endless Codex of Nature's Grace
+        spellID = -1,
+        factionID = 2696,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT],
     },
     {
         id = 92386, -- Quest: A Handful of Voidlight Marl
@@ -394,11 +499,12 @@ end
 function AddOn.MidnightDataProviderInit(frame, reward)
     if not frame or not reward then return end
 
+    frame.isFactionName = false
     frame.Bg:Hide()
     frame.FactionBg:Hide()
     frame.IconDescContainer.Icon:SetScript("OnEnter", nil)
     frame.IconDescContainer.Icon:SetScript("OnLeave", nil)
-    frame.isFactionName = false
+    frame.CurrencyDisplay:SetText("")
 
     if reward.id == 0 then
         frame.isFactionName = true
@@ -438,5 +544,22 @@ function AddOn.MidnightDataProviderInit(frame, reward)
             frame.IconDescContainer.Desc:SetText(cacheData.itemName or reward.type.." "..reward.id)
         end
     end
+
     if not frame.isFactionName then frame.RewardType:SetText(reward.type) end
+
+    if reward.currency and #reward.currency > 0 then
+        local costText = ""
+        for _, curr in ipairs(reward.currency) do
+            local currencyInfo = C_CurrencyInfo.GetCurrencyInfo(curr.id)
+            local currencyText = AddOn.GetTextureString(currencyInfo.iconFileID)
+            if (currencyInfo.quantity < curr.amount) then
+                currencyText = currencyText.." "..ERROR_COLOR:WrapTextInColorCode("x"..curr.amount)
+            else
+                currencyText = currencyText.." x"..curr.amount
+            end
+            costText = costText..currencyText.."    "
+        end
+
+        frame.CurrencyDisplay:SetText(costText)
+    end
 end
