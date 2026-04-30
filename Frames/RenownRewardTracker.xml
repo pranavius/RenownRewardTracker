@@ -62,13 +62,85 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                             <Anchor point="TOPLEFT" relativeKey="$parent.FiltersContainer" relativePoint="TOPLEFT" x="5" y="-10"/>
                         </Anchors>
                     </Frame> -->
-                    <Frame parentKey="ToggleDecor" inherits="RRTFilterTemplate">
+                    <Frame name="$parentToggleDecor" parentKey="ToggleDecor" inherits="RRTFilterTemplate">
                         <KeyValues>
                             <KeyValue key="label" value="Decor" />
                             <KeyValue key="toggleName" value="decor" />
                         </KeyValues>
                         <Anchors>
                             <Anchor point="TOPLEFT" relativeKey="$parent.FilterContainers" relativePoint="TOPLEFT" x="5" y="-10"/>
+                        </Anchors>
+                    </Frame>
+                    <Frame name="$parentToggleQuests" parentKey="ToggleQuests" inherits="RRTFilterTemplate">
+                        <KeyValues>
+                            <KeyValue key="label" value="Quests" />
+                            <KeyValue key="toggleName" value="quest" />
+                        </KeyValues>
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parentToggleDecor" relativePoint="BOTTOMLEFT" y="-5"/>
+                        </Anchors>
+                    </Frame>
+                    <Frame name="$parentToggleRecipes" parentKey="ToggleRecipes" inherits="RRTFilterTemplate">
+                        <KeyValues>
+                            <KeyValue key="label" value="Recipes" />
+                            <KeyValue key="toggleName" value="recipe" />
+                        </KeyValues>
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parentToggleQuests" relativePoint="BOTTOMLEFT" y="-5"/>
+                        </Anchors>
+                    </Frame>
+                    <Frame name="$parentToggleProfKnowledge" parentKey="ToggleProfKnowledge" inherits="RRTFilterTemplate">
+                        <KeyValues>
+                            <KeyValue key="label" value="Prof. Knowledge" />
+                            <KeyValue key="toggleName" value="profession" />
+                        </KeyValues>
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parentToggleRecipes" relativePoint="BOTTOMLEFT" y="-5"/>
+                        </Anchors>
+                    </Frame>
+                    <Frame name="$parentToggleMounts" parentKey="ToggleMounts" inherits="RRTFilterTemplate">
+                        <KeyValues>
+                            <KeyValue key="label" value="Mounts" />
+                            <KeyValue key="toggleName" value="mount" />
+                        </KeyValues>
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parentToggleProfKnowledge" relativePoint="BOTTOMLEFT" y="-5"/>
+                        </Anchors>
+                    </Frame>
+                    <Frame name="$parentToggleToys" parentKey="ToggleToys" inherits="RRTFilterTemplate">
+                        <KeyValues>
+                            <KeyValue key="label" value="Toys" />
+                            <KeyValue key="toggleName" value="toy" />
+                        </KeyValues>
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parentToggleMounts" relativePoint="BOTTOMLEFT" y="-5"/>
+                        </Anchors>
+                    </Frame>
+                    <Frame name="$parentTogglePets" parentKey="TogglePets" inherits="RRTFilterTemplate">
+                        <KeyValues>
+                            <KeyValue key="label" value="Pets" />
+                            <KeyValue key="toggleName" value="pet" />
+                        </KeyValues>
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parentToggleToys" relativePoint="BOTTOMLEFT" y="-5"/>
+                        </Anchors>
+                    </Frame>
+                    <Frame name="$parentToggleCosmetics" parentKey="ToggleCosmetics" inherits="RRTFilterTemplate">
+                        <KeyValues>
+                            <KeyValue key="label" value="Cosmetics" />
+                            <KeyValue key="toggleName" value="cosmetic" />
+                        </KeyValues>
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parentTogglePets" relativePoint="BOTTOMLEFT" y="-5"/>
+                        </Anchors>
+                    </Frame>
+                    <Frame name="$parentToggleGear" parentKey="ToggleGear" inherits="RRTFilterTemplate">
+                        <KeyValues>
+                            <KeyValue key="label" value="Gear" />
+                            <KeyValue key="toggleName" value="gear" />
+                        </KeyValues>
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parentToggleCosmetics" relativePoint="BOTTOMLEFT" y="-5"/>
                         </Anchors>
                     </Frame>
                 </Frames>

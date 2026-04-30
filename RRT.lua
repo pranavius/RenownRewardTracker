@@ -34,6 +34,11 @@ function AddOn:Initialize()
     RRTScrollBox:InitializeScrollView()
 end
 
+function AddOn.ApplyFilters()
+    if not AddOn.initialized then return end
+    AddOn:UpdateListContents()
+end
+
 SLASH_RRT1 = "/renownrewardtracker"
 SLASH_RRT2 = "/rrt"
 SlashCmdList["RRT"] = function(msg)
@@ -54,6 +59,7 @@ function AddOn:UpdateListContents()
     local listContents = {}
     local seenFactions = {}
     for _, reward in ipairs(self.MidnightData) do
+        ---@cast reward RewardData
         if self.ShouldRewardBeListed(reward) then
             if not seenFactions[reward.factionID] then
                 seenFactions[reward.factionID] = true
@@ -71,6 +77,8 @@ end
 ---@param reward RewardData
 ---@return boolean `true` if reward should be shown, `false` otherwise
 function AddOn.ShouldRewardBeListed(reward)
+    if RRT_DB and not RRT_DB.toggles[reward.type:lower()] then return false end
+    
     if reward.requiredCharacterLevel then return UnitLevel("player") >= reward.requiredCharacterLevel end
 
     local currentRenownLevel = C_MajorFactions.GetCurrentRenownLevel(reward.factionID)

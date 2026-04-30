@@ -22,7 +22,6 @@
 ---@field ResizeHandle PanelResizeButton
 ---@field ExpansionDropdown ExpansionDropdownButton
 ---@field CloseButton Button
-RenownRewardTracker = {}
 
 ---@class ListItemIconDescContainer: Frame
 ---@field Icon Texture
@@ -63,5 +62,3 @@ RenownRewardTracker = {}
 ----- Undefined globals (VS Code extension) -----
 
 LE_EXPANSION_MIDNIGHT = 11
-RRTScrollBox = {}
-RRTScrollBar = {}

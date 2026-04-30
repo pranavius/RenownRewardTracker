@@ -1,3 +1,6 @@
+---@type RenownRewardTracker
+local AddOn = select(2, ...)
+
 ---@class ListFilter
 RRTFilterMixin = {}
 
@@ -10,14 +13,16 @@ function RRTFilterMixin:OnLoad()
     self.Desc:SetText(self.label)
     if self.toggleName and strtrim(self.toggleName) ~= "" and RRT_DB and RRT_DB.toggles[self.toggleName] ~= nil then
         if RRT_DB.toggles[self.toggleName] then self:SetButtonEnabled() else self:SetButtonDisabled() end
-        self.Toggle:HookScript("OnClick", function()
-            RRT_DB.toggles[self.toggleName] = not RRT_DB.toggles[self.toggleName]
-            if RRT_DB.toggles[self.toggleName] then self:SetButtonEnabled() else self:SetButtonDisabled() end
-        end)
     else
         -- Initialize filter with "visible" or "enabled" texture
         self:SetButtonEnabled()
     end
+    
+    self.Toggle:HookScript("OnClick", function()
+        RRT_DB.toggles[self.toggleName] = not RRT_DB.toggles[self.toggleName]
+        if RRT_DB.toggles[self.toggleName] then self:SetButtonEnabled() else self:SetButtonDisabled() end
+        AddOn.ApplyFilters()
+    end)
 end
 
 function RRTFilterMixin:SetButtonEnabled()
