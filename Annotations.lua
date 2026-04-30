@@ -36,6 +36,15 @@ RenownRewardTracker = {}
 ---@field IconDescContainer ListItemIconDescContainer
 ---@field RewardType FontString
 
+---@class ListFilter: Frame
+---@field visibleAtlas string
+---@field visibleAtlasPressed string
+---@field hiddenAtlas string
+---@field hiddenAtlasPressed string
+---@field label string
+---@field Toggle Button
+---@field Desc FontString
+
 ---@class RewardCost
 ---@field id number
 ---@field amount number

@@ -40,6 +40,30 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                 </Anchors>
                 <!-- TODO: Look into overwriting the default background texture to align better with the modern look -->
             </DropdownButton>
+            <Frame parentKey="FiltersContainer">
+                <Size x="160"/>
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeKey="$parent.ExpansionDropdown" relativePoint="BOTTOMLEFT" y="-10"/>
+                    <Anchor point="BOTTOMLEFT" relativeKey="$parent.ExpansionDropdown" y="-310"/>
+                </Anchors>
+                <Layers>
+                    <Layer level="BACKGROUND">
+                        <Texture parentKey="Bg" setAllPoints="true">
+                            <Color color="BLACK_FONT_COLOR" a="0.9"/>
+                        </Texture>
+                    </Layer>
+                </Layers>
+                <Frames>
+                    <Frame parentKey="ToggleAll" inherits="RRTFilterTemplate">
+                        <KeyValues>
+                            <KeyValue key="label" value="Toggle All" type="string"/>
+                        </KeyValues>
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeKey="$parent.FiltersContainer" relativePoint="TOPLEFT" x="5" y="-10"/>
+                        </Anchors>
+                    </Frame>
+                </Frames>
+            </Frame>
         </Frames>
         <Scripts>
             <OnLoad method="OnLoad"/>

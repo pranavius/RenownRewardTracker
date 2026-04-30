@@ -14,6 +14,8 @@ Utils.lua
 Data\Midnight.lua
 Templates\RRTListItemMixins.lua
 Templates\RRTListItemTemplates.xml
+Templates\RRTFilterMixin.lua
+Templates\RRTFilterTemplate.xml
 Frames\RenownRewardTrackerMixin.lua
 Frames\RenownRewardTracker.xml
 Frames\RRTScrollBoxMixin.lua
