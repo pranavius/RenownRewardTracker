@@ -27,6 +27,9 @@
 ---@field Icon Texture
 ---@field Desc FontString
 
+---@class CurrencyDisplayButton: Button
+---@field Text FontString
+
 ---@class ListItem: Frame
 ---@field isFactionName? boolean
 ---@field factionID number
@@ -34,16 +37,14 @@
 ---@field FactionBg Texture
 ---@field IconDescContainer ListItemIconDescContainer
 ---@field RewardType FontString
----@field CurrencyDisplay FontString
+---@field CurrencyDisplay CurrencyDisplayButton
 
----@class ListFilter: Frame
+---@class ListFilter: Button
 ---@field visibleAtlas string
----@field visibleAtlasPressed string
 ---@field hiddenAtlas string
----@field hiddenAtlasPressed string
 ---@field label string
 ---@field toggleName string
----@field Toggle Button
+---@field Icon Texture
 ---@field Desc FontString
 
 ---@class RewardCost
@@ -60,6 +61,8 @@
 ---@field currency? RewardCost[]
 ---@field profSpellID? number
 
------ Undefined globals (VS Code extension) -----
-
-LE_EXPANSION_MIDNIGHT = 11
+---@class CurrencyTooltipData
+---@field icon number
+---@field name string
+---@field amount number
+---@field obtained number

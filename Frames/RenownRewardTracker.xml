@@ -12,7 +12,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
         <Layers>
             <Layer level="BACKGROUND">
                 <Texture parentKey="Bg" setAllPoints="true">
-                    <Color color="BLACK_FONT_COLOR" a="0.95"/>
+                    <Color color="BLACK_FONT_COLOR" a="0.9"/>
                 </Texture>
             </Layer>
             <Layer level="OVERLAY">
@@ -54,7 +54,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                     </Layer>
                 </Layers>
                 <Frames>
-                    <Frame name="$parentToggleDecor" parentKey="ToggleDecor" inherits="RRTFilterTemplate">
+                    <Button name="$parentToggleDecor" parentKey="ToggleDecor" inherits="RRTFilter2Template">
                         <KeyValues>
                             <KeyValue key="label" value="Decor" />
                             <KeyValue key="toggleName" value="decor" />
@@ -62,8 +62,8 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                         <Anchors>
                             <Anchor point="TOPLEFT" relativeKey="$parent.FilterContainers" relativePoint="TOPLEFT" x="5" y="-10"/>
                         </Anchors>
-                    </Frame>
-                    <Frame name="$parentToggleQuests" parentKey="ToggleQuests" inherits="RRTFilterTemplate">
+                    </Button>
+                    <Button name="$parentToggleQuests" parentKey="ToggleQuests" inherits="RRTFilter2Template">
                         <KeyValues>
                             <KeyValue key="label" value="Quests" />
                             <KeyValue key="toggleName" value="quest" />
@@ -71,8 +71,8 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                         <Anchors>
                             <Anchor point="TOPLEFT" relativeTo="$parentToggleDecor" relativePoint="BOTTOMLEFT" y="-5"/>
                         </Anchors>
-                    </Frame>
-                    <Frame name="$parentToggleRecipes" parentKey="ToggleRecipes" inherits="RRTFilterTemplate">
+                    </Button>
+                    <Button name="$parentToggleRecipes" parentKey="ToggleRecipes" inherits="RRTFilter2Template">
                         <KeyValues>
                             <KeyValue key="label" value="Recipes" />
                             <KeyValue key="toggleName" value="recipe" />
@@ -80,8 +80,8 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                         <Anchors>
                             <Anchor point="TOPLEFT" relativeTo="$parentToggleQuests" relativePoint="BOTTOMLEFT" y="-5"/>
                         </Anchors>
-                    </Frame>
-                    <Frame name="$parentToggleProfession" parentKey="ToggleProfession" inherits="RRTFilterTemplate">
+                    </Button>
+                    <Button name="$parentToggleProfession" parentKey="ToggleProfession" inherits="RRTFilter2Template">
                         <KeyValues>
                             <KeyValue key="label" value="Profession" />
                             <KeyValue key="toggleName" value="profession" />
@@ -89,8 +89,8 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                         <Anchors>
                             <Anchor point="TOPLEFT" relativeTo="$parentToggleRecipes" relativePoint="BOTTOMLEFT" y="-5"/>
                         </Anchors>
-                    </Frame>
-                    <Frame name="$parentToggleMounts" parentKey="ToggleMounts" inherits="RRTFilterTemplate">
+                    </Button>
+                    <Button name="$parentToggleMounts" parentKey="ToggleMounts" inherits="RRTFilter2Template">
                         <KeyValues>
                             <KeyValue key="label" value="Mounts" />
                             <KeyValue key="toggleName" value="mount" />
@@ -98,8 +98,8 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                         <Anchors>
                             <Anchor point="TOPLEFT" relativeTo="$parentToggleProfession" relativePoint="BOTTOMLEFT" y="-5"/>
                         </Anchors>
-                    </Frame>
-                    <Frame name="$parentToggleToys" parentKey="ToggleToys" inherits="RRTFilterTemplate">
+                    </Button>
+                    <Button name="$parentToggleToys" parentKey="ToggleToys" inherits="RRTFilter2Template">
                         <KeyValues>
                             <KeyValue key="label" value="Toys" />
                             <KeyValue key="toggleName" value="toy" />
@@ -107,8 +107,8 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                         <Anchors>
                             <Anchor point="TOPLEFT" relativeTo="$parentToggleMounts" relativePoint="BOTTOMLEFT" y="-5"/>
                         </Anchors>
-                    </Frame>
-                    <Frame name="$parentTogglePets" parentKey="TogglePets" inherits="RRTFilterTemplate">
+                    </Button>
+                    <Button name="$parentTogglePets" parentKey="TogglePets" inherits="RRTFilter2Template">
                         <KeyValues>
                             <KeyValue key="label" value="Pets" />
                             <KeyValue key="toggleName" value="pet" />
@@ -116,8 +116,8 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                         <Anchors>
                             <Anchor point="TOPLEFT" relativeTo="$parentToggleToys" relativePoint="BOTTOMLEFT" y="-5"/>
                         </Anchors>
-                    </Frame>
-                    <Frame name="$parentToggleCosmetics" parentKey="ToggleCosmetics" inherits="RRTFilterTemplate">
+                    </Button>
+                    <Button name="$parentToggleCosmetics" parentKey="ToggleCosmetics" inherits="RRTFilter2Template">
                         <KeyValues>
                             <KeyValue key="label" value="Cosmetics" />
                             <KeyValue key="toggleName" value="cosmetic" />
@@ -125,8 +125,8 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                         <Anchors>
                             <Anchor point="TOPLEFT" relativeTo="$parentTogglePets" relativePoint="BOTTOMLEFT" y="-5"/>
                         </Anchors>
-                    </Frame>
-                    <Frame name="$parentToggleGear" parentKey="ToggleGear" inherits="RRTFilterTemplate">
+                    </Button>
+                    <Button name="$parentToggleGear" parentKey="ToggleGear" inherits="RRTFilter2Template">
                         <KeyValues>
                             <KeyValue key="label" value="Gear" />
                             <KeyValue key="toggleName" value="gear" />
@@ -134,7 +134,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                         <Anchors>
                             <Anchor point="TOPLEFT" relativeTo="$parentToggleCosmetics" relativePoint="BOTTOMLEFT" y="-5"/>
                         </Anchors>
-                    </Frame>
+                    </Button>
                 </Frames>
             </Frame>
         </Frames>

@@ -779,7 +779,10 @@ function AddOn.MidnightDataProviderInit(frame, reward)
     frame.FactionBg:Hide()
     frame.IconDescContainer.Icon:SetScript("OnEnter", nil)
     frame.IconDescContainer.Icon:SetScript("OnLeave", nil)
-    frame.CurrencyDisplay:SetText("")
+    frame.CurrencyDisplay.Text:SetText("")
+    frame.CurrencyDisplay:SetScript("OnClick", nil)
+    frame.CurrencyDisplay:SetScript("OnEnter", nil)
+    frame.CurrencyDisplay:SetScript("OnLeave", nil)
 
     if reward.id == 0 then
         frame.isFactionName = true
@@ -825,6 +828,8 @@ function AddOn.MidnightDataProviderInit(frame, reward)
 
     if reward.currency and #reward.currency > 0 then
         local costText = ""
+        ---@type CurrencyTooltipData[]
+        local tooltipInfo = {}
         for _, curr in ipairs(reward.currency) do
             local currencyInfo = C_CurrencyInfo.GetCurrencyInfo(curr.id)
             local currencyText = AddOn.GetTextureString(currencyInfo.iconFileID)
@@ -833,9 +838,32 @@ function AddOn.MidnightDataProviderInit(frame, reward)
             else
                 currencyText = currencyText.." x"..curr.amount
             end
+            tinsert(tooltipInfo, {
+                icon = currencyInfo.iconFileID,
+                name = currencyInfo.name,
+                amount = curr.amount,
+                obtained = currencyInfo.quantity
+            })
             costText = costText..currencyText.."    "
         end
 
-        frame.CurrencyDisplay:SetText(costText)
+        frame.CurrencyDisplay.Text:SetText(costText)
+        frame.CurrencyDisplay:HookScript("OnClick", function() ToggleCharacter("TokenFrame") end)
+        frame.CurrencyDisplay:HookScript("OnEnter", function(fs)
+            GameTooltip:SetOwner(fs, "ANCHOR_TOP")
+            GameTooltip:SetText("Purchase Cost:", 1, 1, 1)
+            GameTooltip:AddLine(" ")
+            for _, ttInfo in ipairs(tooltipInfo) do
+                local rightText = ttInfo.obtained.." / "..ttInfo.amount
+                GameTooltip:AddDoubleLine(AddOn.GetTextureString(ttInfo.icon, 10).." "..ttInfo.name, rightText  ,
+                    nil, nil, nil, 1, 1, 1)
+            end
+            GameTooltip:AddLine(" ")
+            local gR, gG, gB = GREEN_FONT_COLOR:GetRGB()
+            GameTooltip:AddLine("<Click to open currency menu>", 0, 1, 0, false)
+            GameTooltip:AddLine("<Click to open currency menu>", gR, gG, gB, false)
+            GameTooltip:Show()
+        end)
+        frame.CurrencyDisplay:HookScript("OnLeave", function() GameTooltip:Hide() end)
     end
 end

@@ -22,6 +22,18 @@ function AddOn.GetTextureString(texture, dim)
     return "|T"..texture..":"..size..":"..size.."|t"
 end
 
+---Formats `atlas` to be displayed in-game using square dimensions. This differs from `GetTextureString` in that atlases use filenames rather than ID numbers to render
+---@param atlas string the filename or atlas alias for the texture to render
+---@param dim? number The value to be used for the height & width of the texture. Default value is `15`
+---@return string text
+function AddOn.GetAtlasString(atlas, dim)
+    local size = 15
+    if dim and type(dim) == "number" then
+        size = dim
+    end
+    return "|A:"..atlas..":"..size..":"..size.."|a"
+end
+
 ---@param speciesID number ID for the pet species
 ---@return number owned
 ---@return number limit

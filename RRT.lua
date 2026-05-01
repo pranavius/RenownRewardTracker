@@ -84,7 +84,7 @@ function AddOn.ShouldRewardBeListed(reward)
     local currentRenownLevel = C_MajorFactions.GetCurrentRenownLevel(reward.factionID)
     if currentRenownLevel < reward.renownLevel then return false end
     
-    if reward.profSpellID then return C_SpellBook.IsSpellKnown(reward.profSpellID) end
+    if reward.profSpellID and not C_SpellBook.IsSpellKnown(reward.profSpellID) then return false end
 
     return not AddOn.IsItemOwned(reward)
 end
