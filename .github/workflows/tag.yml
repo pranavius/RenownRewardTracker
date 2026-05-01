@@ -15,12 +15,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GH_PAT }}
     steps:
     - uses: actions/checkout@v4
       with:
         fetch-depth: '0'
+        token: ${{ secrets.GH_PAT }}
     - name: Bump version and push tag
       run: |
         git fetch --tags
