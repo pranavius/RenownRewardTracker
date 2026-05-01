@@ -52,7 +52,7 @@
 
 ---@class RewardData
 ---@field id number
----@field spellID? number
+---@field associatedID? number
 ---@field factionID number
 ---@field renownLevel number
 ---@field requiredCharacterLevel? number

@@ -12,7 +12,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
         <Layers>
             <Layer level="BACKGROUND">
                 <Texture parentKey="Bg" setAllPoints="true">
-                    <Color color="BLACK_FONT_COLOR" a="0.8"/>
+                    <Color color="BLACK_FONT_COLOR" a="0.95"/>
                 </Texture>
             </Layer>
             <Layer level="OVERLAY">
@@ -54,14 +54,6 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                     </Layer>
                 </Layers>
                 <Frames>
-                    <!-- <Frame parentKey="ToggleAll" inherits="RRTFilterTemplate">
-                        <KeyValues>
-                            <KeyValue key="label" value="Toggle All" type="string"/>
-                        </KeyValues>
-                        <Anchors>
-                            <Anchor point="TOPLEFT" relativeKey="$parent.FiltersContainer" relativePoint="TOPLEFT" x="5" y="-10"/>
-                        </Anchors>
-                    </Frame> -->
                     <Frame name="$parentToggleDecor" parentKey="ToggleDecor" inherits="RRTFilterTemplate">
                         <KeyValues>
                             <KeyValue key="label" value="Decor" />

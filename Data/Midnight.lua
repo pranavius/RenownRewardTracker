@@ -13,7 +13,7 @@ AddOn.MidnightData = {
     },
     {
         id = 259028, -- Ensemble: Haven's Elegant Regalia
-        spellID = 1264350,
+        associatedID = 1264350,
         factionID = 2710,
         renownLevel = 2,
         type = "Cosmetic",
@@ -49,7 +49,7 @@ AddOn.MidnightData = {
     },
     {
         id = 263223, -- Gilded Sky-Blue Drapery
-        spellID = 1269974,
+        associatedID = 1269974,
         factionID = 2710,
         renownLevel = 3,
         type = "Decor",
@@ -57,7 +57,7 @@ AddOn.MidnightData = {
     },
     {
         id = 263205, -- Crimson Silvermoon Runner
-        spellID = 1269953,
+        associatedID = 1269953,
         factionID = 2710,
         renownLevel = 3,
         type = "Decor",
@@ -65,7 +65,7 @@ AddOn.MidnightData = {
     },
     {
         id = 263206, -- Plum Eversong Rug
-        spellID = 1269956,
+        associatedID = 1269956,
         factionID = 2710,
         renownLevel = 3,
         type = "Decor",
@@ -73,7 +73,7 @@ AddOn.MidnightData = {
     },
     {
         id = 263444, -- Technique: Contract: The Silvermoon Court
-        spellID = 1230051,
+        associatedID = 1230051,
         factionID = 2710,
         renownLevel = 5,
         type = "Recipe",
@@ -85,7 +85,7 @@ AddOn.MidnightData = {
     },
     {
         id = 259363, -- Design: Bejeweled Sin'dorei Lyre
-        spellID = 1246891,
+        associatedID = 1246891,
         factionID = 2710,
         renownLevel = 5,
         type = "Recipe",
@@ -97,7 +97,7 @@ AddOn.MidnightData = {
     },
     {
         id = 256760, -- Formula: Enchant Ring - Silvermoon's Tenacity
-        spellID = 1236089,
+        associatedID = 1236089,
         factionID = 2710,
         renownLevel = 5,
         type = "Recipe",
@@ -109,7 +109,7 @@ AddOn.MidnightData = {
     },
     {
         id = 259374, -- Formula: Spellbound Tome of Thalassian Magics
-        spellID = 1246907,
+        associatedID = 1246907,
         factionID = 2710,
         renownLevel = 5,
         type = "Recipe",
@@ -121,7 +121,7 @@ AddOn.MidnightData = {
     },
     {
         id = 268042, -- Formula: Endless Codex of Blooming Light
-        spellID = 1281342,
+        associatedID = 1281342,
         factionID = 2710,
         renownLevel = 5,
         type = "Recipe",
@@ -133,7 +133,7 @@ AddOn.MidnightData = {
     },
     {
         id = 265528, -- Plans: Gilded Silvermoon Anvil
-        spellID = 1276108,
+        associatedID = 1276108,
         factionID = 2710,
         renownLevel = 5,
         type = "Recipe",
@@ -142,7 +142,7 @@ AddOn.MidnightData = {
     },
     {
         id = 265532, -- Plans: Gilded Silvermoon Hanger
-        spellID = 1276110,
+        associatedID = 1276110,
         factionID = 2710,
         renownLevel = 5,
         type = "Recipe",
@@ -151,7 +151,7 @@ AddOn.MidnightData = {
     },
     {
         id = 256636, -- Pattern: Row Walker's Deflectors
-        spellID = 1237486,
+        associatedID = 1237486,
         factionID = 2710,
         renownLevel = 5,
         type = "Recipe",
@@ -163,7 +163,7 @@ AddOn.MidnightData = {
     },
     {
         id = 258124, -- Pattern: Arcanoweave Spellthread
-        spellID = 1228975,
+        associatedID = 1228975,
         factionID = 2710,
         renownLevel = 5,
         type = "Recipe",
@@ -175,7 +175,7 @@ AddOn.MidnightData = {
     },
     {
         id = 257601, -- Skill Issue: Tailoring
-        spellID = 1261784, -- Can this be used to determine if already learned?
+        associatedID = 93201,
         factionID = 2710,
         renownLevel = 6,
         type = "Profession",
@@ -187,7 +187,7 @@ AddOn.MidnightData = {
     },
     {
         id = 257600, -- Skill Issue: Enchanting
-        spellID = 1251675,
+        associatedID = 92374,
         factionID = 2710,
         renownLevel = 6,
         type = "Profession",
@@ -199,7 +199,7 @@ AddOn.MidnightData = {
     },
     {
         id = 257599, -- Skill Issue: Jewelcrafting
-        spellID = 1261829,
+        associatedID = 93222,
         factionID = 2710,
         renownLevel = 6,
         type = "Profession",
@@ -217,7 +217,7 @@ AddOn.MidnightData = {
     },
     {
         id = 245290, -- Long Silvermoon Table
-        spellID = 1238388,
+        associatedID = 1238388,
         factionID = 2710,
         renownLevel = 7,
         type = "Decor",
@@ -225,7 +225,7 @@ AddOn.MidnightData = {
     },
     {
         id = 263228, -- Grand Lightwood Table
-        spellID = 1270129,
+        associatedID = 1270129,
         factionID = 2710,
         renownLevel = 7,
         type = "Decor",
@@ -233,7 +233,7 @@ AddOn.MidnightData = {
     },
     {
         id = 263229, -- Ornate Lightwood Table
-        spellID = 1270130,
+        associatedID = 1270130,
         factionID = 2710,
         renownLevel = 7,
         type = "Decor",
@@ -241,7 +241,7 @@ AddOn.MidnightData = {
     },
     {
         id = 256040, -- Silvermoon Gemmed Chair
-        spellID = 1259841,
+        associatedID = 1259841,
         factionID = 2710,
         renownLevel = 7,
         type = "Decor",
@@ -249,7 +249,7 @@ AddOn.MidnightData = {
     },
     {
         id = 257422, -- Gilded Sunfury Chair Chair
-        spellID = 1261548,
+        associatedID = 1261548,
         factionID = 2710,
         renownLevel = 7,
         type = "Decor",
@@ -277,7 +277,7 @@ AddOn.MidnightData = {
     },
     {
         id = 263232, -- Floating Spire Shelf
-        spellID = 1270133,
+        associatedID = 1270133,
         factionID = 2710,
         renownLevel = 11,
         type = "Decor",
@@ -285,7 +285,7 @@ AddOn.MidnightData = {
     },
     {
         id = 263234, -- Turning Silvermoon Archives
-        spellID = 1270135,
+        associatedID = 1270135,
         factionID = 2710,
         renownLevel = 11,
         type = "Decor",
@@ -293,7 +293,7 @@ AddOn.MidnightData = {
     },
     {
         id = 259224, -- Dragonhawk Munchkin
-        spellID = 1264611,
+        associatedID = 4928,
         factionID = 2710,
         renownLevel = 12,
         type = "Pet",
@@ -314,7 +314,7 @@ AddOn.MidnightData = {
     },
     {
         id = 259082, -- Ensemble: Haven Dignitary Trappings
-        spellID = 1264423,
+        associatedID = 1264423,
         factionID = 2710,
         renownLevel = 14,
         type = "Cosmetic",
@@ -357,7 +357,7 @@ AddOn.MidnightData = {
     },
     {
         id = 257154, -- Crimson Silvermoon Hawkstrider
-        spellID = -1,
+        associatedID = 2761,
         factionID = 2710,
         renownLevel = 17,
         type = "Mount",
@@ -385,7 +385,7 @@ AddOn.MidnightData = {
     },
     {
         id = 257142, -- Fiery Dragonhawk
-        spellID = -1,
+        associatedID = 2753,
         factionID = 2710,
         renownLevel = 19,
         type = "Mount",
@@ -437,7 +437,7 @@ AddOn.MidnightData = {
     },
     {
         id = 251629, -- Technique: Contract: The Amani Tribe
-        spellID = 1230052,
+        associatedID = 1230052,
         factionID = 2696,
         renownLevel = 5,
         type = "Recipe",
@@ -449,7 +449,7 @@ AddOn.MidnightData = {
     },
     {
         id = 258305, -- Recipe: Amani Extract
-        spellID = -1,
+        associatedID = 1230864,
         factionID = 2696,
         renownLevel = 5,
         type = "Recipe",
@@ -461,7 +461,7 @@ AddOn.MidnightData = {
     },
     {
         id = 256647, -- Pattern: Forest Hunter's Armor Kit
-        spellID = -1,
+        associatedID = 1237544,
         factionID = 2696,
         renownLevel = 5,
         type = "Recipe",
@@ -473,7 +473,7 @@ AddOn.MidnightData = {
     },
     {
         id = 256717, -- Design: Loa Worshipper's Band
-        spellID = -1,
+        associatedID = 1230479,
         factionID = 2696,
         renownLevel = 5,
         type = "Recipe",
@@ -485,7 +485,7 @@ AddOn.MidnightData = {
     },
     {
         id = 256741, -- Formula: Enchant Weapon - Strength of Halazzi
-        spellID = -1,
+        associatedID = 1236065,
         factionID = 2696,
         renownLevel = 5,
         type = "Recipe",
@@ -497,7 +497,7 @@ AddOn.MidnightData = {
     },
     {
         id = 256744, -- Formula: Enchant Tool - Amani Perception
-        spellID = -1,
+        associatedID = 1236063,
         factionID = 2696,
         renownLevel = 5,
         type = "Recipe",
@@ -509,7 +509,7 @@ AddOn.MidnightData = {
     },
     {
         id = 268043, -- Formula: Endless Codex of Nature's Grace
-        spellID = -1,
+        associatedID = 1281348,
         factionID = 2696,
         renownLevel = 5,
         type = "Recipe",
@@ -521,7 +521,7 @@ AddOn.MidnightData = {
     },
     {
         id = 250924, -- Whisper of the Loa: Mining
-        spellID = 1251674,
+        associatedID = 92372,
         factionID = 2696,
         renownLevel = 6,
         type = "Profession",
@@ -533,7 +533,7 @@ AddOn.MidnightData = {
     },
     {
         id = 250923, -- Whisper of the Loa: Skinning
-        spellID = 1251673,
+        associatedID = 92373,
         factionID = 2696,
         renownLevel = 6,
         type = "Profession",
@@ -545,7 +545,7 @@ AddOn.MidnightData = {
     },
     {
         id = 250922, -- Whisper of the Loa: Leatherworking
-        spellID = 1251672,
+        associatedID = 92371,
         factionID = 2696,
         renownLevel = 6,
         type = "Profession",
@@ -625,7 +625,7 @@ AddOn.MidnightData = {
     },
     {
         id = 250863, -- Naloki
-        spellID = -1,
+        associatedID = 4888,
         factionID = 2696,
         renownLevel = 12,
         type = "Pet",
@@ -674,7 +674,7 @@ AddOn.MidnightData = {
     },
     {
         id = 257219, -- Amani Blessed Bear
-        spellID = -1,
+        associatedID = 2776,
         factionID = 2696,
         renownLevel = 17,
         type = "Mount",
@@ -716,7 +716,7 @@ AddOn.MidnightData = {
     },
     {
         id = 250889, -- Amani Windcaller
-        spellID = -1,
+        associatedID = 2694,
         factionID = 2696,
         renownLevel = 19,
         type = "Mount",
@@ -786,6 +786,7 @@ function AddOn.MidnightDataProviderInit(frame, reward)
         frame.FactionBg:Show()
         frame.RewardType:SetText("")
         local factionData = C_MajorFactions.GetMajorFactionData(reward.factionID)
+        frame.FactionBg:SetGradient("VERTICAL", factionData.factionFontColor.color, BLACK_FONT_COLOR)
         frame.IconDescContainer.Desc:SetText(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("Faction: "..(factionData and factionData.name or "Unknown")))
         local atlas = AddOn.FactionIconAtlasMap[reward.factionID]
         if atlas then

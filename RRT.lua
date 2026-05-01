@@ -57,12 +57,12 @@ end
 function AddOn:UpdateListContents()
     ---@type RewardData[]
     local listContents = {}
-    local seenFactions = {}
+    local listedFactions = {}
     for _, reward in ipairs(self.MidnightData) do
         ---@cast reward RewardData
         if self.ShouldRewardBeListed(reward) then
-            if not seenFactions[reward.factionID] then
-                seenFactions[reward.factionID] = true
+            if not listedFactions[reward.factionID] then
+                listedFactions[reward.factionID] = true
                 tinsert(listContents, { id = 0, factionID = reward.factionID, type = "Other" })
             end
             tinsert(listContents, reward)
@@ -83,10 +83,8 @@ function AddOn.ShouldRewardBeListed(reward)
 
     local currentRenownLevel = C_MajorFactions.GetCurrentRenownLevel(reward.factionID)
     if currentRenownLevel < reward.renownLevel then return false end
-
-    if reward.type == "Quest" then return not C_QuestLog.IsQuestFlaggedCompleted(reward.id) end
     
     if reward.profSpellID then return C_SpellBook.IsSpellKnown(reward.profSpellID) end
 
-    return true
+    return not AddOn.IsItemOwned(reward)
 end

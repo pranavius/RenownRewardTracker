@@ -11,9 +11,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                 <Texture parentKey="Bg" hidden="true" setAllPoints="true">
                     <Color color="WHITE_FONT_COLOR" a="0.1"/>
                 </Texture>
-                <Texture parentKey="FactionBg" hidden="true" setAllPoints="true">
-                    <Color color="BLACK_FONT_COLOR"/>
-                </Texture>
+                <Texture parentKey="FactionBg" hidden="true" atlas="UI-Frame-Bar-Fill-White" setAllPoints="true"/>
             </Layer>
             <Layer level="OVERLAY">
                 <FontString parentKey="RewardType" inherits="GameFontHighlightSmall" justifyH="LEFT">
