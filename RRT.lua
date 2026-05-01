@@ -22,6 +22,7 @@ EventFrame:RegisterEvent("ADDON_LOADED")
 RRT_DB = RRT_DB or AddOn.DatabaseDefaults
 
 function AddOn:Initialize()
+    self.playerClassfile = select(2, UnitClass("player"))
     self:CreateMidnightCache()
     EventFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
     EventFrame:RegisterEvent("BAG_UPDATE")
@@ -85,6 +86,14 @@ function AddOn.ShouldRewardBeListed(reward)
     if currentRenownLevel < reward.renownLevel then return false end
     
     if reward.profSpellID and not C_SpellBook.IsSpellKnown(reward.profSpellID) then return false end
+
+    if reward.type == "Gear" then
+        -- Modify based on selected expansion when more are available in the future
+        local cacheData = AddOn.MidnightCache[reward.id]
+        if cacheData and cacheData.armorClassID ~= AddOn.ArmorSubclasses.Misc and cacheData.armorClassID ~= AddOn.ClassFileArmorTypeMap[AddOn.playerClassfile] then
+            return false
+        end
+    end
 
     return not AddOn.IsItemOwned(reward)
 end

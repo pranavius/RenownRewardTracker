@@ -1,3 +1,8 @@
+---@class CachedItemData
+---@field itemName string
+---@field iconID number
+---@field armorClassID? number
+
 ---@class RenownRewardTracker
 ---@field windowMinWidth number
 ---@field windowMinHeight number
@@ -5,10 +10,12 @@
 ---@field windowMaxHeight number
 ---@field selectedExpansion number Expansion ID for the currently selected expansion (1 = TBC, 2 = WOTLK, etc.)
 ---@field iconFallbackTextureID number
+---@field playerClassfile string
 ---@field initialized boolean
 ---@field debug boolean `true` when debugging mode is enabled, `false` otherwise
 ---@field SupportedExpansions table<number, string> Table of expansions the AddOn provides renown tracking info for. Keys of the table are expansion IDs with values being expansion name
 ---@field FactionIconAtlasMap table<number, string>
+---@field MidnightCache CachedItemData[]
 
 ---@class PanelResizeButton: Button
 ---@field Init fun(self: PanelResizeButton, target: Frame, minWidth: number, minHeight: number, maxWidth: number, maxHeight: number, rotationDegrees: number)

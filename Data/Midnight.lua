@@ -757,6 +757,14 @@ function AddOn:CreateMidnightCache()
                     itemName = itemName or item.type.." "..item.id,
                     iconID = iconID or AddOn.iconFallbackTextureID,
                 }
+            elseif item.type == "Gear" then
+                -- Need item class and subclass to determine whether or not to show it for a character
+                local itemName, _, _, _, _, _, _, _, _, iconID, _, itemClassID, itemSubclassID = C_Item.GetItemInfo(item.id)
+                self.MidnightCache[item.id] = {
+                    itemName = itemName or item.type.." "..item.id,
+                    iconID = iconID or AddOn.iconFallbackTextureID,
+                    armorClassID = itemClassID == 4 and itemSubclassID or nil
+                }
             else
                 self.MidnightCache[item.id] = {
                     itemName = C_Item.GetItemNameByID(item.id) or "",

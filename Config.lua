@@ -39,6 +39,31 @@ AddOn.FactionIconAtlasMap = {
     [2792] = "majorfactions_icons_ritualsites512",
 }
 
+---@enum ArmorSubclass
+AddOn.ArmorSubclasses = {
+    Misc = 0,
+    Cloth = 1,
+    Leather = 2,
+    Mail = 3,
+    Plate = 4
+}
+---@type table<string, ArmorSubclass>
+AddOn.ClassFileArmorTypeMap = {
+    WARRIOR = AddOn.ArmorSubclasses.Plate,
+    PALADIN = AddOn.ArmorSubclasses.Plate,
+    HUNTER = AddOn.ArmorSubclasses.Mail,
+    ROGUE = AddOn.ArmorSubclasses.Leather,
+    PRIEST = AddOn.ArmorSubclasses.Cloth,
+    DEATHKNIGHT = AddOn.ArmorSubclasses.Plate,
+    SHAMAN = AddOn.ArmorSubclasses.Mail,
+    MAGE = AddOn.ArmorSubclasses.Cloth,
+    WARLOCK = AddOn.ArmorSubclasses.Cloth,
+    MONK = AddOn.ArmorSubclasses.Leather,
+    DRUID = AddOn.ArmorSubclasses.Leather,
+    DEMONHUNTER = AddOn.ArmorSubclasses.Leather,
+    EVOKER = AddOn.ArmorSubclasses.Mail,
+}
+
 ---@enum Profession
 AddOn.Professions = {
     Alchemy = 171,
