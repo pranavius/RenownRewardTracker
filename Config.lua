@@ -97,7 +97,7 @@ AddOn.ExpacProfSpellIDs = {
         -- [LE_EXPANSION_SHADOWLANDS] = 2751
     },
     [AddOn.Professions.Cooking] = {
-        [LE_EXPANSION_MIDNIGHT] = 2908,
+        [LE_EXPANSION_MIDNIGHT] = 471005,
         -- [LE_EXPANSION_WAR_WITHIN] = 2873,
         -- [LE_EXPANSION_DRAGONFLIGHT] = 2824,
         -- [LE_EXPANSION_SHADOWLANDS] = 2752
@@ -115,13 +115,13 @@ AddOn.ExpacProfSpellIDs = {
         -- [LE_EXPANSION_SHADOWLANDS] = 2755
     },
     [AddOn.Professions.Fishing] = {
-        [LE_EXPANSION_MIDNIGHT] = 2911,
+        [LE_EXPANSION_MIDNIGHT] = 471021,
         -- [LE_EXPANSION_WAR_WITHIN] = 2876,
         -- [LE_EXPANSION_DRAGONFLIGHT] = 2826,
         -- [LE_EXPANSION_SHADOWLANDS] = 2754
     },
     [AddOn.Professions.Herbalism] = {
-        [LE_EXPANSION_MIDNIGHT] = 2912,
+        [LE_EXPANSION_MIDNIGHT] = 471009, -- Herb Gathering (Midnight)
         -- [LE_EXPANSION_WAR_WITHIN] = 2877,
         -- [LE_EXPANSION_DRAGONFLIGHT] = 2832,
         -- [LE_EXPANSION_SHADOWLANDS] = 2760
@@ -170,8 +170,9 @@ AddOn.Currencies = {
     ArtisanMoxie = {
         Alchemy = 3256,
         Blacksmithing = 3257,
-        Enchanting = 3528,
-        Engineering = 0,
+        Enchanting = 3258,
+        Engineering = 3259,
+        Herbalism = 3260,
         Inscription = 3261,
         Jewelcrafting = 3262,
         Leatherworking = 3263,

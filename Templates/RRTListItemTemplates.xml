@@ -17,27 +17,27 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
             </Layer>
             <Layer level="OVERLAY">
                 <FontString parentKey="RewardType" inherits="GameFontHighlightSmall" justifyH="LEFT">
-                    <Size x="100"/>
+                    <Size x="70"/>
                     <Anchors>
-                        <Anchor point="TOPLEFT" x="205"/>
-                        <Anchor point="BOTTOMLEFT" x="205"/>
+                        <Anchor point="TOPLEFT" x="260"/>
+                        <Anchor point="BOTTOMLEFT" x="260"/>
                     </Anchors>
                 </FontString>
             </Layer>
         </Layers>
         <Frames>
             <Frame parentKey="IconDescContainer" inherits="RRTIconDescContainerTemplate">
-                <Size x="200"/>
+                <Size x="250"/>
                 <Anchors>
                     <Anchor point="TOPLEFT"/>
                     <Anchor point="BOTTOMLEFT"/>
                 </Anchors>
             </Frame>
             <Button parentKey="CurrencyDisplay" inherits="InsecureActionButtonTemplate">
-                <Size x="200"/>
+                <Size x="125"/>
                 <Anchors>
-                    <Anchor point="TOPLEFT" x="305"/>
-                    <Anchor point="BOTTOMLEFT" x="305"/>
+                    <Anchor point="TOPLEFT" x="340"/>
+                    <Anchor point="BOTTOMLEFT" x="340"/>
                 </Anchors>
                 <Layers>
                     <Layer level="OVERLAY">

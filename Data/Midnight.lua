@@ -3,7 +3,7 @@ local AddOn = select(2, ...)
 
 ---@type RewardData[]
 AddOn.MidnightData = {
-    --#region Silvermoon Court
+    --region Silvermoon Court
     {
         id = 265658, -- Silvermoon Court Cloak
         factionID = 2710,
@@ -398,8 +398,8 @@ AddOn.MidnightData = {
         type = "Cosmetic",
         currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 5000 } },
     },
-    --#endregion
-    --#region Amani Tribe
+    --endregion
+    --region Amani Tribe
     {
         id = 250799, -- Loa-Blessed Cloak
         factionID = 2696,
@@ -478,8 +478,8 @@ AddOn.MidnightData = {
         renownLevel = 5,
         type = "Recipe",
         currency = {
-            { id = AddOn.Currencies.ArtisanMoxie.Jewelcrafting, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Jewelcrafting, amount = 150 },
         },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_MIDNIGHT],
     },
@@ -502,8 +502,8 @@ AddOn.MidnightData = {
         renownLevel = 5,
         type = "Recipe",
         currency = {
-            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
             { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
         },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT],
     },
@@ -729,13 +729,443 @@ AddOn.MidnightData = {
         type = "Cosmetic",
         currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 5000 } },
     },
-    --#endregion
+    --endregion
+    --region Hara'ti
+    {
+        id = 267479, -- Aspiring Hara'ti Defender's Sash
+        factionID = 2704,
+        renownLevel = 2,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 25 } },
+    },
+    {
+        id = 267480, -- Aspiring Hara'ti Defender's Cord
+        factionID = 2704,
+        renownLevel = 2,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 25 } },
+    },
+    {
+        id = 267481, -- Aspiring Hara'ti Defender's Belt
+        factionID = 2704,
+        renownLevel = 2,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 25 } },
+    },
+    {
+        id = 267482, -- Aspiring Hara'ti Defender's Greatbelt
+        factionID = 2704,
+        renownLevel = 2,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 25 } },
+    },
+    {
+        id = 256613, -- Cloak of the Hara'ti Elder
+        factionID = 2704,
+        renownLevel = 2,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 267257, -- Cloak of the Hara'ti Sage
+        factionID = 2704,
+        renownLevel = 2,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 267258, -- Cloak of the Hara'ti Seer
+        factionID = 2704,
+        renownLevel = 2,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 246402, -- Hollowed Harandar Gourds
+        factionID = 2704,
+        renownLevel = 3,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150 } },
+    },
+    {
+        id = 246408, -- Haranir Herb Rack
+        factionID = 2704,
+        renownLevel = 3,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150 } },
+    },
+    {
+        id = 92890, -- Quest: A Handful of Voidlight Marl
+        factionID = 2704,
+        renownLevel = 4,
+        type = "Quest",
+    },
+    {
+        id = 258141, -- Recipe: Haranir Phial of Perception
+        associatedID = 1230873,
+        factionID = 2704,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Alchemy, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 247500, -- Recipe: Rootbound Var
+        associatedID = 1233133,
+        factionID = 2704,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Alchemy, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 256751, -- Formula: Enchant Weapon - Worldsoul Tenacity
+        associatedID = 1236081,
+        factionID = 2704,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 256745, -- Formula: Enchant Chest - Mark of the Rootwarden
+        associatedID = 1236068,
+        factionID = 2704,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 256749, -- Formula: Enchant Tool - Haranir Multicrafting
+        associatedID = 1236078,
+        factionID = 2704,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 256743, -- Formula: Gleeful Glamor - Haranir
+        associatedID = 1236464,
+        factionID = 2704,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 263443, -- Technique: Contract: The Hara'ti
+        associatedID = 1230053,
+        factionID = 2704,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Inscription, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 258509, -- Technique: Harandar Signpost
+        associatedID = 1248630,
+        factionID = 2704,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Inscription, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 258510, -- Technique: Magnificant Towering Bookcase
+        associatedID = 1248631,
+        factionID = 2704,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Inscription, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 256700, -- Design: Signet of Azerothian Blessings
+        associatedID = 1230487,
+        factionID = 2704,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Jewelcrafting, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 256639, -- Pattern: World Tree Rootwraps
+        associatedID = 1237498,
+        factionID = 2704,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Leatherworking, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 259457, -- Pattern: Simple Haranir Table
+        associatedID = 1246940,
+        factionID = 2704,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Leatherworking, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 258410, -- Traditions of the Haranir: Herbalism
+        associatedID = 93411,
+        factionID = 2704,
+        renownLevel = 6,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750 },
+            { id = AddOn.Currencies.ArtisanMoxie.Herbalism, amount = 75 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Herbalism][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 258411, -- Traditions of the Haranir: Inscription
+        associatedID = 93412,
+        factionID = 2704,
+        renownLevel = 6,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750 },
+            { id = AddOn.Currencies.ArtisanMoxie.Inscription, amount = 75 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 251980, -- Fungarian Sack
+        factionID = 2704,
+        renownLevel = 7,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150 } },
+    },
+    {
+        id = 249768, -- Fungarian Barrel
+        factionID = 2704,
+        renownLevel = 7,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } },
+    },
+    {
+        id = 246959, -- Sealed Fungal Jar
+        factionID = 2704,
+        renownLevel = 7,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150 } },
+    },
+    {
+        id = 93932, -- Quest: Legendary Prosperity
+        factionID = 2704,
+        renownLevel = 8,
+        requiredCharacterLevel = 90,
+        type = "Quest",
+    },
+    {
+        id = 256615, -- Tabard of the Hara'ti Elder
+        factionID = 2704,
+        renownLevel = 10,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 267261, -- Tabard of the Hara'ti Sage
+        factionID = 2704,
+        renownLevel = 10,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 267262, -- Tabard of the Hara'ti Seer
+        factionID = 2704,
+        renownLevel = 10,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 94794, -- Quest: Fine Fashion Funding
+        factionID = 2704,
+        renownLevel = 10,
+        type = "Quest",
+    },
+    {
+        id = 263039, -- Harandar Flowering Lamp
+        factionID = 2704,
+        renownLevel = 12,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } },
+    },
+    {
+        id = 263195, -- Harandar Glowvine Lamppost
+        factionID = 2704,
+        renownLevel = 12,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 750 } },
+    },
+    {
+        id = 263194, -- Harandar Glowvine Sconce
+        factionID = 2704,
+        renownLevel = 12,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } },
+    },
+    {
+        id = 92891, -- Quest: A Cluster of Voidlight Marl
+        factionID = 2704,
+        renownLevel = 13,
+        type = "Quest",
+    },
+    {
+        id = 256552, -- Verdant Rutaani Seed
+        factionID = 2704,
+        renownLevel = 13,
+        type = "Toy",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 4000 } },
+    },
+    {
+        id = 259337, -- Munchy
+        associatedID = 4929,
+        factionID = 2704,
+        renownLevel = 14,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 2500 } },
+    },
+    {
+        id = 264267, -- Rutaani Birdfeeder
+        factionID = 2704,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 500 } }
+    },
+    {
+        id = 264268, -- Rutaani Birdbath
+        factionID = 2704,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } }
+    },
+    {
+        id = 264269, -- Rutaani Bird Perch
+        factionID = 2704,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } }
+    },
+    {
+        id = 246734, -- Fierce Grimlynx
+        associatedID = 2614,
+        factionID = 2704,
+        renownLevel = 16,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 6000 } },
+    },
+    {
+        id = 256614, -- Shoulderguards of the Hara'ti Elder
+        factionID = 2704,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 267259, -- Shoulderguards of the Hara'ti Sage
+        factionID = 2704,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 267260, -- Shoulderguards of the Hara'ti Seer
+        factionID = 2704,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 259073, -- Arsenal: Arms of the Hara'ti
+        factionID = 2704,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 5000 } },
+    },
+    {
+        id = 263019, -- Haranir Pennant
+        factionID = 2704,
+        renownLevel = 18,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } }
+    },
+    {
+        id = 92892, -- Quest: A Trove of Voidlight Marl
+        factionID = 2704,
+        renownLevel = 18,
+        type = "Quest",
+    },
+    {
+        id = 252014, -- Cerulean Sporeglider
+        associatedID = 2710,
+        factionID = 2704,
+        renownLevel = 19,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 8000 } },
+    },
+    {
+        id = 258014, -- Ensemble: Hara'ti Guardian's Armor
+        factionID = 2704,
+        renownLevel = 20,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 5000 } },
+    },
+    {
+        id = 258013, -- Ensemble: Hara'ti Scout's Outfit
+        factionID = 2704,
+        renownLevel = 20,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 5000 } },
+    },
+    {
+        id = 258012, -- Ensemble: Hara'ti Rootwarden's Wear
+        factionID = 2704,
+        renownLevel = 20,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 5000 } },
+    },
+    --endregion
 }
-
--- Relevant API functions:
--- C_TradeSkillUI.GetRecipeInfo(recipeSpellID)
--- GetProfessions()
--- GetProfessionInfo(index)
 
 function AddOn:CreateMidnightCache()
     self.MidnightCache = {}
@@ -774,104 +1204,5 @@ function AddOn:CreateMidnightCache()
 
             if toLoad == 0 then self.DebugPrint("Midnight item data loaded") end
         end)
-    end
-end
-
----@param frame ListItem
----@param reward RewardData
-function AddOn.MidnightDataProviderInit(frame, reward)
-    if not frame or not reward then return end
-
-    frame.isFactionName = false
-    frame.Bg:Hide()
-    frame.FactionBg:Hide()
-    frame.IconDescContainer.Icon:SetScript("OnEnter", nil)
-    frame.IconDescContainer.Icon:SetScript("OnLeave", nil)
-    frame.CurrencyDisplay.Text:SetText("")
-    frame.CurrencyDisplay:SetScript("OnClick", nil)
-    frame.CurrencyDisplay:SetScript("OnEnter", nil)
-    frame.CurrencyDisplay:SetScript("OnLeave", nil)
-
-    if reward.id == 0 then
-        frame.isFactionName = true
-        frame.FactionBg:Show()
-        frame.RewardType:SetText("")
-        local factionData = C_MajorFactions.GetMajorFactionData(reward.factionID)
-        frame.FactionBg:SetGradient("VERTICAL", factionData.factionFontColor.color, BLACK_FONT_COLOR)
-        frame.IconDescContainer.Desc:SetText(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("Faction: "..(factionData and factionData.name or "Unknown")))
-        local atlas = AddOn.FactionIconAtlasMap[reward.factionID]
-        if atlas then
-            frame.IconDescContainer.Icon:SetAtlas(atlas)
-        else
-            frame.IconDescContainer.Icon:SetTexture(AddOn.iconFallbackTextureID)
-        end
-        return
-    end
-
-    local index = AddOn.DataProvider:FindIndex(reward)
-    if index % 2 == 0 then frame.Bg:Show() end
-    frame.factionID = reward.factionID
-
-    if reward.type ~= "Quest" and reward.id ~= 0 then
-        frame.IconDescContainer.Icon:HookScript("OnEnter", function(icon)
-            GameTooltip:SetOwner(icon, "ANCHOR_LEFT")
-            GameTooltip:SetHyperlink("item:"..reward.id)
-            GameTooltip:Show()
-        end)
-        frame.IconDescContainer.Icon:HookScript("OnLeave", function() GameTooltip:Hide() end)
-    end
-
-    if reward.type == "Quest" then
-        frame.IconDescContainer.Icon:SetAtlas("QuestNormal")
-        frame.IconDescContainer.Desc:SetText(C_QuestLog.GetTitleForQuestID(reward.id))
-    else
-        local cacheData = AddOn.MidnightCache[reward.id]
-        if cacheData then
-            frame.IconDescContainer.Icon:SetTexture(cacheData.iconID)
-            frame.IconDescContainer.Desc:SetText(cacheData.itemName or reward.type.." "..reward.id)
-        end
-    end
-
-    if not frame.isFactionName then frame.RewardType:SetText(reward.type) end
-
-    if reward.currency and #reward.currency > 0 then
-        local costText = ""
-        ---@type CurrencyTooltipData[]
-        local tooltipInfo = {}
-        for _, curr in ipairs(reward.currency) do
-            local currencyInfo = C_CurrencyInfo.GetCurrencyInfo(curr.id)
-            local currencyText = AddOn.GetTextureString(currencyInfo.iconFileID)
-            if (currencyInfo.quantity < curr.amount) then
-                currencyText = currencyText.." "..ERROR_COLOR:WrapTextInColorCode("x"..curr.amount)
-            else
-                currencyText = currencyText.." x"..curr.amount
-            end
-            tinsert(tooltipInfo, {
-                icon = currencyInfo.iconFileID,
-                name = currencyInfo.name,
-                amount = curr.amount,
-                obtained = currencyInfo.quantity
-            })
-            costText = costText..currencyText.."    "
-        end
-
-        frame.CurrencyDisplay.Text:SetText(costText)
-        frame.CurrencyDisplay:HookScript("OnClick", function() ToggleCharacter("TokenFrame") end)
-        frame.CurrencyDisplay:HookScript("OnEnter", function(fs)
-            GameTooltip:SetOwner(fs, "ANCHOR_TOP")
-            GameTooltip:SetText("Purchase Cost:", 1, 1, 1)
-            GameTooltip:AddLine(" ")
-            for _, ttInfo in ipairs(tooltipInfo) do
-                local rightText = ttInfo.obtained.." / "..ttInfo.amount
-                GameTooltip:AddDoubleLine(AddOn.GetTextureString(ttInfo.icon, 10).." "..ttInfo.name, rightText  ,
-                    nil, nil, nil, 1, 1, 1)
-            end
-            GameTooltip:AddLine(" ")
-            local gR, gG, gB = GREEN_FONT_COLOR:GetRGB()
-            GameTooltip:AddLine("<Click to open currency menu>", 0, 1, 0, false)
-            GameTooltip:AddLine("<Click to open currency menu>", gR, gG, gB, false)
-            GameTooltip:Show()
-        end)
-        frame.CurrencyDisplay:HookScript("OnLeave", function() GameTooltip:Hide() end)
     end
 end

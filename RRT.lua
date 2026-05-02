@@ -35,11 +35,6 @@ function AddOn:Initialize()
     RRTScrollBox:InitializeScrollView()
 end
 
-function AddOn.ApplyFilters()
-    if not AddOn.initialized then return end
-    AddOn:UpdateListContents()
-end
-
 SLASH_RRT1 = "/renownrewardtracker"
 SLASH_RRT2 = "/rrt"
 SlashCmdList["RRT"] = function(msg)
@@ -56,15 +51,19 @@ SlashCmdList["RRT"] = function(msg)
 end
 
 function AddOn:UpdateListContents()
+    if not self.initialized then return end
+
     ---@type RewardData[]
     local listContents = {}
+    ---@type table<number, boolean>
     local listedFactions = {}
-    for _, reward in ipairs(self.MidnightData) do
+    local dataSource = self:GetExpansionDataAndCache()
+    for _, reward in ipairs(dataSource) do
         ---@cast reward RewardData
         if self.ShouldRewardBeListed(reward) then
             if not listedFactions[reward.factionID] then
                 listedFactions[reward.factionID] = true
-                tinsert(listContents, { id = 0, factionID = reward.factionID, type = "Other" })
+                tinsert(listContents, { id = 0, factionID = reward.factionID, renownLevel = 0, type = "Other" })
             end
             tinsert(listContents, reward)
         end
@@ -89,7 +88,8 @@ function AddOn.ShouldRewardBeListed(reward)
 
     if reward.type == "Gear" then
         -- Modify based on selected expansion when more are available in the future
-        local cacheData = AddOn.MidnightCache[reward.id]
+        local itemCache = select(2, AddOn:GetExpansionDataAndCache())
+        local cacheData = itemCache[reward.id]
         if cacheData and cacheData.armorClassID ~= AddOn.ArmorSubclasses.Misc and cacheData.armorClassID ~= AddOn.ClassFileArmorTypeMap[AddOn.playerClassfile] then
             return false
         end

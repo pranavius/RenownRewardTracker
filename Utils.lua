@@ -83,3 +83,15 @@ function AddOn.IsItemOwned(reward)
     -- Is an isOwned for "Gear" necessary?
     return isOwned
 end
+
+function AddOn:GetExpansionDataAndCache()
+    if self.selectedExpansion == LE_EXPANSION_MIDNIGHT then
+        return self.MidnightData, self.MidnightCache
+    elseif self.selectedExpansion == LE_EXPANSION_WAR_WITHIN then
+        return self.WarWithinData and self.WarWithinData or {}, self.WarWithinCache and self.WarWithinCache or {}
+    elseif self.selectedExpansion == LE_EXPANSION_DRAGONFLIGHT then
+        return self.DragonflightData and self.DragonflightData or {}, self.DragonflightCache and self.DragonflightCache or {}
+    elseif self.selectedExpansion == LE_EXPANSION_SHADOWLANDS then
+        return self.ShadowlandstData and self.ShadowlandstData or {}, self.ShadowlandstCache and self.ShadowlandstCache or {}
+    end
+end

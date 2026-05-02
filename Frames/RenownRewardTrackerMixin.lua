@@ -15,7 +15,10 @@ function RenownRewardTrackerMixin:OnLoad()
     self.Title:SetText("Renown Reward Tracker")
 
     local function isSelectedExpansion(id) return id == AddOn.selectedExpansion end
-    local function setSelectedExpansion(id) AddOn.selectedExpansion = id end
+    local function setSelectedExpansion(id)
+        AddOn.selectedExpansion = id
+        AddOn:UpdateListContents()
+    end
 
     self.ExpansionDropdown:SetupMenu(function(_, rootDescription)
         rootDescription:CreateTitle("Expansion")

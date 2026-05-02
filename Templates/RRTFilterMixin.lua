@@ -20,7 +20,7 @@ end
 function RRTFilterMixin:OnClick()
     RRT_DB.toggles[self.toggleName] = not RRT_DB.toggles[self.toggleName]
     if RRT_DB.toggles[self.toggleName] then self:SetButtonEnabled() else self:SetButtonDisabled() end
-    AddOn.ApplyFilters()
+    AddOn:UpdateListContents()
 end
 
 function RRTFilterMixin:SetButtonEnabled()
