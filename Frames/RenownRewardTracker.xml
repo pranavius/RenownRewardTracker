@@ -1,10 +1,10 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
 https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Blizzard_SharedXML/UI.xsd">
     <Frame name="RenownRewardTracker" parent="UIParent" mixin="RenownRewardTrackerMixin" enableMouse="true" movable="true" resizable="true" registerForDrag="LeftButton" frameStrata="HIGH">
-        <Size x="700" y="400"/>
+        <Size x="800" y="400"/>
         <ResizeBounds>
-            <minResize x="700" y="400"/>
-            <maxResize x="700" y="800"/>
+            <minResize x="800" y="400"/>
+            <maxResize x="800" y="800"/>
         </ResizeBounds>
         <Anchors>
             <Anchor point="TOP" y="-50"/>
@@ -26,7 +26,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
         </Layers>
         <Frames>
             <Button parentKey="CloseButton" inherits="UIPanelCloseButtonDefaultAnchors">
-                <Size x="20" y="20"/>
+                <Size x="16" y="16"/>
             </Button>
             <Button parentKey="ResizeHandle" inherits="PanelResizeButtonTemplate" registerForDrag="LeftButton">
                 <Anchors>
@@ -35,13 +35,13 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
             </Button>
             <DropdownButton parentKey="ExpansionDropdown" inherits="WowStyle1DropdownTemplate">
                 <Anchors>
-                    <Anchor point="TOPLEFT" relativeKey="$parent.Title" relativePoint="BOTTOMRIGHT" x="-160" y="-10" />
+                    <Anchor point="TOPLEFT" relativeKey="$parent.Title" relativePoint="BOTTOMRIGHT" x="-260" y="-10" />
                     <Anchor point="TOPRIGHT" relativeKey="$parent.Title" relativePoint="BOTTOMRIGHT" y="10"/>
                 </Anchors>
                 <!-- TODO: Look into overwriting the default background texture to align better with the modern look -->
             </DropdownButton>
             <Frame parentKey="FiltersContainer">
-                <Size x="160"/>
+                <Size x="260"/>
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeKey="$parent.ExpansionDropdown" relativePoint="BOTTOMLEFT" y="-10"/>
                     <Anchor point="BOTTOMLEFT" relativeKey="$parent.ExpansionDropdown" y="-310"/>
@@ -54,49 +54,22 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                     </Layer>
                 </Layers>
                 <Frames>
-                    <Button name="$parentToggleDecor" parentKey="ToggleDecor" inherits="RRTFilterTemplate">
-                        <KeyValues>
-                            <KeyValue key="label" value="Decor" />
-                            <KeyValue key="toggleName" value="decor" />
-                        </KeyValues>
-                        <Anchors>
-                            <Anchor point="TOPLEFT" relativeKey="$parent.FilterContainers" relativePoint="TOPLEFT" x="5" y="-10"/>
-                        </Anchors>
-                    </Button>
-                    <Button name="$parentToggleQuests" parentKey="ToggleQuests" inherits="RRTFilterTemplate">
-                        <KeyValues>
-                            <KeyValue key="label" value="Quests" />
-                            <KeyValue key="toggleName" value="quest" />
-                        </KeyValues>
-                        <Anchors>
-                            <Anchor point="TOPLEFT" relativeTo="$parentToggleDecor" relativePoint="BOTTOMLEFT" y="-5"/>
-                        </Anchors>
-                    </Button>
-                    <Button name="$parentToggleRecipes" parentKey="ToggleRecipes" inherits="RRTFilterTemplate">
-                        <KeyValues>
-                            <KeyValue key="label" value="Recipes" />
-                            <KeyValue key="toggleName" value="recipe" />
-                        </KeyValues>
-                        <Anchors>
-                            <Anchor point="TOPLEFT" relativeTo="$parentToggleQuests" relativePoint="BOTTOMLEFT" y="-5"/>
-                        </Anchors>
-                    </Button>
-                    <Button name="$parentToggleProfession" parentKey="ToggleProfession" inherits="RRTFilterTemplate">
-                        <KeyValues>
-                            <KeyValue key="label" value="Profession" />
-                            <KeyValue key="toggleName" value="profession" />
-                        </KeyValues>
-                        <Anchors>
-                            <Anchor point="TOPLEFT" relativeTo="$parentToggleRecipes" relativePoint="BOTTOMLEFT" y="-5"/>
-                        </Anchors>
-                    </Button>
                     <Button name="$parentToggleMounts" parentKey="ToggleMounts" inherits="RRTFilterTemplate">
                         <KeyValues>
                             <KeyValue key="label" value="Mounts" />
                             <KeyValue key="toggleName" value="mount" />
                         </KeyValues>
                         <Anchors>
-                            <Anchor point="TOPLEFT" relativeTo="$parentToggleProfession" relativePoint="BOTTOMLEFT" y="-5"/>
+                            <Anchor point="TOPLEFT" relativeKey="$parent.FilterContainers" relativePoint="TOPLEFT" x="5" y="-10"/>
+                        </Anchors>
+                    </Button>
+                    <Button name="$parentToggleDecor" parentKey="ToggleDecor" inherits="RRTFilterTemplate">
+                        <KeyValues>
+                            <KeyValue key="label" value="Decor" />
+                            <KeyValue key="toggleName" value="decor" />
+                        </KeyValues>
+                        <Anchors>
+                            <Anchor point="TOPRIGHT" relativeKey="$parent.FilterContainers" relativePoint="TOPRIGHT" x="-5" y="-10"/>
                         </Anchors>
                     </Button>
                     <Button name="$parentToggleToys" parentKey="ToggleToys" inherits="RRTFilterTemplate">
@@ -114,7 +87,25 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                             <KeyValue key="toggleName" value="pet" />
                         </KeyValues>
                         <Anchors>
+                            <Anchor point="TOPRIGHT" relativeTo="$parentToggleDecor" relativePoint="BOTTOMRIGHT" y="-5"/>
+                        </Anchors>
+                    </Button>
+                    <Button name="$parentToggleRecipes" parentKey="ToggleRecipes" inherits="RRTFilterTemplate">
+                        <KeyValues>
+                            <KeyValue key="label" value="Recipes" />
+                            <KeyValue key="toggleName" value="recipe" />
+                        </KeyValues>
+                        <Anchors>
                             <Anchor point="TOPLEFT" relativeTo="$parentToggleToys" relativePoint="BOTTOMLEFT" y="-5"/>
+                        </Anchors>
+                    </Button>
+                    <Button name="$parentToggleProfession" parentKey="ToggleProfession" inherits="RRTFilterTemplate">
+                        <KeyValues>
+                            <KeyValue key="label" value="Profession" />
+                            <KeyValue key="toggleName" value="profession" />
+                        </KeyValues>
+                        <Anchors>
+                            <Anchor point="TOPRIGHT" relativeTo="$parentTogglePets" relativePoint="BOTTOMRIGHT" y="-5"/>
                         </Anchors>
                     </Button>
                     <Button name="$parentToggleCosmetics" parentKey="ToggleCosmetics" inherits="RRTFilterTemplate">
@@ -123,7 +114,16 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                             <KeyValue key="toggleName" value="cosmetic" />
                         </KeyValues>
                         <Anchors>
-                            <Anchor point="TOPLEFT" relativeTo="$parentTogglePets" relativePoint="BOTTOMLEFT" y="-5"/>
+                            <Anchor point="TOPLEFT" relativeTo="$parentToggleRecipes" relativePoint="BOTTOMLEFT" y="-5"/>
+                        </Anchors>
+                    </Button>
+                    <Button name="$parentToggleQuests" parentKey="ToggleQuests" inherits="RRTFilterTemplate">
+                        <KeyValues>
+                            <KeyValue key="label" value="Quests" />
+                            <KeyValue key="toggleName" value="quest" />
+                        </KeyValues>
+                        <Anchors>
+                            <Anchor point="TOPRIGHT" relativeTo="$parentToggleProfession" relativePoint="BOTTOMRIGHT" y="-5"/>
                         </Anchors>
                     </Button>
                     <Button name="$parentToggleGear" parentKey="ToggleGear" inherits="RRTFilterTemplate">

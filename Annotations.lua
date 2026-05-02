@@ -38,7 +38,7 @@
 ---@field Text FontString
 
 ---@class ListItem: Frame
----@field isFactionName? boolean
+---@field isFactionName boolean
 ---@field Bg Texture
 ---@field FactionBg Texture
 ---@field IconDescContainer ListItemIconDescContainer

@@ -3,7 +3,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
     <Frame name="RRTScrollBox" parent="RenownRewardTracker" parentKey="ScrollBox" mixin="RRTScrollBoxMixin" inherits="WowScrollBoxList">
         <Anchors>
             <Anchor point="TOPLEFT" relativeKey="$parent.Title" relativePoint="BOTTOMLEFT" y="-10"/>
-            <Anchor point="BOTTOMRIGHT" x="-210" y="10"/>
+            <Anchor point="BOTTOMRIGHT" x="-310" y="10"/>
         </Anchors>
     </Frame>
 

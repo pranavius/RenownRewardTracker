@@ -1,9 +1,9 @@
 ---@class RenownRewardTracker
 local AddOn = select(2, ...)
 
-AddOn.windowMinWidth = 700
+AddOn.windowMinWidth = 800
 AddOn.windowMinHeight = 400
-AddOn.windowMaxWidth = 700
+AddOn.windowMaxWidth = 800
 AddOn.windowMaxHeight = 800
 AddOn.selectedExpansion = LE_EXPANSION_MIDNIGHT
 AddOn.iconFallbackTextureID = 134400
