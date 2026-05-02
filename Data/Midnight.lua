@@ -1388,7 +1388,7 @@ AddOn.MidnightData = {
     },
     {
         id = 262645, -- Beyond the Event Horizon: Alchemy
-        associatedID = -1,
+        associatedID = 93794,
         factionID = 2699,
         renownLevel = 9,
         type = "Profession",
@@ -1400,7 +1400,7 @@ AddOn.MidnightData = {
     },
     {
         id = 262644, -- Beyond the Event Horizon: Blacksmithing
-        associatedID = -1,
+        associatedID = 93795,
         factionID = 2699,
         renownLevel = 9,
         type = "Profession",
@@ -1412,7 +1412,7 @@ AddOn.MidnightData = {
     },
     {
         id = 262646, -- Beyond the Event Horizon: Engineering
-        associatedID = -1,
+        associatedID = 93796,
         factionID = 2699,
         renownLevel = 9,
         type = "Profession",
@@ -1472,7 +1472,7 @@ AddOn.MidnightData = {
     },
     {
         id = 263492, -- Blitzcreek
-        associatedID = -1,
+        associatedID = 4952,
         factionID = 2699,
         renownLevel = 14,
         type = "Pet",
@@ -1554,6 +1554,74 @@ AddOn.MidnightData = {
         renownLevel = 19,
         type = "Mount",
         currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 8000 } },
+    },
+    --endregion
+    --region Ritual Sites
+    {
+        id = 273159, -- Void Elf Scribe's Desk
+        factionID = 2792,
+        renownLevel = 3,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } },
+    },
+    {
+        id = 273135, -- Void Elf Floating Desk
+        factionID = 2792,
+        renownLevel = 3,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150 } },
+    },
+    {
+        id = 273142, -- Runic Parchment
+        factionID = 2792,
+        renownLevel = 3,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150 } },
+    },
+    {
+        id = 273157, -- Void Flame Candle
+        factionID = 2792,
+        renownLevel = 3,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150 } },
+    },
+    {
+        id = 273147, -- Void Inkwell
+        factionID = 2792,
+        renownLevel = 3,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150 } },
+    },
+    {
+        id = 270331, -- Void-Infused Mindbreaker Fry
+        associatedID = 5037,
+        factionID = 2792,
+        renownLevel = 6,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 1800 } },
+    },
+    {
+        id = 270330, -- Void-Touched Dragonhawk Egg
+        associatedID = 5036,
+        factionID = 2792,
+        renownLevel = 6,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 1800 } },
+    },
+    {
+        id = 271158, -- Dark Obelisk
+        factionID = 2792,
+        renownLevel = 7,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 500 } },
+    },
+    {
+        id = 268578, -- Void-Touched Hawkstrider
+        associatedID = 2935,
+        factionID = 2792,
+        renownLevel = 8,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 4500 } },
     },
     --endregion
 }

@@ -3,7 +3,7 @@ local AddOn = select(2, ...)
 
 AddOn.windowMinWidth = 700
 AddOn.windowMinHeight = 400
-AddOn.windowMaxWidth = 1400
+AddOn.windowMaxWidth = 700
 AddOn.windowMaxHeight = 800
 AddOn.selectedExpansion = LE_EXPANSION_MIDNIGHT
 AddOn.iconFallbackTextureID = 134400

@@ -4,7 +4,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
         <Size x="700" y="400"/>
         <ResizeBounds>
             <minResize x="700" y="400"/>
-            <maxResize x="1400" y="800"/>
+            <maxResize x="700" y="800"/>
         </ResizeBounds>
         <Anchors>
             <Anchor point="TOP" y="-50"/>
