@@ -4,7 +4,6 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
         <Size y="25"/>
         <KeyValues>
             <KeyValue key="isFactionName" value="false"/>
-            <KeyValue key="factionID" value="-1"/>
         </KeyValues>
         <Layers>
             <Layer level="BACKGROUND">
@@ -23,6 +22,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                         <Anchor point="BOTTOMLEFT" x="260"/>
                     </Anchors>
                 </FontString>
+                <FontString parentKey="FactionHeader" inherits="GameFontNormal" justifyH="CENTER" setAllPoints="true"/>
             </Layer>
         </Layers>
         <Frames>

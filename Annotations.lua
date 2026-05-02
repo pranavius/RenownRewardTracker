@@ -39,11 +39,11 @@
 
 ---@class ListItem: Frame
 ---@field isFactionName? boolean
----@field factionID number
 ---@field Bg Texture
 ---@field FactionBg Texture
 ---@field IconDescContainer ListItemIconDescContainer
 ---@field RewardType FontString
+---@field FactionHeader FontString
 ---@field CurrencyDisplay CurrencyDisplayButton
 
 ---@class ListFilter: Button

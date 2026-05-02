@@ -26,35 +26,25 @@ end
 function RRTScrollBoxMixin.DataProviderInit(frame, reward)
     if not frame or not reward then return end
 
-    frame.isFactionName = false
-    frame.Bg:Hide()
-    frame.FactionBg:Hide()
-    frame.IconDescContainer.Icon:SetScript("OnEnter", nil)
-    frame.IconDescContainer.Icon:SetScript("OnLeave", nil)
-    frame.CurrencyDisplay.Text:SetText("")
-    frame.CurrencyDisplay:SetScript("OnClick", nil)
-    frame.CurrencyDisplay:SetScript("OnEnter", nil)
-    frame.CurrencyDisplay:SetScript("OnLeave", nil)
+    frame:ResetFrameState()
 
     if reward.id == 0 then
         frame.isFactionName = true
-        frame.FactionBg:Show()
-        frame.RewardType:SetText("")
         local factionData = C_MajorFactions.GetMajorFactionData(reward.factionID)
         frame.FactionBg:SetGradient("VERTICAL", factionData.factionFontColor.color, BLACK_FONT_COLOR)
-        frame.IconDescContainer.Desc:SetText(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("Faction: "..(factionData and factionData.name or "Unknown")))
+        frame.FactionBg:Show()
+        local factionName = factionData and factionData.name or "Unknown Faction"
         local atlas = AddOn.FactionIconAtlasMap[reward.factionID]
         if atlas then
-            frame.IconDescContainer.Icon:SetAtlas(atlas)
+            frame.FactionHeader:SetText(AddOn.GetAtlasString(atlas, 20).." "..factionName)
         else
-            frame.IconDescContainer.Icon:SetTexture(AddOn.iconFallbackTextureID)
+            frame.FactionHeader:SetText(AddOn.GetTextureString(AddOn.iconFallbackTextureID, 25).." "..factionName)
         end
         return
     end
 
     local index = AddOn.DataProvider:FindIndex(reward)
     if index % 2 == 0 then frame.Bg:Show() end
-    frame.factionID = reward.factionID
 
     if reward.type ~= "Quest" and reward.id ~= 0 then
         frame.IconDescContainer.Icon:HookScript("OnEnter", function(icon)

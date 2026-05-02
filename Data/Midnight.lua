@@ -1165,6 +1165,397 @@ AddOn.MidnightData = {
         currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 5000 } },
     },
     --endregion
+    --region The Singularity
+    {
+        id = 93970, -- Quest: Researching the Storm
+        factionID = 2699,
+        renownLevel = 2,
+        type = "Quest",
+    },
+    {
+        id = 267607, -- Hazy Penumbral Handwraps
+        factionID = 2699,
+        renownLevel = 2,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 25 } },
+    },
+    {
+        id = 267606, -- Gloves of Infinite Gravity
+        factionID = 2699,
+        renownLevel = 2,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 25 } },
+    },
+    {
+        id = 267605, -- Neverending Vortex Grasps
+        factionID = 2699,
+        renownLevel = 2,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 25 } },
+    },
+    {
+        id = 267604, -- Clutches of the Colossal Behemoths
+        factionID = 2699,
+        renownLevel = 2,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 25 } },
+    },
+    {
+        id = 262607, -- Void Elf Throne
+        factionID = 2699,
+        renownLevel = 3,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } },
+    },
+    {
+        id = 248964, -- Cosmic Void Table
+        factionID = 2699,
+        renownLevel = 3,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } },
+    },
+    {
+        id = 264509, -- Void Elf Barrel
+        factionID = 2699,
+        renownLevel = 3,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150 } },
+    },
+    {
+        id = 263723, -- Shawl of the Gilded Collapsed Star
+        factionID = 2699,
+        renownLevel = 4,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 266979, -- Shawl of the Darkened Collapsed Star
+        factionID = 2699,
+        renownLevel = 4,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 266984, -- Shawl of the Nebulous Collapsed Star
+        factionID = 2699,
+        renownLevel = 4,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 94469, -- Quest: A Handful of Voidlight Marl
+        factionID = 2699,
+        renownLevel = 4,
+        type = "Quest",
+    },
+    {
+        id = 262473, -- Cosmic Chalice
+        factionID = 2699,
+        renownLevel = 5,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150 } },
+    },
+    {
+        id = 263499, -- Sturdy Void Elf Trunk
+        factionID = 2699,
+        renownLevel = 5,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } },
+    },
+    {
+        id = 256758, -- Formula: Enchant Tool - Ren'dorei Ingenuity
+        associatedID = 1236093,
+        factionID = 2699,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 256757, -- Formula: Enchant Weapon - Acuity of the Ren'dorei
+        associatedID = 1236095,
+        factionID = 2699,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 268044, -- Formula: Endless Codex of the Voidtouched
+        associatedID = 1281349,
+        factionID = 2699,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 258128, -- Pattern: Lush Telogrus Carpet
+        associatedID = 1229001,
+        factionID = 2699,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Tailoring, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 259459, -- Formula: Potion of Recklessness
+        associatedID = 1230859,
+        factionID = 2699,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Alchemy, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 258500, -- Technique: Floating Void-Touched Tome
+        associatedID = 1248621,
+        factionID = 2699,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Inscription, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 263445, -- Technique: Contract: The Singularity
+        associatedID = 1230054,
+        factionID = 2699,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Inscription, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 265534, -- Plans: Ren'dorei Anvil
+        associatedID = 1276111,
+        factionID = 2699,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 1500 },
+            { id = AddOn.Currencies.ArtisanMoxie.Blacksmithing, amount = 150 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 93933, -- Quest: Guarded Treasures
+        factionID = 2699,
+        renownLevel = 7,
+        requiredCharacterLevel = 90,
+        type = "Quest",
+    },
+    {
+        id = 262462, -- Dark Void Inkwell
+        factionID = 2699,
+        renownLevel = 8,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150 } },
+    },
+    {
+        id = 262466, -- Void Elf Table
+        factionID = 2699,
+        renownLevel = 8,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } },
+    },
+    {
+        id = 264344, -- Cosmic Void Orb
+        factionID = 2699,
+        renownLevel = 8,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } },
+    },
+    {
+        id = 262645, -- Beyond the Event Horizon: Alchemy
+        associatedID = -1,
+        factionID = 2699,
+        renownLevel = 9,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750 },
+            { id = AddOn.Currencies.ArtisanMoxie.Alchemy, amount = 75 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 262644, -- Beyond the Event Horizon: Blacksmithing
+        associatedID = -1,
+        factionID = 2699,
+        renownLevel = 9,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750 },
+            { id = AddOn.Currencies.ArtisanMoxie.Blacksmithing, amount = 75 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 262646, -- Beyond the Event Horizon: Engineering
+        associatedID = -1,
+        factionID = 2699,
+        renownLevel = 9,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750 },
+            { id = AddOn.Currencies.ArtisanMoxie.Engineering, amount = 75 },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Engineering][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 94671, -- Quest: Finery Funds
+        factionID = 2699,
+        renownLevel = 10,
+        type = "Quest",
+    },
+    {
+        id = 263572, -- Tabard of the Gilded Collapsed Star
+        factionID = 2699,
+        renownLevel = 10,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 266981, -- Tabard of the Darkened Collapsed Star
+        factionID = 2699,
+        renownLevel = 10,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 266982, -- Tabard of the Nebulous Collapsed Star
+        factionID = 2699,
+        renownLevel = 10,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 264351, -- Ornate Cosmic Banner
+        factionID = 2699,
+        renownLevel = 12,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } },
+    },
+    {
+        id = 262609, -- Void Elf Floating Lantern
+        factionID = 2699,
+        renownLevel = 12,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } },
+    },
+    {
+        id = 262463, -- Cosmic Void Ashwell
+        factionID = 2699,
+        renownLevel = 12,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150 } },
+    },
+    {
+        id = 263492, -- Blitzcreek
+        associatedID = -1,
+        factionID = 2699,
+        renownLevel = 14,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 2500 } },
+    },
+    {
+        id = 94470, -- Quest: A Cluster of Voidlight Marl
+        factionID = 2699,
+        renownLevel = 14,
+        type = "Quest",
+    },
+    {
+        id = 263573, -- Pauldrons of the Gilded Collapsed Star
+        factionID = 2699,
+        renownLevel = 15,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 266980, -- Pauldrons of the Darkened Collapsed Star
+        factionID = 2699,
+        renownLevel = 15,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 266983, -- Pauldrons of the Nebulous Collapsed Star
+        factionID = 2699,
+        renownLevel = 15,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000 } },
+    },
+    {
+        id = 263244, -- Enigmatic Fountain
+        factionID = 2699,
+        renownLevel = 16,
+        type = "Toy",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 4000 } },
+    },
+    {
+        id = 257445, -- Ravenous Shredclaw
+        associatedID = 2789,
+        factionID = 2699,
+        renownLevel = 17,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 6000 } },
+    },
+    {
+        id = 264341, -- Cosmic Void Crate
+        factionID = 2699,
+        renownLevel = 18,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } },
+    },
+    {
+        id = 264339, -- Cosmic Void Summoning Crystal
+        factionID = 2699,
+        renownLevel = 18,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250 } },
+    },
+    {
+        id = 264337, -- Cosmic Void Training Dummy
+        factionID = 2699,
+        renownLevel = 18,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 500 } },
+    },
+    {
+        id = 94471, -- Quest: A Trove of Voidlight Marl
+        factionID = 2699,
+        renownLevel = 18,
+        type = "Quest",
+    },
+    {
+        id = 260696, -- Voidbound Stormray
+        associatedID = 2828,
+        factionID = 2699,
+        renownLevel = 19,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 8000 } },
+    },
+    --endregion
 }
 
 function AddOn:CreateMidnightCache()
