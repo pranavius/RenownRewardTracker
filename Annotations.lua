@@ -1,3 +1,18 @@
+---@class DatabaseToggles
+---@field mount boolean
+---@field recipe boolean
+---@field profession boolean
+---@field cosmetic boolean
+---@field toy boolean
+---@field pet boolean
+---@field quest boolean
+---@field decor boolean
+---@field gear boolean
+
+---@class RenownRewardTrackerDatabase
+---@field toggles DatabaseToggles
+---@field factionVisibility table<number, boolean>
+
 ---@class CachedItemData
 ---@field itemName string
 ---@field iconID number
@@ -40,11 +55,17 @@
 ---@class ListItem: Frame
 ---@field isFactionName boolean
 ---@field Bg Texture
----@field FactionBg Texture
 ---@field IconDescContainer ListItemIconDescContainer
 ---@field RewardType FontString
----@field FactionHeader FontString
 ---@field CurrencyDisplay CurrencyDisplayButton
+
+---@class FactionHeaderToggleButton: Button
+---@field Text FontString
+
+---@class FactionHeader: Frame
+---@field Bg Texture
+---@field FactionName FontString
+---@field ToggleButton FactionHeaderToggleButton
 
 ---@class ListFilter: Button
 ---@field visibleAtlas string
@@ -67,6 +88,10 @@
 ---@field type "Recipe"|"Profession"|"Mount"|"Cosmetic"|"Toy"|"Pet"|"Quest"|"Decor"|"Gear"|"Other"
 ---@field currency? RewardCost[]
 ---@field profSpellID? number
+
+---@class FactionHeaderData
+---@field factionID number
+---@field isFactionHeader boolean
 
 ---@class CurrencyTooltipData
 ---@field icon number

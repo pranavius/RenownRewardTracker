@@ -3,6 +3,6 @@
     "flavors": ["retail"],
     "globals": {
         "read": ["RenownRewardTracker", "LE_EXPANSION_MIDNIGHT", "RRTScrollBox", "RRTScrollBar"],
-        "write": ["RRTListItemMixin", "RRTIconDescContainerMixin", "RRTFilterMixin", "RenownRewardTrackerMixin", "RRTScrollBoxMixin"]
+        "write": ["RRTListItemMixin", "RRTFilterMixin", "RenownRewardTrackerMixin", "RRTScrollBoxMixin"]
     }
 }

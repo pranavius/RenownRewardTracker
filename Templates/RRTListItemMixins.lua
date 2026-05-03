@@ -1,25 +1,20 @@
----@class ListItem
-RRTListItemMixin = {}
+---@type RenownRewardTracker
+local AddOn = select(2, ...)
 
-function RRTListItemMixin:ResetFrameState()
+---@class ListItem
+RRTListRewardMixin = {}
+
+---Resets visibility and scripts for all elements within the frame that can change based on the provided data
+function RRTListRewardMixin:ResetFrameState()
     self.isFactionName = false
     self.Bg:Hide()
-    self.FactionBg:Hide()
-    self.IconDescContainer:ResetFrameState()
+    self.IconDescContainer.Icon:SetTexture(nil)
+    self.IconDescContainer.Desc:SetText("")
+    self.IconDescContainer.Icon:SetScript("OnEnter", nil)
+    self.IconDescContainer.Icon:SetScript("OnLeave", nil)
     self.RewardType:SetText("")
-    self.FactionHeader:SetText("")
     self.CurrencyDisplay.Text:SetText("")
     self.CurrencyDisplay:SetScript("OnClick", nil)
     self.CurrencyDisplay:SetScript("OnEnter", nil)
     self.CurrencyDisplay:SetScript("OnLeave", nil)
-end
-
----@class ListItemIconDescContainer
-RRTIconDescContainerMixin = {}
-
-function RRTIconDescContainerMixin:ResetFrameState()
-    self.Icon:SetTexture(nil)
-    self.Desc:SetText("")
-    self.Icon:SetScript("OnEnter", nil)
-    self.Icon:SetScript("OnLeave", nil)
 end

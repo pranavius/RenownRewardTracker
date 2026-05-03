@@ -10,6 +10,7 @@ AddOn.iconFallbackTextureID = 134400
 AddOn.initialized = false
 AddOn.debug = false
 
+---@type RenownRewardTrackerDatabase
 AddOn.DatabaseDefaults = {
     toggles = {
         mount = true,
@@ -21,7 +22,8 @@ AddOn.DatabaseDefaults = {
         quest = true,
         decor = true,
         gear = true,
-    }
+    },
+    factionVisibility = {}
 }
 
 AddOn.SupportedExpansions = {

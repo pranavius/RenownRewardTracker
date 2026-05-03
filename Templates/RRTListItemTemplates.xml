@@ -1,6 +1,6 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
 https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Blizzard_SharedXML/UI.xsd">
-    <Frame name="RRTListItemTemplate" virtual="true" mixin="RRTListItemMixin">
+    <Frame name="RRTListRewardTemplate" virtual="true" mixin="RRTListRewardMixin">
         <Size y="25"/>
         <KeyValues>
             <KeyValue key="isFactionName" value="false"/>
@@ -9,9 +9,6 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
             <Layer level="BACKGROUND">
                 <Texture parentKey="Bg" hidden="true" setAllPoints="true">
                     <Color color="WHITE_FONT_COLOR" a="0.1"/>
-                </Texture>
-                <Texture parentKey="FactionBg" hidden="true" atlas="UI-Frame-Bar-Fill-White" setAllPoints="true">
-                    <Color color="WHITE_FONT_COLOR"/>
                 </Texture>
             </Layer>
             <Layer level="OVERLAY">
@@ -22,16 +19,34 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                         <Anchor point="BOTTOMLEFT" x="260"/>
                     </Anchors>
                 </FontString>
-                <FontString parentKey="FactionHeader" inherits="GameFontNormal" justifyH="CENTER" setAllPoints="true"/>
             </Layer>
         </Layers>
         <Frames>
-            <Frame parentKey="IconDescContainer" inherits="RRTIconDescContainerTemplate">
+            <Frame parentKey="IconDescContainer">
                 <Size x="250"/>
                 <Anchors>
                     <Anchor point="TOPLEFT"/>
                     <Anchor point="BOTTOMLEFT"/>
                 </Anchors>
+                <Layers>
+                    <Layer level="OVERLAY">
+                        <Texture parentKey="Icon" file="Interface/Icons/inv_misc_questionmark">
+                            <Size x="25"/>
+                            <Anchors>
+                                <Anchor point="TOPLEFT"/>
+                                <Anchor point="BOTTOMLEFT"/>
+                            </Anchors>
+                        </Texture>
+                        <FontString parentKey="Desc" inherits="GameFontHighlightSmall" justifyH="LEFT">
+                            <Anchors>
+                                <Anchor point="TOPLEFT" relativeKey="$parent.Icon" relativePoint="TOPRIGHT" x="5"/>
+                                <Anchor point="BOTTOMLEFT" relativeKey="$parent.Icon" relativePoint="BOTTOMRIGHT" x="5"/>
+                                <Anchor point="TOPRIGHT"/>
+                                <Anchor point="BOTTOMRIGHT"/>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
             </Frame>
             <Button parentKey="CurrencyDisplay" inherits="InsecureActionButtonTemplate">
                 <Size x="125"/>
@@ -48,25 +63,30 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
         </Frames>
     </Frame>
 
-    <Frame name="RRTIconDescContainerTemplate" virtual="true" mixin="RRTIconDescContainerMixin">
+    <Frame name="RRTListFactionHeaderTemplate" virtual="true">
+        <Size y="25"/>
         <Layers>
-            <Layer level="OVERLAY">
-                <Texture parentKey="Icon" file="Interface/Icons/inv_misc_questionmark">
-                    <Size x="25"/>
-                    <Anchors>
-                        <Anchor point="TOPLEFT"/>
-                        <Anchor point="BOTTOMLEFT"/>
-                    </Anchors>
+            <Layer level="BACKGROUND">
+                <Texture parentKey="Bg" atlas="UI-Frame-Bar-Fill-White" setAllPoints="true">
+                    <Color color="WHITE_FONT_COLOR"/>
                 </Texture>
-                <FontString parentKey="Desc" inherits="GameFontHighlightSmall" justifyH="LEFT">
-                    <Anchors>
-                        <Anchor point="TOPLEFT" relativeKey="$parent.Icon" relativePoint="TOPRIGHT" x="5"/>
-                        <Anchor point="BOTTOMLEFT" relativeKey="$parent.Icon" relativePoint="BOTTOMRIGHT" x="5"/>
-                        <Anchor point="TOPRIGHT"/>
-                        <Anchor point="BOTTOMRIGHT"/>
-                    </Anchors>
-                </FontString>
+            </Layer>
+            <Layer level="OVERLAY">
+                <FontString parentKey="FactionName" inherits="GameFontNormal" justifyH="CENTER" setAllPoints="true"/>
             </Layer>
         </Layers>
+        <Frames>
+            <Button parentKey="ToggleButton" inherits="InsecureActionButtonTemplate">
+                <Size x="50" y="25"/>
+                <Anchors>
+                    <Anchor point="RIGHT" x="-5"/>
+                </Anchors>
+                <Layers>
+                    <Layer level="OVERLAY">
+                        <FontString parentKey="Text" inherits="GameFontHighlightSmall" setAllPoints="true"/>
+                    </Layer>
+                </Layers>
+            </Button>
+        </Frames>
     </Frame>
 </Ui>

@@ -52,8 +52,9 @@ end
 
 function AddOn:UpdateListContents()
     if not self.initialized then return end
+    self.DebugPrint("Updating list contents")
 
-    ---@type RewardData[]
+    ---@type (RewardData|FactionHeaderData)[]
     local listContents = {}
     ---@type table<number, boolean>
     local listedFactions = {}
@@ -63,9 +64,12 @@ function AddOn:UpdateListContents()
         if self.ShouldRewardBeListed(reward) then
             if not listedFactions[reward.factionID] then
                 listedFactions[reward.factionID] = true
-                tinsert(listContents, { id = 0, factionID = reward.factionID, renownLevel = 0, type = "Other" })
+                tinsert(listContents, { factionID = reward.factionID, isFactionHeader = true })
             end
-            tinsert(listContents, reward)
+            -- Wait until the faction header has been added to listContents before hiding items based on faction visibility toggle
+            if RRT_DB.factionVisibility[reward.factionID] then
+                tinsert(listContents, reward)
+            end
         end
     end
 
@@ -77,7 +81,7 @@ end
 ---@param reward RewardData
 ---@return boolean `true` if reward should be shown, `false` otherwise
 function AddOn.ShouldRewardBeListed(reward)
-    if RRT_DB and not RRT_DB.toggles[reward.type:lower()] then return false end
+    if not RRT_DB.toggles[reward.type:lower()] then return false end
     
     if reward.requiredCharacterLevel then return UnitLevel("player") >= reward.requiredCharacterLevel end
 

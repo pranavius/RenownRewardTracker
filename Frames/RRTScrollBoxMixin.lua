@@ -3,6 +3,8 @@ local AddOn = select(2, ...)
 
 RRTScrollBoxMixin = CreateFromMixins(ScrollBoxListMixin, {})
 
+RRT_DB = RRT_DB or AddOn.DatabaseDefaults
+
 function RRTScrollBoxMixin:InitializeScrollView()
     AddOn.ScrollBox = self
     AddOn.ScrollBar = RRTScrollBar
@@ -13,35 +15,56 @@ function RRTScrollBoxMixin:InitializeScrollView()
 
         ScrollUtil.InitScrollBoxListWithScrollBar(AddOn.ScrollBox, AddOn.ScrollBar, AddOn.ScrollView)
         AddOn.ScrollView:SetElementFactory(function(factory, elementData)
-            factory("RRTListItemTemplate", self.DataProviderInit)
+            if elementData.isFactionHeader ~= nil then
+                factory("RRTListFactionHeaderTemplate", self.FactionHeaderDataProviderInit)
+            else
+                factory("RRTListRewardTemplate", self.ItemDataProviderInit)
+            end
         end)
-        AddOn.ScrollView:SetElementExtent(AddOn.ScrollView:GetTemplateExtent("RRTListItemTemplate"))
+        AddOn.ScrollView:SetElementExtent(AddOn.ScrollView:GetTemplateExtent("RRTListRewardTemplate"))
 
         AddOn.ScrollView:SetDataProvider(AddOn.DataProvider)
     end
 end
 
+---@param frame FactionHeader
+---@param data FactionHeaderData
+function RRTScrollBoxMixin.FactionHeaderDataProviderInit(frame, data)
+    if not frame or not data then return end
+    frame.ToggleButton:SetScript("OnClick", nil)
+    
+    if RRT_DB.factionVisibility[data.factionID] == nil then
+        AddOn.DebugPrint("Adding faction visibility database entry for faction ID", data.factionID)
+        RRT_DB.factionVisibility[data.factionID] = true
+    end
+
+    frame.ToggleButton.Text:SetText("["..(RRT_DB.factionVisibility[data.factionID] and "Hide" or "Show").."]")
+
+    frame.ToggleButton:SetScript("OnClick", function()
+        if data.factionID > 0 and RRT_DB.factionVisibility[data.factionID] ~= nil then
+            RRT_DB.factionVisibility[data.factionID] = not RRT_DB.factionVisibility[data.factionID]
+            AddOn.DebugPrint("Items", RRT_DB.factionVisibility[data.factionID] and "shown" or "hidden", "for faction ID", data.factionID)
+            AddOn:UpdateListContents()
+        end
+    end)
+
+    local factionData = C_MajorFactions.GetMajorFactionData(data.factionID)
+    frame.Bg:SetGradient("VERTICAL", factionData.factionFontColor.color, BLACK_FONT_COLOR)
+    local factionName = factionData and factionData.name or "Unknown Faction"
+    local atlas = AddOn.FactionIconAtlasMap[data.factionID]
+    if atlas then
+        frame.FactionName:SetText(AddOn.GetAtlasString(atlas, 20).." "..factionName)
+    else
+        frame.FactionName:SetText(AddOn.GetTextureString(AddOn.iconFallbackTextureID, 25).." "..factionName)
+    end
+end
+
 ---@param frame ListItem
 ---@param reward RewardData
-function RRTScrollBoxMixin.DataProviderInit(frame, reward)
+function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
     if not frame or not reward then return end
 
     frame:ResetFrameState()
-
-    if reward.id == 0 then
-        frame.isFactionName = true
-        local factionData = C_MajorFactions.GetMajorFactionData(reward.factionID)
-        frame.FactionBg:SetGradient("VERTICAL", factionData.factionFontColor.color, BLACK_FONT_COLOR)
-        frame.FactionBg:Show()
-        local factionName = factionData and factionData.name or "Unknown Faction"
-        local atlas = AddOn.FactionIconAtlasMap[reward.factionID]
-        if atlas then
-            frame.FactionHeader:SetText(AddOn.GetAtlasString(atlas, 20).." "..factionName)
-        else
-            frame.FactionHeader:SetText(AddOn.GetTextureString(AddOn.iconFallbackTextureID, 25).." "..factionName)
-        end
-        return
-    end
 
     local index = AddOn.DataProvider:FindIndex(reward)
     if index % 2 == 0 then frame.Bg:Show() end
@@ -97,7 +120,7 @@ function RRTScrollBoxMixin.DataProviderInit(frame, reward)
             GameTooltip:SetText("Purchase Cost:", 1, 1, 1)
             GameTooltip:AddLine(" ")
             for _, ttInfo in ipairs(tooltipInfo) do
-                local rightText = ttInfo.obtained.." / "..ttInfo.amount
+                local rightText = ttInfo.obtained.."/"..ttInfo.amount
                 GameTooltip:AddDoubleLine(AddOn.GetTextureString(ttInfo.icon, 10).." "..ttInfo.name, rightText  ,
                     nil, nil, nil, 1, 1, 1)
             end
