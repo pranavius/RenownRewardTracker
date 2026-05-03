@@ -63,7 +63,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
         </Frames>
     </Frame>
 
-    <Frame name="RRTListFactionHeaderTemplate" virtual="true">
+    <Frame name="RRTListFactionHeaderTemplate" virtual="true" mixin="RRTListFactionHeaderMixin">
         <Size y="25"/>
         <Layers>
             <Layer level="BACKGROUND">
@@ -88,5 +88,8 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                 </Layers>
             </Button>
         </Frames>
+        <Scripts>
+            <OnLoad method="OnLoad"/>
+        </Scripts>
     </Frame>
 </Ui>

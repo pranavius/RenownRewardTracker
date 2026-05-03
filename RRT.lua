@@ -39,9 +39,10 @@ SLASH_RRT1 = "/renownrewardtracker"
 SLASH_RRT2 = "/rrt"
 SlashCmdList["RRT"] = function(msg)
     if msg:lower() == "debug" then
-        AddOn.debug = not AddOn.debug
-        local color = AddOn.debug and UNCOMMON_GREEN_COLOR or ERROR_COLOR
-        print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode("RRT:"), "Debug mode " .. color:WrapTextInColorCode(AddOn.debug and "enabled" or "disabled"))
+        RRT_DB.debug = not RRT_DB.debug
+        local color = RRT_DB.debug and UNCOMMON_GREEN_COLOR or ERROR_COLOR
+        local debugModeState = RRT_DB.debug and "enabled" or "disabled"
+        print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode("RRT:"), "Debug mode " .. color:WrapTextInColorCode(debugModeState))
     elseif msg:lower() == "help" then
         print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode("RenownRewardTracker"), "Usage:")
         print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("    /rrt debug:"), "Toggle debug mode")
@@ -61,15 +62,12 @@ function AddOn:UpdateListContents()
     local dataSource = self:GetExpansionDataAndCache()
     for _, reward in ipairs(dataSource) do
         ---@cast reward RewardData
-        if self.ShouldRewardBeListed(reward) then
-            if not listedFactions[reward.factionID] then
-                listedFactions[reward.factionID] = true
-                tinsert(listContents, { factionID = reward.factionID, isFactionHeader = true })
-            end
-            -- Wait until the faction header has been added to listContents before hiding items based on faction visibility toggle
-            if RRT_DB.factionVisibility[reward.factionID] then
-                tinsert(listContents, reward)
-            end
+        if not listedFactions[reward.factionID] then
+            listedFactions[reward.factionID] = true
+            tinsert(listContents, { factionID = reward.factionID, isFactionHeader = true })
+        end
+        if self.ShouldRewardBeListed(reward) and RRT_DB.factionVisibility[reward.factionID] then
+            tinsert(listContents, reward)
         end
     end
 
@@ -81,6 +79,9 @@ end
 ---@param reward RewardData
 ---@return boolean `true` if reward should be shown, `false` otherwise
 function AddOn.ShouldRewardBeListed(reward)
+    -- Show everything when toggles.ignoreAll is enabled
+    if RRT_DB.toggles.ignoreAll then return true end
+
     if not RRT_DB.toggles[reward.type:lower()] then return false end
     
     if reward.requiredCharacterLevel then return UnitLevel("player") >= reward.requiredCharacterLevel end

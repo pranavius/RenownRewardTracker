@@ -1,7 +1,9 @@
 ---@class RenownRewardTracker
 local AddOn = select(2, ...)
 
----@class MainWindow
+RRT_DB = RRT_DB or AddOn.DatabaseDefaults
+
+---@type MainWindow
 RenownRewardTrackerMixin = {}
 
 function RenownRewardTrackerMixin:OnLoad()
@@ -26,6 +28,22 @@ function RenownRewardTrackerMixin:OnLoad()
             rootDescription:CreateRadio(name, isSelectedExpansion, setSelectedExpansion, id)
         end
     end)
+
+    self.FiltersContainer.Checkbox.Text:SetText("Show Everything (Ignores Filters)")
+    if RRT_DB.toggles.ignoreAll == nil then RRT_DB.toggles.ignoreAll = false end
+    self.FiltersContainer.Checkbox:SetChecked(RRT_DB.toggles.ignoreAll)
+    self.FiltersContainer.Checkbox:HookScript("OnClick", function(cb)
+        local isChecked = cb:GetChecked()
+        RRT_DB.toggles.ignoreAll = isChecked
+        AddOn.DebugPrint("RRT_DB.toggles.ignoreAll ==", RRT_DB.toggles.ignoreAll)
+        AddOn:UpdateListContents()
+    end)
+    self.FiltersContainer.Checkbox:HookScript("OnEnter", function(cb)
+        GameTooltip:SetOwner(cb, "ANCHOR_BOTTOMRIGHT")
+        GameTooltip:AddLine("Includes rewards past your current renown level, collected items, completed quests, etc.", nil, nil, nil, true)
+        GameTooltip:Show()
+    end)
+    self.FiltersContainer.Checkbox:HookScript("OnLeave", function() GameTooltip:Hide() end)
 end
 
 function RenownRewardTrackerMixin:OnShow()

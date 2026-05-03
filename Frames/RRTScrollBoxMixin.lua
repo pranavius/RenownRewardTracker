@@ -1,6 +1,7 @@
 ---@class RenownRewardTracker
 local AddOn = select(2, ...)
 
+---@class ScrollBox
 RRTScrollBoxMixin = CreateFromMixins(ScrollBoxListMixin, {})
 
 RRT_DB = RRT_DB or AddOn.DatabaseDefaults
@@ -69,10 +70,14 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
     local index = AddOn.DataProvider:FindIndex(reward)
     if index % 2 == 0 then frame.Bg:Show() end
 
-    if reward.type ~= "Quest" and reward.id ~= 0 then
+    if reward.type ~= "Quest" then
         frame.IconDescContainer.Icon:HookScript("OnEnter", function(icon)
             GameTooltip:SetOwner(icon, "ANCHOR_LEFT")
-            GameTooltip:SetHyperlink("item:"..reward.id)
+            if reward.type == "Gear" then
+                GameTooltip:SetHyperlink("item:"..reward.id.."::::::::::::1:13649")
+            else
+                GameTooltip:SetHyperlink("item:"..reward.id)
+            end
             GameTooltip:Show()
         end)
         frame.IconDescContainer.Icon:HookScript("OnLeave", function() GameTooltip:Hide() end)

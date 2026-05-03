@@ -371,7 +371,7 @@ AddOn.MidnightData = {
         currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 500 } }
     },
     {
-        id = 345941, -- Silvermoon Sanctum Focus
+        id = 245941, -- Silvermoon Sanctum Focus
         factionID = 2710,
         renownLevel = 18,
         type = "Decor",

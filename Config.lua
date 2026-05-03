@@ -8,7 +8,6 @@ AddOn.windowMaxHeight = 800
 AddOn.selectedExpansion = LE_EXPANSION_MIDNIGHT
 AddOn.iconFallbackTextureID = 134400
 AddOn.initialized = false
-AddOn.debug = false
 
 ---@type RenownRewardTrackerDatabase
 AddOn.DatabaseDefaults = {
@@ -22,8 +21,10 @@ AddOn.DatabaseDefaults = {
         quest = true,
         decor = true,
         gear = true,
+        ignoreAll = false,
     },
-    factionVisibility = {}
+    factionVisibility = {},
+    debug = false
 }
 
 AddOn.SupportedExpansions = {

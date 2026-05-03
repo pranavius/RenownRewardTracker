@@ -1,6 +1,3 @@
----@type RenownRewardTracker
-local AddOn = select(2, ...)
-
 ---@class ListItem
 RRTListRewardMixin = {}
 
@@ -17,4 +14,18 @@ function RRTListRewardMixin:ResetFrameState()
     self.CurrencyDisplay:SetScript("OnClick", nil)
     self.CurrencyDisplay:SetScript("OnEnter", nil)
     self.CurrencyDisplay:SetScript("OnLeave", nil)
+end
+
+---@type FactionHeader
+RRTListFactionHeaderMixin = {}
+
+function RRTListFactionHeaderMixin:OnLoad()
+    -- Change text color on hover
+    self.ToggleButton:HookScript("OnEnter", function(btn)
+        local r, g, b = DARKYELLOW_FONT_COLOR:GetRGB()
+        btn.Text:SetTextColor(r, g, b)
+    end)
+    self.ToggleButton:HookScript("OnLeave", function(btn)
+        btn.Text:SetTextColor(1, 1, 1)
+    end)
 end

@@ -99,7 +99,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                             <Anchor point="TOPLEFT" relativeTo="$parentToggleToys" relativePoint="BOTTOMLEFT" y="-5"/>
                         </Anchors>
                     </Button>
-                    <Button name="$parentToggleProfession" parentKey="ToggleProfession" inherits="RRTFilterTemplate">
+                    <Button name="$parentToggleProfession" parentKey="ToggleProfessions" inherits="RRTFilterTemplate">
                         <KeyValues>
                             <KeyValue key="label" value="Profession" />
                             <KeyValue key="toggleName" value="profession" />
@@ -135,6 +135,22 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                             <Anchor point="TOPLEFT" relativeTo="$parentToggleCosmetics" relativePoint="BOTTOMLEFT" y="-5"/>
                         </Anchors>
                     </Button>
+                    <CheckButton parentKey="Checkbox" inherits="MinimalCheckboxTemplate">
+                        <Size x="20" y="19"/>
+                        <Anchors>
+                            <Anchor point="BOTTOMLEFT" x="5" y="10"/>
+                        </Anchors>
+                        <Layers>
+                            <Layer level="ARTWORK">
+                                <FontString parentKey="Text" inherits="GameFontHighlightSmall">
+                                    <Anchors>
+                                        <Anchor point="LEFT" relativePoint="RIGHT" x="2"/>
+                                    </Anchors>
+                                    <Color color="LEGENDARY_ORANGE_COLOR"/>
+                                </FontString>
+                            </Layer>
+                        </Layers>
+                    </CheckButton>
                 </Frames>
             </Frame>
         </Frames>
