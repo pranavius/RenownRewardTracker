@@ -81,7 +81,6 @@ function AddOn.IsItemOwned(reward)
         local decor = C_HousingCatalog.GetCatalogEntryInfoByItem(reward.id, true)
         isOwned = decor and decor.quantity and decor.numPlaced and (decor.quantity + decor.numPlaced > 0) or false
     end
-    -- Is an isOwned for "Gear" necessary?
     return isOwned
 end
 

@@ -88,14 +88,31 @@ function AddOn.ShouldRewardBeListed(reward)
 
     local currentRenownLevel = C_MajorFactions.GetCurrentRenownLevel(reward.factionID)
     if currentRenownLevel < reward.renownLevel then return false end
-    
+
     if reward.profSpellID and not C_SpellBook.IsSpellKnown(reward.profSpellID) then return false end
 
     if reward.type == "Gear" then
         local itemCache = select(2, AddOn:GetExpansionDataAndCache())
         local cacheData = itemCache[reward.id]
-        if cacheData and cacheData.armorClassID ~= AddOn.ArmorSubclasses.Misc and cacheData.armorClassID ~= AddOn.ClassFileArmorTypeMap[AddOn.playerClassfile] then
-            return false
+        if cacheData then
+            if cacheData.armorClassID ~= AddOn.ArmorSubclasses.Misc and cacheData.armorClassID ~= AddOn.ClassFileArmorTypeMap[AddOn.playerClassfile] then
+                return false
+            end
+            if cacheData.rewardItemLevel and cacheData.equipLoc then
+                local slots = AddOn.InvTypeToSlots[cacheData.equipLoc]
+                if slots then
+                    local minEquippedLevel = math.huge
+                    for _, slotID in ipairs(slots) do
+                        local equippedLevel = C_Item.GetCurrentItemLevel(ItemLocation:CreateFromEquipmentSlot(slotID)) or 0
+                        if equippedLevel < minEquippedLevel then
+                            minEquippedLevel = equippedLevel
+                        end
+                    end
+                    if cacheData.rewardItemLevel <= minEquippedLevel then
+                        return false
+                    end
+                end
+            end
         end
     end
 
