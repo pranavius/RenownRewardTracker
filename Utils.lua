@@ -55,8 +55,7 @@ end
 function AddOn.IsItemOwned(reward)
     local isOwned = false
     if reward.type == "Recipe" then
-        local recipeInfo = C_TradeSkillUI.GetRecipeInfo(reward.associatedID)
-        isOwned = recipeInfo and recipeInfo.learned or false
+        isOwned = C_SpellBook.IsSpellKnown(reward.associatedID) or false
     elseif reward.type == "Profession" then
         isOwned = C_QuestLog.IsQuestFlaggedCompleted(reward.associatedID)
     elseif reward.type == "Mount" then
