@@ -3,9 +3,9 @@ externals:
   Libs/LibDataBroker-1.1: https://github.com/tekkub/libdatabroker-1-1
   Libs/LibDBIcon-1.0: https://repos.curseforge.com/wow/libdbicon-1-0/trunk/LibDBIcon-1.0
 
-manual-changelog: CHANGELOG
+manual-changelog: CHANGELOG.md
 
 ignore:
   - README.md
-  - CHANGELOG
+  - CHANGELOG.md
   - Annotations.lua
