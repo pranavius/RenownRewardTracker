@@ -1,7 +1,7 @@
 ## Interface: 120005
 ## Title: Renown Reward Tracker
 ## Notes: Easily view renown rewards and track which are available per character
-## IconTexture: Interface/WorldMap/TreasureChest_64
+## IconTexture: Interface/AddOns/RenownRewardTracker/Media/logo.png
 ## Author: @project-author@
 ## Version: @project-version@
 ## SavedVariables: RRT_DB

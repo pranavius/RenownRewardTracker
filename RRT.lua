@@ -59,7 +59,7 @@ function AddOn:ConfigureDataBroker()
     local broker = LDB:NewDataObject("RenownRewardTracker", {
         type = "launcher",
         text = "Renown Reward Tracker",
-        icon = "Interface/WorldMap/TreasureChest_64",
+        icon = "Interface/AddOns/RenownRewardTracker/Media/logo.png",
         OnClick = function() toggleAddonWindow() end,
         OnTooltipShow = function(tooltip) createAddonTooltip(tooltip) end
     })
