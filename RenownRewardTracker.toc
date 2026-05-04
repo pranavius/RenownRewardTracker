@@ -1,12 +1,17 @@
 ## Interface: 120005
 ## Title: Renown Reward Tracker
-## Notes: Easily track which renown rewards are available per character and account-wide
+## Notes: Easily view renown rewards and track which are available per character
+## IconTexture: Interface/WorldMap/TreasureChest_64
 ## Author: @project-author@
 ## Version: @project-version@
 ## SavedVariables: RRT_DB
 ## LoadSavedVariablesFirst: 1
+## Category: Collections
+## AddonCompartmentFunc: RRT_AddonCompartmentOnClick
+## AddonCompartmentFuncOnEnter: RRT_AddonCompartmentOnEnter
+## AddonCompartmentFuncOnLeave: RRT_AddonCompartmentOnLeav
 ## X-Flavor: retail
-## X-License: GNU General Public License
+## X-Last-Update: @build-date-iso@
 
 embeds.xml
 

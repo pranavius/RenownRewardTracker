@@ -1,5 +1,6 @@
 ---@class RenownRewardTracker
 local AddOn = select(2, ...)
+local LDB = LibStub("LibDataBroker-1.1")
 
 local DebugPrint = AddOn.DebugPrint
 
@@ -9,6 +10,7 @@ EventFrame:HookScript("OnEvent", function(self, event, ...)
     if event == "ADDON_LOADED" then
         if ... == "RenownRewardTracker" then
             AddOn:Initialize()
+            AddOn:ConfigureDataBroker()
             self:UnregisterEvent("ADDON_LOADED")
         end
     else
@@ -39,6 +41,32 @@ function AddOn:Initialize()
     RRTScrollBox:InitializeScrollView()
 end
 
+local function toggleAddonWindow()
+    if RenownRewardTracker and not RenownRewardTracker:IsShown() then
+        RenownRewardTracker:Show()
+    elseif RenownRewardTracker and RenownRewardTracker:IsShown() then
+        RenownRewardTracker:Hide()
+    end
+end
+
+local function createAddonTooltip(tooltip)
+    tooltip:SetText("Renown Reward Tracker v@project-version@")
+    tooltip:AddLine("Easily view renown rewards and track which are available per character")
+    tooltip:AddLine("Type \"/rrt help\" in the chat window for available slash commands")
+end
+
+function AddOn:ConfigureDataBroker()
+    local broker = LDB:NewDataObject("RenownRewardTracker", {
+        type = "launcher",
+        text = "Renown Reward Tracker",
+        icon = "Interface/WorldMap/TreasureChest_64",
+        OnClick = function() toggleAddonWindow() end,
+        OnTooltipShow = function(tooltip) createAddonTooltip(tooltip) end
+    })
+    if RRT_DB.minimap == nil or RRT_DB.minimap.hide == nil then RRT_DB.minimap = { hide = false } end
+    self.DataBrokerIcon:Register("RenownRewardTracker", broker, RRT_DB.minimap)
+end
+
 SLASH_RRT1 = "/renownrewardtracker"
 SLASH_RRT2 = "/rrt"
 SlashCmdList["RRT"] = function(msg)
@@ -47,11 +75,18 @@ SlashCmdList["RRT"] = function(msg)
         local color = RRT_DB.debug and UNCOMMON_GREEN_COLOR or ERROR_COLOR
         local debugModeState = RRT_DB.debug and "enabled" or "disabled"
         print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode("RRT:"), "Debug mode " .. color:WrapTextInColorCode(debugModeState))
+    elseif msg:lower() == "minimap" then
+        RRT_DB.minimap.hide = not RRT_DB.minimap.hide
+        if RRT_DB.minimap.hide then AddOn.DataBrokerIcon:Hide("RenownRewardTracker")
+        else AddOn.DataBrokerIcon:Show("RenownRewardTracker")
+        end
     elseif msg:lower() == "help" then
         print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode("RenownRewardTracker"), "Usage:")
+        print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("    /rrt:"), "Toggle the AddOn window")
+        print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("    /rrt minimap:"), "Toggle minimap button")
         print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("    /rrt debug:"), "Toggle debug mode")
-    elseif not RenownRewardTracker:IsShown() then RenownRewardTracker:Show()
-    elseif RenownRewardTracker:IsShown() then RenownRewardTracker:Hide()
+    else
+        toggleAddonWindow()
     end
 end
 
@@ -121,4 +156,19 @@ function AddOn.ShouldRewardBeListed(reward)
     end
 
     return not AddOn.IsItemOwned(reward)
+end
+
+-- AddOn Compartment Functions
+function RRT_AddonCompartmentOnClick()
+    toggleAddonWindow()
+end
+
+function RRT_AddonCompartmentOnEnter(_, btn)
+    MenuUtil.ShowTooltip(btn, function(tooltip)
+        createAddonTooltip(tooltip)
+    end)
+end
+
+function RRT_AddonCompartmentOnLeave(_, btn)
+    MenuUtil.HideTooltip(btn)
 end

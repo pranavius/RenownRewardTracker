@@ -24,8 +24,11 @@ AddOn.DatabaseDefaults = {
         ignoreAll = false,
     },
     factionVisibility = {},
-    debug = false
+    debug = false,
+    minimap = { hide = false }
 }
+
+AddOn.DataBrokerIcon = LibStub("LibDBIcon-1.0")
 
 AddOn.SupportedExpansions = {
     [LE_EXPANSION_MIDNIGHT] = "Midnight",
