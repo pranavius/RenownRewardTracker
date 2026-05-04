@@ -2,11 +2,13 @@ name: Package and release
 
 on:
   push:
-    tags:                                                                                                                                                                   
-      - '[0-9]+'
-      - '[0-9]+-(alpha|beta)'
-      - '[0-9]+.[0-9]+'
-      - '[0-9]+.[0-9]+-(alpha|beta)'
+    tags:
+      - '[0-9]*'
+      - '[0-9]*-alpha'
+      - '[0-9]*-beta'
+      - '[0-9]*.[0-9]*'
+      - '[0-9]*.[0-9]*-alpha'
+      - '[0-9]*.[0-9]*-beta'
 
 jobs:
   release:
