@@ -1,4 +1,8 @@
 
+1.0-beta
+- Added a minimap button that toggles the AddOn window, with a `/rrt minimap` slash command to show or hide it
+- Added AddOn Compartment button support for opening the AddOn window and viewing usage info
+
 0.6
 - Updated visibility conditions for Gear rewards to hide when not an item level upgrade over currently equipped gear
 - **Bug Fix:** Updated determination logic for learned Recipes to accurately show/hide them in the list
