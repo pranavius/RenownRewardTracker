@@ -7,7 +7,6 @@
 ---@field Text FontString
 
 ---@class ListItem: Frame
----@field isFactionName boolean
 ---@field Bg Texture
 ---@field IconDescContainer ListItemIconDescContainer
 ---@field RewardType FontString
@@ -76,6 +75,7 @@
 ---@field quest boolean
 ---@field decor boolean
 ---@field gear boolean
+---@field ignoreAll boolean
 
 ---@class RenownRewardTrackerDatabase
 ---@field toggles DatabaseToggles
@@ -86,6 +86,8 @@
 ---@field itemName string
 ---@field iconID number
 ---@field armorClassID? number
+---@field equipLoc? string
+---@field rewardItemLevel? number
 
 ---@class RewardCost
 ---@field id number

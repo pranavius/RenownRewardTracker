@@ -64,7 +64,7 @@ function AddOn.IsItemOwned(reward)
         local tooltip = C_TooltipInfo.GetItemByID(reward.id)
         if tooltip and tooltip.lines then
             for _, data in ipairs(tooltip.lines) do
-                if data.type == 26 or data.leftText:lower() == ERR_COSMETIC_KNOWN:lower() then
+                if data.type == 26 or (data.leftText and data.leftText:lower() == ERR_COSMETIC_KNOWN:lower()) then
                     isOwned = true
                     break
                 end
@@ -88,10 +88,12 @@ function AddOn:GetExpansionDataAndCache()
     if self.selectedExpansion == LE_EXPANSION_MIDNIGHT then
         return self.MidnightData, self.MidnightCache
     elseif self.selectedExpansion == LE_EXPANSION_WAR_WITHIN then
-        return self.WarWithinData and self.WarWithinData or {}, self.WarWithinCache and self.WarWithinCache or {}
+        return self.WarWithinData or {}, self.WarWithinCache or {}
     elseif self.selectedExpansion == LE_EXPANSION_DRAGONFLIGHT then
-        return self.DragonflightData and self.DragonflightData or {}, self.DragonflightCache and self.DragonflightCache or {}
+        return self.DragonflightData or {}, self.DragonflightCache or {}
     elseif self.selectedExpansion == LE_EXPANSION_SHADOWLANDS then
-        return self.ShadowlandstData and self.ShadowlandstData or {}, self.ShadowlandstCache and self.ShadowlandstCache or {}
+        return self.ShadowlandsData or {}, self.ShadowlandsCache or {}
     end
+
+    return {}, {}
 end

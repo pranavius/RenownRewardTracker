@@ -22,6 +22,10 @@ EventFrame:RegisterEvent("ADDON_LOADED")
 RRT_DB = RRT_DB or AddOn.DatabaseDefaults
 
 function AddOn:Initialize()
+    -- Populate any new toggles that may be added for existing users from DB defaults
+    for key, defaultValue in pairs(AddOn.DatabaseDefaults.toggles) do
+        if RRT_DB.toggles[key] == nil then RRT_DB.toggles[key] = defaultValue end
+    end
     self.playerClassfile = select(2, UnitClass("player"))
     self:CreateMidnightCache()
     EventFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
@@ -66,7 +70,7 @@ function AddOn:UpdateListContents()
             listedFactions[reward.factionID] = true
             tinsert(listContents, { factionID = reward.factionID, isFactionHeader = true })
         end
-        if self.ShouldRewardBeListed(reward) and RRT_DB.factionVisibility[reward.factionID] then
+        if self.ShouldRewardBeListed(reward) and RRT_DB.factionVisibility[reward.factionID] ~= false then
             tinsert(listContents, reward)
         end
     end
@@ -84,7 +88,7 @@ function AddOn.ShouldRewardBeListed(reward)
 
     if not RRT_DB.toggles[reward.type:lower()] then return false end
     
-    if reward.requiredCharacterLevel then return UnitLevel("player") >= reward.requiredCharacterLevel end
+    if reward.requiredCharacterLevel and UnitLevel("player") < reward.requiredCharacterLevel then return false end
 
     local currentRenownLevel = C_MajorFactions.GetCurrentRenownLevel(reward.factionID)
     if currentRenownLevel < reward.renownLevel then return false end

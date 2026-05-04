@@ -1,9 +1,8 @@
----@class ListItem
+---@type ListItem
 RRTListRewardMixin = {}
 
 ---Resets visibility and scripts for all elements within the frame that can change based on the provided data
 function RRTListRewardMixin:ResetFrameState()
-    self.isFactionName = false
     self.Bg:Hide()
     self.IconDescContainer.Icon:SetTexture(nil)
     self.IconDescContainer.Desc:SetText("")

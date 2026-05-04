@@ -50,13 +50,17 @@ function RRTScrollBoxMixin.FactionHeaderDataProviderInit(frame, data)
     end)
 
     local factionData = C_MajorFactions.GetMajorFactionData(data.factionID)
+    if not factionData then
+        AddOn.DebugPrint("Faction data not found for faction ID", data.factionID)
+        frame.FactionName:SetText(AddOn.GetTextureString(AddOn.iconFallbackTextureID, 25).." Unknown Faction")
+        return
+    end
     frame.Bg:SetGradient("VERTICAL", factionData.factionFontColor.color, BLACK_FONT_COLOR)
-    local factionName = factionData and factionData.name or "Unknown Faction"
     local atlas = AddOn.FactionIconAtlasMap[data.factionID]
     if atlas then
-        frame.FactionName:SetText(AddOn.GetAtlasString(atlas, 20).." "..factionName)
+        frame.FactionName:SetText(AddOn.GetAtlasString(atlas, 20).." "..factionData.name)
     else
-        frame.FactionName:SetText(AddOn.GetTextureString(AddOn.iconFallbackTextureID, 25).." "..factionName)
+        frame.FactionName:SetText(AddOn.GetTextureString(AddOn.iconFallbackTextureID, 25).." "..factionData.name)
     end
 end
 
@@ -95,7 +99,7 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
         end
     end
 
-    if not frame.isFactionName then frame.RewardType:SetText(reward.type) end
+    frame.RewardType:SetText(reward.type)
 
     if reward.currency and #reward.currency > 0 then
         local costText = ""
@@ -103,19 +107,21 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
         local tooltipInfo = {}
         for _, curr in ipairs(reward.currency) do
             local currencyInfo = C_CurrencyInfo.GetCurrencyInfo(curr.id)
-            local currencyText = AddOn.GetTextureString(currencyInfo.iconFileID)
-            if (currencyInfo.quantity < curr.amount) then
-                currencyText = currencyText.." "..ERROR_COLOR:WrapTextInColorCode("x"..curr.amount)
-            else
-                currencyText = currencyText.." x"..curr.amount
+            if currencyInfo then
+                local currencyText = AddOn.GetTextureString(currencyInfo.iconFileID)
+                if (currencyInfo.quantity < curr.amount) then
+                    currencyText = currencyText.." "..ERROR_COLOR:WrapTextInColorCode("x"..curr.amount)
+                else
+                    currencyText = currencyText.." x"..curr.amount
+                end
+                tinsert(tooltipInfo, {
+                    icon = currencyInfo.iconFileID,
+                    name = currencyInfo.name,
+                    amount = curr.amount,
+                    obtained = currencyInfo.quantity
+                })
+                costText = costText..currencyText.."    "
             end
-            tinsert(tooltipInfo, {
-                icon = currencyInfo.iconFileID,
-                name = currencyInfo.name,
-                amount = curr.amount,
-                obtained = currencyInfo.quantity
-            })
-            costText = costText..currencyText.."    "
         end
 
         frame.CurrencyDisplay.Text:SetText(costText)

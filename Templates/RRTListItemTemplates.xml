@@ -2,9 +2,6 @@
 https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Blizzard_SharedXML/UI.xsd">
     <Frame name="RRTListRewardTemplate" virtual="true" mixin="RRTListRewardMixin">
         <Size y="25"/>
-        <KeyValues>
-            <KeyValue key="isFactionName" value="false"/>
-        </KeyValues>
         <Layers>
             <Layer level="BACKGROUND">
                 <Texture parentKey="Bg" hidden="true" setAllPoints="true">
