@@ -11,6 +11,9 @@
 ## AddonCompartmentFuncOnEnter: RRT_AddonCompartmentOnEnter
 ## AddonCompartmentFuncOnLeave: RRT_AddonCompartmentOnLeav
 ## X-Flavor: retail
+## X-Additional-Categories: Miscellaneous, Housing, Bags & Inventory, Data Broker, Professions
+## X-Curse-Project-ID: 1533676
+## X-Wago-ID: n6VLmqGd
 ## X-Last-Update: @build-date-iso@
 
 embeds.xml

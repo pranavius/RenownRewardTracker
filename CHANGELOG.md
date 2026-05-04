@@ -1,5 +1,5 @@
 
-1.0-beta
+1-beta
 - Added a minimap button that toggles the AddOn window, with a `/rrt minimap` slash command to show or hide it
 - Added AddOn Compartment button support for opening the AddOn window and viewing usage info
 
