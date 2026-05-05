@@ -85,7 +85,7 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
 
     if reward.type == "Quest" then
         frame.IconDescContainer.Icon:SetAtlas("QuestNormal")
-        frame.IconDescContainer.Desc:SetText(C_QuestLog.GetTitleForQuestID(reward.id))
+        frame.IconDescContainer.Desc:SetText((C_QuestLog.GetTitleForQuestID(reward.id) or "Quest")..(RRT_DB.debug and " "..reward.id or ""))
     else
         local itemCache = select(2, AddOn:GetExpansionDataAndCache())
         local cacheData = itemCache[reward.id]
