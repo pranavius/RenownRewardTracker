@@ -78,7 +78,7 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
         frame.IconDescContainer.Icon:HookScript("OnEnter", function(icon)
             GameTooltip:SetOwner(icon, "ANCHOR_LEFT")
             if reward.type == "Gear" then
-                GameTooltip:SetHyperlink("item:"..reward.id.."::::::::::::1:13649")
+                GameTooltip:SetHyperlink("item:"..reward.id.."::::::::::::"..#reward.bonusIDs..":"..table.concat(reward.bonusIDs, ":"))
             else
                 GameTooltip:SetHyperlink("item:"..reward.id)
             end
@@ -106,19 +106,39 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
         ---@type CurrencyTooltipData[]
         local tooltipInfo = {}
         for _, curr in ipairs(reward.currency) do
-            local currencyInfo = C_CurrencyInfo.GetCurrencyInfo(curr.id)
-            if currencyInfo then
-                local currencyText = AddOn.GetTextureString(currencyInfo.iconFileID)
-                if (currencyInfo.quantity < curr.amount) then
+            if not curr.isItem then
+                local currencyInfo = C_CurrencyInfo.GetCurrencyInfo(curr.id)
+                if currencyInfo then
+                    local currencyText = AddOn.GetTextureString(currencyInfo.iconFileID)
+                    if currencyInfo.quantity < curr.amount then
+                        currencyText = currencyText.." "..ERROR_COLOR:WrapTextInColorCode("x"..curr.amount)
+                    else
+                        currencyText = currencyText.." x"..curr.amount
+                    end
+                    tinsert(tooltipInfo, {
+                        icon = currencyInfo.iconFileID,
+                        name = currencyInfo.name,
+                        amount = curr.amount,
+                        obtained = currencyInfo.quantity
+                    })
+                    costText = costText..currencyText.."    "
+                end
+            else
+                local name = C_Item.GetItemNameByID(curr.id) or "Currency Name"
+                local iconID = select(5, C_Item.GetItemInfoInstant(curr.id))
+                local quantity = C_Item.GetItemCount(curr.id, true, false, true, true)
+
+                local currencyText = AddOn.GetTextureString(iconID)
+                if quantity < curr.amount then
                     currencyText = currencyText.." "..ERROR_COLOR:WrapTextInColorCode("x"..curr.amount)
                 else
                     currencyText = currencyText.." x"..curr.amount
                 end
                 tinsert(tooltipInfo, {
-                    icon = currencyInfo.iconFileID,
-                    name = currencyInfo.name,
+                    icon = iconID,
+                    name = name,
                     amount = curr.amount,
-                    obtained = currencyInfo.quantity
+                    obtained = quantity
                 })
                 costText = costText..currencyText.."    "
             end

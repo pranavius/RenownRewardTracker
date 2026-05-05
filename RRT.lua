@@ -30,6 +30,7 @@ function AddOn:Initialize()
     end
     self.playerClassfile = select(2, UnitClass("player"))
     self:CreateMidnightCache()
+    self:CreateWarWithinCache()
     EventFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
     EventFrame:RegisterEvent("BAG_UPDATE")
     EventFrame:RegisterEvent("QUEST_COMPLETE")
@@ -142,7 +143,8 @@ function AddOn.ShouldRewardBeListed(reward)
                 if slots then
                     local minEquippedLevel = math.huge
                     for _, slotID in ipairs(slots) do
-                        local equippedLevel = C_Item.GetCurrentItemLevel(ItemLocation:CreateFromEquipmentSlot(slotID)) or 0
+                        local itemLocation = ItemLocation:CreateFromEquipmentSlot(slotID)
+                        local equippedLevel = (C_Item.DoesItemExist(itemLocation) and C_Item.GetCurrentItemLevel(itemLocation)) or 0
                         if equippedLevel < minEquippedLevel then
                             minEquippedLevel = equippedLevel
                         end

@@ -97,3 +97,45 @@ function AddOn:GetExpansionDataAndCache()
 
     return {}, {}
 end
+
+function AddOn:CreateItemCache(dataTable, itemCache)
+    ---@type RewardData[]
+    local itemRewards = {}
+    for _, reward in ipairs(dataTable) do
+        if reward.type ~= "Quest" then tinsert(itemRewards, reward) end
+    end
+    local toLoad = #itemRewards
+
+    for _, item in ipairs(itemRewards) do
+        Item:CreateFromItemID(item.id):ContinueOnItemLoad(function()
+            toLoad = toLoad - 1
+
+            -- Recipe info is not fetchable using GetItemNameByID and GetItemIconByID for some reason
+            if item.type == "Recipe" then
+                local itemName, _, _, _, _, _, _, _, _, iconID = C_Item.GetItemInfo(item.id)
+                itemCache[item.id] = {
+                    itemName = itemName or item.type.." "..item.id,
+                    iconID = iconID or AddOn.iconFallbackTextureID,
+                }
+            elseif item.type == "Gear" then
+                -- Need item class and subclass to determine whether or not to show it for a character
+                local itemName, _, _, itemLevel, _, _, _, _, itemEquipLoc, iconID, _, itemClassID, itemSubclassID = C_Item.GetItemInfo(item.id)
+                local rewardItemLevel = C_Item.GetDetailedItemLevelInfo("item:" .. item.id .. ":0:0:0:0:0:0:0:0:0:0:0:" .. #item.bonusIDs .. ":" .. table.concat(item.bonusIDs, ":")) or itemLevel
+                itemCache[item.id] = {
+                    itemName = itemName or item.type.." "..item.id,
+                    iconID = iconID or AddOn.iconFallbackTextureID,
+                    armorClassID = itemClassID == 4 and itemSubclassID or nil,
+                    equipLoc = itemEquipLoc,
+                    rewardItemLevel = rewardItemLevel,
+                }
+            else
+                itemCache[item.id] = {
+                    itemName = C_Item.GetItemNameByID(item.id) or "",
+                    iconID = C_Item.GetItemIconByID(item.id) or AddOn.iconFallbackTextureID,
+                }
+            end
+
+            if toLoad == 0 then self.DebugPrint("Expansion item data cached") end
+        end)
+    end
+end
