@@ -109,6 +109,50 @@ AddOn.WarWithinData = {
         type = "Decor",
         currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 650, isItem = false } },
     },
+    {
+        id = 224645, -- Jewel-Etched Alchemy Notes
+        associatedID = 83058,
+        factionID = AddOn.Faction.CouncilOfDornogal,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 224647, -- Jewel-Etched Blacksmithing Notes
+        associatedID = 83059,
+        factionID = AddOn.Faction.CouncilOfDornogal,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 224652, -- Jewel-Etched Enchanting Notes
+        associatedID = 83060,
+        factionID = AddOn.Faction.CouncilOfDornogal,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 224648, -- Jewel-Etched Tailoring Notes
+        associatedID = 83061,
+        factionID = AddOn.Faction.CouncilOfDornogal,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 222965, -- Loamy
+        associatedID = 4530,
+        factionID = AddOn.Faction.CouncilOfDornogal,
+        renownLevel = 13,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 6500, isItem = false } },
+    },
     --endregion
 }
 
