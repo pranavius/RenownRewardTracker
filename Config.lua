@@ -38,11 +38,6 @@ AddOn.SupportedExpansions = {
     [LE_EXPANSION_SHADOWLANDS] = "Shadowlands"
 }
 
-AddOn.ExpansionGearBonusIdMap = {
-    [LE_EXPANSION_MIDNIGHT] = 13649,
-    [LE_EXPANSION_WAR_WITHIN] = 11335
-}
-
 ---@enum Faction
 AddOn.Faction = {
     CouncilOfDornogal = 2590,
@@ -247,4 +242,9 @@ AddOn.Currencies = {
 
 AddOn.ItemCurrencies = {
     ArtisansAcuity = 210814
+}
+
+-- Necessary because some items are evaluated with an incorrect item level even after applying correct bonus IDs
+AddOn.GearItemLevelFixes = {
+    [228419] = 75
 }

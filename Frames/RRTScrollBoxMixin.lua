@@ -77,11 +77,7 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
     if reward.type ~= "Quest" then
         frame.IconDescContainer.Icon:HookScript("OnEnter", function(icon)
             GameTooltip:SetOwner(icon, "ANCHOR_LEFT")
-            if reward.type == "Gear" then
-                GameTooltip:SetHyperlink("item:"..reward.id.."::::::::::::"..#reward.bonusIDs..":"..table.concat(reward.bonusIDs, ":"))
-            else
-                GameTooltip:SetHyperlink("item:"..reward.id)
-            end
+            GameTooltip:SetHyperlink(AddOn.GetItemHyperlinkText(reward.id, reward.bonusIDs))
             GameTooltip:Show()
         end)
         frame.IconDescContainer.Icon:HookScript("OnLeave", function() GameTooltip:Hide() end)

@@ -98,6 +98,12 @@ function AddOn:GetExpansionDataAndCache()
     return {}, {}
 end
 
+function AddOn.GetItemHyperlinkText(itemID, bonusIDs)
+    if not bonusIDs or #bonusIDs == 0 then return "item:"..itemID end
+
+    return "item:"..itemID.."::::::::::::"..#bonusIDs..":"..table.concat(bonusIDs, ":")
+end
+
 function AddOn:CreateItemCache(dataTable, itemCache)
     ---@type RewardData[]
     local itemRewards = {}
@@ -120,8 +126,12 @@ function AddOn:CreateItemCache(dataTable, itemCache)
             elseif item.type == "Gear" then
                 -- Need item class and subclass to determine whether or not to show it for a character
                 local itemName, _, _, itemLevel, _, _, _, _, itemEquipLoc, iconID, _, itemClassID, itemSubclassID = C_Item.GetItemInfo(item.id)
-                -- Below function seems to be busted for some items in older expacs (Mineral-Sparkled Cape from TWW)
-                local rewardItemLevel = C_Item.GetDetailedItemLevelInfo("item:"..item.id.."::::::::::::"..#item.bonusIDs..":"..table.concat(item.bonusIDs, ":")) or itemLevel
+                local rewardItemLevel = self.GearItemLevelFixes[item.id]
+                -- Some items (i.e. Mineral-Sparkled Cape from TWW) return incorrect item levels even when applying correct bonus IDs. These items will be hardcoded in GearItemLevelFixes.
+                -- If a hardcoded item level does not exist, then fetch it using the C_Item function, falling back on base item level
+                if not rewardItemLevel then
+                    rewardItemLevel = C_Item.GetDetailedItemLevelInfo(self.GetItemHyperlinkText(item.id, item.bonusIDs)) or itemLevel
+                end
                 itemCache[item.id] = {
                     itemName = itemName or item.type.." "..item.id,
                     iconID = iconID or AddOn.iconFallbackTextureID,

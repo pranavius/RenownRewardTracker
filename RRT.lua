@@ -24,10 +24,16 @@ EventFrame:RegisterEvent("ADDON_LOADED")
 RRT_DB = RRT_DB or AddOn.DatabaseDefaults
 
 function AddOn:Initialize()
-    -- Populate any new toggles that may be added for existing users from DB defaults
+    -- Populate any new toggles that may be missing for existing users from DB defaults
     for key, defaultValue in pairs(AddOn.DatabaseDefaults.toggles) do
         if RRT_DB.toggles[key] == nil then RRT_DB.toggles[key] = defaultValue end
     end
+    -- Populate any new factions that may be missing for existing user from enum
+    if not RRT_DB.factionVisibility then RRT_DB.factionVisibility = {} end
+    for _, factionID in pairs(AddOn.Faction) do
+        if RRT_DB.factionVisibility[factionID] == nil then RRT_DB.factionVisibility[factionID] = true end
+    end
+
     self.playerClassfile = select(2, UnitClass("player"))
     self:CreateMidnightCache()
     self:CreateWarWithinCache()
@@ -135,12 +141,13 @@ function AddOn.ShouldRewardBeListed(reward)
         local itemCache = select(2, AddOn:GetExpansionDataAndCache())
         local cacheData = itemCache[reward.id]
         if cacheData then
-            if cacheData.armorClassID ~= AddOn.ArmorSubclasses.Misc and cacheData.armorClassID ~= AddOn.ClassFileArmorTypeMap[AddOn.playerClassfile] then
+            if cacheData.armorClassID ~= AddOn.ArmorSubclasses.Misc and cacheData.armorClassID ~= AddOn.ClassFileArmorTypeMap[AddOn.playerClassfile] and cacheData.equipLoc ~= "INVTYPE_CLOAK" then
                 return false
             end
             if cacheData.rewardItemLevel and cacheData.equipLoc then
                 local slots = AddOn.InvTypeToSlots[cacheData.equipLoc]
                 if slots then
+                    -- Setting to math.huge (infinity) for gear that can be equipped in multiple slots (1H weapons, rings, trinkets)
                     local minEquippedLevel = math.huge
                     for _, slotID in ipairs(slots) do
                         local itemLocation = ItemLocation:CreateFromEquipmentSlot(slotID)
