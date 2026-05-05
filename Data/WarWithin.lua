@@ -307,6 +307,43 @@ AddOn.WarWithinData = {
         type = "Quest",
     },
     --endregion
+    --region The Assembly of the Deeps
+    {
+        id = 228418, -- Mineral-Sparkled Cape
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 2,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 250, isItem = false } },
+        bonusIDs = { 11334 },
+    },
+    {
+        id = 223063, -- Technique: Contract: Assembly of the Deeps
+        associatedID = -1,
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 3,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 225995, -- Pattern: Hideseeker's Tote
+        associatedID = -1,
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 3,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 224418, -- Recipe: Everything Stew
+        associatedID = -1,
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 4,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1000, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Cooking][LE_EXPANSION_WAR_WITHIN]
+    },
+    --endregion
 }
 
 function AddOn:CreateWarWithinCache()

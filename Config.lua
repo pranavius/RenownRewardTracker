@@ -245,6 +245,8 @@ AddOn.ItemCurrencies = {
 }
 
 -- Necessary because some items are evaluated with an incorrect item level even after applying correct bonus IDs
+---@type table<number, number>
 AddOn.GearItemLevelFixes = {
-    [228419] = 75
+    [228419] = 75,
+    [228418] = 77
 }

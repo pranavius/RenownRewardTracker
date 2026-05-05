@@ -132,6 +132,7 @@ function AddOn:CreateItemCache(dataTable, itemCache)
                 if not rewardItemLevel then
                     rewardItemLevel = C_Item.GetDetailedItemLevelInfo(self.GetItemHyperlinkText(item.id, item.bonusIDs)) or itemLevel
                 end
+                self.DebugPrint(itemName, "item level", rewardItemLevel)
                 itemCache[item.id] = {
                     itemName = itemName or item.type.." "..item.id,
                     iconID = iconID or AddOn.iconFallbackTextureID,
