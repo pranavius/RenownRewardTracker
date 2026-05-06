@@ -128,7 +128,7 @@ function AddOn.ShouldRewardBeListed(reward)
     -- Show everything when toggles.ignoreAll is enabled
     if RRT_DB.toggles.ignoreAll then return true end
 
-    if not RRT_DB.toggles[reward.type:lower()] then return false end
+    if not RRT_DB.toggles[reward.type:lower()] and not reward.type == "Other" then return false end
     
     if reward.requiredCharacterLevel and UnitLevel("player") < reward.requiredCharacterLevel then return false end
 

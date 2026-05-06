@@ -157,7 +157,7 @@ AddOn.ExpacProfSpellIDs = {
     },
     [AddOn.Professions.Herbalism] = {
         [LE_EXPANSION_MIDNIGHT] = 471009, -- Herb Gathering (Midnight)
-        -- [LE_EXPANSION_WAR_WITHIN] = 2877,
+        [LE_EXPANSION_WAR_WITHIN] = 441327, -- Herb Gathering (Khaz Algar)
         -- [LE_EXPANSION_DRAGONFLIGHT] = 2832,
         -- [LE_EXPANSION_SHADOWLANDS] = 2760
     },

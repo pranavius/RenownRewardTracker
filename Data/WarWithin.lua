@@ -309,7 +309,7 @@ AddOn.WarWithinData = {
     --endregion
     --region The Assembly of the Deeps
     {
-        id = 228418, -- Mineral-Sparkled Cape
+        id = 228418, -- Noncandescent Smithing Choker
         factionID = AddOn.Faction.AssemblyOfTheDeeps,
         renownLevel = 2,
         type = "Gear",
@@ -626,7 +626,7 @@ AddOn.WarWithinData = {
     },
     {
         id = 223064, -- Technique: Contract: Hallowfall Arathi
-        associatedID = -1,
+        associatedID = 444218,
         factionID = AddOn.Faction.HallowfallArathi,
         renownLevel = 4,
         type = "Recipe",
@@ -635,31 +635,184 @@ AddOn.WarWithinData = {
     },
     {
         id = 223114, -- Formula: Enchant Boots - Scout's March
-        associatedID = -1,
+        associatedID = 445368,
         factionID = AddOn.Faction.HallowfallArathi,
         renownLevel = 4,
         type = "Recipe",
         currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_WAR_WITHIN]
     },
+    {
+        id = 223038, -- Plans: Charged Claymore
+        associatedID = 450238,
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 4,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_WAR_WITHIN]
+    },
     -- Pouch of Resonant Crystals Reward (R4)
     -- Earth Encrusted Gem Reward (R5)
     -- Pouch of Resonant Crystals Reward (R6)
-    -- {
-    --     id = 224418, -- Recipe: Everything Stew
-    --     associatedID = 445115,
-    --     factionID = AddOn.Faction.HallowfallArathi,
-    --     renownLevel = 4,
-    --     type = "Recipe",
-    --     currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1000, isItem = false } },
-    --     profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Cooking][LE_EXPANSION_WAR_WITHIN]
-    -- },
-    -- {
-    --     id = 82367, -- Quest: Earth-Encrusted Gem
-    --     factionID = AddOn.Faction.HallowfallArathi,
-    --     renownLevel = 4,
-    --     type = "Quest",
-    -- },
+    {
+        id = 223299, -- Tunic of Irradating Imprisonment
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 7,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+        bonusIDs = { 10281, 1656 },
+    },
+    {
+        id = 223297, -- Vest of Fading Luminescence
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 7,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+        bonusIDs = { 10281, 1656 },
+    },
+    {
+        id = 223298, -- Chainmail of Depleting Brilliance
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 7,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+        bonusIDs = { 10281, 1656 },
+    },
+    {
+        id = 223296, -- Battleplate of Dimming Fluorescence
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 7,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+        bonusIDs = { 10281, 1656 },
+    },
+    -- Pouch of Resonant Crystals Reward (R8)
+    {
+        id = 82395, -- Quest: Flame-touched Tabard
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 10,
+        type = "Quest",
+    },
+    -- Pouch of Resonant Crystals Reward (R12)
+    {
+        id = 218350, -- Expeditionary Spaulders
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3250, isItem = false } },
+    },
+    {
+        id = 224656, -- Void-lit Herbalism Notes
+        associatedID = 83066,
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 14,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Herbalism][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 224655, -- Void-lit Jewelcrafting Notes
+        associatedID = 83065,
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 14,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 224658, -- Void-lit Leatherworking Notes
+        associatedID = 83068,
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 14,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 224657, -- Void-lit Skinning Notes
+        associatedID = 83067,
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 14,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Skinning][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 221848, -- Tiberius
+        associatedID = 4463,
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 15,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 6500, isItem = false } },
+    },
+    -- Satchel of Resonant Crystals Reward (R16)
+    {
+        id = 228707, -- Trial of Burning Light
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 17,
+        type = "Toy",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 5000, isItem = false } },
+    },
+    {
+        id = 223309, -- Bindings of Irradating Imprisonment
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 18,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
+        bonusIDs = { 10273, 1669 },
+    },
+    {
+        id = 223310, -- Wristwraps of Fading Luminescence
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 18,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
+        bonusIDs = { 10273, 1669 },
+    },
+    {
+        id = 223308, -- Bracers of Depleting Brilliance
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 18,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
+        bonusIDs = { 10273, 1669 },
+    },
+    {
+        id = 223311, -- Armguards of Dimming Fluorescence
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 18,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
+        bonusIDs = { 10273, 1669 },
+    },
+    -- Trove of Resonant Crystals Reward (R19)
+    -- Earth-Encrusted Gem Reward (R20)
+    {
+        id = 223317, -- Vermillion Imperial Lynx
+        associatedID = 2193,
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 21,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 8125, isItem = false } },
+    },
+    {
+        id = 223314, -- Shackled Shadow
+        associatedID = 2191,
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 23,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 11375, isItem = false } },
+    },
+    {
+        id = 224553, -- Beledar's Attunement
+        associatedID = 82998,
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 23,
+        type = "Other",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1000, isItem = false } },
+    },
+    -- Trove of Resonant Crystals Reward (R23)
+    -- Weathered Crest Reward (R24)
     --endregion
 }
 

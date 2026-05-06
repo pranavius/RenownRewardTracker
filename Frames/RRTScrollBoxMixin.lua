@@ -102,8 +102,10 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
         local costText = ""
         ---@type CurrencyTooltipData[]
         local tooltipInfo = {}
+        local isCurrencyOnlyItems = true
         for _, curr in ipairs(reward.currency) do
             if not curr.isItem then
+                isCurrencyOnlyItems = false
                 local currencyInfo = C_CurrencyInfo.GetCurrencyInfo(curr.id)
                 if currencyInfo then
                     local currencyText = AddOn.GetTextureString(currencyInfo.iconFileID)
@@ -142,21 +144,25 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
         end
 
         frame.CurrencyDisplay.Text:SetText(costText)
-        frame.CurrencyDisplay:HookScript("OnClick", function() ToggleCharacter("TokenFrame") end)
         frame.CurrencyDisplay:HookScript("OnEnter", function(fs)
-            GameTooltip:SetOwner(fs, "ANCHOR_TOP")
+            GameTooltip:SetOwner(fs, "ANCHOR_RIGHT", -40, -25)
             GameTooltip:SetText("Purchase Cost:", 1, 1, 1)
             GameTooltip:AddLine(" ")
             for _, ttInfo in ipairs(tooltipInfo) do
                 local rightText = ttInfo.obtained.."/"..ttInfo.amount
                 GameTooltip:AddDoubleLine(AddOn.GetTextureString(ttInfo.icon, 10).." "..ttInfo.name, rightText  ,
-                    nil, nil, nil, 1, 1, 1)
+                nil, nil, nil, 1, 1, 1)
             end
-            GameTooltip:AddLine(" ")
-            local gR, gG, gB = GREEN_FONT_COLOR:GetRGB()
-            GameTooltip:AddLine("<Click to open currency menu>", 0, 1, 0, false)
+            if not isCurrencyOnlyItems then
+                GameTooltip:AddLine(" ")
+                local gR, gG, gB = GREEN_FONT_COLOR:GetRGB()
+                GameTooltip:AddLine("<Click to toggle currency menu>", 0, 1, 0, false)
+            end
             GameTooltip:Show()
         end)
         frame.CurrencyDisplay:HookScript("OnLeave", function() GameTooltip:Hide() end)
+        if not isCurrencyOnlyItems then
+            frame.CurrencyDisplay:HookScript("OnClick", function() ToggleCharacter("TokenFrame") end)
+        end
     end
 end

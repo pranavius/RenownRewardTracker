@@ -80,6 +80,12 @@ function AddOn.IsItemOwned(reward)
     elseif reward.type == "Decor" then
         local decor = C_HousingCatalog.GetCatalogEntryInfoByItem(reward.id, true)
         isOwned = decor and decor.quantity and decor.numPlaced and (decor.quantity + decor.numPlaced > 0) or false
+    elseif reward.type == "Other" then
+        -- There are so few "Other" reward types that they'll be handled on a case-by-case basis here
+        -- 1. Beledar's Attunement
+        if reward.id == 224553 then
+            isOwned = C_QuestLog.IsQuestFlaggedCompleted(reward.associatedID)
+        end
     end
     -- Beacause of the other filtering rules for including an item in the list, gear visibility is handled entirely there instead
     return isOwned
