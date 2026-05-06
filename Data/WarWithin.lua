@@ -121,7 +121,7 @@ AddOn.WarWithinData = {
         renownLevel = 10,
         type = "Quest",
     },
-    -- TODO: UNSURE ABOUT THESE RENOWN 11 QUESTS, WOWHEAD COMMENT SAYING EITHER OF THEM COULD BE THE ONE
+    -- UNSURE ABOUT THESE 2 RENOWN 11 QUESTS
     {
         id = 96122, -- Quest: A Small Bundle of Goods
         factionID = AddOn.Faction.CouncilOfDornogal,
@@ -318,7 +318,7 @@ AddOn.WarWithinData = {
     },
     {
         id = 223063, -- Technique: Contract: Assembly of the Deeps
-        associatedID = -1,
+        associatedID = 444217,
         factionID = AddOn.Faction.AssemblyOfTheDeeps,
         renownLevel = 3,
         type = "Recipe",
@@ -327,7 +327,7 @@ AddOn.WarWithinData = {
     },
     {
         id = 225995, -- Pattern: Hideseeker's Tote
-        associatedID = -1,
+        associatedID = 447888,
         factionID = AddOn.Faction.AssemblyOfTheDeeps,
         renownLevel = 3,
         type = "Recipe",
@@ -336,13 +336,330 @@ AddOn.WarWithinData = {
     },
     {
         id = 224418, -- Recipe: Everything Stew
-        associatedID = -1,
+        associatedID = 445115,
         factionID = AddOn.Faction.AssemblyOfTheDeeps,
         renownLevel = 4,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1000, isItem = false } },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Cooking][LE_EXPANSION_WAR_WITHIN]
     },
+    {
+        id = 82367, -- Quest: Earth-Encrusted Gem
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 4,
+        type = "Quest",
+    },
+    {
+        id = 218342, -- Shawl of the Assembly
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 5,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1625, isItem = false } },
+    },
+    {
+        id = 85538, -- Quest: Shinies
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 6,
+        type = "Quest",
+    },
+    {
+        id = 223294, -- Noncandescent Smithing Hood
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 8,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+        bonusIDs = { 10281, 1656 },
+    },
+    {
+        id = 212107, -- Inflammable Forging Goggles
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 8,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+        bonusIDs = { 10281, 1656 },
+    },
+    {
+        id = 223293, -- Unmelting Ironworker Helmet
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 8,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+        bonusIDs = { 10281, 1656 },
+    },
+    {
+        id = 223295, -- Slag-Accruing Mask
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 8,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+        bonusIDs = { 10281, 1656 },
+    },
+    {
+        id = 82371, -- Quest: A Flickering Candle
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 8,
+        type = "Quest",
+    },
+    {
+        id = 85539, -- Quest: Take Candle!
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 9,
+        type = "Quest",
+    },
+    {
+        id = 82372, -- Quest: Deeps Unifier
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 10,
+        type = "Quest",
+    },
+    -- UNSURE ABOUT THIS RENOWN 11 QUESTS
+    {
+        id = 96121, -- Quest: A Small Bundle of Goods
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 11,
+        type = "Quest",
+    },
+    {
+        id = 253162, -- Earthen Chain Wall Shelf
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 12,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1000, isItem = false } },
+    },
+    {
+        id = 224653, -- Machine-Learned Engineering Notes
+        associatedID = 83063,
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Engineering][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 224654, -- Machine-Learned Inscription Notes
+        associatedID = 83064,
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 224651, -- Machine-Learned Mining Notes
+        associatedID = 83062,
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Mining][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 82374, -- Quest: A Shining Candle
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 12,
+        type = "Quest",
+    },
+    {
+        id = 85540, -- Quest: Take Big Candle!
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 13,
+        type = "Quest",
+    },
+    {
+        id = 218341, -- Shoulderguards of the Assembly
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 14,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3250, isItem = false } },
+    },
+    {
+        id = 82376, -- Quest: A Large Bundle of Goods
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 14,
+        type = "Quest",
+    },
+    {
+        id = 85541, -- Quest: Here's a Shiny!
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 15,
+        type = "Quest",
+    },
+    {
+        id = 223623, -- Guacamole
+        associatedID = 4576,
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 17,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 6500, isItem = false } },
+    },
+    {
+        id = 228698, -- Candleflexer's Dumbbell
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 18,
+        type = "Toy",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 5000, isItem = false } },
+    },
+    {
+        id = 85543, -- Quest: More Shinies!
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 18,
+        type = "Quest",
+    },
+    {
+        id = 223505, -- Crimson Mudnose
+        associatedID = 2209,
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 19,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 8125, isItem = false } },
+    },
+    {
+        id = 223305, -- Noncandescent Smithing Cord
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 19,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
+        bonusIDs = { 10281, 1656 },
+    },
+    {
+        id = 223306, -- Inflammable Forging Cinch
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 19,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
+        bonusIDs = { 10281, 1656 },
+    },
+    {
+        id = 223307, -- Unmelting Ironworker Clasp
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 19,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
+        bonusIDs = { 10281, 1656 },
+    },
+    {
+        id = 223304, -- Slag-Accruing Waistguard
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 19,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
+        bonusIDs = { 10281, 1656 },
+    },
+    {
+        id = 82381, -- Quest: A Scintillating Candle
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 20,
+        type = "Quest",
+    },
+    {
+        id = 85542, -- Quest: Take Really Big Candle!
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 21,
+        type = "Quest",
+    },
+    {
+        id = 82379, -- Quest: An Overflowing Bundle of Shinies
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 22,
+        type = "Quest",
+    },
+    {
+        id = 222989, -- Cyan Glowmite
+        associatedID = 2162,
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 23,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 11375, isItem = false } },
+    },
+    {
+        id = 82384, -- Quest: A Big, Big Shiny!
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 24,
+        type = "Quest",
+    },
+    {
+        id = 85544, -- Quest: Many Little Shinies!
+        factionID = AddOn.Faction.AssemblyOfTheDeeps,
+        renownLevel = 24,
+        type = "Quest",
+    },
+    --endregion
+    --region Hallowfall Arathi
+    {
+        id = 218351, -- Expeditionary Cape
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 2,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1625, isItem = false } },
+    },
+    {
+        id = 228426, -- Gloves of Irradating Imprisonment
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 2,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 250, isItem = false } },
+        bonusIDs = { 11336 },
+    },
+    {
+        id = 228425, -- Grips of Fading Luminescence
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 2,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 250, isItem = false } },
+        bonusIDs = { 11336 },
+    },
+    {
+        id = 228427, -- Wraps of Depleting Brilliance
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 2,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 250, isItem = false } },
+        bonusIDs = { 11336 },
+    },
+    {
+        id = 228428, -- Gauntlets of Dimming Fluorescence
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 2,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 250, isItem = false } },
+        bonusIDs = { 11336 },
+    },
+    {
+        id = 223064, -- Technique: Contract: Hallowfall Arathi
+        associatedID = -1,
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 4,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 223114, -- Formula: Enchant Boots - Scout's March
+        associatedID = -1,
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 4,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_WAR_WITHIN]
+    },
+    -- Pouch of Resonant Crystals Reward (R4)
+    -- Earth Encrusted Gem Reward (R5)
+    -- Pouch of Resonant Crystals Reward (R6)
+    -- {
+    --     id = 224418, -- Recipe: Everything Stew
+    --     associatedID = 445115,
+    --     factionID = AddOn.Faction.HallowfallArathi,
+    --     renownLevel = 4,
+    --     type = "Recipe",
+    --     currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1000, isItem = false } },
+    --     profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Cooking][LE_EXPANSION_WAR_WITHIN]
+    -- },
+    -- {
+    --     id = 82367, -- Quest: Earth-Encrusted Gem
+    --     factionID = AddOn.Faction.HallowfallArathi,
+    --     renownLevel = 4,
+    --     type = "Quest",
+    -- },
     --endregion
 }
 

@@ -15,7 +15,7 @@ EventFrame:HookScript("OnEvent", function(self, event, ...)
         end
     else
         AddOn:UpdateListContents()
-        DebugPrint(event)
+        DebugPrint("Updating list contents for event:", event)
     end
 end)
 
@@ -138,11 +138,22 @@ function AddOn.ShouldRewardBeListed(reward)
     if reward.profSpellID and not C_SpellBook.IsSpellKnown(reward.profSpellID) then return false end
 
     if reward.type == "Gear" then
+        -- Gear visibility in the list entirely handled here, since a majority of gear (especially from older expansions) wouldn't even make it to IsItemOwned()
         local itemCache = select(2, AddOn:GetExpansionDataAndCache())
         local cacheData = itemCache[reward.id]
         if cacheData then
             if cacheData.armorClassID ~= AddOn.ArmorSubclasses.Misc and cacheData.armorClassID ~= AddOn.ClassFileArmorTypeMap[AddOn.playerClassfile] and cacheData.equipLoc ~= "INVTYPE_CLOAK" then
                 return false
+            end
+
+            -- Item will be shown even if it's lower item level than what's equipped if the appearance has not yet been learned
+            local itemSourceID = select(2, C_TransmogCollection.GetItemInfo(reward.id))
+            if itemSourceID then
+                local transmogInfo = C_TransmogCollection.GetAppearanceInfoBySource(itemSourceID)
+                AddOn.DebugPrint(cacheData.itemName, "appearance collected =", transmogInfo and transmogInfo.appearanceIsCollected or "unknown")
+                if transmogInfo and not transmogInfo.appearanceIsCollected then return true end -- Only logic that goes against the conventional logic in this function
+            else
+                AddOn.DebugPrint("No item source for item "..reward.id)
             end
             if cacheData.rewardItemLevel and cacheData.equipLoc then
                 local slots = AddOn.InvTypeToSlots[cacheData.equipLoc]

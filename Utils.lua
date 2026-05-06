@@ -81,6 +81,7 @@ function AddOn.IsItemOwned(reward)
         local decor = C_HousingCatalog.GetCatalogEntryInfoByItem(reward.id, true)
         isOwned = decor and decor.quantity and decor.numPlaced and (decor.quantity + decor.numPlaced > 0) or false
     end
+    -- Beacause of the other filtering rules for including an item in the list, gear visibility is handled entirely there instead
     return isOwned
 end
 
