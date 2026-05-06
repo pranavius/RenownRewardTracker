@@ -15,7 +15,7 @@ EventFrame:HookScript("OnEvent", function(self, event, ...)
         end
     else
         AddOn:UpdateListContents()
-        DebugPrint("Updating list contents for event:", event)
+        DebugPrint("Updating list contents for event:", DARKYELLOW_FONT_COLOR:WrapTextInColorCode(event))
     end
 end)
 
@@ -42,8 +42,8 @@ function AddOn:Initialize()
     EventFrame:RegisterEvent("QUEST_COMPLETE")
     EventFrame:RegisterEvent("MAJOR_FACTION_RENOWN_LEVEL_CHANGED")
     EventFrame:RegisterEvent("COVENANT_SANCTUM_RENOWN_LEVEL_CHANGED")
-    DebugPrint("Initialized")
     self.initialized = true
+    DebugPrint(GREEN_FONT_COLOR:WrapTextInColorCode("Initialized"))
 
     RRTScrollBox:InitializeScrollView()
 end
@@ -99,7 +99,7 @@ end
 
 function AddOn:UpdateListContents()
     if not self.initialized then return end
-    self.DebugPrint("Updating list contents")
+    DebugPrint("Updating list contents")
 
     ---@type (RewardData|FactionHeaderData)[]
     local listContents = {}
@@ -128,7 +128,7 @@ function AddOn.ShouldRewardBeListed(reward)
     -- Show everything when toggles.ignoreAll is enabled
     if RRT_DB.toggles.ignoreAll then return true end
 
-    if not RRT_DB.toggles[reward.type:lower()] and not reward.type == "Other" then return false end
+    if not RRT_DB.toggles[reward.type:lower()] and reward.type ~= "Other" then return false end
     
     if reward.requiredCharacterLevel and UnitLevel("player") < reward.requiredCharacterLevel then return false end
 
@@ -150,10 +150,10 @@ function AddOn.ShouldRewardBeListed(reward)
             local itemSourceID = select(2, C_TransmogCollection.GetItemInfo(reward.id))
             if itemSourceID then
                 local transmogInfo = C_TransmogCollection.GetAppearanceInfoBySource(itemSourceID)
-                AddOn.DebugPrint(cacheData.itemName, "appearance collected =", transmogInfo and transmogInfo.appearanceIsCollected or "unknown")
+                DebugPrint(DARKYELLOW_FONT_COLOR:WrapTextInColorCode(cacheData.itemName), "appearance collected:", HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(transmogInfo and tostring(transmogInfo.appearanceIsCollected) or "unknown"))
                 if transmogInfo and not transmogInfo.appearanceIsCollected then return true end -- Only logic that goes against the conventional logic in this function
             else
-                AddOn.DebugPrint("No item source for item "..reward.id)
+                DebugPrint(WARNING_FONT_COLOR:WrapTextInColorCode("No item source for item "..reward.id))
             end
             if cacheData.rewardItemLevel and cacheData.equipLoc then
                 local slots = AddOn.InvTypeToSlots[cacheData.equipLoc]

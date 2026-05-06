@@ -35,7 +35,7 @@ function RenownRewardTrackerMixin:OnLoad()
     self.FiltersContainer.Checkbox:HookScript("OnClick", function(cb)
         local isChecked = cb:GetChecked()
         RRT_DB.toggles.ignoreAll = isChecked
-        AddOn.DebugPrint("RRT_DB.toggles.ignoreAll ==", RRT_DB.toggles.ignoreAll)
+        AddOn.DebugPrint("Ignore all toggles:", HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(tostring(RRT_DB.toggles.ignoreAll)))
         AddOn:UpdateListContents()
     end)
     self.FiltersContainer.Checkbox:HookScript("OnEnter", function(cb)

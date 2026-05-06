@@ -651,9 +651,24 @@ AddOn.WarWithinData = {
         currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_WAR_WITHIN]
     },
-    -- Pouch of Resonant Crystals Reward (R4)
-    -- Earth Encrusted Gem Reward (R5)
-    -- Pouch of Resonant Crystals Reward (R6)
+    {
+        id = 82335, -- Quest: Crystals
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 4,
+        type = "Quest",
+    },
+    {
+        id = 82391, -- Quest: Precious Stones
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 5,
+        type = "Quest",
+    },
+    {
+        id = 82393, -- Quest: Resonating Crystals
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 6,
+        type = "Quest",
+    },
     {
         id = 223299, -- Tunic of Irradating Imprisonment
         factionID = AddOn.Faction.HallowfallArathi,
@@ -686,7 +701,12 @@ AddOn.WarWithinData = {
         currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
         bonusIDs = { 10281, 1656 },
     },
-    -- Pouch of Resonant Crystals Reward (R8)
+    {
+        id = 85536, -- Quest: Resonance Crystals
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 8,
+        type = "Quest",
+    },
     {
         id = 82395, -- Quest: Flame-touched Tabard
         factionID = AddOn.Faction.HallowfallArathi,
@@ -745,7 +765,12 @@ AddOn.WarWithinData = {
         type = "Pet",
         currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 6500, isItem = false } },
     },
-    -- Satchel of Resonant Crystals Reward (R16)
+    {
+        id = 82396, -- Quest: A Gift from Merledar
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 16,
+        type = "Quest",
+    },
     {
         id = 228707, -- Trial of Burning Light
         factionID = AddOn.Faction.HallowfallArathi,
@@ -785,8 +810,18 @@ AddOn.WarWithinData = {
         currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
         bonusIDs = { 10273, 1669 },
     },
-    -- Trove of Resonant Crystals Reward (R19)
-    -- Earth-Encrusted Gem Reward (R20)
+    {
+        id = 85537, -- Quest: Crystals
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 19,
+        type = "Quest",
+    },
+    {
+        id = 82404, -- Quest: Something to Set Your Apart
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 20,
+        type = "Quest",
+    },
     {
         id = 223317, -- Vermillion Imperial Lynx
         associatedID = 2193,
@@ -811,8 +846,18 @@ AddOn.WarWithinData = {
         type = "Other",
         currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1000, isItem = false } },
     },
-    -- Trove of Resonant Crystals Reward (R23)
-    -- Weathered Crest Reward (R24)
+    {
+        id = 83334, -- Quest: The Wealth of an Empire
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 23,
+        type = "Quest",
+    },
+    {
+        id = 82407, -- Quest: For What Glimmers in the Deep
+        factionID = AddOn.Faction.HallowfallArathi,
+        renownLevel = 24,
+        type = "Quest",
+    },
     --endregion
 }
 

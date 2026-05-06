@@ -35,8 +35,8 @@ function RRTScrollBoxMixin.FactionHeaderDataProviderInit(frame, data)
     frame.ToggleButton:SetScript("OnClick", nil)
     
     if RRT_DB.factionVisibility[data.factionID] == nil then
-        AddOn.DebugPrint("Adding faction visibility database entry for faction ID", data.factionID)
         RRT_DB.factionVisibility[data.factionID] = true
+        AddOn.DebugPrint("Added faction visibility database entry for faction ID", data.factionID)
     end
 
     frame.ToggleButton.Text:SetText("["..(RRT_DB.factionVisibility[data.factionID] and "Hide" or "Show").."]")
@@ -51,8 +51,8 @@ function RRTScrollBoxMixin.FactionHeaderDataProviderInit(frame, data)
 
     local factionData = C_MajorFactions.GetMajorFactionData(data.factionID)
     if not factionData then
-        AddOn.DebugPrint("Faction data not found for faction ID", data.factionID)
         frame.FactionName:SetText(AddOn.GetTextureString(AddOn.iconFallbackTextureID, 25).." Unknown Faction")
+        AddOn.DebugPrint(WARNING_FONT_COLOR:WrapTextInColorCode("Faction data not found for faction ID", data.factionID))
         return
     end
     frame.Bg:SetGradient("VERTICAL", factionData.factionFontColor.color, BLACK_FONT_COLOR)

@@ -248,5 +248,9 @@ AddOn.ItemCurrencies = {
 ---@type table<number, number>
 AddOn.GearItemLevelFixes = {
     [228419] = 75,
-    [228418] = 77
+    [228418] = 77,
+    [228426] = 78,
+    [228425] = 78,
+    [228427] = 78,
+    [228428] = 78
 }
