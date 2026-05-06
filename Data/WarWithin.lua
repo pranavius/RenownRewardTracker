@@ -1017,6 +1017,50 @@ AddOn.WarWithinData = {
         type = "Quest"
     },
     --endregion
+    --region The Severed Threads
+    {
+        id = 228420, -- Unsevered Thread
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 2,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.Kej, amount = 85, isItem = false } },
+        bonusIDs = { 11337 },
+    },
+    -- Small Kej Wallet Reward (R3)
+    {
+        id = 223080, -- Recipe: Algari Alchemist Stone
+        associatedID = -1,
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 4,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 225355, -- Technique: Contract: The Severed Threads
+        associatedID = -1,
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 4,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 218348, -- Thread-Bearer's Cloak
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 5,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.Kej, amount = 565, isItem = false } },
+    },
+    -- Pouch of Resonance Crystals Reward (R6)
+    {
+        id = 217894, -- Nerubian Pheremore Secreter
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 7,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.Kej, amount = 450, isItem = false } },
+    },
+    --endregion
 }
 
 function AddOn:CreateWarWithinCache()

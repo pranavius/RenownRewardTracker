@@ -237,7 +237,8 @@ AddOn.Currencies = {
         Skinning = 3265,
         Tailoring = 3266,
     },
-    ResonanceCrystal = 2815
+    ResonanceCrystal = 2815,
+    Kej = 3056
 }
 
 AddOn.ItemCurrencies = {
@@ -252,5 +253,6 @@ AddOn.GearItemLevelFixes = {
     [228426] = 78,
     [228425] = 78,
     [228427] = 78,
-    [228428] = 78
+    [228428] = 78,
+    [228420] = 79
 }
