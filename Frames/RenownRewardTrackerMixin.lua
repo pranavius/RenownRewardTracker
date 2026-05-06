@@ -47,7 +47,11 @@ function RenownRewardTrackerMixin:OnLoad()
 end
 
 function RenownRewardTrackerMixin:OnShow()
-    if AddOn.initialized then AddOn:UpdateListContents() end
+    if AddOn.initialized then
+        local rewardData = AddOn:GetExpansionDataAndCache()
+        AddOn:CacheQuestNames(rewardData)
+        AddOn:UpdateListContents()
+    end
 end
 
 function RenownRewardTrackerMixin:OnDragStart()

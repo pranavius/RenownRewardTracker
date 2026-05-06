@@ -82,8 +82,8 @@ function AddOn.IsItemOwned(reward)
         isOwned = decor and decor.quantity and decor.numPlaced and (decor.quantity + decor.numPlaced > 0) or false
     elseif reward.type == "Other" then
         -- There are so few "Other" reward types that they'll be handled on a case-by-case basis here
-        -- 1. Beledar's Attunement
-        if reward.id == 224553 then
+        -- 1. Beledar's Attunement, Flame's Radiance Schematics
+        if reward.id == 224553 or reward.id == 238837 or reward.id == 238839 then
             isOwned = C_QuestLog.IsQuestFlaggedCompleted(reward.associatedID)
         end
     end
@@ -156,5 +156,28 @@ function AddOn:CreateItemCache(dataTable, itemCache)
 
             if toLoad == 0 then self.DebugPrint(GREEN_FONT_COLOR:WrapTextInColorCode("Expansion item data cached")) end
         end)
+    end
+end
+
+function AddOn:CacheQuestNames(rewardData)
+    self.QuestNameCache = self.QuestNameCache or {}
+    local tbl = rewardData
+    if #tbl == 0 then
+        tAppendAll(tbl, self.MidnightData)
+        tAppendAll(tbl, self.WarWithinData)
+    end
+
+    local updateCount = 0
+    for _, reward in ipairs(tbl) do
+        if reward.type == "Quest" and not self.QuestNameCache[reward.id] then
+            self.QuestNameCache[reward.id] = C_TaskQuest.GetQuestInfoByQuestID(reward.id) or C_QuestLog.GetTitleForQuestID(reward.id)
+            if self.QuestNameCache[reward.id] then updateCount = updateCount + 1 end
+        end
+    end
+
+    if updateCount > 0 then
+        self.DebugPrint(GREEN_FONT_COLOR:WrapTextInColorCode("Updated "..updateCount.." quest names in cache"))
+    else
+        self.DebugPrint(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("No quest name updates made"))
     end
 end

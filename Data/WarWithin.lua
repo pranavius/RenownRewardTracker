@@ -859,6 +859,164 @@ AddOn.WarWithinData = {
         type = "Quest",
     },
     --endregion
+    --region Flame's Radiance
+    {
+        id = 89493, -- Quest: Welcome to the Field
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 1,
+        type = "Quest"
+    },
+    {
+        id = 238850, -- Arathi Entertainer's Flame
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 2,
+        type = "Toy",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 5000, isItem = false } },
+    },
+    {
+        id = 89349, -- Quest: Flame's Radiance Stipend
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 2,
+        type = "Quest"
+    },
+    {
+        id = 238986, -- Mister Mans
+        associatedID = 4794,
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 3,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 6500, isItem = false } },
+    },
+    {
+        id = 89390, -- Quest: Flame's Radiance Stipend
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 3,
+        type = "Quest"
+    },
+    {
+        id = 238852, -- Flame's Radiance Banner
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 4,
+        type = "Toy",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 5000, isItem = false } },
+    },
+    {
+        id = 89391, -- Quest: Flame's Radiance Stipend
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 4,
+        type = "Quest"
+    },
+    {
+        id = 89494, -- Quest: A Frocking Good Job
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 5,
+        type = "Quest"
+    },
+    {
+        id = 89392, -- Quest: Flame's Radiance Stipend
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 5,
+        type = "Quest"
+    },
+    {
+        id = 239693, -- Radiant Lynx Whistle
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 6,
+        type = "Toy",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 5000, isItem = false } },
+    },
+    {
+        id = 241188, -- Swiftpaw
+        associatedID = 4804,
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 6,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 6500, isItem = false } },
+    },
+    {
+        id = 89393, -- Quest: Flame's Radiance Stipend
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 6,
+        type = "Quest"
+    },
+    {
+        id = 238824, -- Radiant Traveler's Backpack
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 7,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3250, isItem = false } },
+    },
+    {
+        id = 89394, -- Quest: Flame's Radiance Stipend
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 7,
+        type = "Quest"
+    },
+    {
+        id = 238837, -- Delver's Dirigible Schematic: Pale Paint
+        associatedID = 86198,
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 8,
+        type = "Other",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3250, isItem = false } },
+    },
+    {
+        id = 238839, -- Delver's Dirigible Schematic: Arathi Decal
+        associatedID = 86199,
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 8,
+        type = "Other",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+    },
+    {
+        id = 245293, -- Collection of Arathi Scripture
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 8,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1200, isItem = false } },
+    },
+    -- SEEMS LIKE THIS QUEST ISNT IN THE GAME ANYMORE?
+    -- {
+    --     id = 89395, -- Quest: Flame's Radiance Stipend
+    --     factionID = AddOn.Faction.FlamesRadiance,
+    --     renownLevel = 8,
+    --     type = "Quest"
+    -- },
+    {
+        id = 238829, -- Radiant Imperial Lynx
+        associatedID = 2519,
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 9,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 8125, isItem = false } },
+    },
+    {
+        id = 89396, -- Quest: Flame's Radiance Stipend
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 9,
+        type = "Quest"
+    },
+    {
+        id = 89496, -- Quest: Defender of the Sacred Flame
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 10,
+        type = "Quest"
+    },
+    {
+        id = 237433, -- Necklace of the Devout
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 10,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
+        bonusIDs = { 12274 },
+    },
+    {
+        id = 89397, -- Quest: Flame's Radiance Stipend
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 10,
+        type = "Quest"
+    },
+    --endregion
 }
 
 function AddOn:CreateWarWithinCache()

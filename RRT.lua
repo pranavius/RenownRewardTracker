@@ -35,6 +35,7 @@ function AddOn:Initialize()
     end
 
     self.playerClassfile = select(2, UnitClass("player"))
+    self:CacheQuestNames({})
     self:CreateMidnightCache()
     self:CreateWarWithinCache()
     EventFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
