@@ -1,4 +1,4 @@
----@class RenownRewardTracker
+---@type RenownRewardTracker
 local AddOn = select(2, ...)
 local LDB = LibStub("LibDataBroker-1.1")
 
@@ -128,6 +128,9 @@ end
 function AddOn.ShouldRewardBeListed(reward)
     -- Show everything when toggles.ignoreAll is enabled
     if RRT_DB.toggles.ignoreAll then return true end
+
+    -- IMPORTANT: Check for Abundance being unlocked to show or hide the Abundance of Wealth quest reward
+    if reward.id == 93931 and not C_QuestLog.IsQuestFlaggedCompleted(91933) then return false end
 
     if not RRT_DB.toggles[reward.type:lower()] and reward.type ~= "Other" then return false end
     

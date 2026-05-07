@@ -1,4 +1,4 @@
----@class RenownRewardTracker
+---@type RenownRewardTracker
 local AddOn = select(2, ...)
 
 ---@type RewardData[]

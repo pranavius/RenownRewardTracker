@@ -11,6 +11,7 @@
 ---@field IconDescContainer ListItemIconDescContainer
 ---@field RewardType FontString
 ---@field CurrencyDisplay CurrencyDisplayButton
+---@field ResetFrameState fun()
 
 ---@class FactionHeaderToggleButton: Button
 ---@field Text FontString
@@ -81,6 +82,7 @@
 ---@field toggles DatabaseToggles
 ---@field factionVisibility table<number, boolean>
 ---@field debug boolean
+---@field minimap LibDBIcon.button.DB | nil
 
 ---@class CachedItemData
 ---@field itemName string
@@ -128,4 +130,14 @@
 ---@field SupportedExpansions table<number, string>
 ---@field Faction Faction
 ---@field FactionIconAtlasMap table<Faction, string>
+---@field MidnightData RewardData[]
 ---@field MidnightCache CachedItemData[]
+---@field WarWithinData RewardData[]
+---@field WarWithinCache CachedItemData[]
+---@field DragonflightData RewardData[]
+---@field DragonflightCache CachedItemData[]
+---@field ShadowlandsData RewardData[]
+---@field ShadowlandsCache CachedItemData[]
+---@field QuestNameCache table<number, string?>
+---@field DataProvider DataProviderMixin
+---@field ScrollView any

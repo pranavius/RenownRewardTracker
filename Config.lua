@@ -39,7 +39,7 @@ AddOn.SupportedExpansions = {
 }
 
 ---@enum Faction
-AddOn.Faction = {
+local Faction = {
     CouncilOfDornogal = 2590,
     AssemblyOfTheDeeps = 2594,
     HallowfallArathi = 2570,
@@ -55,23 +55,24 @@ AddOn.Faction = {
     Singularity = 2699,
     RitualSites = 2792
 }
+AddOn.Faction = Faction
 
 ---@type table<Faction, string>
 AddOn.FactionIconAtlasMap = {
-    [AddOn.Faction.CouncilOfDornogal] = "majorfactions_icons_storm512",
-    [AddOn.Faction.AssemblyOfTheDeeps] = "majorfactions_icons_candle512",
-    [AddOn.Faction.HallowfallArathi] = "majorfactions_icons_flame512",
-    [AddOn.Faction.SeveredThreads] = "majorfactions_icons_web512",
-    [AddOn.Faction.CartelsOfUndermine] = "majorfactions_icons_rocket512",
-    [AddOn.Faction.Gallagio] = "majorfactions_icons_stars512",
-    [AddOn.Faction.FlamesRadiance] = "majorfactions_icons_Nightfall512",
-    [AddOn.Faction.KareshTrust] = "majorfactions_icons_Karesh512",
-    [AddOn.Faction.ManaforgeVandals] = "majorfactions_icons_ManaforgeVandals512",
-    [AddOn.Faction.SilvermoonCourt] = "majorfactions_icons_light512",
-    [AddOn.Faction.AmaniTribe] = "majorfactions_icons_origin512",
-    [AddOn.Faction.Harati] = "majorfactions_icons_root512",
-    [AddOn.Faction.Singularity] = "majorfactions_icons_sky512",
-    [AddOn.Faction.RitualSites] = "majorfactions_icons_ritualsites512",
+    [Faction.CouncilOfDornogal] = "majorfactions_icons_storm512",
+    [Faction.AssemblyOfTheDeeps] = "majorfactions_icons_candle512",
+    [Faction.HallowfallArathi] = "majorfactions_icons_flame512",
+    [Faction.SeveredThreads] = "majorfactions_icons_web512",
+    [Faction.CartelsOfUndermine] = "majorfactions_icons_rocket512",
+    [Faction.Gallagio] = "majorfactions_icons_stars512",
+    [Faction.FlamesRadiance] = "majorfactions_icons_Nightfall512",
+    [Faction.KareshTrust] = "majorfactions_icons_Karesh512",
+    [Faction.ManaforgeVandals] = "majorfactions_icons_ManaforgeVandals512",
+    [Faction.SilvermoonCourt] = "majorfactions_icons_light512",
+    [Faction.AmaniTribe] = "majorfactions_icons_origin512",
+    [Faction.Harati] = "majorfactions_icons_root512",
+    [Faction.Singularity] = "majorfactions_icons_sky512",
+    [Faction.RitualSites] = "majorfactions_icons_ritualsites512",
 }
 
 ---@enum ArmorSubclass
