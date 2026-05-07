@@ -1530,6 +1530,310 @@ AddOn.WarWithinData = {
     },
     --endregion
     --region The K'aresh Trust
+    {
+        id = 239487, -- Pattern: Pure Dexterous Fiber
+        associatedID = 1228343,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 239485, -- Pattern: Pure Energizing Fiber
+        associatedID = 1228338,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 239486, -- Pattern: Pure Chronomantic Fiber
+        associatedID = 1228344,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 239488, -- Pattern: Pure Precise Fiber
+        associatedID = 1228342,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 244043, -- Technique: Contract: The K'aresh Trust
+        associatedID = 1236170,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 244334, -- Technique: Vantus Rune: Manaforge Omega
+        associatedID = 1236908,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 244841, -- Recipe: Invigorating Healing Potion
+        associatedID = 1238010,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 248550, -- Recipe: Umbral Essentia
+        associatedID = 1246966,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_WAR_WITHIN]
+    },
+    -- Pouch of Resonance Crystals reward (R5)
+    {
+        id = 245967, -- Shawl of the Trust
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 6,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1625, isItem = false } },
+    },
+    {
+        id = 245975, -- Consortium Brute's Chestguard
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 7,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+        bonusIDs = { 12282 },
+    },
+    {
+        id = 245976, -- Consortium Skirmisher's Cuirass
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 7,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+        bonusIDs = { 12282 },
+    },
+    {
+        id = 245977, -- Consortium Scout's Jacket
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 7,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+        bonusIDs = { 12282 },
+    },
+    {
+        id = 245978, -- Consortium Magi's Robes
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 7,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+        bonusIDs = { 12282 },
+    },
+    -- Pouch of Resonance Crystals reward (R8)
+    {
+        id = 91142, -- Quest: Tabard for the Trusted
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 10,
+        type = "Quest"
+    },
+    {
+        id = 235865, -- Ethereal Tome of Alchemy Knowledge
+        associatedID = 87255,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 235864, -- Ethereal Tome of Blacksmithing Knowledge
+        associatedID = 87266,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 235863, -- Ethereal Tome of Enchanting Knowledge
+        associatedID = 87265,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 235862, -- Ethereal Tome of Engineering Knowledge
+        associatedID = 87264,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Engineering][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 235861, -- Ethereal Tome of Herbalism Knowledge
+        associatedID = 87263,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Herbalism][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 235860, -- Ethereal Tome of Inscription Knowledge
+        associatedID = 87262,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 235859, -- Ethereal Tome of Jewelcrafting Knowledge
+        associatedID = 87261,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 235858, -- Ethereal Tome of Leatherworking Knowledge
+        associatedID = 87260,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 235857, -- Ethereal Tome of Mining Knowledge
+        associatedID = 87259,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Mining][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 235856, -- Ethereal Tome of Skinning Knowledge
+        associatedID = 87258,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Skinning][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 235855, -- Ethereal Tome of Tailoring Knowledge
+        associatedID = 87257,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 245969, -- Mantle of the Trust
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 33250, isItem = false } },
+    },
+    -- Satchel of Resonance Crystals reward (R13)
+    {
+        id = 245693, -- K'areshi Ribbon Stash
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 14,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2250, isItem = false } },
+    },
+    {
+        id = 258767, -- Exposed Long Ethereal Pipe Segment
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 800, isItem = false } }
+    },
+    {
+        id = 258666, -- Ethereal Pipe Segment
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 800, isItem = false } }
+    },
+    {
+        id = 258668, -- Long Ethereal Pipe Segment
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 800, isItem = false } }
+    },
+    {
+        id = 258885, -- Exposed Angled Ethereal Pipe Segment
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 800, isItem = false } }
+    },
+    {
+        id = 258667, -- Angled Ethereal Pipe Segment
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 800, isItem = false } }
+    },
+    {
+        id = 258766, -- Exposed Corner Ethereal Pipe Segment
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 800, isItem = false } }
+    },
+    {
+        id = 258836, -- Reinforced Corner Ethereal Pipe Segment
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 800, isItem = false } }
+    },
+    {
+        id = 258669, -- Corner Ethereal Pipe Segment
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 800, isItem = false } }
+    },
+    {
+        id = 258835, -- Exposed Intersecting Ethereal Pipe Segment
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 800, isItem = false } }
+    },
+    {
+        id = 242729, -- Ruby Void Creeper
+        associatedID = 2556,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 15,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 8125, isItem = false } },
+    },
     --endregion
     --region Manaforge Vandals
     --endregion

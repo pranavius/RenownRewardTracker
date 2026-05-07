@@ -13,7 +13,6 @@ AddOn.MidnightData = {
     },
     {
         id = 259028, -- Ensemble: Haven's Elegant Regalia
-        associatedID = 1264350,
         factionID = AddOn.Faction.SilvermoonCourt,
         renownLevel = 2,
         type = "Cosmetic",
@@ -308,7 +307,6 @@ AddOn.MidnightData = {
     },
     {
         id = 259082, -- Ensemble: Haven Dignitary Trappings
-        associatedID = 1264423,
         factionID = AddOn.Faction.SilvermoonCourt,
         renownLevel = 14,
         type = "Cosmetic",

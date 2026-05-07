@@ -139,8 +139,9 @@ function AddOn:CreateItemCache(dataTable, itemCache)
                 if not rewardItemLevel then
                     rewardItemLevel = C_Item.GetDetailedItemLevelInfo(self.GetItemHyperlinkText(item.id, item.bonusIDs)) or itemLevel
                 end
-                if RRT_DB.debug and item.factionID == AddOn.Faction.CartelsOfUndermine then
-                    self.DebugPrint(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(itemName), "item level", DARKYELLOW_FONT_COLOR:WrapTextInColorCode(rewardItemLevel))
+                -- TODO: Revert to DebugPrint after development
+                if item.factionID == AddOn.Faction.KareshTrust then
+                    print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(itemName), "item level", DARKYELLOW_FONT_COLOR:WrapTextInColorCode(rewardItemLevel))
                 end
                 itemCache[item.id] = {
                     itemName = itemName or item.type.." "..item.id,
