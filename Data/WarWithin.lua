@@ -1026,10 +1026,15 @@ AddOn.WarWithinData = {
         currency = { { id = AddOn.Currencies.Kej, amount = 85, isItem = false } },
         bonusIDs = { 11337 },
     },
-    -- Small Kej Wallet Reward (R3)
+    {
+        id = 82417, -- Quest: A Rare Key
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 3,
+        type = "Quest",
+    },
     {
         id = 223080, -- Recipe: Algari Alchemist Stone
-        associatedID = -1,
+        associatedID = 427185,
         factionID = AddOn.Faction.SeveredThreads,
         renownLevel = 4,
         type = "Recipe",
@@ -1038,7 +1043,7 @@ AddOn.WarWithinData = {
     },
     {
         id = 225355, -- Technique: Contract: The Severed Threads
-        associatedID = -1,
+        associatedID = 444219,
         factionID = AddOn.Faction.SeveredThreads,
         renownLevel = 4,
         type = "Recipe",
@@ -1052,13 +1057,132 @@ AddOn.WarWithinData = {
         type = "Cosmetic",
         currency = { { id = AddOn.Currencies.Kej, amount = 565, isItem = false } },
     },
-    -- Pouch of Resonance Crystals Reward (R6)
+    {
+        id = 96116, -- Quest: A Cache of Crystals
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 6,
+        type = "Quest",
+    },
     {
         id = 217894, -- Nerubian Pheremore Secreter
         factionID = AddOn.Faction.SeveredThreads,
         renownLevel = 7,
         type = "Gear",
         currency = { { id = AddOn.Currencies.Kej, amount = 450, isItem = false } },
+    },
+    {
+        id = 85535, -- Quest: Kej
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 8,
+        type = "Quest",
+    },
+    {
+        id = 82442, -- Quest: Keep Up Appearances
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 9,
+        type = "Quest",
+    },
+    {
+        id = 82432, -- Quest: A Gift Handwoven
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 10,
+        type = "Quest",
+    },
+    {
+        id = 217894, -- Nerubian Pheremore Secreter
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 11,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.Kej, amount = 900, isItem = false } },
+        bonusIDs = { 10281, 1485 }
+    },
+    {
+        id = 96117, -- Quest: A Cache of Crystals
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 12,
+        type = "Quest",
+    },
+    {
+        id = 96118, -- Quest: A Cache of Crystals
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 13,
+        type = "Quest",
+    },
+    {
+        id = 85532, -- Quest: The Wealth of a Kingdom
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 14,
+        type = "Quest",
+    },
+    {
+        id = 222972, -- Jump Jump
+        associatedID = 4491,
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 15,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2250, isItem = false } },
+    },
+    {
+        id = 218347, -- Thread-Bearer's Pauldrons
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.Kej, amount = 1125, isItem = false } },
+    },
+    {
+        id = 228705, -- Arachnoserum
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 17,
+        type = "Toy",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1750, isItem = false } },
+    },
+    {
+        id = 85534, -- Quest: The General's Cache
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 18,
+        type = "Quest",
+    },
+    {
+        id = 217894, -- Nerubian Pheremore Secreter
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 19,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.Kej, amount = 1350, isItem = false } },
+        bonusIDs = { 10273, 1498 }
+    },
+    {
+        id = 85531, -- Quest: Earth-Encrusted Gem
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 24,
+        type = "Quest",
+    },
+    {
+        id = 223274, -- Ferocious Jawcrawler
+        associatedID = 2184,
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 22,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2815, isItem = false } },
+    },
+    {
+        id = 85533, -- Quest: Kej
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 22,
+        type = "Quest",
+    },
+    {
+        id = 223264, -- Aquamarine Swarmite
+        associatedID = 2177,
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 23,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3940, isItem = false } },
+    },
+    {
+        id = 82446, -- Quest: For What Glimmers in Shadow
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 24,
+        type = "Quest",
     },
     --endregion
 }

@@ -76,7 +76,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
             <Button parentKey="ToggleButton" inherits="InsecureActionButtonTemplate">
                 <Size x="50" y="25"/>
                 <Anchors>
-                    <Anchor point="RIGHT" x="-5"/>
+                    <Anchor point="RIGHT" x="-5" y="-2"/>
                 </Anchors>
                 <Layers>
                     <Layer level="OVERLAY">

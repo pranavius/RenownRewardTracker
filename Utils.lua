@@ -133,7 +133,7 @@ function AddOn:CreateItemCache(dataTable, itemCache)
             elseif item.type == "Gear" then
                 -- Need item class and subclass to determine whether or not to show it for a character
                 local itemName, _, _, itemLevel, _, _, _, _, itemEquipLoc, iconID, _, itemClassID, itemSubclassID = C_Item.GetItemInfo(item.id)
-                local rewardItemLevel = self.GearItemLevelFixes[item.id]
+                local rewardItemLevel = self.GearItemLevelFixes[item.id..(item.bonusIDs and ":"..table.concat(item.bonusIDs, ":") or "")]
                 -- Some items (i.e. Mineral-Sparkled Cape from TWW) return incorrect item levels even when applying correct bonus IDs. These items will be hardcoded in GearItemLevelFixes.
                 -- If a hardcoded item level does not exist, then fetch it using the C_Item function, falling back on base item level
                 if not rewardItemLevel then

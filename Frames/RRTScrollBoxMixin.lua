@@ -39,7 +39,7 @@ function RRTScrollBoxMixin.FactionHeaderDataProviderInit(frame, data)
         AddOn.DebugPrint("Added faction visibility database entry for faction ID", data.factionID)
     end
 
-    frame.ToggleButton.Text:SetText("["..(RRT_DB.factionVisibility[data.factionID] and "Hide" or "Show").."]")
+    frame.ToggleButton.Text:SetText(RRT_DB.factionVisibility[data.factionID] and "[Collapse]" or "[Expand]")
 
     frame.ToggleButton:SetScript("OnClick", function()
         if data.factionID > 0 and RRT_DB.factionVisibility[data.factionID] ~= nil then
