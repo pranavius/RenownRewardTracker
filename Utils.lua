@@ -82,8 +82,8 @@ function AddOn.IsItemOwned(reward)
         isOwned = decor and decor.quantity and decor.numPlaced and (decor.quantity + decor.numPlaced > 0) or false
     elseif reward.type == "Other" then
         -- There are so few "Other" reward types that they'll be handled on a case-by-case basis here
-        -- 1. Beledar's Attunement, Flame's Radiance Schematics
-        if reward.id == 224553 or reward.id == 238837 or reward.id == 238839 then
+        -- 1. Beledar's Attunement, Flame's Radiance Schematics (2), GNZ Airmaster 9000
+        if reward.id == 224553 or reward.id == 238837 or reward.id == 238839 or reward.id == 232981 then
             isOwned = C_QuestLog.IsQuestFlaggedCompleted(reward.associatedID)
         end
     end
@@ -139,7 +139,9 @@ function AddOn:CreateItemCache(dataTable, itemCache)
                 if not rewardItemLevel then
                     rewardItemLevel = C_Item.GetDetailedItemLevelInfo(self.GetItemHyperlinkText(item.id, item.bonusIDs)) or itemLevel
                 end
-                self.DebugPrint(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(itemName), "item level", DARKYELLOW_FONT_COLOR:WrapTextInColorCode(rewardItemLevel))
+                if RRT_DB.debug and item.factionID == AddOn.Faction.CartelsOfUndermine then
+                    self.DebugPrint(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(itemName), "item level", DARKYELLOW_FONT_COLOR:WrapTextInColorCode(rewardItemLevel))
+                end
                 itemCache[item.id] = {
                     itemName = itemName or item.type.." "..item.id,
                     iconID = iconID or AddOn.iconFallbackTextureID,

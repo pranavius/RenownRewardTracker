@@ -713,7 +713,7 @@ AddOn.WarWithinData = {
         renownLevel = 10,
         type = "Quest",
     },
-    -- Pouch of Resonant Crystals Reward (R12)
+    -- TODO: Determine the quest ID for Rank 12 Pouch of Resonant Crystals reward
     {
         id = 218350, -- Expeditionary Spaulders
         factionID = AddOn.Faction.HallowfallArathi,
@@ -857,164 +857,6 @@ AddOn.WarWithinData = {
         factionID = AddOn.Faction.HallowfallArathi,
         renownLevel = 24,
         type = "Quest",
-    },
-    --endregion
-    --region Flame's Radiance
-    {
-        id = 89493, -- Quest: Welcome to the Field
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 1,
-        type = "Quest"
-    },
-    {
-        id = 238850, -- Arathi Entertainer's Flame
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 2,
-        type = "Toy",
-        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 5000, isItem = false } },
-    },
-    {
-        id = 89349, -- Quest: Flame's Radiance Stipend
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 2,
-        type = "Quest"
-    },
-    {
-        id = 238986, -- Mister Mans
-        associatedID = 4794,
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 3,
-        type = "Pet",
-        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 6500, isItem = false } },
-    },
-    {
-        id = 89390, -- Quest: Flame's Radiance Stipend
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 3,
-        type = "Quest"
-    },
-    {
-        id = 238852, -- Flame's Radiance Banner
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 4,
-        type = "Toy",
-        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 5000, isItem = false } },
-    },
-    {
-        id = 89391, -- Quest: Flame's Radiance Stipend
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 4,
-        type = "Quest"
-    },
-    {
-        id = 89494, -- Quest: A Frocking Good Job
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 5,
-        type = "Quest"
-    },
-    {
-        id = 89392, -- Quest: Flame's Radiance Stipend
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 5,
-        type = "Quest"
-    },
-    {
-        id = 239693, -- Radiant Lynx Whistle
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 6,
-        type = "Toy",
-        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 5000, isItem = false } },
-    },
-    {
-        id = 241188, -- Swiftpaw
-        associatedID = 4804,
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 6,
-        type = "Pet",
-        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 6500, isItem = false } },
-    },
-    {
-        id = 89393, -- Quest: Flame's Radiance Stipend
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 6,
-        type = "Quest"
-    },
-    {
-        id = 238824, -- Radiant Traveler's Backpack
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 7,
-        type = "Cosmetic",
-        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3250, isItem = false } },
-    },
-    {
-        id = 89394, -- Quest: Flame's Radiance Stipend
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 7,
-        type = "Quest"
-    },
-    {
-        id = 238837, -- Delver's Dirigible Schematic: Pale Paint
-        associatedID = 86198,
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 8,
-        type = "Other",
-        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3250, isItem = false } },
-    },
-    {
-        id = 238839, -- Delver's Dirigible Schematic: Arathi Decal
-        associatedID = 86199,
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 8,
-        type = "Other",
-        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
-    },
-    {
-        id = 245293, -- Collection of Arathi Scripture
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 8,
-        type = "Decor",
-        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1200, isItem = false } },
-    },
-    -- SEEMS LIKE THIS QUEST ISNT IN THE GAME ANYMORE?
-    -- {
-    --     id = 89395, -- Quest: Flame's Radiance Stipend
-    --     factionID = AddOn.Faction.FlamesRadiance,
-    --     renownLevel = 8,
-    --     type = "Quest"
-    -- },
-    {
-        id = 238829, -- Radiant Imperial Lynx
-        associatedID = 2519,
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 9,
-        type = "Mount",
-        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 8125, isItem = false } },
-    },
-    {
-        id = 89396, -- Quest: Flame's Radiance Stipend
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 9,
-        type = "Quest"
-    },
-    {
-        id = 89496, -- Quest: Defender of the Sacred Flame
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 10,
-        type = "Quest"
-    },
-    {
-        id = 237433, -- Necklace of the Devout
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 10,
-        type = "Gear",
-        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
-        bonusIDs = { 12274 },
-    },
-    {
-        id = 89397, -- Quest: Flame's Radiance Stipend
-        factionID = AddOn.Faction.FlamesRadiance,
-        renownLevel = 10,
-        type = "Quest"
     },
     --endregion
     --region The Severed Threads
@@ -1183,6 +1025,508 @@ AddOn.WarWithinData = {
         factionID = AddOn.Faction.SeveredThreads,
         renownLevel = 24,
         type = "Quest",
+    },
+    --endregion
+    --region The Cartels of Undermine
+    {
+        id = 85515, -- Quest: A Small Pouch of Crystals
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 3,
+        type = "Quest"
+    },
+    {
+        id = 85518, -- Quest: A Small Pouch of Crystals
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 4,
+        type = "Quest"
+    },
+    {
+        id = 232535, -- Technique: Contract: The Cartels of Undermine
+        associatedID = 471132,
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 233022, -- Technique: Vantus Rune: Liberation of Undermine
+        associatedID = 472951,
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 234274, -- Schematic: 22H Slicks
+        associatedID = 1213620,
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Engineering][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 235338, -- Pattern: Charged Armor Kit
+        associatedID = 1216520,
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 245319, -- Undermine Fence Post
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 5,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 300, isItem = false } },
+    },
+    {
+        id = 245318, -- Undermine Fence
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 5,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 450, isItem = false } },
+    },
+    {
+        id = 232379, -- Slime-Slicked Slippers
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 7,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+        bonusIDs = { 11969, 3272 },
+    },
+    {
+        id = 232381, -- Mostly-Cobbled Shoes
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 7,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+        bonusIDs = { 11969, 3272 },
+    },
+    {
+        id = 232383, -- Soot-Encrusted Kickers
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 7,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+        bonusIDs = { 11969, 3272 },
+    },
+    {
+        id = 232384, -- Aqirite-Toe Boots
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 7,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+        bonusIDs = { 11969, 3272 },
+    },
+    {
+        id = 96114, -- Quest: A Small Pouch of Crystals
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 8,
+        type = "Quest"
+    },
+    {
+        id = 96115, -- Quest: A Small Pouch of Crystals
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 9,
+        type = "Quest"
+    },
+    {
+        id = 86555, -- Quest: Undermine Benefactor
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 10,
+        type = "Quest"
+    },
+    {
+        id = 245314, -- Undermine Round Table
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 10,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 650, isItem = false } },
+    },
+    {
+        id = 243312, -- Undermine Rectangular Table
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 10,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 700, isItem = false } },
+    },
+    {
+        id = 87374, -- Quest: C.H.E.T.T.ing In
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 13,
+        type = "Quest"
+    },
+    {
+        id = 232410, -- Craftsman's Repurposed Mitts
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 14,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
+        bonusIDs = { 3285 },
+    },
+    {
+        id = 232411, -- Goblin Boxer's Wraps
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 14,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
+        bonusIDs = { 3285 },
+    },
+    {
+        id = 232412, -- Undermine Smelter's Gloves
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 14,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
+        bonusIDs = { 3285 },
+    },
+    {
+        id = 232413, -- Retired Bouncer's Gauntlets
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 14,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
+        bonusIDs = { 3285 },
+    },
+    {
+        id = 229936, -- Violet Armored Growler
+        associatedID = 2277,
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 15,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 8125, isItem = false } },
+    },
+    {
+        id = 232499, -- Undermine Treatise on Alchemy
+        associatedID = 85734,
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 16,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 232500, -- Undermine Treatise on Blacksmithing
+        associatedID = 85735,
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 16,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 232501, -- Undermine Treatise on Enchanting
+        associatedID = 85736,
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 16,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 232507, -- Undermine Treatise on Engineering
+        associatedID = 85737,
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 16,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Engineering][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 232503, -- Undermine Treatise on Herbalism
+        associatedID = 85738,
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 16,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Herbalism][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 232508, -- Undermine Treatise on Inscription
+        associatedID = 85739,
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 16,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 232504, -- Undermine Treatise on Jewelcrafting
+        associatedID = 85740,
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 16,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 232505, -- Undermine Treatise on Leatherworking
+        associatedID = 85741,
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 16,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 232509, -- Undermine Treatise on Mining
+        associatedID = 85742,
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 16,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Mining][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 232506, -- Undermine Treatise on Skinning
+        associatedID = 85744,
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 16,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Skinning][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 232502, -- Undermine Treatise on Tailoring
+        associatedID = 85745,
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 16,
+        type = "Profession",
+        currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 50, isItem = true } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_WAR_WITHIN],
+    },
+    {
+        id = 231743, -- Undermine Enforcer's Helmet
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1625, isItem = false } },
+    },
+    {
+        id = 231749, -- Undermine Enforcer's Spikes
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3250, isItem = false } },
+    },
+    {
+        id = 237034, -- Smartest in Town's Attire
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 9750, isItem = false } },
+    },
+    {
+        id = 237102, -- Slickest in Town's Attire
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 9750, isItem = false } },
+    },
+    {
+        id = 237112, -- Craftiest in Town's Attire
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 9750, isItem = false } },
+    },
+    {
+        id = 237122, -- Toughest in Town's Attire
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 9750, isItem = false } },
+    },
+    {
+        id = 232515, -- Experimental Goblin Jetpack
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 18,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3250, isItem = false } },
+    },
+    {
+        id = 232981, -- GNZ Airmaster 9000
+        associatedID = 85776,
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 19,
+        type = "Other",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+    },
+    {
+        id = 229944, -- The Topskimmer Special
+        associatedID = 2280,
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 19,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 11375, isItem = false } },
+    },
+    {
+        id = 85827, -- Quest: Glinting and Gleaming
+        factionID = AddOn.Faction.CartelsOfUndermine,
+        renownLevel = 20,
+        type = "Quest"
+    },
+    --endregion
+    --region Flame's Radiance
+    {
+        id = 89493, -- Quest: Welcome to the Field
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 1,
+        type = "Quest"
+    },
+    {
+        id = 238850, -- Arathi Entertainer's Flame
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 2,
+        type = "Toy",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 5000, isItem = false } },
+    },
+    {
+        id = 89349, -- Quest: Flame's Radiance Stipend
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 2,
+        type = "Quest"
+    },
+    {
+        id = 238986, -- Mister Mans
+        associatedID = 4794,
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 3,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 6500, isItem = false } },
+    },
+    {
+        id = 89390, -- Quest: Flame's Radiance Stipend
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 3,
+        type = "Quest"
+    },
+    {
+        id = 238852, -- Flame's Radiance Banner
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 4,
+        type = "Toy",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 5000, isItem = false } },
+    },
+    {
+        id = 89391, -- Quest: Flame's Radiance Stipend
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 4,
+        type = "Quest"
+    },
+    {
+        id = 89494, -- Quest: A Frocking Good Job
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 5,
+        type = "Quest"
+    },
+    {
+        id = 89392, -- Quest: Flame's Radiance Stipend
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 5,
+        type = "Quest"
+    },
+    {
+        id = 239693, -- Radiant Lynx Whistle
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 6,
+        type = "Toy",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 5000, isItem = false } },
+    },
+    {
+        id = 241188, -- Swiftpaw
+        associatedID = 4804,
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 6,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 6500, isItem = false } },
+    },
+    {
+        id = 89393, -- Quest: Flame's Radiance Stipend
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 6,
+        type = "Quest"
+    },
+    {
+        id = 238824, -- Radiant Traveler's Backpack
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 7,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3250, isItem = false } },
+    },
+    {
+        id = 89394, -- Quest: Flame's Radiance Stipend
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 7,
+        type = "Quest"
+    },
+    {
+        id = 238837, -- Delver's Dirigible Schematic: Pale Paint
+        associatedID = 86198,
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 8,
+        type = "Other",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3250, isItem = false } },
+    },
+    {
+        id = 238839, -- Delver's Dirigible Schematic: Arathi Decal
+        associatedID = 86199,
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 8,
+        type = "Other",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
+    },
+    {
+        id = 245293, -- Collection of Arathi Scripture
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 8,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1200, isItem = false } },
+    },
+    -- SEEMS LIKE THIS QUEST ISNT IN THE GAME ANYMORE?
+    -- {
+    --     id = 89395, -- Quest: Flame's Radiance Stipend
+    --     factionID = AddOn.Faction.FlamesRadiance,
+    --     renownLevel = 8,
+    --     type = "Quest"
+    -- },
+    {
+        id = 238829, -- Radiant Imperial Lynx
+        associatedID = 2519,
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 9,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 8125, isItem = false } },
+    },
+    {
+        id = 89396, -- Quest: Flame's Radiance Stipend
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 9,
+        type = "Quest"
+    },
+    {
+        id = 89496, -- Quest: Defender of the Sacred Flame
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 10,
+        type = "Quest"
+    },
+    {
+        id = 237433, -- Necklace of the Devout
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 10,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
+        bonusIDs = { 12274 },
+    },
+    {
+        id = 89397, -- Quest: Flame's Radiance Stipend
+        factionID = AddOn.Faction.FlamesRadiance,
+        renownLevel = 10,
+        type = "Quest"
     },
     --endregion
 }
