@@ -1529,6 +1529,10 @@ AddOn.WarWithinData = {
         type = "Quest"
     },
     --endregion
+    --region The K'aresh Trust
+    --endregion
+    --region Manaforge Vandals
+    --endregion
 }
 
 function AddOn:CreateWarWithinCache()
