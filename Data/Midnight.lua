@@ -587,7 +587,7 @@ AddOn.MidnightData = {
         id = 93931, -- Quest: An Abundance of Wealth
         factionID = AddOn.Faction.AmaniTribe,
         renownLevel = 9,
-        requiredCharacterLevel = 90, -- Also requires Abundance unlocked (TODO: Figure out a way to check for this)
+        requiredCharacterLevel = 90,
         type = "Quest",
     },
     {

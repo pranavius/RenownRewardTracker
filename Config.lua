@@ -5,8 +5,7 @@ AddOn.windowMinWidth = 800
 AddOn.windowMinHeight = 400
 AddOn.windowMaxWidth = 800
 AddOn.windowMaxHeight = 800
--- AddOn.selectedExpansion = LE_EXPANSION_MIDNIGHT
-AddOn.selectedExpansion = LE_EXPANSION_WAR_WITHIN -- TODO: Delete this line after development is done
+AddOn.selectedExpansion = LE_EXPANSION_MIDNIGHT
 AddOn.iconFallbackTextureID = 134400
 AddOn.initialized = false
 

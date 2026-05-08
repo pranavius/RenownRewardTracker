@@ -142,10 +142,7 @@ function AddOn:CreateItemCache(dataTable, itemCache)
                 if not rewardItemLevel then
                     rewardItemLevel = C_Item.GetDetailedItemLevelInfo(self.GetItemHyperlinkText(item.id, item.bonusIDs)) or itemLevel
                 end
-                -- TODO: Revert to DebugPrint after development
-                if item.factionID == AddOn.Faction.KareshTrust then
-                    print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(itemName), "item level", DARKYELLOW_FONT_COLOR:WrapTextInColorCode(rewardItemLevel))
-                end
+                self:DebugPrint(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(itemName), "item level", DARKYELLOW_FONT_COLOR:WrapTextInColorCode(rewardItemLevel))
                 itemCache[item.id] = {
                     itemName = itemName or item.type.." "..item.id,
                     iconID = iconID or AddOn.iconFallbackTextureID,
