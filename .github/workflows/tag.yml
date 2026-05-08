@@ -29,30 +29,34 @@ jobs:
     - name: Bump version and push tag
       run: |
         git fetch --tags
-        LATEST=$(git tag --sort=-version:refname | grep -E '^[0-9]+\.*[0-9]*$' | head -n 1)
+        if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          BUMP="${{ github.event.inputs.bump_type }}"
+          RELEASE_TYPE="${{ github.event.inputs.release_type }}"
+        else
+          COMMIT_MSG=$(git log -1 --pretty=%B)
+          if echo "$COMMIT_MSG" | grep -q "#major"; then
+            BUMP="major"
+          else
+            BUMP="minor"
+          fi
+          if echo "$COMMIT_MSG" | grep -q "\[alpha\]"; then
+            RELEASE_TYPE="alpha"
+          elif echo "$COMMIT_MSG" | grep -q "\[beta\]"; then
+            RELEASE_TYPE="beta"
+          else
+            RELEASE_TYPE="stable"
+          fi
+        fi
+        if [ "$RELEASE_TYPE" = "stable" ]; then
+          LATEST=$(git tag --sort=-version:refname | grep -E '^[0-9]+(\.[0-9]+)?$' | head -n 1)
+        else
+          LATEST=$(git tag --sort=-version:refname | grep -E "^[0-9]+(\.[0-9]+)?-${RELEASE_TYPE}$" | head -n 1)
+        fi
         if [ -z "$LATEST" ]; then
           NEW_TAG="0.1"
         else
-          IFS='.' read -r MAJOR MINOR <<< "$LATEST"
+          IFS='.' read -r MAJOR MINOR <<< "${LATEST%%-*}"
           [ -z "$MINOR" ] && MINOR=0
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            BUMP="${{ github.event.inputs.bump_type }}"
-            RELEASE_TYPE="${{ github.event.inputs.release_type }}"
-          else
-            COMMIT_MSG=$(git log -1 --pretty=%B)
-            if echo "$COMMIT_MSG" | grep -q "#major"; then
-              BUMP="major"
-            else
-              BUMP="minor"
-            fi
-            if echo "$COMMIT_MSG" | grep -q "\[alpha\]"; then
-              RELEASE_TYPE="alpha"
-            elif echo "$COMMIT_MSG" | grep -q "\[beta\]"; then
-              RELEASE_TYPE="beta"
-            else
-              RELEASE_TYPE="stable"
-            fi
-          fi
           if [ "$BUMP" = "major" ]; then
             NEW_TAG="$((MAJOR + 1))"
           else
