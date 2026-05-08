@@ -35,11 +35,12 @@ function RRTScrollBoxMixin.FactionHeaderDataProviderInit(frame, data)
     frame.ToggleButton:SetScript("OnClick", nil)
     
     if RRT_DB.factionVisibility[data.factionID] == nil then
-        AddOn.DebugPrint("Adding faction visibility database entry for faction ID", data.factionID)
         RRT_DB.factionVisibility[data.factionID] = true
+        AddOn.DebugPrint("Added faction visibility database entry for faction ID", data.factionID)
     end
 
-    frame.ToggleButton.Text:SetText("["..(RRT_DB.factionVisibility[data.factionID] and "Hide" or "Show").."]")
+    frame.ToggleButton.Text:SetText(RRT_DB.factionVisibility[data.factionID] and "[Collapse]" or "[Expand]")
+    frame.ToggleButton:SetWidth(frame.ToggleButton.Text:GetUnboundedStringWidth() + 5)
 
     frame.ToggleButton:SetScript("OnClick", function()
         if data.factionID > 0 and RRT_DB.factionVisibility[data.factionID] ~= nil then
@@ -51,8 +52,8 @@ function RRTScrollBoxMixin.FactionHeaderDataProviderInit(frame, data)
 
     local factionData = C_MajorFactions.GetMajorFactionData(data.factionID)
     if not factionData then
-        AddOn.DebugPrint("Faction data not found for faction ID", data.factionID)
         frame.FactionName:SetText(AddOn.GetTextureString(AddOn.iconFallbackTextureID, 25).." Unknown Faction")
+        AddOn.DebugPrint(WARNING_FONT_COLOR:WrapTextInColorCode("Faction data not found for faction ID", data.factionID))
         return
     end
     frame.Bg:SetGradient("VERTICAL", factionData.factionFontColor.color, BLACK_FONT_COLOR)
@@ -77,11 +78,7 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
     if reward.type ~= "Quest" then
         frame.IconDescContainer.Icon:HookScript("OnEnter", function(icon)
             GameTooltip:SetOwner(icon, "ANCHOR_LEFT")
-            if reward.type == "Gear" then
-                GameTooltip:SetHyperlink("item:"..reward.id.."::::::::::::1:13649")
-            else
-                GameTooltip:SetHyperlink("item:"..reward.id)
-            end
+            GameTooltip:SetHyperlink(AddOn.GetItemHyperlinkText(reward.id, reward.bonusIDs))
             GameTooltip:Show()
         end)
         frame.IconDescContainer.Icon:HookScript("OnLeave", function() GameTooltip:Hide() end)
@@ -89,7 +86,8 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
 
     if reward.type == "Quest" then
         frame.IconDescContainer.Icon:SetAtlas("QuestNormal")
-        frame.IconDescContainer.Desc:SetText(C_QuestLog.GetTitleForQuestID(reward.id))
+        local questTitle = AddOn.QuestNameCache[reward.id] or "Quest"
+        frame.IconDescContainer.Desc:SetText(questTitle..(RRT_DB.debug and " "..reward.id or ""))
     else
         local itemCache = select(2, AddOn:GetExpansionDataAndCache())
         local cacheData = itemCache[reward.id]
@@ -105,41 +103,80 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
         local costText = ""
         ---@type CurrencyTooltipData[]
         local tooltipInfo = {}
+        local isCurrencyOnlyItems = true
+        local isCurrencyOnlyMoney = true
+        local rewardCostInCopper = AddOn.GetRewardCostInCopper(reward.currency)
         for _, curr in ipairs(reward.currency) do
-            local currencyInfo = C_CurrencyInfo.GetCurrencyInfo(curr.id)
-            if currencyInfo then
-                local currencyText = AddOn.GetTextureString(currencyInfo.iconFileID)
-                if (currencyInfo.quantity < curr.amount) then
+            local currencyText = ""
+            if type(curr.id) == "string" then
+                isCurrencyOnlyItems = false
+                if GetMoney() < rewardCostInCopper then
+                    currencyText = ERROR_COLOR:WrapTextInColorCode(FormatLargeNumber(curr.amount)).." "..AddOn.GetAtlasString(curr.id)
+                else
+                    currencyText = FormatLargeNumber(curr.amount).." "..AddOn.GetAtlasString(curr.id)
+                end
+            elseif not curr.isItem then
+                isCurrencyOnlyItems = false
+                isCurrencyOnlyMoney = false
+                local currencyInfo = C_CurrencyInfo.GetCurrencyInfo(curr.id)
+                if currencyInfo then
+                    currencyText = AddOn.GetTextureString(currencyInfo.iconFileID)
+                    if currencyInfo.quantity < curr.amount then
+                        currencyText = currencyText.." "..ERROR_COLOR:WrapTextInColorCode("x"..curr.amount)
+                    else
+                        currencyText = currencyText.." x"..curr.amount
+                    end
+                    tinsert(tooltipInfo, {
+                        icon = currencyInfo.iconFileID,
+                        name = currencyInfo.name,
+                        amount = curr.amount,
+                        obtained = currencyInfo.quantity
+                    })
+                end
+            else
+                isCurrencyOnlyMoney = false
+                local name = C_Item.GetItemNameByID(curr.id) or "Currency Name"
+                local iconID = select(5, C_Item.GetItemInfoInstant(curr.id))
+                local quantity = C_Item.GetItemCount(curr.id, true, false, true, true)
+
+                currencyText = AddOn.GetTextureString(iconID)
+                if quantity < curr.amount then
                     currencyText = currencyText.." "..ERROR_COLOR:WrapTextInColorCode("x"..curr.amount)
                 else
                     currencyText = currencyText.." x"..curr.amount
                 end
                 tinsert(tooltipInfo, {
-                    icon = currencyInfo.iconFileID,
-                    name = currencyInfo.name,
+                    icon = iconID,
+                    name = name,
                     amount = curr.amount,
-                    obtained = currencyInfo.quantity
+                    obtained = quantity
                 })
-                costText = costText..currencyText.."    "
             end
+            costText = costText..currencyText.."    "
         end
 
         frame.CurrencyDisplay.Text:SetText(costText)
-        frame.CurrencyDisplay:HookScript("OnClick", function() ToggleCharacter("TokenFrame") end)
-        frame.CurrencyDisplay:HookScript("OnEnter", function(fs)
-            GameTooltip:SetOwner(fs, "ANCHOR_TOP")
-            GameTooltip:SetText("Purchase Cost:", 1, 1, 1)
-            GameTooltip:AddLine(" ")
-            for _, ttInfo in ipairs(tooltipInfo) do
-                local rightText = ttInfo.obtained.."/"..ttInfo.amount
-                GameTooltip:AddDoubleLine(AddOn.GetTextureString(ttInfo.icon, 10).." "..ttInfo.name, rightText  ,
+        if not isCurrencyOnlyMoney then
+            frame.CurrencyDisplay:HookScript("OnEnter", function(fs)
+                GameTooltip:SetOwner(fs, "ANCHOR_RIGHT", -40, -25)
+                GameTooltip:SetText("Purchase Cost:", 1, 1, 1)
+                GameTooltip:AddLine(" ")
+                for _, ttInfo in ipairs(tooltipInfo) do
+                    local rightText = ttInfo.obtained.."/"..ttInfo.amount
+                    GameTooltip:AddDoubleLine(AddOn.GetTextureString(ttInfo.icon, 10).." "..ttInfo.name, rightText  ,
                     nil, nil, nil, 1, 1, 1)
+                end
+                if not isCurrencyOnlyItems then
+                    GameTooltip:AddLine(" ")
+                    local gR, gG, gB = GREEN_FONT_COLOR:GetRGB()
+                    GameTooltip:AddLine("<Click to toggle currency menu>", 0, 1, 0, false)
+                end
+                GameTooltip:Show()
+            end)
+            frame.CurrencyDisplay:HookScript("OnLeave", function() GameTooltip:Hide() end)
+            if not isCurrencyOnlyItems then
+                frame.CurrencyDisplay:HookScript("OnClick", function() ToggleCharacter("TokenFrame") end)
             end
-            GameTooltip:AddLine(" ")
-            local gR, gG, gB = GREEN_FONT_COLOR:GetRGB()
-            GameTooltip:AddLine("<Click to open currency menu>", 0, 1, 0, false)
-            GameTooltip:Show()
-        end)
-        frame.CurrencyDisplay:HookScript("OnLeave", function() GameTooltip:Hide() end)
+        end
     end
 end

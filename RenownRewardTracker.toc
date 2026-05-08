@@ -21,6 +21,7 @@ embeds.xml
 Config.lua
 Utils.lua
 Data\Midnight.lua
+Data\WarWithin.lua
 Templates\RRTListItemMixins.lua
 Templates\RRTListItemTemplates.xml
 Templates\RRTFilterMixin.lua

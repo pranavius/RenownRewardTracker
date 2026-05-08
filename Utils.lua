@@ -1,4 +1,4 @@
----@class RenownRewardTracker
+---@type RenownRewardTracker
 local AddOn = select(2, ...)
 
 RRT_DB = RRT_DB or AddOn.DatabaseDefaults
@@ -80,7 +80,17 @@ function AddOn.IsItemOwned(reward)
     elseif reward.type == "Decor" then
         local decor = C_HousingCatalog.GetCatalogEntryInfoByItem(reward.id, true)
         isOwned = decor and decor.quantity and decor.numPlaced and (decor.quantity + decor.numPlaced > 0) or false
+    elseif reward.type == "Other" then
+        -- There are so few "Other" reward types that they'll be handled on a case-by-case basis here
+        -- 1. Beledar's Attunement, Flame's Radiance Schematics (2), GNZ Airmaster 9000
+        if reward.id == 224553 or reward.id == 238837 or reward.id == 238839 or reward.id == 232981 then
+            isOwned = C_QuestLog.IsQuestFlaggedCompleted(reward.associatedID)
+        -- 2. Ethereal Augment Rune
+        elseif reward.id == 243191 then
+            isOwned = C_Item.GetItemCount(reward.id, true, false, true, true) > 0
+        end
     end
+    -- Beacause of the other filtering rules for including an item in the list, gear visibility is handled entirely there instead
     return isOwned
 end
 
@@ -96,4 +106,108 @@ function AddOn:GetExpansionDataAndCache()
     end
 
     return {}, {}
+end
+
+function AddOn.GetItemHyperlinkText(itemID, bonusIDs)
+    if not bonusIDs or #bonusIDs == 0 then return "item:"..itemID end
+
+    return "item:"..itemID.."::::::::::::"..#bonusIDs..":"..table.concat(bonusIDs, ":")
+end
+
+function AddOn:CreateItemCache(dataTable, itemCache)
+    ---@type RewardData[]
+    local itemRewards = {}
+    for _, reward in ipairs(dataTable) do
+        if reward.type ~= "Quest" then tinsert(itemRewards, reward) end
+    end
+    local toLoad = #itemRewards
+
+    for _, item in ipairs(itemRewards) do
+        Item:CreateFromItemID(item.id):ContinueOnItemLoad(function()
+            toLoad = toLoad - 1
+
+            -- Recipe info is not fetchable using GetItemNameByID and GetItemIconByID for some reason
+            if item.type == "Recipe" then
+                local itemName, _, _, _, _, _, _, _, _, iconID = C_Item.GetItemInfo(item.id)
+                itemCache[item.id] = {
+                    itemName = itemName or item.type.." "..item.id,
+                    iconID = iconID or AddOn.iconFallbackTextureID,
+                }
+            elseif item.type == "Gear" then
+                -- Need item class and subclass to determine whether or not to show it for a character
+                local itemName, _, _, itemLevel, _, _, _, _, itemEquipLoc, iconID, _, itemClassID, itemSubclassID = C_Item.GetItemInfo(item.id)
+                local rewardItemLevel = self.GearItemLevelFixes[item.id..(item.bonusIDs and ":"..table.concat(item.bonusIDs, ":") or "")]
+                -- Some items (i.e. Mineral-Sparkled Cape from TWW) return incorrect item levels even when applying correct bonus IDs. These items will be hardcoded in GearItemLevelFixes.
+                -- If a hardcoded item level does not exist, then fetch it using the C_Item function, falling back on base item level
+                if not rewardItemLevel then
+                    rewardItemLevel = C_Item.GetDetailedItemLevelInfo(self.GetItemHyperlinkText(item.id, item.bonusIDs)) or itemLevel
+                end
+                self:DebugPrint(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(itemName), "item level", DARKYELLOW_FONT_COLOR:WrapTextInColorCode(rewardItemLevel))
+                itemCache[item.id] = {
+                    itemName = itemName or item.type.." "..item.id,
+                    iconID = iconID or AddOn.iconFallbackTextureID,
+                    armorClassID = itemClassID == 4 and itemSubclassID or nil,
+                    equipLoc = itemEquipLoc,
+                    rewardItemLevel = rewardItemLevel,
+                }
+            else
+                itemCache[item.id] = {
+                    itemName = C_Item.GetItemNameByID(item.id) or "",
+                    iconID = C_Item.GetItemIconByID(item.id) or AddOn.iconFallbackTextureID,
+                }
+            end
+
+            if toLoad == 0 then self.DebugPrint(GREEN_FONT_COLOR:WrapTextInColorCode("Expansion item data cached")) end
+        end)
+    end
+end
+
+function AddOn:CacheQuestNames(rewardData)
+    self.QuestNameCache = self.QuestNameCache or {}
+    local tbl = rewardData
+    if #tbl == 0 then
+        tAppendAll(tbl, self.MidnightData)
+        tAppendAll(tbl, self.WarWithinData)
+    end
+
+    local updateCount = 0
+    for _, reward in ipairs(tbl) do
+        if reward.type == "Quest" and not self.QuestNameCache[reward.id] then
+            self.QuestNameCache[reward.id] = C_TaskQuest.GetQuestInfoByQuestID(reward.id) or C_QuestLog.GetTitleForQuestID(reward.id)
+            if self.QuestNameCache[reward.id] then updateCount = updateCount + 1 end
+        end
+    end
+
+    if updateCount > 0 then
+        self.DebugPrint(GREEN_FONT_COLOR:WrapTextInColorCode("Updated "..updateCount.." quest names in cache"))
+    else
+        self.DebugPrint(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("No quest name updates made"))
+    end
+end
+
+---@param currency RewardCost[]
+function AddOn.GetRewardCostInCopper(currency)
+    local copperTotal = 0
+    for _, curr in ipairs(currency) do
+        if type(curr.id) == "string" then
+            if curr.id == "Coin-Gold" then
+                copperTotal = copperTotal + (curr.amount * 10000)
+            elseif curr.id == "Coin-Silver" then
+                copperTotal = copperTotal + (curr.amount * 100)
+            elseif curr.id == "Coin-Copper" then
+                copperTotal = copperTotal + curr.amount
+            end
+        end
+    end
+
+    return copperTotal
+end
+
+function AddOn.GetCharacterMoneyBreakdown()
+    local totalInCopper = GetMoney()
+    local gold = math.floor(totalInCopper / 10000)
+    local silver = math.floor((totalInCopper % 10000) / 100)
+    local copper = totalInCopper % 100
+    
+    return gold, silver, copper
 end

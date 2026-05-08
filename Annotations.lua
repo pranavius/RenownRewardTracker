@@ -11,6 +11,7 @@
 ---@field IconDescContainer ListItemIconDescContainer
 ---@field RewardType FontString
 ---@field CurrencyDisplay CurrencyDisplayButton
+---@field ResetFrameState fun()
 
 ---@class FactionHeaderToggleButton: Button
 ---@field Text FontString
@@ -81,6 +82,7 @@
 ---@field toggles DatabaseToggles
 ---@field factionVisibility table<number, boolean>
 ---@field debug boolean
+---@field minimap LibDBIcon.button.DB | nil
 
 ---@class CachedItemData
 ---@field itemName string
@@ -92,6 +94,7 @@
 ---@class RewardCost
 ---@field id number
 ---@field amount number
+---@field isItem boolean
 
 ---@class RewardData
 ---@field id number
@@ -101,6 +104,7 @@
 ---@field requiredCharacterLevel? number
 ---@field type "Recipe"|"Profession"|"Mount"|"Cosmetic"|"Toy"|"Pet"|"Quest"|"Decor"|"Gear"|"Other"
 ---@field currency? RewardCost[]
+---@field bonusIDs? number[]
 ---@field profSpellID? number
 
 ---@class FactionHeaderData
@@ -113,16 +117,30 @@
 ---@field amount number
 ---@field obtained number
 
+---@alias Currencies table<string, string|number|table<string, number>>
+
 ---@class RenownRewardTracker
 ---@field windowMinWidth number
 ---@field windowMinHeight number
 ---@field windowMaxWidth number
 ---@field windowMaxHeight number
----@field selectedExpansion number Expansion ID for the currently selected expansion (1 = TBC, 2 = WOTLK, etc.)
+---@field selectedExpansion number
 ---@field iconFallbackTextureID number
 ---@field playerClassfile string
 ---@field initialized boolean
----@field debug boolean `true` when debugging mode is enabled, `false` otherwise
----@field SupportedExpansions table<number, string> Table of expansions the AddOn provides renown tracking info for. Keys of the table are expansion IDs with values being expansion name
----@field FactionIconAtlasMap table<number, string>
+---@field debug boolean
+---@field SupportedExpansions table<number, string>
+---@field Faction Faction
+---@field FactionIconAtlasMap table<Faction, string>
+---@field MidnightData RewardData[]
 ---@field MidnightCache CachedItemData[]
+---@field WarWithinData RewardData[]
+---@field WarWithinCache CachedItemData[]
+---@field DragonflightData RewardData[]
+---@field DragonflightCache CachedItemData[]
+---@field ShadowlandsData RewardData[]
+---@field ShadowlandsCache CachedItemData[]
+---@field QuestNameCache table<number, string?>
+---@field DataProvider DataProviderMixin
+---@field ScrollView any
+---@field Currencies Currencies

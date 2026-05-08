@@ -1,4 +1,4 @@
----@class RenownRewardTracker
+---@type RenownRewardTracker
 local AddOn = select(2, ...)
 local LDB = LibStub("LibDataBroker-1.1")
 
@@ -15,7 +15,7 @@ EventFrame:HookScript("OnEvent", function(self, event, ...)
         end
     else
         AddOn:UpdateListContents()
-        DebugPrint(event)
+        DebugPrint("Updating list contents for event:", DARKYELLOW_FONT_COLOR:WrapTextInColorCode(event))
     end
 end)
 
@@ -24,19 +24,27 @@ EventFrame:RegisterEvent("ADDON_LOADED")
 RRT_DB = RRT_DB or AddOn.DatabaseDefaults
 
 function AddOn:Initialize()
-    -- Populate any new toggles that may be added for existing users from DB defaults
+    -- Populate any new toggles that may be missing for existing users from DB defaults
     for key, defaultValue in pairs(AddOn.DatabaseDefaults.toggles) do
         if RRT_DB.toggles[key] == nil then RRT_DB.toggles[key] = defaultValue end
     end
+    -- Populate any new factions that may be missing for existing user from enum
+    if not RRT_DB.factionVisibility then RRT_DB.factionVisibility = {} end
+    for _, factionID in pairs(AddOn.Faction) do
+        if RRT_DB.factionVisibility[factionID] == nil then RRT_DB.factionVisibility[factionID] = true end
+    end
+
     self.playerClassfile = select(2, UnitClass("player"))
+    self:CacheQuestNames({})
     self:CreateMidnightCache()
+    self:CreateWarWithinCache()
     EventFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
     EventFrame:RegisterEvent("BAG_UPDATE")
     EventFrame:RegisterEvent("QUEST_COMPLETE")
     EventFrame:RegisterEvent("MAJOR_FACTION_RENOWN_LEVEL_CHANGED")
     EventFrame:RegisterEvent("COVENANT_SANCTUM_RENOWN_LEVEL_CHANGED")
-    DebugPrint("Initialized")
     self.initialized = true
+    DebugPrint(GREEN_FONT_COLOR:WrapTextInColorCode("Initialized"))
 
     RRTScrollBox:InitializeScrollView()
 end
@@ -90,9 +98,10 @@ SlashCmdList["RRT"] = function(msg)
     end
 end
 
-function AddOn:UpdateListContents()
+---@param isManualUpdate boolean|nil
+function AddOn:UpdateListContents(isManualUpdate)
     if not self.initialized then return end
-    self.DebugPrint("Updating list contents")
+    DebugPrint("Updating list contents")
 
     ---@type (RewardData|FactionHeaderData)[]
     local listContents = {}
@@ -112,6 +121,9 @@ function AddOn:UpdateListContents()
 
     self.DataProvider = CreateDataProvider(listContents)
     self.ScrollView:SetDataProvider(self.DataProvider)
+    if isManualUpdate then
+        print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode("[RRT]"), "Rewards list refreshed")
+    end
 end
 
 ---Determine if a reward should appear for the current character
@@ -120,6 +132,9 @@ end
 function AddOn.ShouldRewardBeListed(reward)
     -- Show everything when toggles.ignoreAll is enabled
     if RRT_DB.toggles.ignoreAll then return true end
+
+    -- IMPORTANT: Check for Abundance being unlocked to show or hide the Abundance of Wealth quest reward
+    if reward.id == 93931 and not C_QuestLog.IsQuestFlaggedCompleted(91933) then return false end
 
     if not RRT_DB.toggles[reward.type:lower()] then return false end
     
@@ -131,18 +146,31 @@ function AddOn.ShouldRewardBeListed(reward)
     if reward.profSpellID and not C_SpellBook.IsSpellKnown(reward.profSpellID) then return false end
 
     if reward.type == "Gear" then
+        -- Gear visibility in the list entirely handled here, since a majority of gear (especially from older expansions) wouldn't even make it to IsItemOwned()
         local itemCache = select(2, AddOn:GetExpansionDataAndCache())
         local cacheData = itemCache[reward.id]
         if cacheData then
-            if cacheData.armorClassID ~= AddOn.ArmorSubclasses.Misc and cacheData.armorClassID ~= AddOn.ClassFileArmorTypeMap[AddOn.playerClassfile] then
+            if cacheData.armorClassID ~= AddOn.ArmorSubclasses.Misc and cacheData.armorClassID ~= AddOn.ClassFileArmorTypeMap[AddOn.playerClassfile] and cacheData.equipLoc ~= "INVTYPE_CLOAK" then
                 return false
+            end
+
+            -- Item will be shown even if it's lower item level than what's equipped if the appearance has not yet been learned
+            local itemSourceID = select(2, C_TransmogCollection.GetItemInfo(reward.id))
+            if itemSourceID then
+                local transmogInfo = C_TransmogCollection.GetAppearanceInfoBySource(itemSourceID)
+                DebugPrint(DARKYELLOW_FONT_COLOR:WrapTextInColorCode(cacheData.itemName), "appearance collected:", HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(transmogInfo and tostring(transmogInfo.appearanceIsCollected) or "unknown"))
+                if transmogInfo and not transmogInfo.appearanceIsCollected then return true end -- Only logic that goes against the conventional logic in this function
+            else
+                DebugPrint(WARNING_FONT_COLOR:WrapTextInColorCode("No item source for item "..reward.id))
             end
             if cacheData.rewardItemLevel and cacheData.equipLoc then
                 local slots = AddOn.InvTypeToSlots[cacheData.equipLoc]
                 if slots then
+                    -- Setting to math.huge (infinity) for gear that can be equipped in multiple slots (1H weapons, rings, trinkets)
                     local minEquippedLevel = math.huge
                     for _, slotID in ipairs(slots) do
-                        local equippedLevel = C_Item.GetCurrentItemLevel(ItemLocation:CreateFromEquipmentSlot(slotID)) or 0
+                        local itemLocation = ItemLocation:CreateFromEquipmentSlot(slotID)
+                        local equippedLevel = (C_Item.DoesItemExist(itemLocation) and C_Item.GetCurrentItemLevel(itemLocation)) or 0
                         if equippedLevel < minEquippedLevel then
                             minEquippedLevel = equippedLevel
                         end

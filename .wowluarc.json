@@ -2,7 +2,7 @@
     "ignore": [".release/", "Localization/"],
     "flavors": ["retail"],
     "globals": {
-        "read": ["RenownRewardTracker", "LE_EXPANSION_MIDNIGHT", "RRTScrollBox", "RRTScrollBar"],
-        "write": ["RRTListRewardMixin", "RRTListFactionHeaderMixin", "RRTFilterMixin", "RenownRewardTrackerMixin", "RRTScrollBoxMixin"]
+        "read": ["RenownRewardTracker*", "RRT*", "LE_EXPANSION_MIDNIGHT"],
+        "write": ["RenownRewardTracker*", "RRT*"]
     }
 }

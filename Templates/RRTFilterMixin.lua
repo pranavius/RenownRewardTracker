@@ -23,6 +23,7 @@ function RRTFilterMixin:OnClick()
     RRT_DB.toggles[self.toggleName] = not RRT_DB.toggles[self.toggleName]
     if RRT_DB.toggles[self.toggleName] then self:ShowEnabledState() else self:ShowDisabledState() end
     AddOn:UpdateListContents()
+    RenownRewardTracker:SetToggleAllButtonText()
 end
 
 function RRTFilterMixin:ShowEnabledState()

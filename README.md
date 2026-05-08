@@ -9,8 +9,9 @@ _Easily view renown rewards and track which are available per character_
 
 Currently provides information on the renown-based factions from the following expansions:
 - Midnight
+- The War Within
 
-Non-renown based factions are not currently supported, but may be in a future update.
+Non-renown based factions in these expansions are not currently supported, but may be in a future update.
 
 ## Highlights
 
@@ -36,6 +37,13 @@ Currently supported factions:
   - Hara'ti
   - The Singularity
   - Ritual Sites
+- **The War Within**
+  - Council of Dornogal
+  - The Assembly of the Deeps
+  - Hallowfall Arathi
+  - The Severed Threads
+  - The Cartels of Undermine
+  - The K'aresh Trust
 
 ## Usage
 
@@ -43,7 +51,7 @@ Open the AddOn window with the slash command `/rrt` or `/renownrewardtracker`. R
 
 ### Filters
 
-The AddOn provides a number of filter selectors for each reward type. Click any filter to toggle it on or off.
+The AddOn provides a number of filter selectors for each reward type. Click any filter to toggle it on or off. You can also use the **Apply All Filters**/**Remove All Filters** button to show or hide all types of rewards at once.
 
 Currently available filters:
 - **Mounts**
@@ -55,6 +63,7 @@ Currently available filters:
 - **Quests**
 - **Decor**
 - **Gear**
+- **Other**
 
 The **Show All** checkbox bypasses all active filters and displays every reward regardless of ownership or filter state.
 
