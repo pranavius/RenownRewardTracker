@@ -85,6 +85,9 @@ function AddOn.IsItemOwned(reward)
         -- 1. Beledar's Attunement, Flame's Radiance Schematics (2), GNZ Airmaster 9000
         if reward.id == 224553 or reward.id == 238837 or reward.id == 238839 or reward.id == 232981 then
             isOwned = C_QuestLog.IsQuestFlaggedCompleted(reward.associatedID)
+        -- 2. Ethereal Augment Rune
+        elseif reward.id == 243191 then
+            isOwned = C_Item.GetItemCount(reward.id, true, false, true, true) > 0
         end
     end
     -- Beacause of the other filtering rules for including an item in the list, gear visibility is handled entirely there instead
@@ -183,4 +186,31 @@ function AddOn:CacheQuestNames(rewardData)
     else
         self.DebugPrint(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("No quest name updates made"))
     end
+end
+
+---@param currency RewardCost[]
+function AddOn.GetRewardCostInCopper(currency)
+    local copperTotal = 0
+    for _, curr in ipairs(currency) do
+        if type(curr.id) == "string" then
+            if curr.id == "Coin-Gold" then
+                copperTotal = copperTotal + (curr.amount * 10000)
+            elseif curr.id == "Coin-Silver" then
+                copperTotal = copperTotal + (curr.amount * 100)
+            elseif curr.id == "Coin-Copper" then
+                copperTotal = copperTotal + curr.amount
+            end
+        end
+    end
+
+    return copperTotal
+end
+
+function AddOn.GetCharacterMoneyBreakdown()
+    local totalInCopper = GetMoney()
+    local gold = math.floor(totalInCopper / 10000)
+    local silver = math.floor((totalInCopper % 10000) / 100)
+    local copper = totalInCopper % 100
+    
+    return gold, silver, copper
 end

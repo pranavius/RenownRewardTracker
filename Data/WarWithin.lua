@@ -1602,7 +1602,12 @@ AddOn.WarWithinData = {
         currency = { { id = AddOn.ItemCurrencies.ArtisansAcuity, amount = 150, isItem = true } },
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_WAR_WITHIN]
     },
-    -- Pouch of Resonance Crystals reward (R5)
+    {
+        id = 90630, -- Quest: A Small Bundle of Crystals
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 5,
+        type = "Quest"
+    },
     {
         id = 245967, -- Shawl of the Trust
         factionID = AddOn.Faction.KareshTrust,
@@ -1642,7 +1647,12 @@ AddOn.WarWithinData = {
         currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
         bonusIDs = { 12282 },
     },
-    -- Pouch of Resonance Crystals reward (R8)
+    {
+        id = 90634, -- Quest: A Small Bundle of Crystals
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 8,
+        type = "Quest"
+    },
     {
         id = 91142, -- Quest: Tabard for the Trusted
         factionID = AddOn.Faction.KareshTrust,
@@ -1753,9 +1763,14 @@ AddOn.WarWithinData = {
         factionID = AddOn.Faction.KareshTrust,
         renownLevel = 13,
         type = "Cosmetic",
-        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 33250, isItem = false } },
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3250, isItem = false } },
     },
-    -- Satchel of Resonance Crystals reward (R13)
+    {
+        id = 90638, -- Quest: A Bundle of Crystals
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 13,
+        type = "Quest"
+    },
     {
         id = 245693, -- K'areshi Ribbon Stash
         factionID = AddOn.Faction.KareshTrust,
@@ -1834,6 +1849,102 @@ AddOn.WarWithinData = {
         type = "Mount",
         currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 8125, isItem = false } },
     },
+    {
+        id = 245971, -- Consortium Brute's Clasp
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 16,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
+        bonusIDs = { 12290 },
+    },
+    {
+        id = 245972, -- Consortium Skirmisher's Armbands
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 16,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
+        bonusIDs = { 12290 },
+    },
+    {
+        id = 245973, -- Consortium Scout's Armlets
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 16,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
+        bonusIDs = { 12290 },
+    },
+    {
+        id = 245974, -- Consortium Magi's Cuffs
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 16,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3900, isItem = false } },
+        bonusIDs = { 12290 },
+    },
+    {
+        id = 245980, -- Inter-Phase Scoop
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1150, isItem = false } },
+    },
+    {
+        id = 245979, -- Arcano-Charged Wrench
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1150, isItem = false } },
+    },
+    {
+        id = 245981, -- K'aresh Multi-Tool
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1150, isItem = false } },
+    },
+    {
+        id = 243191, -- Ethereal Augment Rune
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 18,
+        type = "Other",
+        currency = { { id = AddOn.Currencies.Gold, amount = 100000, isItem = false } },
+    },
+    {
+        id = 90666, -- Quest: A Bundle of Crystals
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 18,
+        type = "Quest"
+    },
+    {
+        id = 237484, -- Terror of the Wastes
+        associatedID = 2510,
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 19,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 11375, isItem = false } },
+    },
+    {
+        id = 258320, -- K'areshi Protectorate Portal
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 19,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1000, isItem = false } }
+    },
+    {
+        id = 258306, -- K'areshi Warp Platform
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 19,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1000, isItem = false } }
+    },
+    {
+        id = 247751, -- Deactivated K'areshi Warp Cannon
+        factionID = AddOn.Faction.KareshTrust,
+        renownLevel = 19,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2000, isItem = false } }
+    },
+    -- Ethereal Harbinger Crest Reward (R20)
     --endregion
     --region Manaforge Vandals
     --endregion

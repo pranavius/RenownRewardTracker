@@ -103,12 +103,23 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
         ---@type CurrencyTooltipData[]
         local tooltipInfo = {}
         local isCurrencyOnlyItems = true
+        local isCurrencyOnlyMoney = true
+        local rewardCostInCopper = AddOn.GetRewardCostInCopper(reward.currency)
         for _, curr in ipairs(reward.currency) do
-            if not curr.isItem then
+            local currencyText = ""
+            if type(curr.id) == "string" then
                 isCurrencyOnlyItems = false
+                if GetMoney() < rewardCostInCopper then
+                    currencyText = ERROR_COLOR:WrapTextInColorCode(FormatLargeNumber(curr.amount)).." "..AddOn.GetAtlasString(curr.id)
+                else
+                    currencyText = FormatLargeNumber(curr.amount).." "..AddOn.GetAtlasString(curr.id)
+                end
+            elseif not curr.isItem then
+                isCurrencyOnlyItems = false
+                isCurrencyOnlyMoney = false
                 local currencyInfo = C_CurrencyInfo.GetCurrencyInfo(curr.id)
                 if currencyInfo then
-                    local currencyText = AddOn.GetTextureString(currencyInfo.iconFileID)
+                    currencyText = AddOn.GetTextureString(currencyInfo.iconFileID)
                     if currencyInfo.quantity < curr.amount then
                         currencyText = currencyText.." "..ERROR_COLOR:WrapTextInColorCode("x"..curr.amount)
                     else
@@ -120,14 +131,14 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
                         amount = curr.amount,
                         obtained = currencyInfo.quantity
                     })
-                    costText = costText..currencyText.."    "
                 end
             else
+                isCurrencyOnlyMoney = false
                 local name = C_Item.GetItemNameByID(curr.id) or "Currency Name"
                 local iconID = select(5, C_Item.GetItemInfoInstant(curr.id))
                 local quantity = C_Item.GetItemCount(curr.id, true, false, true, true)
 
-                local currencyText = AddOn.GetTextureString(iconID)
+                currencyText = AddOn.GetTextureString(iconID)
                 if quantity < curr.amount then
                     currencyText = currencyText.." "..ERROR_COLOR:WrapTextInColorCode("x"..curr.amount)
                 else
@@ -139,30 +150,32 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
                     amount = curr.amount,
                     obtained = quantity
                 })
-                costText = costText..currencyText.."    "
             end
+            costText = costText..currencyText.."    "
         end
 
         frame.CurrencyDisplay.Text:SetText(costText)
-        frame.CurrencyDisplay:HookScript("OnEnter", function(fs)
-            GameTooltip:SetOwner(fs, "ANCHOR_RIGHT", -40, -25)
-            GameTooltip:SetText("Purchase Cost:", 1, 1, 1)
-            GameTooltip:AddLine(" ")
-            for _, ttInfo in ipairs(tooltipInfo) do
-                local rightText = ttInfo.obtained.."/"..ttInfo.amount
-                GameTooltip:AddDoubleLine(AddOn.GetTextureString(ttInfo.icon, 10).." "..ttInfo.name, rightText  ,
-                nil, nil, nil, 1, 1, 1)
-            end
-            if not isCurrencyOnlyItems then
+        if not isCurrencyOnlyMoney then
+            frame.CurrencyDisplay:HookScript("OnEnter", function(fs)
+                GameTooltip:SetOwner(fs, "ANCHOR_RIGHT", -40, -25)
+                GameTooltip:SetText("Purchase Cost:", 1, 1, 1)
                 GameTooltip:AddLine(" ")
-                local gR, gG, gB = GREEN_FONT_COLOR:GetRGB()
-                GameTooltip:AddLine("<Click to toggle currency menu>", 0, 1, 0, false)
+                for _, ttInfo in ipairs(tooltipInfo) do
+                    local rightText = ttInfo.obtained.."/"..ttInfo.amount
+                    GameTooltip:AddDoubleLine(AddOn.GetTextureString(ttInfo.icon, 10).." "..ttInfo.name, rightText  ,
+                    nil, nil, nil, 1, 1, 1)
+                end
+                if not isCurrencyOnlyItems then
+                    GameTooltip:AddLine(" ")
+                    local gR, gG, gB = GREEN_FONT_COLOR:GetRGB()
+                    GameTooltip:AddLine("<Click to toggle currency menu>", 0, 1, 0, false)
+                end
+                GameTooltip:Show()
+            end)
+            frame.CurrencyDisplay:HookScript("OnLeave", function() GameTooltip:Hide() end)
+            if not isCurrencyOnlyItems then
+                frame.CurrencyDisplay:HookScript("OnClick", function() ToggleCharacter("TokenFrame") end)
             end
-            GameTooltip:Show()
-        end)
-        frame.CurrencyDisplay:HookScript("OnLeave", function() GameTooltip:Hide() end)
-        if not isCurrencyOnlyItems then
-            frame.CurrencyDisplay:HookScript("OnClick", function() ToggleCharacter("TokenFrame") end)
         end
     end
 end

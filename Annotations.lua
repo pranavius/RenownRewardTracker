@@ -117,6 +117,8 @@
 ---@field amount number
 ---@field obtained number
 
+---@alias Currencies table<string, string|number|table<string, number>>
+
 ---@class RenownRewardTracker
 ---@field windowMinWidth number
 ---@field windowMinHeight number
@@ -141,3 +143,4 @@
 ---@field QuestNameCache table<number, string?>
 ---@field DataProvider DataProviderMixin
 ---@field ScrollView any
+---@field Currencies Currencies

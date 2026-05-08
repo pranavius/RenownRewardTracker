@@ -224,6 +224,9 @@ AddOn.InvTypeToSlots = {
 }
 
 AddOn.Currencies = {
+    Gold = "Coin-Gold",
+    Silver = "Coin-Silver",
+    Copper = "Coin-Copper",
     VoidlightMarl = 3316,
     ArtisanMoxie = {
         Alchemy = 3256,
