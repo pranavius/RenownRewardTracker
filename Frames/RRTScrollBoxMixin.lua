@@ -40,6 +40,7 @@ function RRTScrollBoxMixin.FactionHeaderDataProviderInit(frame, data)
     end
 
     frame.ToggleButton.Text:SetText(RRT_DB.factionVisibility[data.factionID] and "[Collapse]" or "[Expand]")
+    frame.ToggleButton:SetWidth(frame.ToggleButton.Text:GetUnboundedStringWidth() + 5)
 
     frame.ToggleButton:SetScript("OnClick", function()
         if data.factionID > 0 and RRT_DB.factionVisibility[data.factionID] ~= nil then

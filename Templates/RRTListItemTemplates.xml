@@ -74,13 +74,13 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
         </Layers>
         <Frames>
             <Button parentKey="ToggleButton" inherits="InsecureActionButtonTemplate">
-                <Size x="50" y="25"/>
+                <Size y="25"/>
                 <Anchors>
                     <Anchor point="RIGHT" x="-5" y="-2"/>
                 </Anchors>
                 <Layers>
                     <Layer level="OVERLAY">
-                        <FontString parentKey="Text" inherits="GameFontHighlightSmall" setAllPoints="true"/>
+                        <FontString parentKey="Text" inherits="GameFontHighlightSmall" justifyH="CENTER" setAllPoints="true"/>
                     </Layer>
                 </Layers>
             </Button>

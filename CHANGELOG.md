@@ -1,4 +1,15 @@
 
+1
+- Added renown rewards for **Council of Dornogal**, **Assembly of the Deeps**, **Hallowfall Arathi**, **Cartels of Undermine**, **Flame's Radiance**, **Severed Threads**, and **Karesh Trust**
+- Added a manual list refresh button to the main window
+- Added a button to apply or remove all active filters at once
+- Updated gear reward visibility to also show items when transmog appearance has not yet been learned, regardless of item level
+- Improved quest name display to more consistently show the actual quest name in reward entries
+- Removed *Dragonflight* and *Shadowlands* from expansions dropdown
+- *Bug Fix:* Corrected item level display for certain gear rewards that return inaccurate values from the API
+- *Bug Fix:* Corrected visibility of cloak rewards in the rewards list
+- *Bug Fix:* Dynamically adjust Expand/Collapse button width for factions to avoid clipping text on lower resolutions
+
 1-beta
 - Added a minimap button that toggles the AddOn window, with a `/rrt minimap` slash command to show or hide it
 - Added AddOn Compartment button support for opening the AddOn window and viewing usage info

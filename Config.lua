@@ -34,8 +34,8 @@ AddOn.DataBrokerIcon = LibStub("LibDBIcon-1.0")
 AddOn.SupportedExpansions = {
     [LE_EXPANSION_MIDNIGHT] = "Midnight",
     [LE_EXPANSION_WAR_WITHIN] = "The War Within",
-    [LE_EXPANSION_DRAGONFLIGHT] = "Dragonflight",
-    [LE_EXPANSION_SHADOWLANDS] = "Shadowlands"
+    -- [LE_EXPANSION_DRAGONFLIGHT] = "Dragonflight",
+    -- [LE_EXPANSION_SHADOWLANDS] = "Shadowlands"
 }
 
 ---@enum Faction
