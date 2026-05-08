@@ -98,7 +98,8 @@ SlashCmdList["RRT"] = function(msg)
     end
 end
 
-function AddOn:UpdateListContents()
+---@param isManualUpdate boolean|nil
+function AddOn:UpdateListContents(isManualUpdate)
     if not self.initialized then return end
     DebugPrint("Updating list contents")
 
@@ -120,6 +121,9 @@ function AddOn:UpdateListContents()
 
     self.DataProvider = CreateDataProvider(listContents)
     self.ScrollView:SetDataProvider(self.DataProvider)
+    if isManualUpdate then
+        print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode("[RRT]"), "Rewards list refreshed")
+    end
 end
 
 ---Determine if a reward should appear for the current character
@@ -132,7 +136,7 @@ function AddOn.ShouldRewardBeListed(reward)
     -- IMPORTANT: Check for Abundance being unlocked to show or hide the Abundance of Wealth quest reward
     if reward.id == 93931 and not C_QuestLog.IsQuestFlaggedCompleted(91933) then return false end
 
-    if not RRT_DB.toggles[reward.type:lower()] and reward.type ~= "Other" then return false end
+    if not RRT_DB.toggles[reward.type:lower()] then return false end
     
     if reward.requiredCharacterLevel and UnitLevel("player") < reward.requiredCharacterLevel then return false end
 

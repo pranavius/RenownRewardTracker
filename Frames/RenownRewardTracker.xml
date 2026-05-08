@@ -16,7 +16,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                 </Texture>
             </Layer>
             <Layer level="OVERLAY">
-                <FontString parentKey="Title" inherits="GameFontHighlightMedium" justifyH="CENTER">
+                <FontString parentKey="Title" inherits="GameFontHighlightMedium" justifyH="CENTER" text="Renown Reward Tracker">
                     <Anchors>
                         <Anchor point="TOPLEFT" x="10" y="-10"/>
                         <Anchor point="TOPRIGHT" x="-10" y="-10"/>
@@ -25,8 +25,21 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
             </Layer>
         </Layers>
         <Frames>
+            <Button parentKey="RefreshButton" inherits="UIPanelCloseButtonNoScripts">
+                <Size x="16" y="16"/>
+                <Anchors>
+                    <Anchor point="TOPLEFT" x="1"/>
+                </Anchors>
+                <DisabledTexture atlas="uitools-icon-refresh"/>
+                <NormalTexture atlas="UI-RefreshButton"/>
+                <HighlightTexture atlas="UI-RefreshButton"/>
+                <PushedTexture atlas="UI-RefreshButton"/>
+            </Button>
             <Button parentKey="CloseButton" inherits="UIPanelCloseButtonDefaultAnchors">
                 <Size x="16" y="16"/>
+                <NormalTexture atlas="common-icon-redx"/>
+                <HighlightTexture atlas="common-icon-redx"/>
+                <PushedTexture atlas="common-icon-redx"/>
             </Button>
             <Button parentKey="ResizeHandle" inherits="PanelResizeButtonTemplate" registerForDrag="LeftButton">
                 <Anchors>
@@ -135,6 +148,30 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                             <Anchor point="TOPLEFT" relativeTo="$parentToggleCosmetics" relativePoint="BOTTOMLEFT" y="-5"/>
                         </Anchors>
                     </Button>
+                    <Button name="$parentToggleOther" parentKey="ToggleOther" inherits="RRTFilterTemplate">
+                        <KeyValues>
+                            <KeyValue key="label" value="Other" />
+                            <KeyValue key="toggleName" value="other" />
+                        </KeyValues>
+                        <Anchors>
+                            <Anchor point="TOPRIGHT" relativeTo="$parentToggleQuests" relativePoint="BOTTOMRIGHT" y="-5"/>
+                        </Anchors>
+                    </Button>
+                    <Button name="$parentToggleAllFilters" parentKey="ToggleAllFilters">
+                        <Size y="25"/>
+                        <Anchors>
+                            <Anchor point="TOPLEFT" relativeTo="$parentToggleGear" relativePoint="BOTTOMLEFT" x="20" y="-20"/>
+                            <Anchor point="TOPRIGHT" relativeTo="$parentToggleOther" relativePoint="BOTTOMRIGHT" x="-20" y="-20"/>
+                        </Anchors>
+                        <Layers>
+                            <Layer level="ARTWORK">
+                                <FontString parentKey="Text" inherits="GameFontNormalSmallLeft" justifyH="CENTER" setAllPoints="true"/>
+                            </Layer>
+                        </Layers>
+                        <NormalTexture atlas="common-button-tertiary-normal-small"/>
+                        <HighlightTexture atlas="common-button-tertiary-normal-pending-FX"/>
+                        <PushedTexture atlas="common-button-tertiary-pressed-small"/>
+                    </Button>
                     <CheckButton parentKey="Checkbox" inherits="MinimalCheckboxTemplate">
                         <Size x="20" y="19"/>
                         <Anchors>
@@ -142,7 +179,7 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                         </Anchors>
                         <Layers>
                             <Layer level="ARTWORK">
-                                <FontString parentKey="Text" inherits="GameFontHighlightSmall">
+                                <FontString parentKey="Text" inherits="GameFontHighlightSmall" text="Show Everything (Ignores Filters)">
                                     <Anchors>
                                         <Anchor point="LEFT" relativePoint="RIGHT" x="2"/>
                                     </Anchors>

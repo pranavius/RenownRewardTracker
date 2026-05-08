@@ -22,6 +22,7 @@ AddOn.DatabaseDefaults = {
         quest = true,
         decor = true,
         gear = true,
+        other = true,
         ignoreAll = false,
     },
     factionVisibility = {},
