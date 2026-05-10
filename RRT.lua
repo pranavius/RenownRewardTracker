@@ -38,11 +38,13 @@ function AddOn:Initialize()
     self:CacheQuestNames({})
     self:CreateMidnightCache()
     self:CreateWarWithinCache()
+    self:CreateDragonflightCache()
     EventFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
     EventFrame:RegisterEvent("BAG_UPDATE")
     EventFrame:RegisterEvent("QUEST_COMPLETE")
     EventFrame:RegisterEvent("MAJOR_FACTION_RENOWN_LEVEL_CHANGED")
     EventFrame:RegisterEvent("COVENANT_SANCTUM_RENOWN_LEVEL_CHANGED")
+    EventFrame:RegisterEvent("CURRENCY_TRANSFER_LOG_UPDATE")
     self.initialized = true
     DebugPrint(GREEN_FONT_COLOR:WrapTextInColorCode("Initialized"))
 

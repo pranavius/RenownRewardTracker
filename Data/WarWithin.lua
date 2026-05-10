@@ -844,6 +844,7 @@ AddOn.WarWithinData = {
         factionID = AddOn.Faction.HallowfallArathi,
         renownLevel = 23,
         type = "Other",
+        otherCompletionType = "Quest",
         currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1000, isItem = false } },
     },
     {
@@ -1354,6 +1355,7 @@ AddOn.WarWithinData = {
         factionID = AddOn.Faction.CartelsOfUndermine,
         renownLevel = 19,
         type = "Other",
+        otherCompletionType = "Quest",
         currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
     },
     {
@@ -1470,6 +1472,7 @@ AddOn.WarWithinData = {
         factionID = AddOn.Faction.FlamesRadiance,
         renownLevel = 8,
         type = "Other",
+        otherCompletionType = "Quest",
         currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3250, isItem = false } },
     },
     {
@@ -1478,6 +1481,7 @@ AddOn.WarWithinData = {
         factionID = AddOn.Faction.FlamesRadiance,
         renownLevel = 8,
         type = "Other",
+        otherCompletionType = "Quest",
         currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
     },
     {
@@ -1907,6 +1911,7 @@ AddOn.WarWithinData = {
         factionID = AddOn.Faction.KareshTrust,
         renownLevel = 18,
         type = "Other",
+        otherCompletionType = "Item",
         currency = { { id = AddOn.Currencies.Gold, amount = 100000, isItem = false } },
     },
     {

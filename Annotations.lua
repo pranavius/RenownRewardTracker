@@ -103,6 +103,7 @@
 ---@field renownLevel number
 ---@field requiredCharacterLevel? number
 ---@field type "Recipe"|"Profession"|"Mount"|"Cosmetic"|"Toy"|"Pet"|"Quest"|"Decor"|"Gear"|"Other"
+---@field otherCompletionType? "Quest"|"Item"
 ---@field currency? RewardCost[]
 ---@field bonusIDs? number[]
 ---@field profSpellID? number

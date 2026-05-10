@@ -6,6 +6,11 @@ RRTScrollBoxMixin = CreateFromMixins(ScrollBoxListMixin, {})
 
 RRT_DB = RRT_DB or AddOn.DatabaseDefaults
 
+local factionsWithWhiteNames = {
+    AddOn.Faction.CartelsOfUndermine,
+    AddOn.Faction.MaruukCentaur
+}
+
 function RRTScrollBoxMixin:InitializeScrollView()
     AddOn.ScrollBox = self
     AddOn.ScrollBar = RRTScrollBar
@@ -59,9 +64,15 @@ function RRTScrollBoxMixin.FactionHeaderDataProviderInit(frame, data)
     frame.Bg:SetGradient("VERTICAL", factionData.factionFontColor.color, BLACK_FONT_COLOR)
     local atlas = AddOn.FactionIconAtlasMap[data.factionID]
     if atlas then
-        frame.FactionName:SetText(AddOn.GetAtlasString(atlas, 20).." "..factionData.name)
+        frame.FactionName:SetText(AddOn.GetAtlasString(atlas, 18).." "..factionData.name)
     else
         frame.FactionName:SetText(AddOn.GetTextureString(AddOn.iconFallbackTextureID, 25).." "..factionData.name)
+    end
+    if tContains(factionsWithWhiteNames, data.factionID) then
+    frame.FactionName:SetTextColor(1, 1, 1)
+    else
+        local r, g, b = DARKYELLOW_FONT_COLOR:GetRGB()
+        frame.FactionName:SetTextColor(r, g, b)
     end
 end
 
@@ -152,7 +163,7 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
                     obtained = quantity
                 })
             end
-            costText = costText..currencyText.."    "
+            costText = costText..currencyText.."   "
         end
 
         frame.CurrencyDisplay.Text:SetText(costText)

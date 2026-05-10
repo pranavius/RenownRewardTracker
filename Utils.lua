@@ -81,12 +81,10 @@ function AddOn.IsItemOwned(reward)
         local decor = C_HousingCatalog.GetCatalogEntryInfoByItem(reward.id, true)
         isOwned = decor and decor.quantity and decor.numPlaced and (decor.quantity + decor.numPlaced > 0) or false
     elseif reward.type == "Other" then
-        -- There are so few "Other" reward types that they'll be handled on a case-by-case basis here
-        -- 1. Beledar's Attunement, Flame's Radiance Schematics (2), GNZ Airmaster 9000
-        if reward.id == 224553 or reward.id == 238837 or reward.id == 238839 or reward.id == 232981 then
+        -- Release 2 (stable): Add optional property `otherCompletionType` to `reward` to make determining ownership simpler
+        if reward.otherCompletionType == "Quest" then
             isOwned = C_QuestLog.IsQuestFlaggedCompleted(reward.associatedID)
-        -- 2. Ethereal Augment Rune
-        elseif reward.id == 243191 then
+        elseif reward.otherCompletionType == "Item" then
             isOwned = C_Item.GetItemCount(reward.id, true, false, true, true) > 0
         end
     end
