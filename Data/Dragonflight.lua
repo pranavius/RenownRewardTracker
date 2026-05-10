@@ -812,6 +812,759 @@ AddOn.DragonflightData = {
         otherCompletionType = "Quest",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
     },
+    {
+        id = 200481, -- Ohn'ir Midnight Helm
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 7,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.IridescentPlume, amount = 2, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200484, -- Ohn'ir Dawnlight Hat
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 7,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.IridescentPlume, amount = 2, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200485, -- Ohn'ir Dusklight Cap
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 7,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.IridescentPlume, amount = 2, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200486, -- Ohn'ir Daylight Visor
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 7,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.IridescentPlume, amount = 2, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200482, -- Shikaar Harrier's Visor
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 7,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.IridescentPlume, amount = 2, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200487, -- Shikaar Hunter's Visor
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 7,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.IridescentPlume, amount = 2, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200488, -- Shikaar Huntermaster's Visor
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 7,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.IridescentPlume, amount = 2, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200489, -- Shikaar Scout's Visor
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 7,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.IridescentPlume, amount = 2, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200483, -- Nokhud Battle Helm
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 7,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200490, -- Nokhud Reaver's Helm
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 7,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200491, -- Nokhud Champion's Helm
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 7,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200492, -- Nokhud Warlord's Helm
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 7,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 199814, -- Formula: Enchant Boots - Plainsrunner's Breeze
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 8,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 199813, -- Formula: Enchant Chest - Sustained Strength
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 8,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 193618, -- Hoofhelper
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 8,
+        type = "Pet",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 200460, -- Ohn'aran Plainswalker Moccasions
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 11,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1472 },
+    },
+    {
+        id = 200459, -- Ohn'aran Plainswalker slippers
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 11,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1472 },
+    },
+    {
+        id = 200458, -- Ohn'aran Plainswalker Greaves
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 11,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1472 },
+    },
+    {
+        id = 200457, -- Ohn'aran Plainswalker Boots
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 11,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1472 },
+    },
+    {
+        id = 193870, -- Pattern: Allied Legguards of Sansok Khan
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 13,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 193878, -- Pattern: Ancestor's Dew Drippers
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 13,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 191547, -- Recipe: Alacritous Alchemist Stone
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 13,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 194480, -- Plans: Obsidian Seared Halberd
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 13,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 194477, -- Plans: Obsidian Seared Runeaxe
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 13,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 194478, -- Plans: Obsidian Seared Facesmasher
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 13,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 200498, -- Shikaar Harrier's Shoulderpads
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 20, isItem = true },
+        },
+    },
+    {
+        id = 200497, -- Shikaar Hunter's Shoulderpads
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 20, isItem = true },
+        },
+    },
+    {
+        id = 200496, -- Shikaar Huntmaster's Shoulderpads
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 20, isItem = true },
+        },
+    },
+    {
+        id = 200494, -- Shikaar Scout's Shoulderpads
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 20, isItem = true },
+        },
+    },
+    {
+        id = 200499, -- Nokhud Battle Shoulderpads
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200501, -- Nokhud Reaver's Shoulderpads
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200500, -- Nokhud Champion's Shoulderpads
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200495, -- Nokhud Warlord's Shoulderpads
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200502, -- Ohn'ir Midnight Shoulderpads
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.IridescentPlume, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 200504, -- Ohn'ir Dawnlight Shoulderpads
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.IridescentPlume, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 200503, -- Ohn'ir Dusklight Shoulderpads
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.IridescentPlume, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 200493, -- Ohn'ir Daylight Shoulderpads
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.IridescentPlume, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 71074, -- Quest: Befriending Wings and Wind
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 14,
+        type = "Quest"
+    },
+    {
+        id = 198902, -- Technique: Windborne Velocidrake: Black Fur
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 15,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 25, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 197623, -- Windborne Velocidrake: Spiked Tail
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 15,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 100, isItem = false } },
+    },
+    {
+        id = 197618, -- Windborne Velocidrake: Long Snout
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 15,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 100, isItem = false } },
+    },
+    {
+        id = 197591, -- Windborne Velocidrake: Hairy Head
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 15,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 100, isItem = false } },
+    },
+    {
+        id = 197587, -- Windborne Velocidrake: Feathered Back
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 15,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 100, isItem = false } },
+    },
+    {
+        id = 200524, -- Nokhud Warhammer
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 200520, -- Mammothbone Knife
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.LargeSturdyFemur, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 200525, -- Massive Stone Sledgehammer
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200521, -- Maruuk Boneblade
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.LargeSturdyFemur, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 200522, -- Maruukai Smith's Tongs
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 200511, -- Stonework Greatspear
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.DraconiumOre, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 200523, -- Smith's Stoneworked Mallet
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200510, -- Huntstrider's Spear
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 200512, -- Teerai Warspear
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 200534, -- Toghus Poleaxe
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.DraconiumOre, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200517, -- Nokhud Warspear
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.DraconiumOre, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 200518, -- Nokhud Goliath's Spear
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.DraconiumOre, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 200539, -- Khansguard Shield
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.DraconiumOre, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 200540, -- Improvised Maruuk Barrier
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.RunedWrithebark, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200541, -- Fur-Lined Safeguard
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.DraconiumOre, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 194499, -- Plans: Khaz'gorite Leatherworker's Knife
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 18,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.Gold, amount = 200, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 194497, -- Plans: Khaz'gorite Skinning Knife
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 18,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.Gold, amount = 200, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 194463, -- Pattern: Expert Alchemist's Hat
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 18,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.Gold, amount = 200, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 194462, -- Pattern: Flameproof Apron
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 18,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.Gold, amount = 200, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 194457, -- Pattern: Masterwork Smock
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 18,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.Gold, amount = 200, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 194464, -- Pattern: Reinforced Pack
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 18,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.Gold, amount = 200, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 197011, -- Cliffside Wylderdrake: Green Scales
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 19,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
+            { id = AddOn.Currencies.AwakenedAir, amount = 1, isItem = false },
+        },
+    },
+    {
+        id = 197143, -- Highland Drake: Green Scales
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 19,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
+            { id = AddOn.Currencies.AwakenedAir, amount = 1, isItem = false },
+        },
+    },
+    {
+        id = 197389, -- Renwewed Proto-Drake: Green Scales
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 19,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
+            { id = AddOn.Currencies.AwakenedAir, amount = 1, isItem = false },
+        },
+    },
+    {
+        id = 203352, -- Winding Slitherdrake: Green Scales
+        associatedID = -1,
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 19,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
+            { id = AddOn.Currencies.AwakenedAir, amount = 1, isItem = false },
+        },
+    },
+    {
+        id = 200543, -- Clan Teerai Pennant
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 21,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.Copper, amount = 22, isItem = false } },
+    },
+    {
+        id = 200545, -- Clan Shikaar Pennant
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 21,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.Copper, amount = 22, isItem = false } },
+    },
+    {
+        id = 200546, -- Clan Nokhud Pennant
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 21,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.Copper, amount = 22, isItem = false } },
+    },
+    {
+        id = 200547, -- Clan Ohn'ir Pennant
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 21,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.Copper, amount = 22, isItem = false } },
+    },
+    {
+        id = 200467, -- Maruuk Spiritual Vestments
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 24,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1485 },
+    },
+    {
+        id = 200466, -- Maruuk Scout's Vestments
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 24,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1485 },
+    },
+    {
+        id = 200465, -- Maruuk Harrier's Hauberk
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 24,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1485 },
+    },
+    {
+        id = 200464, -- Maruuk Warrior's Chestplate
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 24,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1485 },
+    },
+    {
+        id = 71091, -- Quest: The Highest Honor
+        factionID = AddOn.Faction.MaruukCentaur,
+        renownLevel = 25,
+        type = "Quest"
+    },
     --endregion
 }
 

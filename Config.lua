@@ -273,7 +273,11 @@ AddOn.ItemCurrencies = {
     ContouredFowlfeather = 193053,
     SpoolOfWilderthread = 192096,
     AwakenedFire = 190321,
-    DenseHide = 193217
+    DenseHide = 193217,
+    DraconiumOre = 188658,
+    RunedWrithebark = 194863,
+    LargeSturdyFemur = 201402,
+    AwakenedAir = 190327,
 }
 
 -- Necessary because some items are evaluated with an incorrect item level even after applying correct bonus IDs
