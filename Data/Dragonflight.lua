@@ -1460,7 +1460,7 @@ AddOn.DragonflightData = {
         otherCompletionType = "Quest",
         currency = {
             { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
-            { id = AddOn.Currencies.AwakenedAir, amount = 1, isItem = false },
+            { id = AddOn.ItemCurrencies.AwakenedAir, amount = 1, isItem = true },
         },
     },
     {
@@ -1472,7 +1472,7 @@ AddOn.DragonflightData = {
         otherCompletionType = "Quest",
         currency = {
             { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
-            { id = AddOn.Currencies.AwakenedAir, amount = 1, isItem = false },
+            { id = AddOn.ItemCurrencies.AwakenedAir, amount = 1, isItem = true },
         },
     },
     {
@@ -1484,7 +1484,7 @@ AddOn.DragonflightData = {
         otherCompletionType = "Quest",
         currency = {
             { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
-            { id = AddOn.Currencies.AwakenedAir, amount = 1, isItem = false },
+            { id = AddOn.ItemCurrencies.AwakenedAir, amount = 1, isItem = true },
         },
     },
     {
@@ -1496,7 +1496,7 @@ AddOn.DragonflightData = {
         otherCompletionType = "Quest",
         currency = {
             { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
-            { id = AddOn.Currencies.AwakenedAir, amount = 1, isItem = false },
+            { id = AddOn.ItemCurrencies.AwakenedAir, amount = 1, isItem = true },
         },
     },
     {
