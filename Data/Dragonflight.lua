@@ -946,7 +946,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 199814, -- Formula: Enchant Boots - Plainsrunner's Breeze
-        associatedID = -1,
+        associatedID = 389479,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 8,
         type = "Recipe",
@@ -955,7 +955,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 199813, -- Formula: Enchant Chest - Sustained Strength
-        associatedID = -1,
+        associatedID = 389419,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 8,
         type = "Recipe",
@@ -964,7 +964,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 193618, -- Hoofhelper
-        associatedID = -1,
+        associatedID = 3221,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 8,
         type = "Pet",
@@ -1008,7 +1008,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 193870, -- Pattern: Allied Legguards of Sansok Khan
-        associatedID = -1,
+        associatedID = 375157,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 13,
         type = "Recipe",
@@ -1017,7 +1017,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 193878, -- Pattern: Ancestor's Dew Drippers
-        associatedID = -1,
+        associatedID = 375153,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 13,
         type = "Recipe",
@@ -1026,7 +1026,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 191547, -- Recipe: Alacritous Alchemist Stone
-        associatedID = -1,
+        associatedID = 370677,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 13,
         type = "Recipe",
@@ -1035,7 +1035,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 194480, -- Plans: Obsidian Seared Halberd
-        associatedID = -1,
+        associatedID = 367588,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 13,
         type = "Recipe",
@@ -1044,7 +1044,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 194477, -- Plans: Obsidian Seared Runeaxe
-        associatedID = -1,
+        associatedID = 367594,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 13,
         type = "Recipe",
@@ -1053,7 +1053,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 194478, -- Plans: Obsidian Seared Facesmasher
-        associatedID = -1,
+        associatedID = 367589,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 13,
         type = "Recipe",
@@ -1196,7 +1196,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 198902, -- Technique: Windborne Velocidrake: Black Fur
-        associatedID = -1,
+        associatedID = 383583,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 15,
         type = "Recipe",
@@ -1205,7 +1205,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 197623, -- Windborne Velocidrake: Spiked Tail
-        associatedID = -1,
+        associatedID = 69827,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 15,
         type = "Other",
@@ -1214,7 +1214,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 197618, -- Windborne Velocidrake: Long Snout
-        associatedID = -1,
+        associatedID = 69822,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 15,
         type = "Other",
@@ -1223,7 +1223,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 197591, -- Windborne Velocidrake: Hairy Head
-        associatedID = -1,
+        associatedID = 69795,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 15,
         type = "Other",
@@ -1232,7 +1232,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 197587, -- Windborne Velocidrake: Feathered Back
-        associatedID = -1,
+        associatedID = 69791,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 15,
         type = "Other",
@@ -1399,7 +1399,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 194499, -- Plans: Khaz'gorite Leatherworker's Knife
-        associatedID = -1,
+        associatedID = 371369,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 18,
         type = "Recipe",
@@ -1408,7 +1408,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 194497, -- Plans: Khaz'gorite Skinning Knife
-        associatedID = -1,
+        associatedID = 371367,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 18,
         type = "Recipe",
@@ -1416,8 +1416,8 @@ AddOn.DragonflightData = {
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_WAR_WITHIN]
     },
     {
-        id = 194463, -- Pattern: Expert Alchemist's Hat
-        associatedID = -1,
+        id = 198463, -- Pattern: Expert Alchemist's Hat
+        associatedID = 375196,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 18,
         type = "Recipe",
@@ -1425,8 +1425,8 @@ AddOn.DragonflightData = {
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
     },
     {
-        id = 194462, -- Pattern: Flameproof Apron
-        associatedID = -1,
+        id = 198462, -- Pattern: Flameproof Apron
+        associatedID = 375195,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 18,
         type = "Recipe",
@@ -1434,8 +1434,8 @@ AddOn.DragonflightData = {
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
     },
     {
-        id = 194457, -- Pattern: Masterwork Smock
-        associatedID = -1,
+        id = 198457, -- Pattern: Masterwork Smock
+        associatedID = 375194,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 18,
         type = "Recipe",
@@ -1443,8 +1443,8 @@ AddOn.DragonflightData = {
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
     },
     {
-        id = 194464, -- Pattern: Reinforced Pack
-        associatedID = -1,
+        id = 198464, -- Pattern: Reinforced Pack
+        associatedID = 375190,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 18,
         type = "Recipe",
@@ -1453,7 +1453,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 197011, -- Cliffside Wylderdrake: Green Scales
-        associatedID = -1,
+        associatedID = 69211,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 19,
         type = "Other",
@@ -1465,7 +1465,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 197143, -- Highland Drake: Green Scales
-        associatedID = -1,
+        associatedID = 69344,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 19,
         type = "Other",
@@ -1477,7 +1477,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 197389, -- Renwewed Proto-Drake: Green Scales
-        associatedID = -1,
+        associatedID = 66720,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 19,
         type = "Other",
@@ -1489,7 +1489,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 203352, -- Winding Slitherdrake: Green Scales
-        associatedID = -1,
+        associatedID = 73843,
         factionID = AddOn.Faction.MaruukCentaur,
         renownLevel = 19,
         type = "Other",
