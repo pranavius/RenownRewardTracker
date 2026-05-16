@@ -1566,6 +1566,240 @@ AddOn.DragonflightData = {
         type = "Quest"
     },
     --endregion
+    --region Iskaara Tuskarr
+    {
+        id = 199892, -- Tuskarr Traveling Soup Pot
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 4,
+        type = "Toy",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 100, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 199650, -- Whale Bone Tea Set
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 4,
+        type = "Toy",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 100, isItem = false },
+            { id = AddOn.ItemCurrencies.AquaticMaw, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199538, -- Azure Ear Warmer
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 6,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 199536, -- Ocean Grey Ear Warmer
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 6,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 199534, -- Blue Stocking Cap
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 6,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 199533, -- Green Stocking Cap
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 6,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 199532, -- Grey Stocking Cap
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 6,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 199531, -- Red Stocking Cap
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 6,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 197132, --  HighlandDrake: Spiked Cheek
+        associatedID = -1,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 7,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+    },
+    {
+        id = 197114, --  Highland Drake: Multi-Horned Head
+        associatedID = -1,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 7,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+    },
+    {
+        id = 197101, --  Highland Drake: Bushy Brow
+        associatedID = -1,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 7,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+    },
+    {
+        id = 197155, --  Highland Drake: Finned Neck
+        associatedID = -1,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 7,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+    },
+    -- Small Iskaaran Supply Pack Reward (R8)
+    {
+        id = 193225, -- Whiskuk
+        associatedID = -1,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 9,
+        type = "Pet",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.LargeSturdyFemur, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 193837, -- Backswimmer Timbertooth
+        associatedID = -1,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 9,
+        type = "Pet",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.RunedWrithebark, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199815, -- Formula: Enchant Cloak - Regenerative Leech
+        associatedID = -1,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 10,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 199816, -- Formula: Enchant Chest - Accelerated Agility
+        associatedID = -1,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 10,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 194726, -- Design: Kalu'ak Figurine
+        associatedID = -1,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 10,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 194611, -- Design: Energized Ysemerald
+        associatedID = -1,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 10,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 194610, -- Design: Keen Ysemerald
+        associatedID = -1,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 10,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 194603, -- Design: Radiant Alexstraszite
+        associatedID = -1,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 10,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 194602, -- Design: Sensei's Ysemerald
+        associatedID = -1,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 10,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
+    },
+    -- Chieftain's Duty questline (R11)
+    {
+        id = 199872, -- Tuskarr Trader's Cloan
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 12,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 75, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 10, isItem = true },
+        },
+    },
+    {
+        id = 199877, -- Ensemble: Tuskarr Trader's Leather Armor
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 12,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 750, isItem = false },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+            { id = AddOn.ItemCurrencies.MastodonTusk, amount = 2, isItem = true },
+        },
+    },
+    --endregion
 }
 
 function AddOn:CreateDragonflightCache()

@@ -43,7 +43,7 @@ AddOn.SupportedExpansions = {
 local Faction = {
     DragonscaleExpedition = 2507,
     MaruukCentaur = 2503,
-    IskaaraTuskar = 2511,
+    IskaaraTuskarr = 2511,
     ValdrakkenAccord = 2510,
     LoammNiffen = 2564,
     DreamWardens = 2574,
@@ -69,7 +69,7 @@ AddOn.Faction = Faction
 AddOn.FactionIconAtlasMap = {
     [Faction.DragonscaleExpedition] = "MajorFactions_Icons_Expedition512",
     [Faction.MaruukCentaur] = "MajorFactions_Icons_Centaur512",
-    [Faction.IskaaraTuskar] = "MajorFactions_Icons_Tuskarr512",
+    [Faction.IskaaraTuskarr] = "MajorFactions_Icons_Tuskarr512",
     [Faction.ValdrakkenAccord] = "MajorFactions_Icons_Valdrakken512",
     [Faction.LoammNiffen] = "MajorFactions_Icons_Niffen512",
     [Faction.DreamWardens] = "MajorFactions_Icons_Dream512",
@@ -278,6 +278,8 @@ AddOn.ItemCurrencies = {
     RunedWrithebark = 194863,
     LargeSturdyFemur = 201402,
     AwakenedAir = 190327,
+    AquaticMaw = 201400,
+    MastodonTusk = 201403,
 }
 
 -- Necessary because some items are evaluated with an incorrect item level even after applying correct bonus IDs
