@@ -61,8 +61,8 @@ end
 
 local function createAddonTooltip(tooltip)
     tooltip:SetText("Renown Reward Tracker v@project-version@")
-    tooltip:AddLine("Easily view renown rewards and track which are available per character")
-    tooltip:AddLine("Type \"/rrt help\" in the chat window for available slash commands")
+    tooltip:AddLine("Easily view renown rewards and track which are available per character", 1, 1, 1, true)
+    tooltip:AddLine("Type "..DARKYELLOW_FONT_COLOR:WrapTextInColorCode("/rrt help").." in the chat window for available slash commands", 0.67, 0.67, 0.67)
 end
 
 function AddOn:ConfigureDataBroker()

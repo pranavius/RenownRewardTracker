@@ -1654,8 +1654,8 @@ AddOn.DragonflightData = {
         },
     },
     {
-        id = 197132, --  HighlandDrake: Spiked Cheek
-        associatedID = -1,
+        id = 197132, -- Highland Drake: Spiked Cheek
+        associatedID = 69333,
         factionID = AddOn.Faction.IskaaraTuskarr,
         renownLevel = 7,
         type = "Other",
@@ -1663,8 +1663,8 @@ AddOn.DragonflightData = {
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
     },
     {
-        id = 197114, --  Highland Drake: Multi-Horned Head
-        associatedID = -1,
+        id = 197114, -- Highland Drake: Multi-Horned Head
+        associatedID = 69315,
         factionID = AddOn.Faction.IskaaraTuskarr,
         renownLevel = 7,
         type = "Other",
@@ -1672,8 +1672,8 @@ AddOn.DragonflightData = {
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
     },
     {
-        id = 197101, --  Highland Drake: Bushy Brow
-        associatedID = -1,
+        id = 197101, -- Highland Drake: Bushy Brow
+        associatedID = 69302,
         factionID = AddOn.Faction.IskaaraTuskarr,
         renownLevel = 7,
         type = "Other",
@@ -1681,8 +1681,8 @@ AddOn.DragonflightData = {
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
     },
     {
-        id = 197155, --  Highland Drake: Finned Neck
-        associatedID = -1,
+        id = 197155, -- Highland Drake: Finned Neck
+        associatedID = 69356,
         factionID = AddOn.Faction.IskaaraTuskarr,
         renownLevel = 7,
         type = "Other",
@@ -1692,7 +1692,7 @@ AddOn.DragonflightData = {
     -- Small Iskaaran Supply Pack Reward (R8)
     {
         id = 193225, -- Whiskuk
-        associatedID = -1,
+        associatedID = 3284,
         factionID = AddOn.Faction.IskaaraTuskarr,
         renownLevel = 9,
         type = "Pet",
@@ -1704,7 +1704,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 193837, -- Backswimmer Timbertooth
-        associatedID = -1,
+        associatedID = 3326,
         factionID = AddOn.Faction.IskaaraTuskarr,
         renownLevel = 9,
         type = "Pet",
@@ -1716,7 +1716,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 199815, -- Formula: Enchant Cloak - Regenerative Leech
-        associatedID = -1,
+        associatedID = 389404,
         factionID = AddOn.Faction.IskaaraTuskarr,
         renownLevel = 10,
         type = "Recipe",
@@ -1725,7 +1725,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 199816, -- Formula: Enchant Chest - Accelerated Agility
-        associatedID = -1,
+        associatedID = 389416,
         factionID = AddOn.Faction.IskaaraTuskarr,
         renownLevel = 10,
         type = "Recipe",
@@ -1734,7 +1734,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 194726, -- Design: Kalu'ak Figurine
-        associatedID = -1,
+        associatedID = 377804,
         factionID = AddOn.Faction.IskaaraTuskarr,
         renownLevel = 10,
         type = "Recipe",
@@ -1743,7 +1743,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 194611, -- Design: Energized Ysemerald
-        associatedID = -1,
+        associatedID = 374454,
         factionID = AddOn.Faction.IskaaraTuskarr,
         renownLevel = 10,
         type = "Recipe",
@@ -1752,7 +1752,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 194610, -- Design: Keen Ysemerald
-        associatedID = -1,
+        associatedID = 374453,
         factionID = AddOn.Faction.IskaaraTuskarr,
         renownLevel = 10,
         type = "Recipe",
@@ -1761,7 +1761,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 194603, -- Design: Radiant Alexstraszite
-        associatedID = -1,
+        associatedID = 374444,
         factionID = AddOn.Faction.IskaaraTuskarr,
         renownLevel = 10,
         type = "Recipe",
@@ -1769,8 +1769,8 @@ AddOn.DragonflightData = {
         profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
     },
     {
-        id = 194602, -- Design: Sensei's Ysemerald
-        associatedID = -1,
+        id = 194602, -- Design: Sensei's Alexstraszite
+        associatedID = 374443,
         factionID = AddOn.Faction.IskaaraTuskarr,
         renownLevel = 10,
         type = "Recipe",
@@ -1779,7 +1779,7 @@ AddOn.DragonflightData = {
     },
     -- Chieftain's Duty questline (R11)
     {
-        id = 199872, -- Tuskarr Trader's Cloan
+        id = 199872, -- Tuskarr Trader's Cloak
         factionID = AddOn.Faction.IskaaraTuskarr,
         renownLevel = 12,
         type = "Cosmetic",
@@ -1797,6 +1797,1209 @@ AddOn.DragonflightData = {
             { id = AddOn.Currencies.DragonIslesSupplies, amount = 750, isItem = false },
             { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
             { id = AddOn.ItemCurrencies.MastodonTusk, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 197153, -- Highland Drake: Bladed Tail
+        associatedID = 69354,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 13,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 100, isItem = false } },
+    },
+    {
+        id = 197123, -- Highland Drake: Thorn Horns
+        associatedID = 69324,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 13,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 100, isItem = false } },
+    },
+    {
+        id = 197139, -- Highland Drake: Large Spotted Pattern
+        associatedID = 69340,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 13,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 100, isItem = false } },
+    },
+    {
+        id = 198894, -- Technique: Highland Drake: Black Hair
+        associatedID = 383577,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 13,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 25, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 199887, -- Tuskarr Trapper's Bracers
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 14,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1472 },
+    },
+    {
+        id = 199886, -- Tuskarr Sharkguard Wristguards
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 14,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1472 },
+    },
+    {
+        id = 199885, -- Reinforced Fisherman's Vambraces
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 14,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1472 },
+    },
+    {
+        id = 199884, -- Tuskarr Crafter's Bindings
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 14,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1472 },
+    },
+    {
+        id = 198102, -- Recipe: Impossibly Sharp Cutting Knife
+        associatedID = 381375,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 15,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Cooking][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 194634, -- Design: Idol of the Dreamer
+        associatedID = 374490,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 15,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 194633, -- Design: Idol of the Spellweaver
+        associatedID = 374488,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 15,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 193875, -- Pattern: Allied Heartwarming Fur Coat
+        associatedID = 375144,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 15,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 193876, -- Pattern: Snowball Makers
+        associatedID = 375146,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 15,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 199860, -- Rustic Tuskarr Backpack
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199861, -- Tan Tuskarr Backpack
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199862, -- Dark Tuskarr Backpack
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199863, -- Burgundy Tuskarr Backpack
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199852, -- Rustic Fisherman's Pack
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false },
+            { id = AddOn.ItemCurrencies.ScalebellyMackerel, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199853, -- Tan Fisherman's Pack
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false },
+            { id = AddOn.ItemCurrencies.TemporalDragonhead, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199854, -- Dark Fisherman's Pack
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false },
+            { id = AddOn.ItemCurrencies.CeruleanSpinefish, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199855, -- Burgundy Fisherman's Pack
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false },
+            { id = AddOn.ItemCurrencies.AileronSeamoth, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199856, -- Rustic Tuskarr Trader's Pack
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.MastodonTusk, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 199857, -- Tan Tuskarr Trader's Pack
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.MastodonTusk, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 199858, -- Dark Tuskarr Trader's Pack
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.MastodonTusk, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 199859, -- Burgundy Tuskarr Trader's Pack
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.MastodonTusk, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 199894, -- Fisherman's Folly
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 17,
+        type = "Toy",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
+            { id = AddOn.ItemCurrencies.ScalebellyMackerel, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199896, -- Rubbery Fish Head
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 17,
+        type = "Toy",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
+            { id = AddOn.ItemCurrencies.PebbledRockSalts, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.ThousandbitePiranha, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 194660, -- Design: Fine-Print Trifocals
+        associatedID = 374538,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 18,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 194663, -- Design: Resonant Focus
+        associatedID = 374543,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 18,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 198461, -- Pattern: Shockproof Gloves
+        associatedID = 375193,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 18,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 198459, -- Pattern: Lavish Floral Pack
+        associatedID = 375189,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 18,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 198458, -- Pattern: Resplendent Cover
+        associatedID = 375192,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 18,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 198465, -- Pattern: Expert Skinner's Cap
+        associatedID = 375191,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 18,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 197390, -- Renewed Proto-Drake: Blue Scales
+        associatedID = 69591,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 19,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
+            { id = AddOn.ItemCurrencies.AwakenedFrost, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 197612, -- Windborne Velocidrake: Blue Scales
+        associatedID = 69816,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 19,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
+            { id = AddOn.ItemCurrencies.AwakenedFrost, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 197012, -- Cliffside Wylderdrake: Blue Scales
+        associatedID = 69212,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 19,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
+            { id = AddOn.ItemCurrencies.AwakenedFrost, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 203350, -- Winding Slitherdrake: Blue Scales
+        associatedID = 73841,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 19,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
+            { id = AddOn.ItemCurrencies.AwakenedFrost, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 70968, -- Quest: Of the CLoth, of the Community
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 21,
+        type = "Quest"
+    },
+    {
+        id = 199891, -- Tuskarr Sharkguard Shoulderguards
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 22,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1485 },
+    },
+    {
+        id = 199890, -- Tuskarr Crafter's Mantle
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 22,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1485 },
+    },
+    {
+        id = 199889, -- Tuskarr Boneplate Pauldrons
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 22,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1485 },
+    },
+    {
+        id = 199888, -- Tuskarr Trapper's Spaulders
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 22,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1485 },
+    },
+    {
+        id = 194311, -- Pattern: Tuskarr Beanbag
+        associatedID = 375191,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 22,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 750, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 199897, -- Blue-Covered Beanbag
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 23,
+        type = "Toy",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 100, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.PebbledRockSalts, amount = 10, isItem = true },
+        },
+    },
+    {
+        id = 199878, -- Tuskarr Timber Splitter
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 24,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+            { id = AddOn.ItemCurrencies.AquaticMaw, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 199883, -- Tuskarr Sharktooth Bolt-Thrower
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 24,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.AquaticMaw, amount = 2, isItem = true },
+            { id = AddOn.ItemCurrencies.PrimalBearSpine, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199879, -- Tuskarr Fisherman's Dagger
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 24,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+            { id = AddOn.ItemCurrencies.AquaticMaw, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 199880, -- Tuskarr Leviathan's Hook
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 24,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.AquaticMaw, amount = 2, isItem = true },
+            { id = AddOn.ItemCurrencies.PrimalBearSpine, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199881, -- Tuskarr Fisherman's Harpoon
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 24,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.AquaticMaw, amount = 2, isItem = true },
+            { id = AddOn.ItemCurrencies.PrimalBearSpine, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199882, -- Tuskarr Mystic's Stave
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 24,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.RunedWrithebark, amount = 3, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 198872, -- Brown Scouting Ottuk
+        associatedID = 1657,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 25,
+        type = "Mount",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 750, isItem = false },
+            { id = AddOn.ItemCurrencies.MastodonTusk, amount = 2, isItem = true },
+            { id = AddOn.ItemCurrencies.AquaticMaw, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 200118, -- Yellow Scouting Ottuk
+        associatedID = 1659,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 25,
+        type = "Mount",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 750, isItem = false },
+            { id = AddOn.ItemCurrencies.MastodonTusk, amount = 2, isItem = true },
+            { id = AddOn.ItemCurrencies.AquaticMaw, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 198940, -- Technique: Contract: Iskaara Tuskarr
+        associatedID = 383588,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 25,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 198827, -- Magical Snow Sled
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 26,
+        type = "Toy",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
+            { id = AddOn.ItemCurrencies.RunedWrithebark, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.ChromaticDust, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199899, -- Magical Snow Sled
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 26,
+        type = "Toy",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
+            { id = AddOn.ItemCurrencies.RunedWrithebark, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.MastodonTusk, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 199542, -- Red Tufted Shoulderpads
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 199541, -- Grey Tufted Shoulderpads
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 199540, -- Green Tufted Shoulderpads
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 199539, -- Blue Tufted Shoulderpads
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 199550, -- Bloody Shorestalker's Spaulders
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+            { id = AddOn.ItemCurrencies.PrimalBearSpine, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199549, -- Depth-Delver's Spaulders
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+            { id = AddOn.ItemCurrencies.PrimalBearSpine, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199548, -- Rugged Seaspawn Spaulders
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+            { id = AddOn.ItemCurrencies.PrimalBearSpine, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199547, -- Spine-Reinforced's Spaulders
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.TuftOfPrimalWool, amount = 3, isItem = true },
+            { id = AddOn.ItemCurrencies.PrimalBearSpine, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199546, -- Crimson Depths Shoulderguards
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.AquaticMaw, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 199545, -- Grey Depths Shoulderguards
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.AquaticMaw, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 199544, -- Murky Depths Shoulderguards
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.AquaticMaw, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 199543, -- Azure Depths Shoulderguards
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.AquaticMaw, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 198341, -- Tan Paw Pack
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false },
+            { id = AddOn.ItemCurrencies.ScalebellyMackerel, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.LargeSturdyFemur, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 198340, -- Red Print Paw Pack
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false },
+            { id = AddOn.ItemCurrencies.AileronSeamoth, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.LargeSturdyFemur, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 198339, -- Dark Blue Paw Pack
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false },
+            { id = AddOn.ItemCurrencies.ThousandbitePiranha, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.LargeSturdyFemur, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 198338, -- Black Print Paw Pack
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false },
+            { id = AddOn.ItemCurrencies.CeruleanSpinefish, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.LargeSturdyFemur, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 198337, -- Azure Paw Pack
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false },
+            { id = AddOn.ItemCurrencies.TemporalDragonhead, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.LargeSturdyFemur, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 197981, -- Pattern: Finished Prototype Regal Barding
+        associatedID = 381848,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 29,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 750, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+    },
+    {
+        id = 70969, -- Quest: Becoming One of Our Community
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 30,
+        type = "Quest"
+    },
+    {
+        id = 201425, -- Yellow War Ottuk
+        associatedID = 1655,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 30,
+        type = "Mount",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 1000, isItem = false },
+            { id = AddOn.ItemCurrencies.MastodonTusk, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.AquaticMaw, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 201426, -- Brown War Ottuk
+        associatedID = 1653,
+        factionID = AddOn.Faction.IskaaraTuskarr,
+        renownLevel = 30,
+        type = "Mount",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 1000, isItem = false },
+            { id = AddOn.ItemCurrencies.MastodonTusk, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.AquaticMaw, amount = 5, isItem = true },
+        },
+    },
+    --endregion
+    --region Valdrakken Accord
+    {
+        id = 256168, -- Draconic Sconce
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 0,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 10, isItem = false } }
+    },
+    {
+        id = 199649, -- Dragon Tea Set
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 3,
+        type = "Toy",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 100, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 199648, -- Dragon Dinner Fork
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 3,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.AdamantScales, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200750, -- Dragon Dinner Knife
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 3,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.AdamantScales, amount = 3, isItem = true },
+        },
+    },
+    {
+        id = 200751, -- Simple Silver Dragon Goblet
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 3,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.DraconiumOre, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 200752, -- Jeweled Silver Dragon Goblet
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 3,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.DraconiumOre, amount = 3, isItem = true },
+            { id = AddOn.ItemCurrencies.QueensRuby, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 200751, -- Simple Gold Dragon Goblet
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 3,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 200754, -- Jeweled Gold Dragon Goblet
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 3,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.QueensRuby, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 256169, -- Valdrakken Oven
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 3,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } }
+    },
+    {
+        id = 199647, -- Dragon Garden Fork
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 6,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.RainbowPearl, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199651, -- Dragon Garden Hoe
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 6,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.RainbowPearl, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199652, -- Dragon Garden Rake
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 6,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.RainbowPearl, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199653, -- Dragon Garden Hand Shovel
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 6,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.RainbowPearl, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199654, -- Dragon Garden Shovel
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 6,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.RainbowPearl, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 248112, -- Valdrakken Garden Fountain
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 6,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } }
+    },
+    {
+        id = 196972, -- Cliffside Wylderdrake: Plated Brow
+        associatedID = 69172,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 9,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+    },
+    {
+        id = 196977, -- Cliffside Wylderdrake: Split Head Horns
+        associatedID = 69177,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 9,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+    },
+    {
+        id = 197003, -- Cliffside Wylderdrake: Spiked Cheek
+        associatedID = 69203,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 9,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+    },
+    {
+        id = 197015, -- Cliffside Wylderdrake: Dark Skin Variation
+        associatedID = 69215,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 9,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+    },
+    {
+        id = 199655, -- Black Dragonspawn Shoulderpads
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 10,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
+        },
+    },
+    {
+        id = 199656, -- Blue Dragonspawn Shoulderpads
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 10,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
+        },
+    },
+    {
+        id = 199657, -- Bronze Dragonspawn Shoulderpads
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 10,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
+        },
+    },
+    {
+        id = 199658, -- Green Dragonspawn Shoulderpads
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 10,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
+        },
+    },
+    {
+        id = 199659, -- Red Dragonspawn Shoulderpads
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 10,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
+        },
+    },
+    {
+        id = 199772, -- Titan Gatekeeper's Shield
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.GlowingTitanOrb, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199773, -- Titan Watcher's Scepter
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.EternityAmber, amount = 1, isItem = true },
+            { id = AddOn.ItemCurrencies.GlowingTitanOrb, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199774, -- Ancient Titan Blunderbuss
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.GlowingTitanOrb, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199775, -- Titan Keeper's Gladius
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.GlowingTitanOrb, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199776, -- Titan Watcher's Broadsword
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 13,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.EternityAmber, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 248103, -- Draconic Stone Table
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 14,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } }
+    },
+    {
+        id = 196974, -- Cliffside Wylderdrake: Four-Horned Chin
+        associatedID = 69174,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 15,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 100, isItem = false } },
+    },
+    {
+        id = 196989, -- Cliffside Wylderdrake: White Hair
+        associatedID = 69189,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 15,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 100, isItem = false } },
+    },
+    {
+        id = 196998, -- Cliffside Wylderdrake: Hook Horns
+        associatedID = 69198,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 15,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 100, isItem = false } },
+    },
+    {
+        id = 197004, -- Cliffside Wylderdrake: Spiked Legs
+        associatedID = 69204,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 15,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 100, isItem = false } },
+    },
+    {
+        id = 197020, -- Cliffside Wylderdrake: Spear Tail
+        associatedID = 69220,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 15,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 100, isItem = false } },
+    },
+    {
+        id = 197009, -- Cliffside Wylderdrake: Scaled Pattern
+        associatedID = 69209,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 15,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 100, isItem = false } },
+    },
+    {
+        id = 199762, -- Valdrakken Guards Belt
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 16,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1472 },
+    },
+    {
+        id = 199761, -- Valdrakken Dragonspawn Waistguard
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 16,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1472 },
+    },
+    {
+        id = 199760, -- Valdrakken Spellweaver's Cord
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 16,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1472 },
+    },
+    {
+        id = 199759, -- Valdrakken Plate Girdle
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 16,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1472 },
+    },
+    {
+        id = 199684, -- Crimson Drakonid Helmet
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+        },
+    },
+    {
+        id = 199683, -- Verdant Drakonid Helmet
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+        },
+    },
+    {
+        id = 199682, -- Bronze Drakonid Helmet
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+        },
+    },
+    {
+        id = 199681, -- Cobalt Drakonid Helmet
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+        },
+    },
+    {
+        id = 199680, -- Obsidian Drakonid Helmet
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 17,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
         },
     },
     --endregion

@@ -280,6 +280,19 @@ AddOn.ItemCurrencies = {
     AwakenedAir = 190327,
     AquaticMaw = 201400,
     MastodonTusk = 201403,
+    ScalebellyMackerel = 194730,
+    TemporalDragonhead = 194969,
+    CeruleanSpinefish = 194968,
+    AileronSeamoth = 194967,
+    ThousandbitePiranha = 194966,
+    PebbledRockSalts = 197756,
+    AwakenedFrost = 190329,
+    PrimalBearSpine = 201399,
+    ChromaticDust = 194123,
+    QueensRuby = 192838,
+    RainbowPearl = 198397,
+    GlowingTitanOrb = 201406,
+    EternityAmber = 192850,
 }
 
 -- Necessary because some items are evaluated with an incorrect item level even after applying correct bonus IDs
