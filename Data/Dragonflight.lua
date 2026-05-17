@@ -92,7 +92,7 @@ AddOn.DragonflightData = {
         renownLevel = 5,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 15, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 194102, -- Expedition Excavator
@@ -951,7 +951,7 @@ AddOn.DragonflightData = {
         renownLevel = 8,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 199813, -- Formula: Enchant Chest - Sustained Strength
@@ -960,7 +960,7 @@ AddOn.DragonflightData = {
         renownLevel = 8,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 193618, -- Hoofhelper
@@ -1013,7 +1013,7 @@ AddOn.DragonflightData = {
         renownLevel = 13,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 193878, -- Pattern: Ancestor's Dew Drippers
@@ -1022,7 +1022,7 @@ AddOn.DragonflightData = {
         renownLevel = 13,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 191547, -- Recipe: Alacritous Alchemist Stone
@@ -1031,7 +1031,7 @@ AddOn.DragonflightData = {
         renownLevel = 13,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 194480, -- Plans: Obsidian Seared Halberd
@@ -1040,7 +1040,7 @@ AddOn.DragonflightData = {
         renownLevel = 13,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 194477, -- Plans: Obsidian Seared Runeaxe
@@ -1049,7 +1049,7 @@ AddOn.DragonflightData = {
         renownLevel = 13,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 194478, -- Plans: Obsidian Seared Facesmasher
@@ -1058,7 +1058,7 @@ AddOn.DragonflightData = {
         renownLevel = 13,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 200498, -- Shikaar Harrier's Shoulderpads
@@ -1201,7 +1201,7 @@ AddOn.DragonflightData = {
         renownLevel = 15,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 25, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 197623, -- Windborne Velocidrake: Spiked Tail
@@ -1404,7 +1404,7 @@ AddOn.DragonflightData = {
         renownLevel = 18,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.Gold, amount = 200, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 194497, -- Plans: Khaz'gorite Skinning Knife
@@ -1413,7 +1413,7 @@ AddOn.DragonflightData = {
         renownLevel = 18,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.Gold, amount = 200, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 198463, -- Pattern: Expert Alchemist's Hat
@@ -1422,7 +1422,7 @@ AddOn.DragonflightData = {
         renownLevel = 18,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.Gold, amount = 200, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 198462, -- Pattern: Flameproof Apron
@@ -1431,7 +1431,7 @@ AddOn.DragonflightData = {
         renownLevel = 18,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.Gold, amount = 200, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 198457, -- Pattern: Masterwork Smock
@@ -1440,7 +1440,7 @@ AddOn.DragonflightData = {
         renownLevel = 18,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.Gold, amount = 200, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 198464, -- Pattern: Reinforced Pack
@@ -1449,7 +1449,7 @@ AddOn.DragonflightData = {
         renownLevel = 18,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.Gold, amount = 200, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 197011, -- Cliffside Wylderdrake: Green Scales
@@ -1721,7 +1721,7 @@ AddOn.DragonflightData = {
         renownLevel = 10,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 199816, -- Formula: Enchant Chest - Accelerated Agility
@@ -1730,7 +1730,7 @@ AddOn.DragonflightData = {
         renownLevel = 10,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 194726, -- Design: Kalu'ak Figurine
@@ -1739,7 +1739,7 @@ AddOn.DragonflightData = {
         renownLevel = 10,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 194611, -- Design: Energized Ysemerald
@@ -1748,7 +1748,7 @@ AddOn.DragonflightData = {
         renownLevel = 10,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 194610, -- Design: Keen Ysemerald
@@ -1757,7 +1757,7 @@ AddOn.DragonflightData = {
         renownLevel = 10,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 194603, -- Design: Radiant Alexstraszite
@@ -1766,7 +1766,7 @@ AddOn.DragonflightData = {
         renownLevel = 10,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 194602, -- Design: Sensei's Alexstraszite
@@ -1775,7 +1775,7 @@ AddOn.DragonflightData = {
         renownLevel = 10,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_DRAGONFLIGHT]
     },
     -- Chieftain's Duty questline (R11)
     {
@@ -1833,7 +1833,7 @@ AddOn.DragonflightData = {
         renownLevel = 13,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 25, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 199887, -- Tuskarr Trapper's Bracers
@@ -1874,7 +1874,7 @@ AddOn.DragonflightData = {
         renownLevel = 15,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Cooking][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Cooking][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 194634, -- Design: Idol of the Dreamer
@@ -1883,7 +1883,7 @@ AddOn.DragonflightData = {
         renownLevel = 15,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 194633, -- Design: Idol of the Spellweaver
@@ -1892,7 +1892,7 @@ AddOn.DragonflightData = {
         renownLevel = 15,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 193875, -- Pattern: Allied Heartwarming Fur Coat
@@ -1901,7 +1901,7 @@ AddOn.DragonflightData = {
         renownLevel = 15,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 193876, -- Pattern: Snowball Makers
@@ -1910,7 +1910,7 @@ AddOn.DragonflightData = {
         renownLevel = 15,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 199860, -- Rustic Tuskarr Backpack
@@ -2073,7 +2073,7 @@ AddOn.DragonflightData = {
         renownLevel = 18,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 194663, -- Design: Resonant Focus
@@ -2082,7 +2082,7 @@ AddOn.DragonflightData = {
         renownLevel = 18,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 198461, -- Pattern: Shockproof Gloves
@@ -2091,7 +2091,7 @@ AddOn.DragonflightData = {
         renownLevel = 18,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 198459, -- Pattern: Lavish Floral Pack
@@ -2100,7 +2100,7 @@ AddOn.DragonflightData = {
         renownLevel = 18,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 198458, -- Pattern: Resplendent Cover
@@ -2109,7 +2109,7 @@ AddOn.DragonflightData = {
         renownLevel = 18,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 198465, -- Pattern: Expert Skinner's Cap
@@ -2118,7 +2118,7 @@ AddOn.DragonflightData = {
         renownLevel = 18,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 197390, -- Renewed Proto-Drake: Blue Scales
@@ -2213,7 +2213,7 @@ AddOn.DragonflightData = {
         renownLevel = 22,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 750, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 199897, -- Blue-Covered Beanbag
@@ -2323,7 +2323,7 @@ AddOn.DragonflightData = {
         renownLevel = 25,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 198827, -- Magical Snow Sled
@@ -2541,7 +2541,7 @@ AddOn.DragonflightData = {
         renownLevel = 29,
         type = "Recipe",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 750, isItem = false } },
-        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_WAR_WITHIN]
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 70969, -- Quest: Becoming One of Our Community
@@ -2805,6 +2805,33 @@ AddOn.DragonflightData = {
         },
     },
     {
+        id = 199818, -- Formula: Enchant Boots - Watcher's Loam
+        associatedID = 389484,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 11,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_DRAGONFLIGHT]
+    },
+    {
+        id = 199817, -- Formula: Enchant Cloak - Homebound Speed
+        associatedID = 389405,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 11,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_DRAGONFLIGHT]
+    },
+    {
+        id = 199246, -- Schematic: Tinker: Grounded Circuitry
+        associatedID = 382344,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 11,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 50, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Engineering][LE_EXPANSION_DRAGONFLIGHT]
+    },
+    {
         id = 199772, -- Titan Gatekeeper's Shield
         factionID = AddOn.Faction.ValdrakkenAccord,
         renownLevel = 13,
@@ -2858,6 +2885,51 @@ AddOn.DragonflightData = {
             { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
             { id = AddOn.ItemCurrencies.EternityAmber, amount = 1, isItem = true },
         },
+    },
+    {
+        id = 191545, -- Recipe: Sustaining Alchemist's Stone
+        associatedID = 370676,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 14,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_DRAGONFLIGHT]
+    },
+    {
+        id = 194482, -- Plans: Obsidian Seared Invoker
+        associatedID = 367592,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 14,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_DRAGONFLIGHT]
+    },
+    {
+        id = 194479, -- Plans: Obsidian Seared Claymore
+        associatedID = 367590,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 14,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_DRAGONFLIGHT]
+    },
+    {
+        id = 194280, -- Pattern: Chronocloth Sash
+        associatedID = 376505,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 14,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_DRAGONFLIGHT]
+    },
+    {
+        id = 194279, -- Pattern: Azureweave Slippers
+        associatedID = 376501,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 14,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 248103, -- Draconic Stone Table
@@ -2919,6 +2991,15 @@ AddOn.DragonflightData = {
         type = "Other",
         otherCompletionType = "Quest",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 100, isItem = false } },
+    },
+    {
+        id = 198892, -- Technique: Cliffside Wylderdrake: Red Hair
+        associatedID = 383575,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 15,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 25, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_DRAGONFLIGHT]
     },
     {
         id = 199762, -- Valdrakken Guards Belt
@@ -3001,6 +3082,164 @@ AddOn.DragonflightData = {
             { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false },
             { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
         },
+    },
+    {
+        id = 199758, -- Crimson Proto-Whelp
+        associatedID = 3379,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 18,
+        type = "Pet",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.PrimalBearSpine, amount = 3, isItem = true },
+            { id = AddOn.ItemCurrencies.LargeSturdyFemur, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199757, -- Magic Nibbler
+        associatedID = 3378,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 18,
+        type = "Pet",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.PrimalBearSpine, amount = 3, isItem = true },
+            { id = AddOn.ItemCurrencies.LargeSturdyFemur, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 194500, -- Plans: Khaz'gorite Leatherworker's Toolset
+        associatedID = 371371,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 19,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_DRAGONFLIGHT]
+    },
+    {
+        id = 194498, -- Plans: Khaz'gorite Needle Set
+        associatedID = 371368,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 19,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_DRAGONFLIGHT]
+    },
+    {
+        id = 194495, -- Plans: Khaz'gorite Sickle
+        associatedID = 371365,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 19,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_DRAGONFLIGHT]
+    },
+    {
+        id = 199245, -- Schematic: Lapidary's Khaz'gorite Clamps
+        associatedID = 382342,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 19,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Engineering][LE_EXPANSION_DRAGONFLIGHT]
+    },
+    {
+        id = 199244, -- Schematic: Khaz'gorite Delver's Helmet
+        associatedID = 382341,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 19,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Engineering][LE_EXPANSION_DRAGONFLIGHT]
+    },
+    {
+        id = 194288, -- Pattern: Master Wildercloth Alchemist's Robe
+        associatedID = 376544,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 19,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_DRAGONFLIGHT]
+    },
+    {
+        id = 194290, -- Pattern: Master Wildercloth Enchanter's Hat
+        associatedID = 376550,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 19,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_DRAGONFLIGHT]
+    },
+    {
+        id = 194292, -- Pattern: Master Wildercloth Gardening Hat
+        associatedID = 376554,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 19,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_DRAGONFLIGHT]
+    },
+    {
+        id = 199756, -- Ensemble: Bronze Valdrakken Clothing
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 20,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 750, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 25, isItem = true },
+            { id = AddOn.ItemCurrencies.EternityAmber, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199754, -- Ensemble: Azure Valdrakken Clothing
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 20,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 750, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 25, isItem = true },
+            { id = AddOn.ItemCurrencies.MysticSapphire, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199755, -- Ensemble: Green Valdrakken Clothing
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 20,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 750, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 25, isItem = true },
+            { id = AddOn.ItemCurrencies.VibrantEmerald, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199753, -- Ensemble: Black Valdrakken Clothing
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 20,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 750, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 25, isItem = true },
+            { id = AddOn.ItemCurrencies.SunderedOnyx, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199752, -- Ensemble: Crimson Valdrakken Clothing
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 20,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 750, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 25, isItem = true },
+            { id = AddOn.ItemCurrencies.QueensRuby, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 248652, -- Dragon's Grand Mirror
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 20,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false } }
     },
     --endregion
 }

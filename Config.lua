@@ -293,6 +293,9 @@ AddOn.ItemCurrencies = {
     RainbowPearl = 198397,
     GlowingTitanOrb = 201406,
     EternityAmber = 192850,
+    MysticSapphire = 192841,
+    VibrantEmerald = 192844,
+    SunderedOnyx = 192847,
 }
 
 -- Necessary because some items are evaluated with an incorrect item level even after applying correct bonus IDs
