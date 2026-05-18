@@ -2634,7 +2634,7 @@ AddOn.DragonflightData = {
         },
     },
     {
-        id = 200751, -- Simple Gold Dragon Goblet
+        id = 200753, -- Simple Gold Dragon Goblet
         factionID = AddOn.Faction.ValdrakkenAccord,
         renownLevel = 3,
         type = "Cosmetic",

@@ -994,12 +994,6 @@ AddOn.WarWithinData = {
         bonusIDs = { 10273, 1498 }
     },
     {
-        id = 85531, -- Quest: Earth-Encrusted Gem
-        factionID = AddOn.Faction.SeveredThreads,
-        renownLevel = 24,
-        type = "Quest",
-    },
-    {
         id = 223274, -- Ferocious Jawcrawler
         associatedID = 2184,
         factionID = AddOn.Faction.SeveredThreads,
@@ -1020,6 +1014,12 @@ AddOn.WarWithinData = {
         renownLevel = 23,
         type = "Mount",
         currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3940, isItem = false } },
+    },
+    {
+        id = 85531, -- Quest: Earth-Encrusted Gem
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 24,
+        type = "Quest",
     },
     {
         id = 82446, -- Quest: For What Glimmers in Shadow
