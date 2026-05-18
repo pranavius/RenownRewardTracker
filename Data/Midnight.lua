@@ -1630,5 +1630,5 @@ AddOn.MidnightData = {
 
 function AddOn:CreateMidnightCache()
     self.MidnightCache = {}
-    self:CreateItemCache(self.MidnightData, self.MidnightCache)
+    self:CreateItemCache(self.MidnightData, self.MidnightCache, self._midnightCached)
 end

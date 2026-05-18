@@ -1957,5 +1957,5 @@ AddOn.WarWithinData = {
 
 function AddOn:CreateWarWithinCache()
     self.WarWithinCache = {}
-    self:CreateItemCache(self.WarWithinData, self.WarWithinCache)
+    self:CreateItemCache(self.WarWithinData, self.WarWithinCache, self._warWithinCached)
 end

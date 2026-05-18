@@ -112,7 +112,7 @@ function AddOn.GetItemHyperlinkText(itemID, bonusIDs)
     return "item:"..itemID.."::::::::::::"..#bonusIDs..":"..table.concat(bonusIDs, ":")
 end
 
-function AddOn:CreateItemCache(dataTable, itemCache)
+function AddOn:CreateItemCache(dataTable, itemCache, cacheFlag)
     ---@type RewardData[]
     local itemRewards = {}
     for _, reward in ipairs(dataTable) do
@@ -140,7 +140,7 @@ function AddOn:CreateItemCache(dataTable, itemCache)
                 if not rewardItemLevel then
                     rewardItemLevel = C_Item.GetDetailedItemLevelInfo(self.GetItemHyperlinkText(item.id, item.bonusIDs)) or itemLevel
                 end
-                self:DebugPrint(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(itemName), "item level", DARKYELLOW_FONT_COLOR:WrapTextInColorCode(rewardItemLevel))
+                -- self.DebugPrint(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(itemName), "item level", DARKYELLOW_FONT_COLOR:WrapTextInColorCode(rewardItemLevel))
                 itemCache[item.id] = {
                     itemName = itemName or item.type.." "..item.id,
                     iconID = iconID or AddOn.iconFallbackTextureID,
@@ -155,7 +155,10 @@ function AddOn:CreateItemCache(dataTable, itemCache)
                 }
             end
 
-            if toLoad == 0 then self.DebugPrint(GREEN_FONT_COLOR:WrapTextInColorCode("Expansion item data cached")) end
+            if toLoad == 0 then
+                cacheFlag = true
+                self.DebugPrint(GREEN_FONT_COLOR:WrapTextInColorCode("Expansion item data cached"))
+            end
         end)
     end
 end
@@ -166,6 +169,7 @@ function AddOn:CacheQuestNames(rewardData)
     if #tbl == 0 then
         tAppendAll(tbl, self.MidnightData)
         tAppendAll(tbl, self.WarWithinData)
+        tAppendAll(tbl, self.DragonflightData)
     end
 
     local updateCount = 0
@@ -208,4 +212,8 @@ function AddOn.GetCharacterMoneyBreakdown()
     local copper = totalInCopper % 100
     
     return gold, silver, copper
+end
+
+function AddOn:AreAllRewardsCached()
+    return (self._midnightCached and self._warWithinCached and self._dragonflightCached) or false
 end

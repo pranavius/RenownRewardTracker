@@ -13,9 +13,8 @@ EventFrame:HookScript("OnEvent", function(self, event, ...)
             AddOn:ConfigureDataBroker()
             self:UnregisterEvent("ADDON_LOADED")
         end
-    else
+    elseif AddOn:AreAllRewardsCached() then
         AddOn:UpdateListContents()
-        DebugPrint("Updating list contents for event:", DARKYELLOW_FONT_COLOR:WrapTextInColorCode(event))
     end
 end)
 
@@ -33,9 +32,12 @@ function AddOn:Initialize()
     for _, factionID in pairs(AddOn.Faction) do
         if RRT_DB.factionVisibility[factionID] == nil then RRT_DB.factionVisibility[factionID] = true end
     end
-
     self.playerClassfile = select(2, UnitClass("player"))
     self:CacheQuestNames({})
+    -- Track initialization for each rewards cache
+    self._midnightCached = false
+    self._warWithinCached = false
+    self._dragonflightCached = false
     self:CreateMidnightCache()
     self:CreateWarWithinCache()
     self:CreateDragonflightCache()
@@ -92,9 +94,9 @@ SlashCmdList["RRT"] = function(msg)
         end
     elseif msg:lower() == "help" then
         print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode("RenownRewardTracker"), "Usage:")
-        print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("    /rrt:"), "Toggle the AddOn window")
-        print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("    /rrt minimap:"), "Toggle minimap button")
-        print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("    /rrt debug:"), "Toggle debug mode")
+        print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("  /rrt:"), "Toggle the AddOn window")
+        print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("  /rrt minimap:"), "Toggle minimap button")
+        print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("  /rrt debug:"), "Toggle debug mode")
     else
         toggleAddonWindow()
     end

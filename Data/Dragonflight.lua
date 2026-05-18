@@ -3841,9 +3841,346 @@ AddOn.DragonflightData = {
         type = "Quest"
     },
     --endregion
+    --region Loamm Niffen
+    {
+        id = 75722, -- Quest: Bag of Gold
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 4,
+        type = "Quest"
+    },
+    {
+        id = 203310, -- Winding Slitherdrake: Grand Chin Thorn
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 5,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+    },
+    {
+        id = 203316, -- Winding Slitherdrake: Large Finned Crest
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 5,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+    },
+    {
+        id = 203327, -- Winding Slitherdrake: Tan Horns
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 5,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+    },
+    {
+        id = 75724, -- Quest: Like the Niffen Do
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 6,
+        type = "Quest"
+    },
+    {
+        id = 205272, -- Scent-Masking Vest
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 8,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 225, isItem = false } },
+        bonusIDs = { 9314, 1495, 8767 },
+    },
+    {
+        id = 205275, -- Mycelial Fabric Tuning
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 8,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 225, isItem = false } },
+        bonusIDs = { 9314, 1495, 8767 },
+    },
+    {
+        id = 205271, -- Speleothemic Cataphract
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 8,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 225, isItem = false } },
+        bonusIDs = { 9314, 1495, 8767 },
+    },
+    {
+        id = 205273, -- Sulphuric Crystal Breastmail
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 8,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 225, isItem = false } },
+        bonusIDs = { 9314, 1495, 8767 },
+    },
+    {
+        id = 75727, -- Quest: The Smelliest Tabard
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 10,
+        type = "Quest"
+    },
+    {
+        id = 205963, -- Sniffin' Salts
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 11,
+        type = "Toy",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false } },
+    },
+    {
+        id = 205353, -- Niffen Notebook of Alchemy Knowledge
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_DRAGONFLIGHT],
+    },
+    {
+        id = 205352, -- Niffen Notebook of Blacksmithing Knowledge
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_DRAGONFLIGHT],
+    },
+    {
+        id = 205351, -- Niffen Notebook of Enchanting Knowledge
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_DRAGONFLIGHT],
+    },
+    {
+        id = 205349, -- Niffen Notebook of Engineering Knowledge
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Engineering][LE_EXPANSION_DRAGONFLIGHT],
+    },
+    {
+        id = 205358, -- Niffen Notebook of Herbalism Knowledge
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Herbalism][LE_EXPANSION_DRAGONFLIGHT],
+    },
+    {
+        id = 205354, -- Niffen Notebook of Inscription Knowledge
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_DRAGONFLIGHT],
+    },
+    {
+        id = 205348, -- Niffen Notebook of Jewelcrafting Knowledge
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_DRAGONFLIGHT],
+    },
+    {
+        id = 205350, -- Niffen Notebook of Leatherworking Knowledge
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_DRAGONFLIGHT],
+    },
+    {
+        id = 205356, -- Niffen Notebook of Mining Knowledge
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Mining][LE_EXPANSION_DRAGONFLIGHT],
+    },
+    {
+        id = 205357, -- Niffen Notebook of Skinning Knowledge
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Skinning][LE_EXPANSION_DRAGONFLIGHT],
+    },
+    {
+        id = 205355, -- Niffen Notebook of Tailoring Knowledge
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 12,
+        type = "Profession",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_DRAGONFLIGHT],
+    },
+    {
+        id = 203323, -- Winding Slitherdrake: Brown Hair
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 13,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+    },
+    {
+        id = 203335, -- Winding Slitherdrake: Curved Horns
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 13,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+    },
+    {
+        id = 203341, -- Winding Slitherdrake: Long Jaw Horns
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 13,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+    },
+    {
+        id = 205270, -- Mycelial Fabric Sandals
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 14,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 225, isItem = false } },
+        bonusIDs = { 9321, 1508, 8767 },
+    },
+    {
+        id = 205264, -- Speleothemic Footguards
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 14,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 225, isItem = false } },
+        bonusIDs = { 9321, 1508, 8767 },
+    },
+    {
+        id = 205265, -- Sulfuric Crystal Boots
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 14,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 225, isItem = false } },
+        bonusIDs = { 9321, 1508, 8767 },
+    },
+    {
+        id = 205269, -- Scent-Masking Moccasins
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 14,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 225, isItem = false } },
+        bonusIDs = { 9321, 1508, 8767 },
+    },
+    {
+        id = 205050, -- Paulie
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 15,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false } },
+    },
+    {
+        id = 205051, -- Rango
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 15,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false } },
+    },
+    {
+        id = 205363, -- Ensemble: Ornate Black Dragon Labwear
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false } },
+    },
+    {
+        id = 203347, -- Winding Slitherdrake: Large Spiked Nose
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 16,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false } },
+    },
+    {
+        id = 203362, -- Winding Slitherdrake: Hairy Tail
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 16,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false } },
+    },
+    {
+        id = 203365, -- Winding Slitherdrake: Hairy Throat
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 16,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false } },
+    },
+    {
+        id = 205207, -- Morsel Sniffer
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 18,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 800, isItem = false } },
+    },
+    {
+        id = 205971, -- Rock Breaking Digger
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 18,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false } },
+    },
+    {
+        id = 205972, -- Decorative Niffen Sword
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 18,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 200, isItem = false } },
+    },
+    {
+        id = 75742, -- Quest: Drake Helms
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 19,
+        type = "Quest"
+    },
+    {
+        id = 197120, -- Highland Drake: Ornate Helm
+        associatedID = -1,
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 19,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 1000, isItem = false } },
+    },
+    {
+        id = 75744, -- Quest: A Token of Our Gratitude
+        factionID = AddOn.Faction.LoammNiffen,
+        renownLevel = 20,
+        type = "Quest"
+    },
+    --endregion
 }
 
 function AddOn:CreateDragonflightCache()
     self.DragonflightCache = {}
-    self:CreateItemCache(self.DragonflightData, self.DragonflightCache)
+    self:CreateItemCache(self.DragonflightData, self.DragonflightCache, self._dragonflightCached)
 end
