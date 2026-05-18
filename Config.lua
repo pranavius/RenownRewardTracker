@@ -296,6 +296,10 @@ AddOn.ItemCurrencies = {
     MysticSapphire = 192841,
     VibrantEmerald = 192844,
     SunderedOnyx = 192847,
+    AwakenedOrder = 190324,
+    GlimmeringYsemeraldCluster = 200865,
+    GlimmeringAlexstrasziteCluster = 200864,
+    GlimmeringNozdoriteCluster = 200863,
 }
 
 -- Necessary because some items are evaluated with an incorrect item level even after applying correct bonus IDs

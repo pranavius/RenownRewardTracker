@@ -3241,6 +3241,605 @@ AddOn.DragonflightData = {
         type = "Decor",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false } }
     },
+    {
+        id = 197391, -- Renewed Proto-Drake: Bronze Scales
+        associatedID = 69592,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 21,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
+            { id = AddOn.ItemCurrencies.AwakenedOrder, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 197613, -- Windborne Velocidrake: Bronze Scales
+        associatedID = 69817,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 21,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
+            { id = AddOn.ItemCurrencies.AwakenedOrder, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 197145, -- Highland Drake: Bronze Scales
+        associatedID = 69346,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 21,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
+            { id = AddOn.ItemCurrencies.AwakenedOrder, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 203351, -- Winding Slitherdrake: Bronze Scales
+        associatedID = 73842,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 21,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 400, isItem = false },
+            { id = AddOn.ItemCurrencies.AwakenedOrder, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199766, -- Expedition Guard's Helm
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 22,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1485 },
+    },
+    {
+        id = 199765, -- Field Scout's Helmet
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 22,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1485 },
+    },
+    {
+        id = 199764, -- Expedition Mercenary's Helm
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 22,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1485 },
+    },
+    {
+        id = 199763, -- Expedition Researcher's Hood
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 22,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false } },
+        bonusIDs = { 1485 },
+    },
+    {
+        id = 70905, -- Quest: Flying with Our Colors
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 23,
+        type = "Quest"
+    },
+    {
+        id = 199745, -- Everflame Night Torch
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 25,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.AwakenedFire, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199744, -- Academy Student's Journal
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 25,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199743, -- Runic Symbols and their Meaning
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 25,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.DraconiumOre, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199742, -- A Mender's Mentality
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 25,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.RainbowPearl, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 199741, -- Compendium of Advanced Spells
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 25,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.RainbowPearl, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 198389, -- Weighted Potion Cylinder
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 25,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 198388, -- Swirling Draconian Concoction
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 25,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.RainbowPearl, amount = 2, isItem = true },
+        },
+    },
+    {
+        id = 198320, -- Reinforced Lavender Bottle
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 25,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.ResilientLeather, amount = 10, isItem = true },
+        },
+    },
+    {
+        id = 197350, -- Renewed Proto-Drake: Silver and Purple Armor
+        associatedID = 69551,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 26,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 750, isItem = false },
+            { id = AddOn.ItemCurrencies.DraconiumOre, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 10, isItem = true },
+        },
+    },
+    {
+        id = 197581, -- Windborne Velocidrake: Silver and Purple Armor
+        associatedID = 69785,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 26,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 750, isItem = false },
+            { id = AddOn.ItemCurrencies.DraconiumOre, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 10, isItem = true },
+        },
+    },
+    {
+        id = 197093, -- Highland Drake: Silver and Purple Armor
+        associatedID = 69294,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 26,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 750, isItem = false },
+            { id = AddOn.ItemCurrencies.DraconiumOre, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 10, isItem = true },
+        },
+    },
+    {
+        id = 196962, -- Cliffside Wylderdrake: Silver and Purple Armor
+        associatedID = 69162,
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 26,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 750, isItem = false },
+            { id = AddOn.ItemCurrencies.DraconiumOre, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 10, isItem = true },
+        },
+    },
+    {
+        id = 199771, -- Green Dragon Banner
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 27,
+        type = "Toy",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.VibrantEmerald, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199770, -- Bronze Dragon Banner
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 27,
+        type = "Toy",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.EternityAmber, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199769, -- Blue Dragon Banner
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 27,
+        type = "Toy",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.MysticSapphire, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199768, -- Black Dragon Banner
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 27,
+        type = "Toy",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.SunderedOnyx, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199767, -- Red Dragon Banner
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 27,
+        type = "Toy",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 150, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.QueensRuby, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199664, -- Ruby Jeweled Shoulderpads
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.QueensRuby, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199663, -- Emerald Jeweled Shoulderpads
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.VibrantEmerald, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199662, -- Amber Jeweled Shoulderpads
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.EternityAmber, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199661, -- Azure Jeweled Shoulderpads
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.MysticSapphire, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199660, -- Obsidian Jeweled Shoulderpads
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.SunderedOnyx, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199674, -- Crimson Drakonid Shoulderpads
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.QueensRuby, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199673, -- Verdant Drakonid Shoulderpads
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.VibrantEmerald, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199672, -- Bronze Drakonid Shoulderpads
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.EternityAmber, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199671, -- Cobalt Drakonid Shoulderpads
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.MysticSapphire, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199670, -- Black Drakonid Shoulderpads
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 28,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 250, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.SunderedOnyx, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199734, -- Valdrakken Guard's Cutlass
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.EternityAmber, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199732, -- Valdrakken Wing Glaive
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199730, -- Valdrakken Bladewing Staff
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199728, -- Valdrakken Spellweaver's Stave
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199726, -- Valdrakken Spellweaver's Sceepter
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199705, -- Valdrakken Guard's Spear
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.AdamantScales, amount = 10, isItem = true },
+        },
+    },
+    {
+        id = 199702, -- Valdrakken Guard's Barrier
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.AdamantScales, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.RainbowPearl, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199806, -- Valdrakken Drakeclaw Barrier
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199707, -- Valdrakken Wingguard Polearm
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199700, -- Valdrakken Bladewing Decapitator
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.AdamantScales, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.RainbowPearl, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199823, -- Valdrakken Gatekeeper's Polearm
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.TatteredWildercloth, amount = 20, isItem = true },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+        },
+    },
+    {
+        id = 199821, -- Valdrakken Serrated Shortsword
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.DraconiumOre, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199820, -- Valdrakken Guard's Skullsplitter
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.DraconiumOre, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 201796, -- Valdrakken Drakonid's Claw
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 201795, -- Valdrakken Guard's Claw
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.SereviteOre, amount = 10, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 200456, -- Valdrakken Armor Opener
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.DraconiumOre, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+        },
+    },
+    {
+        id = 199739, -- Emerald Dragonflame Blade
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.GlimmeringYsemeraldCluster, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199738, -- Ruby Dragonflame Blade
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.GlimmeringAlexstrasziteCluster, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 199736, -- Amber Dragonflame Blade
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 29,
+        type = "Cosmetic",
+        currency = {
+            { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false },
+            { id = AddOn.ItemCurrencies.TallstriderSinew, amount = 5, isItem = true },
+            { id = AddOn.ItemCurrencies.GlimmeringNozdoriteCluster, amount = 1, isItem = true },
+        },
+    },
+    {
+        id = 70916, -- Quest: Beknownst and Glorious
+        factionID = AddOn.Faction.ValdrakkenAccord,
+        renownLevel = 30,
+        type = "Quest"
+    },
     --endregion
 }
 

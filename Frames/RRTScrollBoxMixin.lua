@@ -58,7 +58,7 @@ function RRTScrollBoxMixin.FactionHeaderDataProviderInit(frame, data)
     local factionData = C_MajorFactions.GetMajorFactionData(data.factionID)
     if not factionData then
         frame.FactionName:SetText(AddOn.GetTextureString(AddOn.iconFallbackTextureID, 25).." Unknown Faction")
-        AddOn.DebugPrint(WARNING_FONT_COLOR:WrapTextInColorCode("Faction data not found for faction ID", data.factionID))
+        AddOn.DebugPrint(WARNING_FONT_COLOR:WrapTextInColorCode("Faction data not found for faction ID"), data.factionID)
         return
     end
     frame.Bg:SetGradient("VERTICAL", factionData.factionFontColor.color, BLACK_FONT_COLOR)
@@ -179,7 +179,6 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
                 end
                 if not isCurrencyOnlyItems then
                     GameTooltip:AddLine(" ")
-                    local gR, gG, gB = GREEN_FONT_COLOR:GetRGB()
                     GameTooltip:AddLine("<Click to toggle currency menu>", 0, 1, 0, false)
                 end
                 GameTooltip:Show()
