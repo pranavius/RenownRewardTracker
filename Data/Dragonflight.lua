@@ -3850,7 +3850,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 203310, -- Winding Slitherdrake: Grand Chin Thorn
-        associatedID = -1,
+        associatedID = 73798,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 5,
         type = "Other",
@@ -3859,7 +3859,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 203316, -- Winding Slitherdrake: Large Finned Crest
-        associatedID = -1,
+        associatedID = 73804,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 5,
         type = "Other",
@@ -3868,7 +3868,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 203327, -- Winding Slitherdrake: Tan Horns
-        associatedID = -1,
+        associatedID = 73815,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 5,
         type = "Other",
@@ -3928,7 +3928,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 205353, -- Niffen Notebook of Alchemy Knowledge
-        associatedID = -1,
+        associatedID = 75756,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 12,
         type = "Profession",
@@ -3937,7 +3937,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 205352, -- Niffen Notebook of Blacksmithing Knowledge
-        associatedID = -1,
+        associatedID = 75755,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 12,
         type = "Profession",
@@ -3946,7 +3946,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 205351, -- Niffen Notebook of Enchanting Knowledge
-        associatedID = -1,
+        associatedID = 75752,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 12,
         type = "Profession",
@@ -3955,7 +3955,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 205349, -- Niffen Notebook of Engineering Knowledge
-        associatedID = -1,
+        associatedID = 75759,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 12,
         type = "Profession",
@@ -3964,7 +3964,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 205358, -- Niffen Notebook of Herbalism Knowledge
-        associatedID = -1,
+        associatedID = 75753,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 12,
         type = "Profession",
@@ -3973,7 +3973,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 205354, -- Niffen Notebook of Inscription Knowledge
-        associatedID = -1,
+        associatedID = 75761,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 12,
         type = "Profession",
@@ -3982,7 +3982,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 205348, -- Niffen Notebook of Jewelcrafting Knowledge
-        associatedID = -1,
+        associatedID = 75754,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 12,
         type = "Profession",
@@ -3991,7 +3991,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 205350, -- Niffen Notebook of Leatherworking Knowledge
-        associatedID = -1,
+        associatedID = 75751,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 12,
         type = "Profession",
@@ -4000,7 +4000,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 205356, -- Niffen Notebook of Mining Knowledge
-        associatedID = -1,
+        associatedID = 75758,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 12,
         type = "Profession",
@@ -4009,7 +4009,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 205357, -- Niffen Notebook of Skinning Knowledge
-        associatedID = -1,
+        associatedID = 75760,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 12,
         type = "Profession",
@@ -4018,7 +4018,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 205355, -- Niffen Notebook of Tailoring Knowledge
-        associatedID = -1,
+        associatedID = 75757,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 12,
         type = "Profession",
@@ -4027,7 +4027,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 203323, -- Winding Slitherdrake: Brown Hair
-        associatedID = -1,
+        associatedID = 73811,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 13,
         type = "Other",
@@ -4036,7 +4036,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 203335, -- Winding Slitherdrake: Curved Horns
-        associatedID = -1,
+        associatedID = 73825,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 13,
         type = "Other",
@@ -4045,7 +4045,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 203341, -- Winding Slitherdrake: Long Jaw Horns
-        associatedID = -1,
+        associatedID = 73832,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 13,
         type = "Other",
@@ -4086,7 +4086,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 205050, -- Paulie
-        associatedID = -1,
+        associatedID = 204286,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 15,
         type = "Pet",
@@ -4094,7 +4094,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 205051, -- Rango
-        associatedID = -1,
+        associatedID = 204288,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 15,
         type = "Pet",
@@ -4109,7 +4109,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 203347, -- Winding Slitherdrake: Large Spiked Nose
-        associatedID = -1,
+        associatedID = 73838,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 16,
         type = "Other",
@@ -4118,7 +4118,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 203362, -- Winding Slitherdrake: Hairy Tail
-        associatedID = -1,
+        associatedID = 73854,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 16,
         type = "Other",
@@ -4127,7 +4127,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 203365, -- Winding Slitherdrake: Hairy Throat
-        associatedID = -1,
+        associatedID = 73857,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 16,
         type = "Other",
@@ -4136,7 +4136,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 205207, -- Morsel Sniffer
-        associatedID = -1,
+        associatedID = 1738,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 18,
         type = "Mount",
@@ -4164,7 +4164,7 @@ AddOn.DragonflightData = {
     },
     {
         id = 197120, -- Highland Drake: Ornate Helm
-        associatedID = -1,
+        associatedID = 69321,
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 19,
         type = "Other",
@@ -4176,6 +4176,47 @@ AddOn.DragonflightData = {
         factionID = AddOn.Faction.LoammNiffen,
         renownLevel = 20,
         type = "Quest"
+    },
+    --endregion
+    --region Dream Wardens
+    {
+        id = 78385, -- Quest: Small Dreamseeds
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 3,
+        type = "Quest"
+    },
+    {
+        id = 78386, -- Quest: Emerald Reawakening
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 5,
+        type = "Quest"
+    },
+    {
+        id = 210482, -- Flourishing Whimsydrake: Back Fins
+        associatedID = 78400,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 6,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 225, isItem = false } },
+    },
+    {
+        id = 210483, -- Flourishing Whimsydrake: Ridged Brow
+        associatedID = 78403,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 6,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 225, isItem = false } },
+    },
+    {
+        id = 210484, -- Flourishing Whimsydrake: Underbite Snout
+        associatedID = 78404,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 6,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 225, isItem = false } },
     },
     --endregion
 }
