@@ -10,6 +10,7 @@ _Easily view renown rewards and track which are available per character_
 Currently provides information on the renown-based factions from the following expansions:
 - Midnight
 - The War Within
+- Dragonflight
 
 Non-renown based factions in these expansions are not currently supported, but may be in a future update.
 
@@ -44,6 +45,13 @@ Currently supported factions:
   - The Severed Threads
   - The Cartels of Undermine
   - The K'aresh Trust
+- **Dragonflight**
+  - Dragonscale Expedition
+  - Maruuk Centaur
+  - Iskaara Tuskarr
+  - Valdrakken Accord
+  - Loamm Niffen
+  - Dream Wardens
 
 ## Usage
 
@@ -65,7 +73,7 @@ Currently available filters:
 - **Gear**
 - **Other**
 
-The **Show All** checkbox bypasses all active filters and displays every reward regardless of ownership or filter state.
+The **Show Everything** checkbox displays every reward regardless of ownership or renown level while respecting filter choices.
 
 ### Slash Commands
 
