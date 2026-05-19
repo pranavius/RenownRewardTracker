@@ -1,4 +1,14 @@
 
+2
+- Added support for Dragonflight renown rewards across all major factions
+- Added ability to *Control-Click* on certain reward icons to see a preview
+  - Cosmetic and Gear rewards open the Dressing Room
+  - Decor rewards open the Housing Model viewer
+  - Mount rewards open the Mount Journal
+- Updated "Show Everything" checkbox to now respect type filter selections when enabled, bypassing only renown level and collection-based checks
+- Hid the equipped item comparison tooltip when hovering over the icon for an equipment slot item
+- *Bug Fix:* Corrected owned status detection for Decor rewards
+
 1
 - Added renown rewards for **Council of Dornogal**, **Assembly of the Deeps**, **Hallowfall Arathi**, **Cartels of Undermine**, **Flame's Radiance**, **Severed Threads**, and **Karesh Trust**
 - Added a manual list refresh button to the main window
