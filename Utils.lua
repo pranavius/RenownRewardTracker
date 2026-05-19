@@ -81,12 +81,10 @@ function AddOn.IsItemOwned(reward)
         local decor = C_HousingCatalog.GetCatalogEntryInfoByItem(reward.id, true)
         isOwned = decor and decor.quantity and decor.numPlaced and (decor.quantity + decor.numPlaced > 0) or false
     elseif reward.type == "Other" then
-        -- There are so few "Other" reward types that they'll be handled on a case-by-case basis here
-        -- 1. Beledar's Attunement, Flame's Radiance Schematics (2), GNZ Airmaster 9000
-        if reward.id == 224553 or reward.id == 238837 or reward.id == 238839 or reward.id == 232981 then
+        -- Release 2 (stable): Add optional property `otherCompletionType` to `reward` to make determining ownership simpler
+        if reward.otherCompletionType == "Quest" then
             isOwned = C_QuestLog.IsQuestFlaggedCompleted(reward.associatedID)
-        -- 2. Ethereal Augment Rune
-        elseif reward.id == 243191 then
+        elseif reward.otherCompletionType == "Item" then
             isOwned = C_Item.GetItemCount(reward.id, true, false, true, true) > 0
         end
     end
@@ -114,7 +112,7 @@ function AddOn.GetItemHyperlinkText(itemID, bonusIDs)
     return "item:"..itemID.."::::::::::::"..#bonusIDs..":"..table.concat(bonusIDs, ":")
 end
 
-function AddOn:CreateItemCache(dataTable, itemCache)
+function AddOn:CreateItemCache(dataTable, itemCache, cacheFlag)
     ---@type RewardData[]
     local itemRewards = {}
     for _, reward in ipairs(dataTable) do
@@ -142,7 +140,7 @@ function AddOn:CreateItemCache(dataTable, itemCache)
                 if not rewardItemLevel then
                     rewardItemLevel = C_Item.GetDetailedItemLevelInfo(self.GetItemHyperlinkText(item.id, item.bonusIDs)) or itemLevel
                 end
-                self:DebugPrint(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(itemName), "item level", DARKYELLOW_FONT_COLOR:WrapTextInColorCode(rewardItemLevel))
+                -- self.DebugPrint(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(itemName), "item level", DARKYELLOW_FONT_COLOR:WrapTextInColorCode(rewardItemLevel))
                 itemCache[item.id] = {
                     itemName = itemName or item.type.." "..item.id,
                     iconID = iconID or AddOn.iconFallbackTextureID,
@@ -157,8 +155,33 @@ function AddOn:CreateItemCache(dataTable, itemCache)
                 }
             end
 
-            if toLoad == 0 then self.DebugPrint(GREEN_FONT_COLOR:WrapTextInColorCode("Expansion item data cached")) end
+            if toLoad == 0 then
+                cacheFlag = true
+                self.DebugPrint(GREEN_FONT_COLOR:WrapTextInColorCode("Expansion item data cached"))
+            end
         end)
+    end
+end
+
+function AddOn:CreateItemCurrencyCache()
+    -- Determine number of items to load info for
+    local toLoad = 0
+    for _, itemID in pairs(self.ItemCurrencies) do
+        toLoad = toLoad + 1
+    end
+    -- TODO: Look at better ways to do this than iterating over the table twice
+    for _, itemID in pairs(self.ItemCurrencies) do
+        Item:CreateFromItemID(itemID):ContinueOnItemLoad(function()
+            toLoad = toLoad - 1
+
+            local itemName, _, _, _, _, _, _, _, _, iconID = C_Item.GetItemInfo(itemID)
+            self.ItemCurrencyCache[itemID] = { itemName = itemName, iconID = iconID }
+        end)
+
+        if toLoad == 0 then
+            self._itemCurrenciesCached = true
+            self.DebugPrint(GREEN_FONT_COLOR:WrapTextInColorCode("Currency item data cached"))
+        end
     end
 end
 
@@ -168,6 +191,7 @@ function AddOn:CacheQuestNames(rewardData)
     if #tbl == 0 then
         tAppendAll(tbl, self.MidnightData)
         tAppendAll(tbl, self.WarWithinData)
+        tAppendAll(tbl, self.DragonflightData)
     end
 
     local updateCount = 0
@@ -210,4 +234,8 @@ function AddOn.GetCharacterMoneyBreakdown()
     local copper = totalInCopper % 100
     
     return gold, silver, copper
+end
+
+function AddOn:AreAllRewardsCached()
+    return (self._midnightCached and self._warWithinCached and self._dragonflightCached) or false
 end

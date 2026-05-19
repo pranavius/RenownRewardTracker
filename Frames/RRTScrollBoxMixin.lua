@@ -6,6 +6,13 @@ RRTScrollBoxMixin = CreateFromMixins(ScrollBoxListMixin, {})
 
 RRT_DB = RRT_DB or AddOn.DatabaseDefaults
 
+---@type Faction[]
+local factionsWithWhiteNames = {
+    AddOn.Faction.CartelsOfUndermine,
+    AddOn.Faction.MaruukCentaur,
+    AddOn.Faction.LoammNiffen,
+}
+
 function RRTScrollBoxMixin:InitializeScrollView()
     AddOn.ScrollBox = self
     AddOn.ScrollBar = RRTScrollBar
@@ -53,15 +60,21 @@ function RRTScrollBoxMixin.FactionHeaderDataProviderInit(frame, data)
     local factionData = C_MajorFactions.GetMajorFactionData(data.factionID)
     if not factionData then
         frame.FactionName:SetText(AddOn.GetTextureString(AddOn.iconFallbackTextureID, 25).." Unknown Faction")
-        AddOn.DebugPrint(WARNING_FONT_COLOR:WrapTextInColorCode("Faction data not found for faction ID", data.factionID))
+        AddOn.DebugPrint(WARNING_FONT_COLOR:WrapTextInColorCode("Faction data not found for faction ID"), data.factionID)
         return
     end
     frame.Bg:SetGradient("VERTICAL", factionData.factionFontColor.color, BLACK_FONT_COLOR)
     local atlas = AddOn.FactionIconAtlasMap[data.factionID]
     if atlas then
-        frame.FactionName:SetText(AddOn.GetAtlasString(atlas, 20).." "..factionData.name)
+        frame.FactionName:SetText(AddOn.GetAtlasString(atlas, 18).." "..factionData.name)
     else
         frame.FactionName:SetText(AddOn.GetTextureString(AddOn.iconFallbackTextureID, 25).." "..factionData.name)
+    end
+    if tContains(factionsWithWhiteNames, data.factionID) then
+    frame.FactionName:SetTextColor(1, 1, 1)
+    else
+        local r, g, b = DARKYELLOW_FONT_COLOR:GetRGB()
+        frame.FactionName:SetTextColor(r, g, b)
     end
 end
 
@@ -135,8 +148,16 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
                 end
             else
                 isCurrencyOnlyMoney = false
-                local name = C_Item.GetItemNameByID(curr.id) or "Currency Name"
-                local iconID = select(5, C_Item.GetItemInfoInstant(curr.id))
+                local name, iconID
+                local cacheData = AddOn.ItemCurrencyCache[curr.id]
+
+                if cacheData then
+                    name = cacheData.itemName
+                    iconID = cacheData.iconID
+                else
+                    name = C_Item.GetItemNameByID(curr.id) or "Currency Name"
+                    iconID = select(5, C_Item.GetItemInfoInstant(curr.id))
+                end
                 local quantity = C_Item.GetItemCount(curr.id, true, false, true, true)
 
                 currencyText = AddOn.GetTextureString(iconID)
@@ -152,7 +173,7 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
                     obtained = quantity
                 })
             end
-            costText = costText..currencyText.."    "
+            costText = costText..currencyText.."   "
         end
 
         frame.CurrencyDisplay.Text:SetText(costText)
@@ -168,7 +189,6 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
                 end
                 if not isCurrencyOnlyItems then
                     GameTooltip:AddLine(" ")
-                    local gR, gG, gB = GREEN_FONT_COLOR:GetRGB()
                     GameTooltip:AddLine("<Click to toggle currency menu>", 0, 1, 0, false)
                 end
                 GameTooltip:Show()

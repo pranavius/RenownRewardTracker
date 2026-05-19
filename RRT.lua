@@ -13,15 +13,20 @@ EventFrame:HookScript("OnEvent", function(self, event, ...)
             AddOn:ConfigureDataBroker()
             self:UnregisterEvent("ADDON_LOADED")
         end
-    else
+    elseif AddOn:AreAllRewardsCached() then
         AddOn:UpdateListContents()
-        DebugPrint("Updating list contents for event:", DARKYELLOW_FONT_COLOR:WrapTextInColorCode(event))
     end
 end)
 
 EventFrame:RegisterEvent("ADDON_LOADED")
 
 RRT_DB = RRT_DB or AddOn.DatabaseDefaults
+
+-- Track initialization for each rewards cache
+AddOn._midnightCached = false
+AddOn._warWithinCached = false
+AddOn._dragonflightCached = false
+AddOn._itemCurrenciesCached = false
 
 function AddOn:Initialize()
     -- Populate any new toggles that may be missing for existing users from DB defaults
@@ -33,16 +38,20 @@ function AddOn:Initialize()
     for _, factionID in pairs(AddOn.Faction) do
         if RRT_DB.factionVisibility[factionID] == nil then RRT_DB.factionVisibility[factionID] = true end
     end
-
     self.playerClassfile = select(2, UnitClass("player"))
+    -- Initialize caches for data that we need to fetch for the AddOn from some in-game API
     self:CacheQuestNames({})
     self:CreateMidnightCache()
     self:CreateWarWithinCache()
+    self:CreateDragonflightCache()
+    self:CreateItemCurrencyCache()
+    -- Register events to trigger certain kinds of updates on EventFrame
     EventFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
     EventFrame:RegisterEvent("BAG_UPDATE")
     EventFrame:RegisterEvent("QUEST_COMPLETE")
     EventFrame:RegisterEvent("MAJOR_FACTION_RENOWN_LEVEL_CHANGED")
     EventFrame:RegisterEvent("COVENANT_SANCTUM_RENOWN_LEVEL_CHANGED")
+    EventFrame:RegisterEvent("CURRENCY_TRANSFER_LOG_UPDATE")
     self.initialized = true
     DebugPrint(GREEN_FONT_COLOR:WrapTextInColorCode("Initialized"))
 
@@ -59,8 +68,8 @@ end
 
 local function createAddonTooltip(tooltip)
     tooltip:SetText("Renown Reward Tracker v@project-version@")
-    tooltip:AddLine("Easily view renown rewards and track which are available per character")
-    tooltip:AddLine("Type \"/rrt help\" in the chat window for available slash commands")
+    tooltip:AddLine("Easily view renown rewards and track which are available per character", 1, 1, 1, true)
+    tooltip:AddLine("Type "..DARKYELLOW_FONT_COLOR:WrapTextInColorCode("/rrt help").." in the chat window for available slash commands", 0.67, 0.67, 0.67)
 end
 
 function AddOn:ConfigureDataBroker()
@@ -90,9 +99,9 @@ SlashCmdList["RRT"] = function(msg)
         end
     elseif msg:lower() == "help" then
         print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode("RenownRewardTracker"), "Usage:")
-        print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("    /rrt:"), "Toggle the AddOn window")
-        print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("    /rrt minimap:"), "Toggle minimap button")
-        print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("    /rrt debug:"), "Toggle debug mode")
+        print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("  /rrt:"), "Toggle the AddOn window")
+        print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("  /rrt minimap:"), "Toggle minimap button")
+        print(DARKYELLOW_FONT_COLOR:WrapTextInColorCode("  /rrt debug:"), "Toggle debug mode")
     else
         toggleAddonWindow()
     end

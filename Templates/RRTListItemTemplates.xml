@@ -46,10 +46,10 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                 </Layers>
             </Frame>
             <Button parentKey="CurrencyDisplay" inherits="InsecureActionButtonTemplate">
-                <Size x="125"/>
                 <Anchors>
                     <Anchor point="TOPLEFT" x="340"/>
                     <Anchor point="BOTTOMLEFT" x="340"/>
+                    <Anchor point="RIGHT"/>
                 </Anchors>
                 <Layers>
                     <Layer level="OVERLAY">
@@ -69,14 +69,18 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
                 </Texture>
             </Layer>
             <Layer level="OVERLAY">
-                <FontString parentKey="FactionName" inherits="GameFontNormal" justifyH="CENTER" setAllPoints="true"/>
+                <FontString parentKey="FactionName" inherits="GameFontNormal" justifyH="CENTER" justifyV="MIDDLE" setAllPoints="true">
+                    <Anchors>
+                        <Anchor point="CENTER" y="-2"/>
+                    </Anchors>
+                </FontString>
             </Layer>
         </Layers>
         <Frames>
             <Button parentKey="ToggleButton" inherits="InsecureActionButtonTemplate">
                 <Size y="25"/>
                 <Anchors>
-                    <Anchor point="RIGHT" x="-5" y="-2"/>
+                    <Anchor point="RIGHT" x="-5" y="-1"/>
                 </Anchors>
                 <Layers>
                     <Layer level="OVERLAY">

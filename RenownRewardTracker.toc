@@ -22,6 +22,7 @@ Config.lua
 Utils.lua
 Data\Midnight.lua
 Data\WarWithin.lua
+Data\Dragonflight.lua
 Templates\RRTListItemMixins.lua
 Templates\RRTListItemTemplates.xml
 Templates\RRTFilterMixin.lua

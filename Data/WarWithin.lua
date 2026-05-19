@@ -844,6 +844,7 @@ AddOn.WarWithinData = {
         factionID = AddOn.Faction.HallowfallArathi,
         renownLevel = 23,
         type = "Other",
+        otherCompletionType = "Quest",
         currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 1000, isItem = false } },
     },
     {
@@ -993,12 +994,6 @@ AddOn.WarWithinData = {
         bonusIDs = { 10273, 1498 }
     },
     {
-        id = 85531, -- Quest: Earth-Encrusted Gem
-        factionID = AddOn.Faction.SeveredThreads,
-        renownLevel = 24,
-        type = "Quest",
-    },
-    {
         id = 223274, -- Ferocious Jawcrawler
         associatedID = 2184,
         factionID = AddOn.Faction.SeveredThreads,
@@ -1019,6 +1014,12 @@ AddOn.WarWithinData = {
         renownLevel = 23,
         type = "Mount",
         currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3940, isItem = false } },
+    },
+    {
+        id = 85531, -- Quest: Earth-Encrusted Gem
+        factionID = AddOn.Faction.SeveredThreads,
+        renownLevel = 24,
+        type = "Quest",
     },
     {
         id = 82446, -- Quest: For What Glimmers in Shadow
@@ -1354,6 +1355,7 @@ AddOn.WarWithinData = {
         factionID = AddOn.Faction.CartelsOfUndermine,
         renownLevel = 19,
         type = "Other",
+        otherCompletionType = "Quest",
         currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
     },
     {
@@ -1470,6 +1472,7 @@ AddOn.WarWithinData = {
         factionID = AddOn.Faction.FlamesRadiance,
         renownLevel = 8,
         type = "Other",
+        otherCompletionType = "Quest",
         currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 3250, isItem = false } },
     },
     {
@@ -1478,6 +1481,7 @@ AddOn.WarWithinData = {
         factionID = AddOn.Faction.FlamesRadiance,
         renownLevel = 8,
         type = "Other",
+        otherCompletionType = "Quest",
         currency = { { id = AddOn.Currencies.ResonanceCrystal, amount = 2600, isItem = false } },
     },
     {
@@ -1907,6 +1911,7 @@ AddOn.WarWithinData = {
         factionID = AddOn.Faction.KareshTrust,
         renownLevel = 18,
         type = "Other",
+        otherCompletionType = "Item",
         currency = { { id = AddOn.Currencies.Gold, amount = 100000, isItem = false } },
     },
     {
@@ -1952,5 +1957,5 @@ AddOn.WarWithinData = {
 
 function AddOn:CreateWarWithinCache()
     self.WarWithinCache = {}
-    self:CreateItemCache(self.WarWithinData, self.WarWithinCache)
+    self:CreateItemCache(self.WarWithinData, self.WarWithinCache, self._warWithinCached)
 end

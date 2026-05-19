@@ -34,12 +34,19 @@ AddOn.DataBrokerIcon = LibStub("LibDBIcon-1.0")
 AddOn.SupportedExpansions = {
     [LE_EXPANSION_MIDNIGHT] = "Midnight",
     [LE_EXPANSION_WAR_WITHIN] = "The War Within",
-    -- [LE_EXPANSION_DRAGONFLIGHT] = "Dragonflight",
+    [LE_EXPANSION_DRAGONFLIGHT] = "Dragonflight",
     -- [LE_EXPANSION_SHADOWLANDS] = "Shadowlands"
 }
 
 ---@enum Faction
 local Faction = {
+    DragonscaleExpedition = 2507,
+    MaruukCentaur = 2503,
+    IskaaraTuskarr = 2511,
+    ValdrakkenAccord = 2510,
+    LoammNiffen = 2564,
+    DreamWardens = 2574,
+    KegLegsCrew = 2593,
     CouncilOfDornogal = 2590,
     AssemblyOfTheDeeps = 2594,
     HallowfallArathi = 2570,
@@ -59,6 +66,13 @@ AddOn.Faction = Faction
 
 ---@type table<Faction, string>
 AddOn.FactionIconAtlasMap = {
+    [Faction.DragonscaleExpedition] = "MajorFactions_Icons_Expedition512",
+    [Faction.MaruukCentaur] = "MajorFactions_Icons_Centaur512",
+    [Faction.IskaaraTuskarr] = "MajorFactions_Icons_Tuskarr512",
+    [Faction.ValdrakkenAccord] = "MajorFactions_Icons_Valdrakken512",
+    [Faction.LoammNiffen] = "MajorFactions_Icons_Niffen512",
+    [Faction.DreamWardens] = "MajorFactions_Icons_Dream512",
+    [Faction.KegLegsCrew] = "majorfactions_icons_plunderstorm512",
     [Faction.CouncilOfDornogal] = "majorfactions_icons_storm512",
     [Faction.AssemblyOfTheDeeps] = "majorfactions_icons_candle512",
     [Faction.HallowfallArathi] = "majorfactions_icons_flame512",
@@ -123,79 +137,79 @@ AddOn.ExpacProfSpellIDs = {
     [AddOn.Professions.Alchemy] = {
         [LE_EXPANSION_MIDNIGHT] = 471003,
         [LE_EXPANSION_WAR_WITHIN] = 2871,
-        -- [LE_EXPANSION_DRAGONFLIGHT] = 2823,
+        [LE_EXPANSION_DRAGONFLIGHT] = 2823,
         -- [LE_EXPANSION_SHADOWLANDS] = 2750
     },
     [AddOn.Professions.Blacksmithing] = {
         [LE_EXPANSION_MIDNIGHT] = 471004,
         [LE_EXPANSION_WAR_WITHIN] = 2872,
-        -- [LE_EXPANSION_DRAGONFLIGHT] = 2822,
+        [LE_EXPANSION_DRAGONFLIGHT] = 2822,
         -- [LE_EXPANSION_SHADOWLANDS] = 2751
     },
     [AddOn.Professions.Cooking] = {
         [LE_EXPANSION_MIDNIGHT] = 471005,
         [LE_EXPANSION_WAR_WITHIN] = 2873,
-        -- [LE_EXPANSION_DRAGONFLIGHT] = 2824,
+        [LE_EXPANSION_DRAGONFLIGHT] = 2824,
         -- [LE_EXPANSION_SHADOWLANDS] = 2752
     },
     [AddOn.Professions.Enchanting] = {
         [LE_EXPANSION_MIDNIGHT] = 471006,
         [LE_EXPANSION_WAR_WITHIN] = 2874,
-        -- [LE_EXPANSION_DRAGONFLIGHT] = 2825,
+        [LE_EXPANSION_DRAGONFLIGHT] = 2825,
         -- [LE_EXPANSION_SHADOWLANDS] = 2753
     },
     [AddOn.Professions.Engineering] = {
         [LE_EXPANSION_MIDNIGHT] = 471007,
         [LE_EXPANSION_WAR_WITHIN] = 2875,
-        -- [LE_EXPANSION_DRAGONFLIGHT] = 2827,
+        [LE_EXPANSION_DRAGONFLIGHT] = 2827,
         -- [LE_EXPANSION_SHADOWLANDS] = 2755
     },
     [AddOn.Professions.Fishing] = {
         [LE_EXPANSION_MIDNIGHT] = 471021,
         [LE_EXPANSION_WAR_WITHIN] = 2876,
-        -- [LE_EXPANSION_DRAGONFLIGHT] = 2826,
+        [LE_EXPANSION_DRAGONFLIGHT] = 2826,
         -- [LE_EXPANSION_SHADOWLANDS] = 2754
     },
     [AddOn.Professions.Herbalism] = {
         [LE_EXPANSION_MIDNIGHT] = 471009, -- Herb Gathering (Midnight)
         [LE_EXPANSION_WAR_WITHIN] = 441327, -- Herb Gathering (Khaz Algar)
-        -- [LE_EXPANSION_DRAGONFLIGHT] = 2832,
+        [LE_EXPANSION_DRAGONFLIGHT] = 366252, -- Herb Gathering (Dragon Isles)
         -- [LE_EXPANSION_SHADOWLANDS] = 2760
     },
     [AddOn.Professions.Inscription] = {
         [LE_EXPANSION_MIDNIGHT] = 471010,
         [LE_EXPANSION_WAR_WITHIN] = 2878,
-        -- [LE_EXPANSION_DRAGONFLIGHT] = 2828,
+        [LE_EXPANSION_DRAGONFLIGHT] = 2828,
         -- [LE_EXPANSION_SHADOWLANDS] = 2756
     },
     [AddOn.Professions.Jewelcrafting] = {
         [LE_EXPANSION_MIDNIGHT] = 471011,
         [LE_EXPANSION_WAR_WITHIN] = 2879,
-        -- [LE_EXPANSION_DRAGONFLIGHT] = 2829,
+        [LE_EXPANSION_DRAGONFLIGHT] = 2829,
         -- [LE_EXPANSION_SHADOWLANDS] = 2757
     },
     [AddOn.Professions.Leatherworking] = {
         [LE_EXPANSION_MIDNIGHT] = 471012,
         [LE_EXPANSION_WAR_WITHIN] = 2880,
-        -- [LE_EXPANSION_DRAGONFLIGHT] = 2830,
+        [LE_EXPANSION_DRAGONFLIGHT] = 2830,
         -- [LE_EXPANSION_SHADOWLANDS] = 2758
     },
     [AddOn.Professions.Mining] = {
         [LE_EXPANSION_MIDNIGHT] = 471013,
         [LE_EXPANSION_WAR_WITHIN] = 2881,
-        -- [LE_EXPANSION_DRAGONFLIGHT] = 2833,
+        [LE_EXPANSION_DRAGONFLIGHT] = 2833,
         -- [LE_EXPANSION_SHADOWLANDS] = 2761
     },
     [AddOn.Professions.Skinning] = {
         [LE_EXPANSION_MIDNIGHT] = 471014,
         [LE_EXPANSION_WAR_WITHIN] = 2882,
-        -- [LE_EXPANSION_DRAGONFLIGHT] = 2834,
+        [LE_EXPANSION_DRAGONFLIGHT] = 2834,
         -- [LE_EXPANSION_SHADOWLANDS] = 2762
     },
     [AddOn.Professions.Tailoring] = {
         [LE_EXPANSION_MIDNIGHT] = 471015,
         [LE_EXPANSION_WAR_WITHIN] = 2883,
-        -- [LE_EXPANSION_DRAGONFLIGHT] = 2831,
+        [LE_EXPANSION_DRAGONFLIGHT] = 2831,
         -- [LE_EXPANSION_SHADOWLANDS] = 2759
     }
 
@@ -242,12 +256,53 @@ AddOn.Currencies = {
         Tailoring = 3266,
     },
     ResonanceCrystal = 2815,
-    Kej = 3056
+    Kej = 3056,
+    DragonIslesSupplies = 2003,
 }
 
 AddOn.ItemCurrencies = {
-    ArtisansAcuity = 210814
+    ArtisansAcuity = 210814,
+    AdamantScales = 193214,
+    ResilientLeather = 193210,
+    TatteredWildercloth = 193050,
+    SereviteOre = 190396,
+    TuftOfPrimalWool = 201405,
+    TallstriderSinew = 201404,
+    IridescentPlume = 201401,
+    ContouredFowlfeather = 193053,
+    SpoolOfWilderthread = 192096,
+    AwakenedFire = 190321,
+    DenseHide = 193217,
+    DraconiumOre = 188658,
+    RunedWrithebark = 194863,
+    LargeSturdyFemur = 201402,
+    AwakenedAir = 190327,
+    AquaticMaw = 201400,
+    MastodonTusk = 201403,
+    ScalebellyMackerel = 194730,
+    TemporalDragonhead = 194969,
+    CeruleanSpinefish = 194968,
+    AileronSeamoth = 194967,
+    ThousandbitePiranha = 194966,
+    PebbledRockSalts = 197756,
+    AwakenedFrost = 190329,
+    PrimalBearSpine = 201399,
+    ChromaticDust = 194123,
+    QueensRuby = 192838,
+    RainbowPearl = 198397,
+    GlowingTitanOrb = 201406,
+    EternityAmber = 192850,
+    MysticSapphire = 192841,
+    VibrantEmerald = 192844,
+    SunderedOnyx = 192847,
+    AwakenedOrder = 190324,
+    GlimmeringYsemeraldCluster = 200865,
+    GlimmeringAlexstrasziteCluster = 200864,
+    GlimmeringNozdoriteCluster = 200863,
+    Seedbloom = 211376,
 }
+
+AddOn.ItemCurrencyCache = {}
 
 -- Necessary because some items are evaluated with an incorrect item level even after applying correct bonus IDs
 ---@type table<string, number>
