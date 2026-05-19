@@ -22,6 +22,12 @@ EventFrame:RegisterEvent("ADDON_LOADED")
 
 RRT_DB = RRT_DB or AddOn.DatabaseDefaults
 
+-- Track initialization for each rewards cache
+AddOn._midnightCached = false
+AddOn._warWithinCached = false
+AddOn._dragonflightCached = false
+AddOn._itemCurrenciesCached = false
+
 function AddOn:Initialize()
     -- Populate any new toggles that may be missing for existing users from DB defaults
     for key, defaultValue in pairs(AddOn.DatabaseDefaults.toggles) do
@@ -33,14 +39,13 @@ function AddOn:Initialize()
         if RRT_DB.factionVisibility[factionID] == nil then RRT_DB.factionVisibility[factionID] = true end
     end
     self.playerClassfile = select(2, UnitClass("player"))
+    -- Initialize caches for data that we need to fetch for the AddOn from some in-game API
     self:CacheQuestNames({})
-    -- Track initialization for each rewards cache
-    self._midnightCached = false
-    self._warWithinCached = false
-    self._dragonflightCached = false
     self:CreateMidnightCache()
     self:CreateWarWithinCache()
     self:CreateDragonflightCache()
+    self:CreateItemCurrencyCache()
+    -- Register events to trigger certain kinds of updates on EventFrame
     EventFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
     EventFrame:RegisterEvent("BAG_UPDATE")
     EventFrame:RegisterEvent("QUEST_COMPLETE")

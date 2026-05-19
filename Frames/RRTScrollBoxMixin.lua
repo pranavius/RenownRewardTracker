@@ -6,9 +6,11 @@ RRTScrollBoxMixin = CreateFromMixins(ScrollBoxListMixin, {})
 
 RRT_DB = RRT_DB or AddOn.DatabaseDefaults
 
+---@type Faction[]
 local factionsWithWhiteNames = {
     AddOn.Faction.CartelsOfUndermine,
-    AddOn.Faction.MaruukCentaur
+    AddOn.Faction.MaruukCentaur,
+    AddOn.Faction.LoammNiffen,
 }
 
 function RRTScrollBoxMixin:InitializeScrollView()
@@ -146,8 +148,16 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
                 end
             else
                 isCurrencyOnlyMoney = false
-                local name = C_Item.GetItemNameByID(curr.id) or "Currency Name"
-                local iconID = select(5, C_Item.GetItemInfoInstant(curr.id))
+                local name, iconID
+                local cacheData = AddOn.ItemCurrencyCache[curr.id]
+
+                if cacheData then
+                    name = cacheData.itemName
+                    iconID = cacheData.iconID
+                else
+                    name = C_Item.GetItemNameByID(curr.id) or "Currency Name"
+                    iconID = select(5, C_Item.GetItemInfoInstant(curr.id))
+                end
                 local quantity = C_Item.GetItemCount(curr.id, true, false, true, true)
 
                 currencyText = AddOn.GetTextureString(iconID)

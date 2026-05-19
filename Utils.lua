@@ -163,6 +163,28 @@ function AddOn:CreateItemCache(dataTable, itemCache, cacheFlag)
     end
 end
 
+function AddOn:CreateItemCurrencyCache()
+    -- Determine number of items to load info for
+    local toLoad = 0
+    for _, itemID in pairs(self.ItemCurrencies) do
+        toLoad = toLoad + 1
+    end
+    -- TODO: Look at better ways to do this than iterating over the table twice
+    for _, itemID in pairs(self.ItemCurrencies) do
+        Item:CreateFromItemID(itemID):ContinueOnItemLoad(function()
+            toLoad = toLoad - 1
+
+            local itemName, _, _, _, _, _, _, _, _, iconID = C_Item.GetItemInfo(itemID)
+            self.ItemCurrencyCache[itemID] = { itemName = itemName, iconID = iconID }
+        end)
+
+        if toLoad == 0 then
+            self._itemCurrenciesCached = true
+            self.DebugPrint(GREEN_FONT_COLOR:WrapTextInColorCode("Currency item data cached"))
+        end
+    end
+end
+
 function AddOn:CacheQuestNames(rewardData)
     self.QuestNameCache = self.QuestNameCache or {}
     local tbl = rewardData

@@ -5,8 +5,7 @@ AddOn.windowMinWidth = 800
 AddOn.windowMinHeight = 400
 AddOn.windowMaxWidth = 800
 AddOn.windowMaxHeight = 800
--- AddOn.selectedExpansion = LE_EXPANSION_MIDNIGHT
-AddOn.selectedExpansion = LE_EXPANSION_DRAGONFLIGHT
+AddOn.selectedExpansion = LE_EXPANSION_MIDNIGHT
 AddOn.iconFallbackTextureID = 134400
 AddOn.initialized = false
 
@@ -300,7 +299,10 @@ AddOn.ItemCurrencies = {
     GlimmeringYsemeraldCluster = 200865,
     GlimmeringAlexstrasziteCluster = 200864,
     GlimmeringNozdoriteCluster = 200863,
+    Seedbloom = 211376,
 }
+
+AddOn.ItemCurrencyCache = {}
 
 -- Necessary because some items are evaluated with an incorrect item level even after applying correct bonus IDs
 ---@type table<string, number>

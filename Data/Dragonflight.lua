@@ -3399,7 +3399,7 @@ AddOn.DragonflightData = {
         },
     },
     {
-        id = 198320, -- Reinforced Lavender Bottle
+        id = 194320, -- Reinforced Lavender Bottle
         factionID = AddOn.Faction.ValdrakkenAccord,
         renownLevel = 25,
         type = "Cosmetic",
@@ -4217,6 +4217,323 @@ AddOn.DragonflightData = {
         type = "Other",
         otherCompletionType = "Quest",
         currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 225, isItem = false } },
+    },
+    {
+        id = 210702, -- Solar Synthesis Gloves
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 7,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+        bonusIDs = { 9552, 9506, 1498, 8767 },
+    },
+    {
+        id = 210706, -- Drowsed Shepherd's Gloves
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 7,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+        bonusIDs = { 9552, 9506, 1498, 8767 },
+    },
+    {
+        id = 210700, -- Auburn Scavenger Gauntlets
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 7,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+        bonusIDs = { 9552, 9506, 1498, 8767 },
+    },
+    {
+        id = 210704, -- Fallen Protector Handguards
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 7,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+        bonusIDs = { 9552, 9506, 1498, 8767 },
+    },
+    {
+        id = 78387, -- Quest: Plump Dreamseeds
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 9,
+        type = "Quest"
+    },
+    {
+        id = 78363, -- Quest: The Tabard of Your Dreams
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 10,
+        type = "Quest"
+    },
+    {
+        id = 210690, -- Elmer
+        associatedID = 4306,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 11,
+        type = "Pet",
+        currency = { { id = AddOn.ItemCurrencies.Seedbloom, amount = 1, isItem = true } },
+    },
+    {
+        id = 210689, -- Snoots
+        associatedID = 4305,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 11,
+        type = "Pet",
+        currency = { { id = AddOn.ItemCurrencies.Seedbloom, amount = 1, isItem = true } },
+    },
+    {
+        id = 210571, -- Snoozles
+        associatedID = 4296,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 11,
+        type = "Pet",
+        currency = { { id = AddOn.ItemCurrencies.Seedbloom, amount = 1, isItem = true } },
+    },
+    {
+        id = 210570, -- Napps
+        associatedID = 4295,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 11,
+        type = "Pet",
+        currency = { { id = AddOn.ItemCurrencies.Seedbloom, amount = 1, isItem = true } },
+    },
+    {
+        id = 210651, -- Dustite
+        associatedID = 4299,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 11,
+        type = "Pet",
+        currency = { { id = AddOn.ItemCurrencies.Seedbloom, amount = 1, isItem = true } },
+    },
+    {
+        id = 210648, -- Seedle
+        associatedID = 4298,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 11,
+        type = "Pet",
+        currency = { { id = AddOn.ItemCurrencies.Seedbloom, amount = 1, isItem = true } },
+    },
+    {
+        id = 210485, -- Flourishing Whimsydrake: Long Snout
+        associatedID = 78405,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 13,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 450, isItem = false } },
+    },
+    {
+        id = 210486, -- Flourishing Whimsydrake: Horns
+        associatedID = 78406,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 13,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 450, isItem = false } },
+    },
+    {
+        id = 210487, -- Flourishing Whimsydrake: Neck Fins
+        associatedID = 78407,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 13,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 450, isItem = false } },
+    },
+    {
+        id = 210703, -- Solar Synthesis Crown
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 14,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false } },
+        bonusIDs = { 9560, 9506, 9599, 1511, 8767 },
+    },
+    {
+        id = 210707, -- Drowsed Shepherd's Hood
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 14,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false } },
+        bonusIDs = { 9560, 9506, 9599, 1511, 8767 },
+    },
+    {
+        id = 210701, -- Auburn Scavenger Helm
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 14,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false } },
+        bonusIDs = { 9560, 9506, 9599, 1511, 8767 },
+    },
+    {
+        id = 210705, -- Fallen Protector Greathelm
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 14,
+        type = "Gear",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 600, isItem = false } },
+        bonusIDs = { 9560, 9506, 9599, 1511, 8767 },
+    },
+    {
+        id = 210692, -- Juniper
+        associatedID = 4308,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 15,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 375, isItem = false } },
+    },
+    {
+        id = 210691, -- Spruce
+        associatedID = 4307,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 15,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 375, isItem = false } },
+    },
+    {
+        id = 210790, -- Ensemble: Elegant Green Dragon Outerwear
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 500, isItem = false } },
+    },
+    {
+        id = 210676, -- Elderwood Cane
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+    },
+    {
+        id = 210677, -- Survivalist's Shovel
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+    },
+    {
+        id = 210679, -- Cultivator's Watering Can
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+    },
+    {
+        id = 210680, -- Caretaker's Trowel
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+    },
+    {
+        id = 210685, -- Ranger's Longbow
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 300, isItem = false } },
+    },
+    {
+        id = 209949, -- Suntouched Dreamstag
+        associatedID = 1809,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 17,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 1200, isItem = false } },
+    },
+    {
+        id = 209951, -- Lunar Dreamstag
+        associatedID = 1809,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 17,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 1200, isItem = false } },
+    },
+    {
+        id = 78388, -- Quest: Gigantic Dreamseeds
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 17,
+        type = "Quest"
+    },
+    {
+        id = 78595, -- Quest: Dream Infused
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 18,
+        type = "Quest"
+    },
+    {
+        id = 209947, -- Blossoming Dreamstag
+        associatedID = 1808,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 18,
+        type = "Mount",
+        currency = { { id = AddOn.ItemCurrencies.Seedbloom, amount = 1, isItem = true } },
+    },
+    {
+        id = 209950, -- Rekindled Dreamstag
+        associatedID = 1810,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 18,
+        type = "Mount",
+        currency = { { id = AddOn.ItemCurrencies.Seedbloom, amount = 1, isItem = true } },
+    },
+    {
+        id = 210057, -- Morning Flourish Dreamsaber
+        associatedID = 1817,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 18,
+        type = "Mount",
+        currency = { { id = AddOn.ItemCurrencies.Seedbloom, amount = 1, isItem = true } },
+    },
+    {
+        id = 210058, -- Evening Sun Dreamsaber
+        associatedID = 1816,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 18,
+        type = "Mount",
+        currency = { { id = AddOn.ItemCurrencies.Seedbloom, amount = 1, isItem = true } },
+    },
+    {
+        id = 210769, -- Springtide Dreamtalon
+        associatedID = 1833,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 18,
+        type = "Mount",
+        currency = { { id = AddOn.ItemCurrencies.Seedbloom, amount = 1, isItem = true } },
+    },
+    {
+        id = 210775, -- Snowfluff Dreamtalon
+        associatedID = 1835,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 18,
+        type = "Mount",
+        currency = { { id = AddOn.ItemCurrencies.Seedbloom, amount = 1, isItem = true } },
+    },
+    {
+        id = 211495, -- Dreambound Augment Rune
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 18,
+        type = "Other",
+        otherCompletionType = "Item",
+        currency = { { id = AddOn.Currencies.Gold, amount = 100000, isItem = false } },
+    },
+    {
+        id = 210479, -- Flourishing Whimsydrake: Night Scales
+        associatedID = 78408,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 19,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 1250, isItem = false } },
+    },
+    {
+        id = 210481, -- Flourishing Whimsydrake: Sunset Scales
+        associatedID = 78410,
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 19,
+        type = "Other",
+        otherCompletionType = "Quest",
+        currency = { { id = AddOn.Currencies.DragonIslesSupplies, amount = 1250, isItem = false } },
+    },
+    {
+        id = 78373, -- Quest: The Dream Thanks You
+        factionID = AddOn.Faction.DreamWardens,
+        renownLevel = 20,
+        type = "Quest"
     },
     --endregion
 }
