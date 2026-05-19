@@ -35,11 +35,10 @@ function RenownRewardTrackerMixin:OnLoad()
 
     self:SetToggleAllButtonText()
     self.FiltersContainer.ToggleAllFilters:HookScript("OnClick", function() self:HandleToggleAllClick() end)
-    self.FiltersContainer.Checkbox:SetChecked(RRT_DB.toggles.ignoreAll or false)
+    self.FiltersContainer.Checkbox:SetChecked(RRT_DB.showAll or false)
     self.FiltersContainer.Checkbox:HookScript("OnClick", function(cb)
-        local isChecked = cb:GetChecked()
-        RRT_DB.toggles.ignoreAll = isChecked
-        AddOn.DebugPrint("Ignore all toggles:", HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(tostring(RRT_DB.toggles.ignoreAll)))
+        RRT_DB.showAll = cb:GetChecked()
+        AddOn.DebugPrint("Show all:", HEIRLOOM_BLUE_COLOR:WrapTextInColorCode(tostring(RRT_DB.showAll)))
         AddOn:UpdateListContents()
     end)
     self.FiltersContainer.Checkbox:HookScript("OnEnter", function(cb)
@@ -68,8 +67,8 @@ end
 
 function RenownRewardTrackerMixin:SetToggleAllButtonText()
     local areAllTogglesShown = true
-    for k, v in pairs(RRT_DB.toggles) do
-        if k ~= "ignoreAll" and not v then
+    for _, v in pairs(RRT_DB.toggles) do
+        if not v then
             areAllTogglesShown = false
             break
         end
@@ -81,8 +80,8 @@ end
 function RenownRewardTrackerMixin:HandleToggleAllClick()
     local toggleState = self.FiltersContainer.ToggleAllFilters.Text:GetText() == "Remove All Filters"
     -- DB state updates
-    for k, v in pairs(RRT_DB.toggles) do
-        if k ~= "ignoreAll" then RRT_DB.toggles[k] = toggleState end
+    for k in pairs(RRT_DB.toggles) do
+        RRT_DB.toggles[k] = toggleState
     end
     -- Visual updates (filters)
     for _, child in ipairs({ self.FiltersContainer:GetChildren() }) do

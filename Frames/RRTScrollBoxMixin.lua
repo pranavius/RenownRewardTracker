@@ -6,6 +6,14 @@ RRTScrollBoxMixin = CreateFromMixins(ScrollBoxListMixin, {})
 
 RRT_DB = RRT_DB or AddOn.DatabaseDefaults
 
+local isHoveringPreviewableItem = false
+
+local nonDressableEquipLocs = {
+    INVTYPE_NECK = true,
+    INVTYPE_FINGER = true,
+    INVTYPE_TRINKET = true,
+}
+
 ---@type Faction[]
 local factionsWithWhiteNames = {
     AddOn.Faction.CartelsOfUndermine,
@@ -16,6 +24,26 @@ local factionsWithWhiteNames = {
 function RRTScrollBoxMixin:InitializeScrollView()
     AddOn.ScrollBox = self
     AddOn.ScrollBar = RRTScrollBar
+
+    TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, function(tooltip)
+        if isHoveringPreviewableItem and tooltip == GameTooltip then
+            tooltip:AddLine(" ")
+            tooltip:AddLine("<Control-Click to preview item>", 0, 1, 0)
+            tooltip:Show()
+            GameTooltip_HideShoppingTooltips(tooltip)
+        end
+    end)
+
+    self:RegisterEvent("MODIFIER_STATE_CHANGED")
+    self:HookScript("OnEvent", function(_, event, key, down)
+        if event == "MODIFIER_STATE_CHANGED" and (key == "LCTRL" or key == "RCTRL") and isHoveringPreviewableItem then
+            if down == 1 then
+                SetCursorByMode(Enum.Cursormode.InspectCursor)
+            else
+                ResetCursor()
+            end
+        end
+    end)
 
     if AddOn.ScrollBox and AddOn.ScrollBar then
         AddOn.DataProvider = CreateDataProvider()
@@ -78,6 +106,69 @@ function RRTScrollBoxMixin.FactionHeaderDataProviderInit(frame, data)
     end
 end
 
+local function onEnterPreviewableIcon()
+    isHoveringPreviewableItem = true
+    if IsControlKeyDown() then SetCursorByMode(Enum.Cursormode.InspectCursor) end
+end
+
+local function onExitPreviewableIcon()
+    isHoveringPreviewableItem = false
+    ResetCursor()
+end
+
+---@param frame ListItem
+---@param reward RewardData
+---@param cacheData table|nil
+local function configurePreviewForReward(frame, reward, cacheData)
+    if reward.type ~= "Cosmetic" and reward.type ~= "Gear" and reward.type ~= "Decor" and reward.type ~= "Mount" then
+        return false
+    end
+
+    if reward.type == "Gear" and (not cacheData or not cacheData.equipLoc or nonDressableEquipLocs[cacheData.equipLoc]) then
+        return false
+    end
+
+    local icon = frame.IconDescContainer.Icon
+    icon:SetMouseClickEnabled(true)
+    icon:HookScript("OnEnter", onEnterPreviewableIcon)
+    icon:HookScript("OnLeave", onExitPreviewableIcon)
+    
+    if reward.type == "Cosmetic" or reward.type == "Gear" then
+        local linkText = AddOn.GetItemHyperlinkText(reward.id, reward.bonusIDs)
+        
+        icon:HookScript("OnMouseDown", function(_, mouseBtn)
+            if mouseBtn == "LeftButton" and IsControlKeyDown() then
+                DressUpItemLink(linkText)
+            end
+        end)
+    elseif reward.type == "Decor" then
+        icon:HookScript("OnMouseDown", function(_, mouseBtn)
+            if mouseBtn == "LeftButton" and IsControlKeyDown() then
+                local decorCatalogEntryInfo = C_HousingCatalog.GetCatalogEntryInfoByItem(reward.id)
+                if decorCatalogEntryInfo then
+                    HousingModelPreviewFrame:ShowCatalogEntryInfo(decorCatalogEntryInfo)
+                else
+                    print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode("[RRT]"), "Unable to preview decor. Please report this issue through Discord or GitHub")
+                end
+            end
+        end)
+    elseif reward.type == "Mount" then
+        icon:HookScript("OnMouseDown", function(_, mouseBtn)
+            if mouseBtn == "LeftButton" and IsControlKeyDown() then
+                local _, spellID = C_MountJournal.GetMountInfoByID(reward.associatedID)
+                if spellID then
+                    SetCollectionsJournalShown(true, 1)
+                    MountJournal_SetSelected(reward.associatedID, spellID)
+                else
+                    print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode("[RRT]"), "Unable to preview mount. Please report this issue through Discord or GitHub")
+                end
+            end
+        end)
+    end
+
+    return true
+end
+
 ---@param frame ListItem
 ---@param reward RewardData
 function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
@@ -88,11 +179,19 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
     local index = AddOn.DataProvider:FindIndex(reward)
     if index % 2 == 0 then frame.Bg:Show() end
 
+    local cacheData
+    if reward.type ~= "Quest" then
+        cacheData = select(2, AddOn:GetExpansionDataAndCache())[reward.id]
+    end
+
+    configurePreviewForReward(frame, reward, cacheData)
+
     if reward.type ~= "Quest" then
         frame.IconDescContainer.Icon:HookScript("OnEnter", function(icon)
             GameTooltip:SetOwner(icon, "ANCHOR_LEFT")
             GameTooltip:SetHyperlink(AddOn.GetItemHyperlinkText(reward.id, reward.bonusIDs))
             GameTooltip:Show()
+            GameTooltip_HideShoppingTooltips(GameTooltip)
         end)
         frame.IconDescContainer.Icon:HookScript("OnLeave", function() GameTooltip:Hide() end)
     end
@@ -102,8 +201,6 @@ function RRTScrollBoxMixin.ItemDataProviderInit(frame, reward)
         local questTitle = AddOn.QuestNameCache[reward.id] or "Quest"
         frame.IconDescContainer.Desc:SetText(questTitle..(RRT_DB.debug and " "..reward.id or ""))
     else
-        local itemCache = select(2, AddOn:GetExpansionDataAndCache())
-        local cacheData = itemCache[reward.id]
         if cacheData then
             frame.IconDescContainer.Icon:SetTexture(cacheData.iconID)
             frame.IconDescContainer.Desc:SetText(cacheData.itemName or reward.type.." "..reward.id)

@@ -76,10 +76,11 @@
 ---@field quest boolean
 ---@field decor boolean
 ---@field gear boolean
----@field ignoreAll boolean
+---@field other boolean
 
 ---@class RenownRewardTrackerDatabase
 ---@field toggles DatabaseToggles
+---@field showAll boolean
 ---@field factionVisibility table<number, boolean>
 ---@field debug boolean
 ---@field minimap LibDBIcon.button.DB | nil

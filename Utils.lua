@@ -78,7 +78,7 @@ function AddOn.IsItemOwned(reward)
     elseif reward.type == "Quest" then
         isOwned = C_QuestLog.IsQuestFlaggedCompleted(reward.id)
     elseif reward.type == "Decor" then
-        local decor = C_HousingCatalog.GetCatalogEntryInfoByItem(reward.id, true)
+        local decor = C_HousingCatalog.GetCatalogEntryInfoByItem(reward.id)
         isOwned = decor and decor.quantity and decor.numPlaced and (decor.quantity + decor.numPlaced > 0) or false
     elseif reward.type == "Other" then
         -- Release 2 (stable): Add optional property `otherCompletionType` to `reward` to make determining ownership simpler

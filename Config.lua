@@ -22,8 +22,8 @@ AddOn.DatabaseDefaults = {
         decor = true,
         gear = true,
         other = true,
-        ignoreAll = false,
     },
+    showAll = false,
     factionVisibility = {},
     debug = false,
     minimap = { hide = false }

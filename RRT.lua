@@ -29,9 +29,22 @@ AddOn._dragonflightCached = false
 AddOn._itemCurrenciesCached = false
 
 function AddOn:Initialize()
-    -- Populate any new toggles that may be missing for existing users from DB defaults
+    -- Load Blizzard AddOns that RRT might require for previewing items (transmog, decor, mounts, etc.)
+    if not C_AddOns.IsAddOnLoaded("Blizzard_HousingModelPreview") then UIParentLoadAddOn("Blizzard_HousingModelPreview") end
+    if not C_AddOns.IsAddOnLoaded("Blizzard_Collections") then UIParentLoadAddOn("Blizzard_Collections") end
+    -- Sync top-level DB keys with schema: add missing, remove stale
+    for key, defaultValue in pairs(AddOn.DatabaseDefaults) do
+        if RRT_DB[key] == nil then RRT_DB[key] = defaultValue end
+    end
+    for key in pairs(RRT_DB) do
+        if AddOn.DatabaseDefaults[key] == nil then RRT_DB[key] = nil end
+    end
+    -- Sync toggles sub-table: add missing, remove stale (cleans up old ignoreAll key)
     for key, defaultValue in pairs(AddOn.DatabaseDefaults.toggles) do
         if RRT_DB.toggles[key] == nil then RRT_DB.toggles[key] = defaultValue end
+    end
+    for key in pairs(RRT_DB.toggles) do
+        if AddOn.DatabaseDefaults.toggles[key] == nil then RRT_DB.toggles[key] = nil end
     end
     -- Populate any new factions that may be missing for existing user from enum
     if not RRT_DB.factionVisibility then RRT_DB.factionVisibility = {} end
@@ -76,7 +89,7 @@ function AddOn:ConfigureDataBroker()
     local broker = LDB:NewDataObject("RenownRewardTracker", {
         type = "launcher",
         text = "Renown Reward Tracker",
-        icon = "Interface/AddOns/RenownRewardTracker/Media/logo.png",
+        icon = "Interface/AddOns/RenownRewardTracker/Media/RRT-logo-small.png",
         OnClick = function() toggleAddonWindow() end,
         OnTooltipShow = function(tooltip) createAddonTooltip(tooltip) end
     })
@@ -139,13 +152,14 @@ end
 ---@param reward RewardData
 ---@return boolean `true` if reward should be shown, `false` otherwise
 function AddOn.ShouldRewardBeListed(reward)
-    -- Show everything when toggles.ignoreAll is enabled
-    if RRT_DB.toggles.ignoreAll then return true end
-
     -- IMPORTANT: Check for Abundance being unlocked to show or hide the Abundance of Wealth quest reward
     if reward.id == 93931 and not C_QuestLog.IsQuestFlaggedCompleted(91933) then return false end
 
+    -- Type toggles are always respected, even when showAll is enabled
     if not RRT_DB.toggles[reward.type:lower()] then return false end
+
+    -- Skip progression/ownership filters when showAll is on
+    if RRT_DB.showAll then return true end
     
     if reward.requiredCharacterLevel and UnitLevel("player") < reward.requiredCharacterLevel then return false end
 
