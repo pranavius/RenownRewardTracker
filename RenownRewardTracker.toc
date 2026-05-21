@@ -9,7 +9,7 @@
 ## Category: Collections
 ## AddonCompartmentFunc: RRT_AddonCompartmentOnClick
 ## AddonCompartmentFuncOnEnter: RRT_AddonCompartmentOnEnter
-## AddonCompartmentFuncOnLeave: RRT_AddonCompartmentOnLeav
+## AddonCompartmentFuncOnLeave: RRT_AddonCompartmentOnLeave
 ## X-Flavor: retail
 ## X-Additional-Categories: Miscellaneous, Housing, Bags & Inventory, Data Broker, Professions
 ## X-Curse-Project-ID: 1533676
