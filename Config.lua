@@ -64,6 +64,30 @@ local Faction = {
 }
 AddOn.Faction = Faction
 
+---@type table<number, VendorPinData>
+AddOn.QuartermasterPins = {
+    [Faction.DragonscaleExpedition] = { mapID = 2022, x = 0.471, y = 0.826 },
+    [Faction.MaruukCentaur] = { mapID = 2023, x = 0.604, y = 0.377 },
+    [Faction.IskaaraTuskarr] = { mapID = 2024, x = 0.131, y = 0.492 },
+    [Faction.ValdrakkenAccord] = { mapID = 2112, x = 0.582, y = 0.353 },
+    [Faction.LoammNiffen] = { mapID = 2133, x = 0.565, y = 0.557 },
+    [Faction.DreamWardens] = { mapID = 2200, x = 0.503, y = 0.617 },
+    [Faction.CouncilOfDornogal] = { mapID = 2339, x = 0.392, y = 0.243 },
+    [Faction.AssemblyOfTheDeeps] = { mapID = 2214, x = 0.431, y = 0.329 },
+    [Faction.HallowfallArathi] = { mapID = 2215, x = 0.413, y = 0.53 },
+    [Faction.SeveredThreads] = { mapID = 2255, x = 0.552, y = 0.414 },
+    [Faction.CartelsOfUndermine] = { mapID = 2346, x = 0.437, y= 0.507 },
+    [Faction.Gallagio] = { mapID = 2346, x = 0.416, y= 0.488, tooltipText = "Vendor is inside the Liberation of Undermine raid" },
+    [Faction.FlamesRadiance] = { mapID = 2215, x = 0.266, y = 0.565 },
+    [Faction.KareshTrust] = {mapID = 2472, x = 0.406, y = 0.292 },
+    [Faction.ManaforgeVandals] = {mapID = 2371, x = 0.429, y = 0.215 },
+    [Faction.SilvermoonCourt] = { mapID = 2395, x = 0.435, y = 0.474 },
+    [Faction.AmaniTribe] = { mapID = 2347, x = 0.459, y = 0.659 },
+    [Faction.Harati] = { mapID = 2413, x = 0.51, y = 0.508 },
+    [Faction.Singularity] = { mapID = 2405, x = 0.523, y = 0.729 },
+    [Faction.RitualSites] = { mapID = 2393, x = 0.481, y = 0.506, tooltipText = "Separate vendors for decor and pets/mount" },
+}
+
 ---@type table<Faction, string>
 AddOn.FactionIconAtlasMap = {
     [Faction.DragonscaleExpedition] = "MajorFactions_Icons_Expedition512",

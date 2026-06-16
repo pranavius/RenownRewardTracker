@@ -74,6 +74,41 @@ function RRTScrollBoxMixin.FactionHeaderDataProviderInit(frame, data)
         AddOn.DebugPrint("Added faction visibility database entry for faction ID", data.factionID)
     end
 
+    local factionData = C_MajorFactions.GetMajorFactionData(data.factionID)
+
+    if AddOn.QuartermasterPins[data.factionID] then
+        local pinData = AddOn.QuartermasterPins[data.factionID]
+
+        frame.QuartermasterPin:Show()
+        frame.QuartermasterPin:SetScript("OnClick", function()
+            -- Clear any previously supertracked pins and waypoints
+            C_SuperTrack.ClearSuperTrackedMapPin()
+            C_SuperTrack.SetSuperTrackedUserWaypoint(false)
+            C_Map.ClearUserWaypoint()
+
+            C_Map.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(pinData.mapID, pinData.x, pinData.y))
+            C_SuperTrack.SetSuperTrackedUserWaypoint(true)
+            print("Renown Reward Tracker:", DARKYELLOW_FONT_COLOR:WrapTextInColorCode("Map pin set for "..(factionData and factionData.name or "?").." Quartermaster"))
+        end)
+        frame.QuartermasterPin:SetScript("OnEnter", function(btn)
+            GameTooltip:SetOwner(btn, "ANCHOR_LEFT", nil, -30)
+            GameTooltip:SetText("Set Map Pin for Vendor")
+            if pinData.tooltipText then
+                GameTooltip:AddLine(" ")
+                GameTooltip:AddLine(pinData.tooltipText)
+            end
+            GameTooltip:Show()
+        end)
+        frame.QuartermasterPin:SetScript("OnLeave", function()
+            GameTooltip:Hide()
+        end)
+    else
+        frame.QuartermasterPin:Hide()
+        frame.QuartermasterPin:SetScript("OnClick", nil)
+        frame.QuartermasterPin:SetScript("OnEnter", nil)
+        frame.QuartermasterPin:SetScript("OnLeave", nil)
+    end
+
     frame.ToggleButton.Text:SetText(RRT_DB.factionVisibility[data.factionID] and "[Collapse]" or "[Expand]")
     frame.ToggleButton:SetWidth(frame.ToggleButton.Text:GetUnboundedStringWidth() + 5)
 
@@ -85,7 +120,6 @@ function RRTScrollBoxMixin.FactionHeaderDataProviderInit(frame, data)
         end
     end)
 
-    local factionData = C_MajorFactions.GetMajorFactionData(data.factionID)
     if not factionData then
         frame.FactionName:SetText(AddOn.GetTextureString(AddOn.iconFallbackTextureID, 25).." Unknown Faction")
         AddOn.DebugPrint(WARNING_FONT_COLOR:WrapTextInColorCode("Faction data not found for faction ID"), data.factionID)
@@ -120,7 +154,7 @@ end
 ---@param reward RewardData
 ---@param cacheData table|nil
 local function configurePreviewForReward(frame, reward, cacheData)
-    if reward.type ~= "Cosmetic" and reward.type ~= "Gear" and reward.type ~= "Decor" and reward.type ~= "Mount" then
+    if reward.type ~= "Cosmetic" and reward.type ~= "Gear" and reward.type ~= "Decor" and reward.type ~= "Mount" and reward.type ~= "Pet" then
         return false
     end
 
@@ -155,13 +189,14 @@ local function configurePreviewForReward(frame, reward, cacheData)
     elseif reward.type == "Mount" then
         icon:HookScript("OnMouseDown", function(_, mouseBtn)
             if mouseBtn == "LeftButton" and IsControlKeyDown() then
-                local _, spellID = C_MountJournal.GetMountInfoByID(reward.associatedID)
-                if spellID then
-                    SetCollectionsJournalShown(true, 1)
-                    MountJournal_SetSelected(reward.associatedID, spellID)
-                else
-                    print(HEIRLOOM_BLUE_COLOR:WrapTextInColorCode("[RRT]"), "Unable to preview mount. Please report this issue through Discord or GitHub")
-                end
+                DressUpMount(reward.associatedID)
+            end
+        end)
+    elseif reward.type == "Pet" then
+        icon:HookScript("OnMouseDown", function(_, mouseBtn)
+            if mouseBtn == "LeftButton" and IsControlKeyDown() then
+                local _, _, _, creatureID, _, _, _, _, _, _, _, displayID = C_PetJournal.GetPetInfoBySpeciesID(reward.associatedID)
+                DressUpBattlePet(creatureID, displayID, reward.associatedID)
             end
         end)
     end

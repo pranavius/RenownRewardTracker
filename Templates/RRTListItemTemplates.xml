@@ -77,6 +77,19 @@ https://raw.githubusercontent.com/Gethe/wow-ui-source/live/Interface/AddOns/Bliz
             </Layer>
         </Layers>
         <Frames>
+            <Button parentKey="QuartermasterPin" inherits="InsecureActionButtonTemplate" hidden="true">
+                <Size x="20" y="20"/>
+                <Anchors>
+                    <Anchor point="LEFT" x="5" y="1"/>
+                </Anchors>
+                <NormalTexture atlas="Waypoint-MapPin-Untracked"/>
+                <PushedTexture atlas="Waypoint-MapPin-Untracked">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" x="2" y="-2"/>
+                        <Anchor point="BOTTOMRIGHT" x="2" y="-2"/>
+                    </Anchors>
+                </PushedTexture>
+            </Button>
             <Button parentKey="ToggleButton" inherits="InsecureActionButtonTemplate">
                 <Size y="25"/>
                 <Anchors>

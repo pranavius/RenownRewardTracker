@@ -19,6 +19,7 @@
 ---@class FactionHeader: Frame
 ---@field Bg Texture
 ---@field FactionName FontString
+---@field QuartermasterPin Button
 ---@field ToggleButton FactionHeaderToggleButton
 
 ---@class ListFilter: Button
@@ -108,6 +109,12 @@
 ---@field currency? RewardCost[]
 ---@field bonusIDs? number[]
 ---@field profSpellID? number
+
+---@class VendorPinData
+---@field mapID number
+---@field x number
+---@field y number
+---@field tooltipText? string
 
 ---@class FactionHeaderData
 ---@field factionID number

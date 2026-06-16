@@ -1,4 +1,10 @@
 
+2.1
+- Added a map pin button to faction headers for factions with a known Quartermaster vendor location
+- Updated Mount preview to open in a Dressing Room window instead of the Mount Journal
+- Added Pet preview that opens in a Dressing Room window when the item's icon is control-clicked
+- Updated compatibility for Patch 12.0.7
+
 2
 - Added support for Dragonflight renown rewards across all major factions
 - Added ability to *Control-Click* on certain reward icons to see a preview
