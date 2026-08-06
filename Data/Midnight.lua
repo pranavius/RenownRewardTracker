@@ -1611,6 +1611,14 @@ AddOn.MidnightData = {
         currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 1800, isItem = false } },
     },
     {
+        id = 270989, -- Cappy
+        associatedID = 5039,
+        factionID = AddOn.Faction.RitualSites,
+        renownLevel = 6,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 1800, isItem = false } },
+    },
+    {
         id = 271158, -- Dark Obelisk
         factionID = AddOn.Faction.RitualSites,
         renownLevel = 7,
@@ -1624,6 +1632,481 @@ AddOn.MidnightData = {
         renownLevel = 8,
         type = "Mount",
         currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 4500, isItem = false } },
+    },
+    --endregion
+    --region Zul'Jarra's Forces
+    {
+        id = 276249, -- Cloak of the Hash'ura
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 2,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000, isItem = false } },
+    },
+    -- Potential rewards from Counter-Curse Bounty quest (TODO: Figure out best way to display quest rewards later)
+    -- {
+    --     id = 276531, -- Cursebreaker's Vambraces
+    --     factionID = AddOn.Faction.ZulJarrasForces,
+    --     renownLevel = 2,
+    --     type = "Gear",
+    --     bonusIDs = { 12825 }
+    -- },
+    -- {
+    --     id = 276532, -- Cursebreaker's Bracers
+    --     factionID = AddOn.Faction.ZulJarrasForces,
+    --     renownLevel = 2,
+    --     type = "Gear",
+    --     bonusIDs = { 12825 }
+    -- },
+    -- {
+    --     id = 276533, -- Cursebreaker's Wristwraps
+    --     factionID = AddOn.Faction.ZulJarrasForces,
+    --     renownLevel = 2,
+    --     type = "Gear",
+    --     bonusIDs = { 12825 }
+    -- },
+    -- {
+    --     id = 276534, -- Cursebreaker's Cuffs
+    --     factionID = AddOn.Faction.ZulJarrasForces,
+    --     renownLevel = 2,
+    --     type = "Gear",
+    --     bonusIDs = { 12825 }
+    -- },
+    {
+        id = 97382, -- Quest: Counter-Curse Bounty
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 2,
+        type = "Quest",
+    },
+    {
+        id = 249765, -- Amani Supply Sack
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 3,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150, isItem = false } },
+    },
+    {
+        id = 263316, -- Amani Storage Crate
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 3,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150, isItem = false } },
+    },
+    {
+        id = 264331, -- Amani Wayfarer's Torch
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 3,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150, isItem = false } },
+    },
+    {
+        id = 275300, -- Recipe: Loa's Gathering
+        associatedID = 1295776,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 1500, isItem = false } },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Cooking][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 271885, -- Recipe: Concentrated Silvermoon Health Potion
+        associatedID = 1289744,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.ArtisanMoxie.Alchemy, amount = 150, isItem = false }, },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 277967, -- Technique: Contract: Zul'Jarra's FOrces
+        associatedID = 1303151,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.ArtisanMoxie.Inscription, amount = 150, isItem = false }, },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 272196, -- Technique: Vantus Rune: Tides
+        associatedID = 1290561,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.ArtisanMoxie.Inscription, amount = 150, isItem = false }, },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 273073, -- Formula: Rite of the Hash'ey
+        associatedID = 1291694,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150, isItem = false }, },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 275304, -- Plans: Amani Forgemaster's Workbench
+        associatedID = 1296495,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.ArtisanMoxie.Blacksmithing, amount = 150, isItem = false }, },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 275310, -- Formula: Keen Hex Mask
+        associatedID = 1296498,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 150, isItem = false }, },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 275316, -- Schematic: Coiled Amani Hookshot
+        associatedID = 1296501,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.ArtisanMoxie.Engineering, amount = 150, isItem = false }, },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Engineering][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 275332, -- Pattern: Flat Snakeskin Canopy
+        associatedID = 1296509,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 5,
+        type = "Recipe",
+        currency = { { id = AddOn.Currencies.ArtisanMoxie.Leatherworking, amount = 150, isItem = false }, },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_MIDNIGHT]
+    },
+    {
+        id = 274500, -- Demistifyin': Alchemy
+        associatedID = 96459,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 6,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750, isItem = false },
+            { id = AddOn.Currencies.ArtisanMoxie.Alchemy, amount = 75, isItem = false },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Alchemy][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 274507, -- Demistifyin': Leatherworking
+        associatedID = 96517,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 6,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750, isItem = false },
+            { id = AddOn.Currencies.ArtisanMoxie.Leatherworking, amount = 75, isItem = false },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Leatherworking][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 274508, -- Demistifyin': Skinning
+        associatedID = 96519,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 6,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750, isItem = false },
+            { id = AddOn.Currencies.ArtisanMoxie.Skinning, amount = 75, isItem = false },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Skinning][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 274509, -- Demistifyin': Mining
+        associatedID = 96518,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 6,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750, isItem = false },
+            { id = AddOn.Currencies.ArtisanMoxie.Mining, amount = 75, isItem = false },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Mining][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 274510, -- Demistifyin': Jewelcrafting
+        associatedID = 96516,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 6,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750, isItem = false },
+            { id = AddOn.Currencies.ArtisanMoxie.Jewelcrafting, amount = 75, isItem = false },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Jewelcrafting][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 274511, -- Demistifyin': Enchanting
+        associatedID = 96512,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 6,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750, isItem = false },
+            { id = AddOn.Currencies.ArtisanMoxie.Enchanting, amount = 75, isItem = false },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Enchanting][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 274512, -- Demistifyin': Tailoring
+        associatedID = 96520,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 6,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750, isItem = false },
+            { id = AddOn.Currencies.ArtisanMoxie.Tailoring, amount = 75, isItem = false },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Tailoring][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 274513, -- Demistifyin': Herbalism
+        associatedID = 96514,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 6,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750, isItem = false },
+            { id = AddOn.Currencies.ArtisanMoxie.Herbalism, amount = 75, isItem = false },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Herbalism][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 274514, -- Demistifyin': Inscription
+        associatedID = 96515,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 6,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750, isItem = false },
+            { id = AddOn.Currencies.ArtisanMoxie.Inscription, amount = 75, isItem = false },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Inscription][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 274515, -- Demistifyin': Blacksmithing
+        associatedID = 96511,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 6,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750, isItem = false },
+            { id = AddOn.Currencies.ArtisanMoxie.Blacksmithing, amount = 75, isItem = false },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Blacksmithing][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 274516, -- Demistifyin': Engineering
+        associatedID = 96513,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 6,
+        type = "Profession",
+        currency = {
+            { id = AddOn.Currencies.VoidlightMarl, amount = 750, isItem = false },
+            { id = AddOn.Currencies.ArtisanMoxie.Engineering, amount = 75, isItem = false },
+        },
+        profSpellID = AddOn.ExpacProfSpellIDs[AddOn.Professions.Engineering][LE_EXPANSION_MIDNIGHT],
+    },
+    {
+        id = 97670, -- Quest: A Handful of Voidlight Marl
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 6,
+        type = "Quest",
+    },
+    {
+        id = 269778, -- Stitched Blisterfang Bag
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 7,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150, isItem = false } },
+    },
+    {
+        id = 269779, -- Fanged Scaleskin Pouch
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 7,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150, isItem = false } },
+    },
+    {
+        id = 277280, -- Vilescar Weapon Rack
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 7,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250, isItem = false } },
+    },
+    {
+        id = 97141, -- Quest: Spoils of the Vaults
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 9,
+        type = "Quest",
+    },
+    {
+        id = 276250, -- Tabard of the Hash'ura
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 10,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000, isItem = false } },
+    },
+    -- TODO: Time-gated quest chain for Tok'jara mount
+    {
+        id = 277271, -- Wrapped Scaleskin Urn
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 11,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150, isItem = false } },
+    },
+    {
+        id = 277273, -- Cracked Vilescar Urn
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 11,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150, isItem = false } },
+    },
+    {
+        id = 277275, -- Charmed Blisterfang Urn
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 11,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150, isItem = false } },
+    },
+    {
+        id = 276248, -- Snek'zali
+        associatedID = 5093,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 12,
+        type = "Pet",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 2500, isItem = false } },
+    },
+    {
+        id = 97672, -- Quest: A Cluster of Voidlight Marl
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 12,
+        type = "Quest",
+    },
+    {
+        id = 276925, -- Idol of Ula'tek
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 13,
+        type = "Toy",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 4000, isItem = false } },
+    },
+    {
+        id = 276841, -- Arsenal: Armaments of the Loa
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 15,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 5000, isItem = false } },
+    },
+    {
+        id = 276457, -- Amani Worship Candle
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150, isItem = false } },
+    },
+    {
+        id = 276459, -- Amani Ritual Candles
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 150, isItem = false } },
+    },
+    {
+        id = 264271, -- Amani Ritual Totem
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 15,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250, isItem = false } },
+    },
+    {
+        id = 276251, -- Shoulderguards of the Hash'ura
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 16,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 3000, isItem = false } },
+    },
+    {
+        id = 276802, -- Indigo Coiled Horror
+        associatedID = 3060,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 17,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 6000, isItem = false } },
+    },
+    {
+        id = 267377, -- Ula'tek Ritual Monolith
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 18,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250, isItem = false } },
+    },
+    {
+        id = 271177, -- Opened Serpentine Reliquary
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 18,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250, isItem = false } },
+    },
+    {
+        id = 277323, -- Sealed Serpentine Reliquary
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 18,
+        type = "Decor",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 250, isItem = false } },
+    },
+    {
+        id = 276607, -- Ensemble: Vestments of Jana'lai's Chosen
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 18,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 5000, isItem = false } },
+    },
+    {
+        id = 276608, -- Ensemble: Battlegear of Halazzi's Chosen
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 18,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 5000, isItem = false } },
+    },
+    {
+        id = 276609, -- Ensemble: Chainmail of Akil'zon's Chosen
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 18,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 5000, isItem = false } },
+    },
+    {
+        id = 276610, -- Ensemble: Warplate of Nalorakk's Chosen
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 18,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 5000, isItem = false } },
+    },
+    {
+        id = 276551, -- Voilet-Backed Skyfang
+        associatedID = 3054,
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 19,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 8000, isItem = false } },
+    },
+    {
+        id = 277326, -- Axe of the Amani
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 20,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 5000, isItem = false } },
+    },
+    {
+        id = 277327, -- Mantle of Nalorakk
+        factionID = AddOn.Faction.ZulJarrasForces,
+        renownLevel = 20,
+        type = "Cosmetic",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 5000, isItem = false } },
     },
     --endregion
 }

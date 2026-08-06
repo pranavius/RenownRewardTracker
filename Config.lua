@@ -60,7 +60,8 @@ local Faction = {
     AmaniTribe = 2696,
     Harati = 2704,
     Singularity = 2699,
-    RitualSites = 2792
+    RitualSites = 2792,
+    ZulJarrasForces = 2772,
 }
 AddOn.Faction = Faction
 
@@ -86,6 +87,7 @@ AddOn.QuartermasterPins = {
     [Faction.Harati] = { mapID = 2413, x = 0.51, y = 0.508 },
     [Faction.Singularity] = { mapID = 2405, x = 0.523, y = 0.729 },
     [Faction.RitualSites] = { mapID = 2393, x = 0.481, y = 0.506, tooltipText = "Separate vendors for decor and pets/mount" },
+    [Faction.ZulJarrasForces] = { mapID = 2512, x = 0.586, y = 0.46 },
 }
 
 ---@type table<Faction, string>
@@ -111,6 +113,7 @@ AddOn.FactionIconAtlasMap = {
     [Faction.Harati] = "majorfactions_icons_root512",
     [Faction.Singularity] = "majorfactions_icons_sky512",
     [Faction.RitualSites] = "majorfactions_icons_ritualsites512",
+    [Faction.ZulJarrasForces] = "majorfactions_icons_zuljarra512",
 }
 
 ---@enum ArmorSubclass

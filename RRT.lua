@@ -28,10 +28,14 @@ AddOn._warWithinCached = false
 AddOn._dragonflightCached = false
 AddOn._itemCurrenciesCached = false
 
+-- Required for backwards compatibility with Patch 12.0.7
+-- Can be deleted after 12.1.0 has been live for a bit
+LoadAddOnWithErrorHandling = LoadAddOnWithErrorHandling or UIParentLoadAddOn
+
 function AddOn:Initialize()
     -- Load Blizzard AddOns that RRT might require for previewing items (transmog, decor, mounts, etc.)
-    if not C_AddOns.IsAddOnLoaded("Blizzard_HousingModelPreview") then UIParentLoadAddOn("Blizzard_HousingModelPreview") end
-    if not C_AddOns.IsAddOnLoaded("Blizzard_Collections") then UIParentLoadAddOn("Blizzard_Collections") end
+    if not C_AddOns.IsAddOnLoaded("Blizzard_HousingModelPreview") then LoadAddOnWithErrorHandling("Blizzard_HousingModelPreview") end
+    if not C_AddOns.IsAddOnLoaded("Blizzard_Collections") then LoadAddOnWithErrorHandling("Blizzard_Collections") end
     -- Sync top-level DB keys with schema: add missing, remove stale
     for key, defaultValue in pairs(AddOn.DatabaseDefaults) do
         if RRT_DB[key] == nil then RRT_DB[key] = defaultValue end
