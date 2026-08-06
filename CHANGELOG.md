@@ -1,4 +1,9 @@
 
+3
+- Updated compatibility for Patch 12.1.0
+- Added all known rewards for **Zul'jarra's Forces**
+- Added the **Cappy** pet reward to Ritual Sites (Thank you *Wyldclaw* for pointing this out on CurseForge!)
+
 2.1
 - Added a map pin button to faction headers for factions with a known Quartermaster vendor location
 - Updated Mount preview to open in a Dressing Room window instead of the Mount Journal

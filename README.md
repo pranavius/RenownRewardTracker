@@ -44,6 +44,7 @@ Currently supported factions:
   - Hara'ti
   - The Singularity
   - Ritual Sites
+  - Zul'jarra's Forces
 - **The War Within**
   - Council of Dornogal
   - The Assembly of the Deeps
