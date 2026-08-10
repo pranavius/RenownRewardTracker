@@ -133,15 +133,20 @@ function AddOn:UpdateListContents(isManualUpdate)
     local listContents = {}
     ---@type table<number, boolean>
     local listedFactions = {}
-    local dataSource = self:GetExpansionDataAndCache()
+    local dataSource, itemCache = self:GetExpansionDataAndCache()
     for _, reward in ipairs(dataSource) do
         ---@cast reward RewardData
-        if not listedFactions[reward.factionID] then
-            listedFactions[reward.factionID] = true
-            tinsert(listContents, { factionID = reward.factionID, isFactionHeader = true })
-        end
-        if self.ShouldRewardBeListed(reward) and RRT_DB.factionVisibility[reward.factionID] ~= false then
-            tinsert(listContents, reward)
+        local isRenderable = self.ShouldRewardBeListed(reward) and (reward.type == "Quest" or itemCache[reward.id] ~= nil)
+        if isRenderable then
+            -- Insert faction header only once a faction has a renderable reward, and the game has major faction data for it (skip "Unknown Faction" headers).
+            if not listedFactions[reward.factionID] and C_MajorFactions.GetMajorFactionData(reward.factionID) then
+                listedFactions[reward.factionID] = true
+                tinsert(listContents, { factionID = reward.factionID, isFactionHeader = true })
+            end
+            -- Only add rewards for visible, valid factions
+            if listedFactions[reward.factionID] and RRT_DB.factionVisibility[reward.factionID] ~= false then
+                tinsert(listContents, reward)
+            end
         end
     end
 

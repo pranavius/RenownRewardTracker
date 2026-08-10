@@ -1610,20 +1610,31 @@ AddOn.MidnightData = {
         type = "Pet",
         currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 1800, isItem = false } },
     },
-    {
-        id = 270989, -- Cappy
-        associatedID = 5039,
-        factionID = AddOn.Faction.RitualSites,
-        renownLevel = 6,
-        type = "Pet",
-        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 1800, isItem = false } },
-    },
+    -- Seems to only have an achievement unlock requirement rather than a renown-based one. Commenting out for now.
+    -- {
+    --     id = 270989, -- Cappy
+    --     associatedID = 5039,
+    --     factionID = AddOn.Faction.RitualSites,
+    --     renownLevel = 6,
+    --     type = "Pet",
+    --     currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 1800, isItem = false } },
+    -- },
     {
         id = 271158, -- Dark Obelisk
         factionID = AddOn.Faction.RitualSites,
         renownLevel = 7,
         type = "Decor",
         currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 500, isItem = false } },
+    },
+    -- Renown based + achievement based unlock requirement for Unbound Manawyrm
+    -- TODO: Figure out how to display this to users to show accurate info
+    {
+        id = 264348, -- Unbound Manawyrm
+        associatedID = 2915,
+        factionID = AddOn.Faction.RitualSites,
+        renownLevel = 8,
+        type = "Mount",
+        currency = { { id = AddOn.Currencies.VoidlightMarl, amount = 6000, isItem = false } },
     },
     {
         id = 268578, -- Void-Touched Hawkstrider

@@ -2,7 +2,8 @@
 3
 - Updated compatibility for Patch 12.1.0
 - Added all known rewards for **Zul'jarra's Forces**
-- Added the **Cappy** pet reward to Ritual Sites (Thank you *Wyldclaw* for pointing this out on CurseForge!)
+- Added the **Unbound Manawyrm** mount reward to Ritual Sites (Thank you *Wyldclaw* for pointing this out on CurseForge!)
+- Improved the rewards list to hide factions without available rewards and rewards with missing or invalid data
 
 2.1
 - Added a map pin button to faction headers for factions with a known Quartermaster vendor location

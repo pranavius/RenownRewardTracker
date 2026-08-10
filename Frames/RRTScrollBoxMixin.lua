@@ -121,7 +121,8 @@ function RRTScrollBoxMixin.FactionHeaderDataProviderInit(frame, data)
     end)
 
     if not factionData then
-        frame.FactionName:SetText(AddOn.GetTextureString(AddOn.iconFallbackTextureID, 25).." Unknown Faction")
+        -- With the current logic that populates data provider tables, this should never be hit but keeping it as a fallback
+        frame.FactionName:SetText(AddOn.GetTextureString(AddOn.iconFallbackTextureID, 18).." Unknown Faction")
         AddOn.DebugPrint(WARNING_FONT_COLOR:WrapTextInColorCode("Faction data not found for faction ID"), data.factionID)
         return
     end
