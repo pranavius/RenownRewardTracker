@@ -157,7 +157,7 @@ function AddOn:CreateItemCache(dataTable, itemCache, cacheFlag)
 
             if toLoad == 0 then
                 cacheFlag = true
-                self.DebugPrint(GREEN_FONT_COLOR:WrapTextInColorCode("Expansion item data cached"))
+                self.DebugPrint("Expansion item data cached")
             end
         end)
     end
@@ -180,7 +180,7 @@ function AddOn:CreateItemCurrencyCache()
 
         if toLoad == 0 then
             self._itemCurrenciesCached = true
-            self.DebugPrint(GREEN_FONT_COLOR:WrapTextInColorCode("Currency item data cached"))
+            self.DebugPrint("Currency item data cached")
         end
     end
 end

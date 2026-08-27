@@ -64,11 +64,14 @@ function AddOn:Initialize()
     self:CreateItemCurrencyCache()
     -- Register events to trigger certain kinds of updates on EventFrame
     EventFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
-    EventFrame:RegisterEvent("BAG_UPDATE")
     EventFrame:RegisterEvent("QUEST_COMPLETE")
     EventFrame:RegisterEvent("MAJOR_FACTION_RENOWN_LEVEL_CHANGED")
     EventFrame:RegisterEvent("COVENANT_SANCTUM_RENOWN_LEVEL_CHANGED")
     EventFrame:RegisterEvent("CURRENCY_TRANSFER_LOG_UPDATE")
+    hooksecurefunc("ToggleAllBags", function()
+        DebugPrint("All bags toggled")
+        if AddOn:AreAllRewardsCached() then AddOn:UpdateListContents() end
+    end)
     self.initialized = true
     DebugPrint(GREEN_FONT_COLOR:WrapTextInColorCode("Initialized"))
 
