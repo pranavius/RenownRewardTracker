@@ -28,10 +28,6 @@ AddOn._warWithinCached = false
 AddOn._dragonflightCached = false
 AddOn._itemCurrenciesCached = false
 
--- Required for backwards compatibility with Patch 12.0.7
--- Can be deleted after 12.1.0 has been live for a bit
-LoadAddOnWithErrorHandling = LoadAddOnWithErrorHandling or UIParentLoadAddOn
-
 function AddOn:Initialize()
     -- Load Blizzard AddOns that RRT might require for previewing items (transmog, decor, mounts, etc.)
     if not C_AddOns.IsAddOnLoaded("Blizzard_HousingModelPreview") then LoadAddOnWithErrorHandling("Blizzard_HousingModelPreview") end
@@ -64,11 +60,14 @@ function AddOn:Initialize()
     self:CreateItemCurrencyCache()
     -- Register events to trigger certain kinds of updates on EventFrame
     EventFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
-    EventFrame:RegisterEvent("BAG_UPDATE")
     EventFrame:RegisterEvent("QUEST_COMPLETE")
     EventFrame:RegisterEvent("MAJOR_FACTION_RENOWN_LEVEL_CHANGED")
     EventFrame:RegisterEvent("COVENANT_SANCTUM_RENOWN_LEVEL_CHANGED")
     EventFrame:RegisterEvent("CURRENCY_TRANSFER_LOG_UPDATE")
+    hooksecurefunc("ToggleAllBags", function()
+        DebugPrint("All bags toggled")
+        if AddOn:AreAllRewardsCached() then AddOn:UpdateListContents() end
+    end)
     self.initialized = true
     DebugPrint(GREEN_FONT_COLOR:WrapTextInColorCode("Initialized"))
 
