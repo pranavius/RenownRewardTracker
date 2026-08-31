@@ -1,3 +1,6 @@
+3.1
+- Update rewards list when inventory bags are shown or hidden
+- *Bug Fix:* Resolved an issue that introduced accidental taint errors when Blizzard's own code was showing or hiding raid frames
 
 3
 - Updated compatibility for Patch 12.1.0
