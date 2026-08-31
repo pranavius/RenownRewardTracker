@@ -1,3 +1,5 @@
+3.1
+- *Bug Fix:* Resolved an issue that introduced accidental taint errors when Blizzard's own code was showing or hiding raid frames
 
 3
 - Updated compatibility for Patch 12.1.0
